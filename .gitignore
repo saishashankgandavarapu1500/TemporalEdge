@@ -64,7 +64,6 @@ data/
 # ================================
 notebooks/charts/
 notebooks/exports/
-notebooks/*.html
 
 # ================================
 # Temporary files
