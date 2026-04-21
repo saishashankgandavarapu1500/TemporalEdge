@@ -43,7 +43,7 @@ mlflow.db
 # ================================
 # Models / artifacts
 # ================================
-models/
+
 checkpoints/
 *.pkl
 *.joblib

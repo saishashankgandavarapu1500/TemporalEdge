@@ -1,0 +1,112 @@
+[
+  {
+    "ticker": "VOO",
+    "n_months": 151,
+    "win_rate_pct": 77.5,
+    "avg_saving_pct": 1.083,
+    "median_saving_pct": 0.862,
+    "avg_capture_rate": 57.8,
+    "best_month": 9.5,
+    "worst_month": -5.85
+  },
+  {
+    "ticker": "VTI",
+    "n_months": 224,
+    "win_rate_pct": 76.3,
+    "avg_saving_pct": 1.116,
+    "median_saving_pct": 0.856,
+    "avg_capture_rate": 28.7,
+    "best_month": 9.7,
+    "worst_month": -6.32
+  },
+  {
+    "ticker": "NVDA",
+    "n_months": 224,
+    "win_rate_pct": 71.0,
+    "avg_saving_pct": 3.026,
+    "median_saving_pct": 2.23,
+    "avg_capture_rate": 38.3,
+    "best_month": 19.75,
+    "worst_month": -12.46
+  },
+  {
+    "ticker": "AAPL",
+    "n_months": 224,
+    "win_rate_pct": 79.0,
+    "avg_saving_pct": 2.099,
+    "median_saving_pct": 1.878,
+    "avg_capture_rate": 48.7,
+    "best_month": 20.22,
+    "worst_month": -24.11
+  },
+  {
+    "ticker": "SCHD",
+    "n_months": 138,
+    "win_rate_pct": 77.5,
+    "avg_saving_pct": 0.937,
+    "median_saving_pct": 0.783,
+    "avg_capture_rate": 49.6,
+    "best_month": 11.98,
+    "worst_month": -8.07
+  },
+  {
+    "ticker": "VXUS",
+    "n_months": 147,
+    "win_rate_pct": 70.1,
+    "avg_saving_pct": 0.764,
+    "median_saving_pct": 0.717,
+    "avg_capture_rate": 36.9,
+    "best_month": 9.41,
+    "worst_month": -3.32
+  },
+  {
+    "ticker": "TSLA",
+    "n_months": 154,
+    "win_rate_pct": 71.4,
+    "avg_saving_pct": 2.548,
+    "median_saving_pct": 2.2,
+    "avg_capture_rate": 7.9,
+    "best_month": 28.52,
+    "worst_month": -26.31
+  },
+  {
+    "ticker": "BND",
+    "n_months": 192,
+    "win_rate_pct": 74.5,
+    "avg_saving_pct": 0.263,
+    "median_saving_pct": 0.215,
+    "avg_capture_rate": 49.9,
+    "best_month": 2.41,
+    "worst_month": -1.54
+  },
+  {
+    "ticker": "VYM",
+    "n_months": 197,
+    "win_rate_pct": 78.2,
+    "avg_saving_pct": 1.015,
+    "median_saving_pct": 0.835,
+    "avg_capture_rate": 55.2,
+    "best_month": 5.69,
+    "worst_month": -5.16
+  },
+  {
+    "ticker": "VEA",
+    "n_months": 189,
+    "win_rate_pct": 76.7,
+    "avg_saving_pct": 1.07,
+    "median_saving_pct": 1.001,
+    "avg_capture_rate": 48.6,
+    "best_month": 7.36,
+    "worst_month": -4.0
+  },
+  {
+    "ticker": "VWO",
+    "n_months": 217,
+    "win_rate_pct": 77.0,
+    "avg_saving_pct": 1.24,
+    "median_saving_pct": 0.98,
+    "avg_capture_rate": 43.1,
+    "best_month": 11.36,
+    "worst_month": -24.49
+  }
+]
