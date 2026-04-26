@@ -48,6 +48,44 @@ log = get_logger("models.trainer")
 MODELS_DIR = ROOT / "models"
 MODELS_DIR.mkdir(exist_ok=True)
 
+# Model proxy table — used for both simulation and live prediction
+# VTI: Phase 4 confirmed own model is ~random (50.9% win) due to
+# pre-2010 regime shift in training data. VOO model (79.1% win,
+# post-2010) transfers cleanly — same macro drivers, >0.99 corr.
+# VTI features (actual prices + macro) are always used as inputs.
+# Only the trained weights come from VOO.
+MODEL_PROXY = {
+    "VTI": "VOO",
+}
+
+
+def load_model_for_prediction(ticker: str) -> dict | None:
+    """
+    Load the correct model bundle for a given ticker.
+    Applies MODEL_PROXY so VTI automatically uses VOO weights.
+    This is the single entry point for live prediction in Phase 5+.
+    """
+    model_ticker = MODEL_PROXY.get(ticker, ticker)
+    path = MODELS_DIR / f"{model_ticker}_model.pkl"
+
+    if not path.exists():
+        log.warning(f"  Model not found: {path}. Run Phase 3 first.")
+        return None
+
+    with open(path, "rb") as f:
+        bundle = pickle.load(f)
+
+    if model_ticker != ticker:
+        log.info(
+            f"  {ticker}: using {model_ticker} model weights (proxy) | "
+            f"VTI own model was ~random, VOO transfers cleanly"
+        )
+        bundle = dict(bundle)
+        bundle["proxy_for"]       = ticker
+        bundle["original_ticker"] = model_ticker
+
+    return bundle
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # LightGBM hyperparameters
@@ -326,7 +364,7 @@ def predict_optimal_day(
         "AAPL":  0.790,   # using win_rate as proxy (capture was -29.4%, formula bug)
         "VEA":   0.767,   # same proxy
         "VOO":   0.775,   # same proxy
-        "VTI":   0.763,
+        "VTI":   0.791,   # using VOO model proxy — VOO win rate applies
         "VYM":   0.552,
         "SCHD":  0.457,
         "VWO":   0.431,
@@ -453,7 +491,7 @@ def evaluate_backtest(predictions_df: pd.DataFrame, ticker: str) -> dict:
             "model_beat_27":        model_saving_vs_27 > 0,
             "capture_rate":         round(
                 model_saving_vs_27 / optimal_saving_vs_27 * 100
-                if optimal_saving_vs_27 > 0.1 else 0, 2
+                if optimal_saving_vs_27 > 0 else 0, 2
             ),
         })
 

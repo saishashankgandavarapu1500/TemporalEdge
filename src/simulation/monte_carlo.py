@@ -31,14 +31,38 @@ N_RUNS_BACKTEST = 1000   # full simulation
 N_RUNS_LIVE     = 1000   # same for web app — fast enough on M2
 
 
+# VTI MODEL PROXY — Phase 4 finding
+# VTI own model: 50.9% win rate (random). Root cause: pre-2010 dot-com/GFC
+# training data has different timing patterns than post-2010 regime.
+# Fix: use VOO model for VTI — same securities, >0.99 correlation post-2010,
+# all macro features are market-wide and transfer directly.
+# VTI scenarios still use VTI actual prices (fair comparison preserved).
+MODEL_PROXY = {
+    "VTI": "VOO",
+}
+
+
 def load_model(ticker: str) -> dict | None:
-    """Load saved model bundle from Phase 3."""
-    path = MODELS_DIR / f"{ticker}_model.pkl"
+    """
+    Load saved model bundle from Phase 3.
+    VTI uses VOO model as proxy (see MODEL_PROXY).
+    """
+    model_ticker = MODEL_PROXY.get(ticker, ticker)
+    if model_ticker != ticker:
+        log.info(f"  {ticker}: loading {model_ticker} model as proxy "
+                 f"(own model ~random, Phase 4 finding)")
+
+    path = MODELS_DIR / f"{model_ticker}_model.pkl"
     if not path.exists():
         log.warning(f"  Model not found: {path}. Run Phase 3 first.")
         return None
     with open(path, "rb") as f:
-        return pickle.load(f)
+        bundle = pickle.load(f)
+
+    bundle["proxy_used"]      = (model_ticker != ticker)
+    bundle["proxy_ticker"]    = model_ticker if model_ticker != ticker else None
+    bundle["original_ticker"] = ticker
+    return bundle
 
 
 def run_simulation(
@@ -221,42 +245,204 @@ def run_single_ticker_simulation(
 ) -> dict:
     """
     Entry point for the Streamlit web app.
-    Accepts any ticker (not just portfolio tickers).
-    Falls back to nearest sector model if ticker not in portfolio.
-    """
-    # If ticker not in portfolio, use closest sector proxy
-    if ticker not in PORTFOLIO:
-        log.info(f"  {ticker} not in portfolio — finding closest sector proxy")
-        ticker = _find_sector_proxy(ticker)
+    Accepts any ticker, not just portfolio tickers.
 
-    monthly_usd = float(monthly_usd)
+    For portfolio tickers: uses pre-built feature store directly.
+    For unknown tickers:
+      1. Downloads real historical data via yfinance
+      2. Builds features using the same pipeline
+      3. Finds nearest model by beta + sector (NOT by data substitution)
+      4. Runs simulation with REAL ticker data + proxy model weights
+      5. Tags result with proxy info so UI can be honest about it
+    """
+    monthly_usd   = float(monthly_usd)
+    proxy_model   = None
+    proxy_label   = None
+
+    if ticker not in PORTFOLIO:
+        log.info(f"  {ticker}: unknown ticker — building features on-the-fly")
+
+        # Step 1: Find model proxy (weights only, not data)
+        proxy_model = _find_model_proxy(ticker)
+        proxy_label = proxy_model
+        log.info(f"  {ticker}: using {proxy_model} model weights as proxy")
+
+        # Step 2: Download + build features for the REAL ticker
+        success = _build_features_on_the_fly(ticker)
+        if not success:
+            log.warning(f"  {ticker}: feature build failed — falling back to {proxy_model} data")
+            # Last resort: run proxy data (clearly labeled)
+            result = run_simulation(proxy_model, monthly_usd, n_runs=n_runs, seed=seed)
+            if "summary" in result:
+                result["summary"]["proxy_ticker"]  = proxy_model
+                result["summary"]["proxy_reason"]  = "feature_build_failed"
+                result["summary"]["is_proxy_data"] = True
+                result["warning"] = (
+                    f"⚠️  No data available for {ticker}. "
+                    f"Showing {proxy_model} results as a rough proxy. "
+                    f"These numbers do NOT represent {ticker}."
+                )
+            return result
+
+        # Step 3: Add ticker to PORTFOLIO-like config temporarily
+        # so ScenarioSampler can load its feature file
+        _TEMP_PORTFOLIO[ticker] = {
+            "name": ticker, "monthly_usd": monthly_usd,
+            "type": "unknown", "sector": "unknown",
+        }
+
+        # Step 4: Patch MODEL_PROXY so the simulation uses proxy model weights
+        _ORIG_PROXY = dict(MODEL_PROXY)
+        MODEL_PROXY[ticker] = proxy_model
+
+        try:
+            result = run_simulation(ticker, monthly_usd, n_runs=n_runs, seed=seed)
+        finally:
+            # Clean up temp state
+            MODEL_PROXY.clear()
+            MODEL_PROXY.update(_ORIG_PROXY)
+            if ticker in _TEMP_PORTFOLIO:
+                del _TEMP_PORTFOLIO[ticker]
+
+        # Tag result with proxy information
+        if "summary" in result:
+            result["summary"]["proxy_ticker"]   = proxy_model
+            result["summary"]["proxy_reason"]   = "model_weights_only"
+            result["summary"]["is_proxy_data"]  = False
+            result["summary"]["real_data"]      = True
+        return result
+
     return run_simulation(ticker, monthly_usd, n_runs=n_runs, seed=seed)
 
 
-def _find_sector_proxy(ticker: str) -> str:
-    """
-    For arbitrary tickers entered in the web app,
-    find the closest portfolio ticker by sector/type.
-    Simple heuristic — proper version will use yfinance sector info.
-    """
-    # Default proxies by common sector patterns
-    proxies = {
-        "tech":    "NVDA",   # tech stocks
-        "etf":     "VOO",    # broad ETFs
-        "bond":    "BND",    # bond ETFs
-        "intl":    "VXUS",   # international
-        "div":     "SCHD",   # dividend
-    }
-    ticker_upper = ticker.upper()
+# Temp storage for on-the-fly tickers
+_TEMP_PORTFOLIO: dict = {}
 
-    # Simple rules
-    if any(x in ticker_upper for x in ["BOND","TLT","IEF","AGG"]):
+
+def _build_features_on_the_fly(ticker: str) -> bool:
+    """
+    Download historical data for an unknown ticker and build its feature file.
+    Returns True if successful, False if insufficient data.
+    """
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+    try:
+        import yfinance as yf
+        import pandas as pd
+        import numpy as np
+        from src.config import DATA_RAW, DATA_FEAT, START_DATE
+        from src.features.engineer import build_ticker_features, load_macro_panel
+
+        log.info(f"  {ticker}: downloading historical data...")
+        raw = yf.download(ticker, start="2010-01-01",
+                          auto_adjust=True, progress=False)
+
+        if raw.empty or len(raw) < 200:
+            log.warning(f"  {ticker}: insufficient data ({len(raw)} rows)")
+            return False
+
+        # Save raw parquet
+        df_raw = raw.copy()
+        df_raw.columns = [c.lower() for c in df_raw.columns]
+        df_raw.index.name = "date"
+        df_raw["ticker"] = ticker
+        raw_path = DATA_RAW / f"{ticker}.parquet"
+        df_raw.to_parquet(raw_path)
+
+        # Build features using existing macro panel
+        log.info(f"  {ticker}: building features ({len(df_raw):,} rows)...")
+        macro = load_macro_panel()
+        feat_df = build_ticker_features(ticker, macro, save=True)
+
+        if feat_df is None or len(feat_df) < 100:
+            log.warning(f"  {ticker}: feature build produced insufficient rows")
+            return False
+
+        log.info(f"  {ticker}: features built ✓ ({len(feat_df):,} rows)")
+        return True
+
+    except Exception as e:
+        log.warning(f"  {ticker}: on-the-fly build failed: {e}")
+        return False
+
+
+def _find_model_proxy(ticker: str) -> str:
+    """
+    Find the best MODEL PROXY for an unknown ticker.
+    Uses yfinance to get real beta and sector, then maps to
+    the closest portfolio ticker's MODEL WEIGHTS.
+
+    This is MODEL-only proxy (weights). The simulation always
+    uses REAL historical data for the actual ticker.
+
+    Volatility tiers:
+      Low vol (beta < 0.7):   BND / SCHD / VYM
+      Medium vol (0.7-1.2):   VOO / VTI / AAPL
+      High vol (1.2-2.0):     NVDA / VWO / VXUS
+      Very high (> 2.0):      TSLA
+    """
+    import yfinance as yf
+
+    try:
+        info = yf.Ticker(ticker).fast_info
+        quote_type = getattr(info, "quote_type", "").upper()
+        # Get beta as volatility proxy
+        full_info  = yf.Ticker(ticker).info
+        beta       = full_info.get("beta", 1.0) or 1.0
+        sector     = full_info.get("sector", "").lower()
+        asset_type = full_info.get("quoteType", "").upper()
+    except Exception:
+        beta, sector, asset_type = 1.0, "", "EQUITY"
+
+    log.info(f"  {ticker}: beta={beta:.2f} sector={sector} type={asset_type}")
+
+    # Bond ETFs
+    if any(x in ticker.upper() for x in ["BOND","TLT","IEF","AGG","BND","LQD","HYG"]):
         return "BND"
-    if any(x in ticker_upper for x in ["EEM","VWO","EWZ"]):
-        return "VWO"
-    if any(x in ticker_upper for x in ["EFA","VEA","IEFA"]):
-        return "VEA"
 
-    # Default to VOO for unknown tickers
-    log.info(f"  No proxy found for {ticker}, using VOO")
-    return "VOO"
+    # International / EM ETFs
+    if any(x in ticker.upper() for x in ["EEM","EWZ","VWO","FXI","IEMG"]):
+        return "VWO"
+    if any(x in ticker.upper() for x in ["EFA","VEA","IEFA","EWJ","VGK"]):
+        return "VEA"
+    if any(x in ticker.upper() for x in ["VXUS","IXUS","CWI"]):
+        return "VXUS"
+
+    # Dividend ETFs
+    if any(x in ticker.upper() for x in ["DIV","DGRO","VYM","SCHD","HDV"]):
+        return "SCHD"
+
+    # Map by volatility + sector
+    if beta > 2.5:
+        # Extremely volatile — meme stocks, high-beta plays
+        log.info(f"  {ticker}: very high beta ({beta:.1f}) → TSLA proxy (Tier C)")
+        return "TSLA"
+    elif beta > 1.5:
+        # High vol tech/growth
+        if "technology" in sector or "communication" in sector:
+            log.info(f"  {ticker}: high beta tech ({beta:.1f}) → NVDA proxy (Tier B)")
+            return "NVDA"
+        else:
+            log.info(f"  {ticker}: high beta non-tech ({beta:.1f}) → TSLA proxy (Tier C)")
+            return "TSLA"
+    elif beta > 1.0:
+        # Moderate-high vol
+        if "technology" in sector or "communication" in sector:
+            log.info(f"  {ticker}: moderate-high beta tech ({beta:.1f}) → AAPL proxy (Tier A)")
+            return "AAPL"
+        elif "financial" in sector:
+            log.info(f"  {ticker}: financial ({beta:.1f}) → VOO proxy (Tier A)")
+            return "VOO"
+        else:
+            log.info(f"  {ticker}: moderate-high beta ({beta:.1f}) → NVDA proxy (Tier B)")
+            return "NVDA"
+    elif beta > 0.6:
+        # Moderate vol — broad market-like
+        log.info(f"  {ticker}: moderate beta ({beta:.1f}) → VOO proxy (Tier A)")
+        return "VOO"
+    else:
+        # Low vol — bond/dividend-like
+        log.info(f"  {ticker}: low beta ({beta:.1f}) → BND proxy (Tier A)")
+        return "BND"

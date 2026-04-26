@@ -1,79 +1,65 @@
-# ================================
-# Python
-# ================================
+# ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
 
-# ================================
-# Virtual environments
-# ================================
-.venv/
+# ── Environment ──────────────────────────────────────────────────────────────
+.env
+.env.*
+*.env
 venv/
+.venv/
 env/
-ENV/
-conda-env/
-*.conda
+miniforge/
+conda-meta/
 
-# ================================
-# Jupyter
-# ================================
-.ipynb_checkpoints/
+# ── Data — large binary files, never commit raw data ─────────────────────────
+data/raw/
+data/features/
+data/macro/
+data/cache/
 
-# ================================
-# OS files
-# ================================
+# ── ML artefacts — too large for git, rebuilt by pipeline ────────────────────
+models/*.pkl
+models/*.model
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal
+mlruns/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Notebooks ────────────────────────────────────────────────────────────────
+notebooks/charts/
+notebooks/exports/
+notebooks/.ipynb_checkpoints/
+*.ipynb
+
+# ── OS ───────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
 
-# ================================
-# Logs
-# ================================
-*.log
-
-# ================================
-# MLflow
-# ================================
-mlruns/
-mlflow.db
-*.db
-
-# ================================
-# Models / artifacts
-# ================================
-
-checkpoints/
-*.pkl
-*.joblib
-*.h5
-
-# ================================
-# Data
-# ================================
-
-*.parquet
-*.csv
-
-# (optional: keep small sample data)
-!data/sample/
-
-# ================================
-# Notebooks outputs / exports
-# ================================
-notebooks/charts/
-notebooks/exports/
-
-# ================================
-# Temporary files
-# ================================
-*.tmp
-*.temp
-*.cache
-
-# ================================
-# IDEs
-# ================================
+# ── IDE ──────────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
+
+# ── Streamlit ────────────────────────────────────────────────────────────────
+# Keep .streamlit/config.toml (theme) but never secrets
+.streamlit/secrets.toml
+
+# ── On-demand cache — large, rebuilt on first run, not needed in repo ─────────
+dashboard/cache/on_demand/
+
+# ── KEEP these (explicitly un-ignore) ────────────────────────────────────────
+# dashboard/cache/execution_plan.json  ← committed by GitHub Actions each month
+# results/portfolio_simulation.json   ← committed by GitHub Actions each month
+# models/*_backtest.csv               ← small, useful for Evidence tab
+# models/backtest_summary.json        ← small summary

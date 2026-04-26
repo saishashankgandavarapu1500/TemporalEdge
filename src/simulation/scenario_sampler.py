@@ -26,7 +26,10 @@ from src.utils.logger import get_logger
 log = get_logger("simulation.sampler")
 
 # Tickers where we restrict to post-2010 to avoid structural regime shift
-POST_2010_ONLY = {"VTI"}   # Phase 3 finding: pre-2010 data hurts VTI capture rate
+# VTI: pre-2010 dot-com/GFC patterns are structurally different — excluded
+# Note: VTI now uses VOO model proxy, so post-2010 restriction also ensures
+# the scenario period matches VOO's training regime (VOO started Sep 2010)
+POST_2010_ONLY = {"VTI"}
 
 # Macro columns that define the scenario context
 # These are fed to the LLM reasoning layer AND used to label each run
@@ -77,16 +80,21 @@ class ScenarioSampler:
         Build a pool of historical monthly windows for this ticker.
         Each entry is one month's purchase window (days >= 18).
         Returns list of dicts, one per month.
+        Works for both portfolio tickers and on-the-fly unknown tickers.
         """
         if ticker in self._scenario_pool:
             return self._scenario_pool[ticker]
 
         df = self._load_ticker(ticker)
 
-        # VTI fix: skip pre-2010 (dot-com/GFC era)
+        # VTI fix: skip pre-2010 (dot-com/GFC era pattern shift)
+        # Only applies to known portfolio tickers, not on-the-fly
         if ticker in POST_2010_ONLY:
             df = df[df.index >= "2010-01-01"]
             log.info(f"  {ticker}: restricted to post-2010 data ({len(df):,} rows)")
+
+        # For on-the-fly tickers: always use full available history
+        # (no regime restriction — we don't know their history yet)
 
         # Filter to purchase window
         window = df[df.index.day >= PURCHASE_WINDOW_START].copy()

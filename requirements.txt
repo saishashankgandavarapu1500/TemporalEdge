@@ -1,6 +1,6 @@
-# TemporalEdge — Python Dependencies
-# Install: pip install -r requirements.txt
-# On M2 Mac: use conda for lightgbm (see README)
+# TemporalEdge — Phase 6 deployment requirements
+# Pinned for Streamlit Cloud (Python 3.11, linux/x86_64)
+# Do NOT add fastapi/uvicorn — not needed on Streamlit Cloud
 
 # Data
 yfinance>=0.2.40
@@ -16,9 +16,8 @@ ta>=0.11.0
 # ML
 lightgbm>=4.0.0
 scikit-learn>=1.3.0
-optuna>=3.0.0          # hyperparameter tuning
 
-# Experiment tracking
+# Experiment tracking — disabled on cloud (no local DB), kept for import compat
 mlflow>=2.8.0
 
 # LLM (Groq — free tier)
@@ -27,10 +26,6 @@ groq>=0.4.0
 # Dashboard
 streamlit>=1.28.0
 plotly>=5.17.0
-
-# API
-fastapi>=0.104.0
-uvicorn>=0.24.0
 
 # Utilities
 python-dotenv>=1.0.0

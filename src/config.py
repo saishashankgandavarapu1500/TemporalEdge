@@ -1,19 +1,50 @@
 """
 TemporalEdge — Central Config
 Single source of truth. Change things here, everything updates.
+
+Phase 6 change: paths are now cloud-aware.
+On Streamlit Cloud the repo root is read-only; writable dirs are
+redirected to /tmp so data/model downloads don't crash.
 """
 
+import os
 from pathlib import Path
 
-# ── Paths ────────────────────────────────────────────────────────────────────
-ROOT        = Path(__file__).resolve().parents[1]
-DATA_RAW    = ROOT / "data" / "raw"
-DATA_FEAT   = ROOT / "data" / "features"
-DATA_MACRO  = ROOT / "data" / "macro"
-DATA_CACHE  = ROOT / "data" / "cache"
+# ── Environment detection ─────────────────────────────────────────────────────
+# Streamlit Cloud sets IS_STREAMLIT_CLOUD or we detect via missing home dir
+_IS_CLOUD = (
+    os.environ.get("IS_STREAMLIT_CLOUD") == "1"
+    or os.environ.get("STREAMLIT_SHARING_MODE") == "1"
+    or not Path("/Users").exists()          # not a Mac/local machine
+)
 
-for p in [DATA_RAW, DATA_FEAT, DATA_MACRO, DATA_CACHE]:
+# ── Paths ────────────────────────────────────────────────────────────────────
+ROOT = Path(__file__).resolve().parents[1]
+
+if _IS_CLOUD:
+    # Streamlit Cloud: repo is read-only after deploy.
+    # Write all generated data to /tmp which is writable.
+    _WRITABLE = Path("/tmp/temporaledge")
+else:
+    _WRITABLE = ROOT
+
+DATA_RAW    = _WRITABLE / "data" / "raw"
+DATA_FEAT   = _WRITABLE / "data" / "features"
+DATA_MACRO  = _WRITABLE / "data" / "macro"
+DATA_CACHE  = _WRITABLE / "data" / "cache"
+
+# Dashboard cache lives inside the repo so it can be committed by GitHub Actions
+# and served directly on both local and cloud.
+DASHBOARD_CACHE = ROOT / "dashboard" / "cache"
+
+for p in [DATA_RAW, DATA_FEAT, DATA_MACRO, DATA_CACHE, DASHBOARD_CACHE,
+          DASHBOARD_CACHE / "on_demand"]:
     p.mkdir(parents=True, exist_ok=True)
+
+# ── MLflow ───────────────────────────────────────────────────────────────────
+# Disabled on cloud (no persistent sqlite). Trainer falls back gracefully.
+MLFLOW_ENABLED = not _IS_CLOUD
+MLFLOW_URI     = f"sqlite:///{ROOT}/mlflow.db" if MLFLOW_ENABLED else None
 
 # ── Your Portfolio ───────────────────────────────────────────────────────────
 PORTFOLIO = {
@@ -31,41 +62,27 @@ PORTFOLIO = {
 }
 
 # ── Macro / Reference Tickers ────────────────────────────────────────────────
-# These are fetched alongside portfolio tickers but stored separately
 MACRO_TICKERS = {
-    # Volatility & Sentiment
     "^VIX":       "vix",
-    "^VXN":       "vix_nasdaq",   # Nasdaq VIX — if download fails, skipped gracefully
-
-    # Equity Benchmarks
+    "^VXN":       "vix_nasdaq",
     "^GSPC":      "sp500",
     "^NDX":       "nasdaq100",
     "^RUT":       "russell2000",
-
-    # Rates & Fixed Income
     "^TNX":       "us10y_yield",
     "^IRX":       "us3m_yield",
     "^TYX":       "us30y_yield",
-
-    # Currencies
     "DX-Y.NYB":   "usd_index",
     "EURUSD=X":   "eur_usd",
     "JPY=X":      "usd_jpy",
     "CNY=X":      "usd_cny",
-
-    # Commodities
     "GC=F":       "gold",
     "CL=F":       "oil_wti",
     "BZ=F":       "oil_brent",
     "HG=F":       "copper",
     "NG=F":       "nat_gas",
     "SI=F":       "silver",
-
-    # Credit / Risk
     "HYG":        "high_yield_etf",
     "LQD":        "invest_grade_etf",
-
-    # Sector Proxies
     "QQQ":        "tech_etf",
     "XLF":        "financials_etf",
     "XLE":        "energy_etf",
@@ -73,18 +90,16 @@ MACRO_TICKERS = {
 }
 
 # ── Date Range ───────────────────────────────────────────────────────────────
-START_DATE = "2000-01-01"   # yfinance clips automatically per ticker's IPO
+START_DATE = "2000-01-01"
 
 # ── Purchase Window ──────────────────────────────────────────────────────────
-# Days of month considered for optimal buy (your current = 27th/28th)
-PURCHASE_WINDOW_START = 18   # start of window
-PURCHASE_WINDOW_END   = 5    # end = first 5 days of NEXT month
-YOUR_CURRENT_DAY      = 27   # your Robinhood recurring day
+PURCHASE_WINDOW_START = 18
+PURCHASE_WINDOW_END   = 5
+YOUR_CURRENT_DAY      = 27
 
 # ── Feature Engineering ──────────────────────────────────────────────────────
-# Rolling windows used for technical indicators
-ROLLING_WINDOWS = [5, 10, 21, 63]       # ~1w, 2w, 1mo, 1q
-FORWARD_WINDOWS = [7, 14, 21, 30]       # prediction horizons (days)
+ROLLING_WINDOWS = [5, 10, 21, 63]
+FORWARD_WINDOWS = [7, 14, 21, 30]
 
 # ── Model ────────────────────────────────────────────────────────────────────
 LIGHTGBM_PARAMS = {
@@ -98,15 +113,15 @@ LIGHTGBM_PARAMS = {
     "colsample_bytree": 0.8,
     "random_state":     42,
     "verbose":          -1,
-    "n_jobs":           -1,   # uses all M2 cores
+    "n_jobs":           -1,
 }
 
-WALK_FORWARD_TRAIN_MONTHS = 36   # 3 years training window
-WALK_FORWARD_TEST_MONTHS  = 1    # predict 1 month at a time
+WALK_FORWARD_TRAIN_MONTHS = 36
+WALK_FORWARD_TEST_MONTHS  = 1
 
 # ── Monte Carlo ──────────────────────────────────────────────────────────────
 MONTE_CARLO_RUNS_BACKTEST = 10_000
-MONTE_CARLO_RUNS_LIVE     = 1_000    # faster for web app requests
+MONTE_CARLO_RUNS_LIVE     = 1_000
 
 # ── Logging ──────────────────────────────────────────────────────────────────
 LOG_LEVEL = "INFO"
