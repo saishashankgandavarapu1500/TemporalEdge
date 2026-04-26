@@ -499,10 +499,24 @@ def evaluate_backtest(predictions_df: pd.DataFrame, ticker: str) -> dict:
         return {}
 
     df_results = pd.DataFrame(results)
-    win_rate   = df_results["model_beat_27"].mean() * 100
-    avg_saving = df_results["model_saving_vs_27"].mean()
-    avg_capture = df_results["capture_rate"].mean()
+    win_rate      = df_results["model_beat_27"].mean() * 100
+    avg_saving    = df_results["model_saving_vs_27"].mean()
     median_saving = df_results["model_saving_vs_27"].median()
+
+    # Capture rate fix: the raw mean is distorted by large negative values in
+    # loss months (e.g. model_saving=-3%, optimal=0.5% → capture=-600%).
+    # These blow up the mean even when the model wins 67% of the time.
+    # Fix: use median capture over months where there was a real opportunity
+    # (optimal_saving_vs_27 > 0.1pp). Median is robust to the blow-up.
+    # Also clip each month's capture to [-100, 100] before taking the median
+    # so outliers in tiny-spread months don't corrupt the result.
+    opportunity_rows = df_results[df_results["optimal_saving_vs_27"] > 0.1].copy()
+    if len(opportunity_rows) >= 10:
+        opportunity_rows["capture_clipped"] = opportunity_rows["capture_rate"].clip(-100, 100)
+        avg_capture = float(opportunity_rows["capture_clipped"].median())
+    else:
+        # Fallback: clipped mean across all rows
+        avg_capture = float(df_results["capture_rate"].clip(-100, 100).mean())
 
     return {
         "ticker":           ticker,

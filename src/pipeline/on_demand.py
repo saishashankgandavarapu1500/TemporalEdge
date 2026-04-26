@@ -561,12 +561,12 @@ def _run_simulation(
     bt      = model_bundle.get("backtest", {})
     n_folds = len(model_bundle.get("wf_fold_metrics", []))
 
-    # Port of trainer.py capture-rate guard: only credit capture when there
-    # is a meaningful spread to capture (> 0.1 pp).  Negative or near-zero
-    # denominators produce nonsense ratios that corrupt the trust score
-    # (e.g. IVV was showing -23% capture → wrongly Tier B instead of A).
+    # avg_capture_rate from trainer.py is now the median capture over
+    # positive-opportunity months (> 0.1pp spread), clipped to [-100,100].
+    # Guard: if the stored value is still negative or near-zero (old pkl),
+    # treat as 0 so the trust score doesn't unfairly penalise the ticker.
     raw_cap = bt.get("avg_capture_rate", 0) or 0
-    cap     = raw_cap if raw_cap > 0.1 else 0.0
+    cap     = max(0.0, float(raw_cap))   # floor at 0 — negative = no credit, not penalty
     trust        = _compute_trust(
         win_rate, avg_save, cap, beta, n_folds, p["p10"], p["p90"]
     )

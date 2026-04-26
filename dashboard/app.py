@@ -23,7 +23,7 @@ st.set_page_config(
     page_title="TemporalEdge",
     page_icon="⏱",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 # ── Design system ─────────────────────────────────────────────────────────────
@@ -61,7 +61,7 @@ html, body, [class*="css"] {
   color: var(--text-1) !important;
 }
 
-/* Sidebar styling */
+/* ── Sidebar: open state ────────────────────────────────────────── */
 section[data-testid="stSidebar"] {
     background-color: #0D0F14 !important;
     border-right: 1px solid #1E2330 !important;
@@ -97,6 +97,35 @@ section[data-testid="stSidebar"] .stButton > button[kind="primary"] {
 section[data-testid="stSidebar"] .stButton > button[kind="primary"]:hover {
     background: #2DB37A !important;
     color: #0D0F14 !important;
+}
+
+/* ── Main content: center when sidebar is collapsed ─────────────────────── */
+/* When sidebar is closed, Streamlit adds data-collapsed="true" to the     */
+/* AppView container. We use this to re-center the block-container.        */
+[data-testid="stAppViewContainer"] > section:last-child {
+    transition: margin-left 0.3s ease;
+}
+/* Remove left padding offset Streamlit applies for sidebar — let the      */
+/* block-container max-width + auto margins do the centering.              */
+.block-container {
+    padding: 1.5rem 2rem 3rem !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ── Sidebar toggle button — make it visible and styled ────────────────── */
+button[data-testid="collapsedControl"] {
+    background: #141720 !important;
+    border: 1px solid #252A38 !important;
+    border-radius: 0 6px 6px 0 !important;
+    color: #9AA0B4 !important;
+    top: 1.5rem !important;
+}
+button[data-testid="collapsedControl"]:hover {
+    background: #1A1E2A !important;
+    border-color: #2DB37A !important;
+    color: #2DB37A !important;
 }
 
 /* Hide Streamlit chrome */
@@ -319,13 +348,36 @@ def load_simulation_results():
 
 def render_header(active_tab: str):
     now = datetime.now().strftime("%d %b %Y  %H:%M")
+    active = get_active_portfolio()
+    n_tickers  = len(active)
+    total_mo   = sum(v["monthly_usd"] for v in active.values())
+
     st.markdown(f"""
     <div class="te-header">
         <div>
             <div class="te-logo">TEMPORAL<span>EDGE</span></div>
             <div class="te-meta">portfolio-aware DCA timing system</div>
         </div>
-        <div class="te-meta">{now} UTC</div>
+        <div style="display:flex;align-items:center;gap:1.5rem;">
+            <div style="font-family:var(--mono);font-size:0.68rem;color:#5C6378;
+                        text-align:right;line-height:1.6;">
+                {now} UTC<br>
+                <span style="color:#9AA0B4">{n_tickers} tickers · <span style="color:#2DB37A">${total_mo}/mo</span></span>
+            </div>
+            <button onclick="
+                var btn = window.parent.document.querySelector('button[data-testid=\"collapsedControl\"]');
+                var sidebar = window.parent.document.querySelector('section[data-testid=\"stSidebar\"]');
+                if (btn) btn.click();
+            " style="
+                background:#141720;border:1px solid #252A38;border-radius:5px;
+                color:#9AA0B4;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;
+                padding:0.35rem 0.75rem;cursor:pointer;letter-spacing:0.04em;
+                transition:all 0.15s;
+            "
+            onmouseover="this.style.borderColor='#2DB37A';this.style.color='#2DB37A'"
+            onmouseout="this.style.borderColor='#252A38';this.style.color='#9AA0B4'"
+            >⚙ Portfolio</button>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
