@@ -536,31 +536,57 @@ def render_simulator():
                         st.error(f"Simulation failed: {e}")
                         return
             else:
-                # Full on-demand pipeline with progress bar
-                progress_bar = st.progress(0)
-                status_text  = st.empty()
+                # Full on-demand pipeline — use session_state to survive reruns.
+                # Streamlit reruns the entire script on every widget interaction
+                # (including progress bar updates), which would kill a 2-min pipeline.
+                # We store the result in session_state so it persists across reruns
+                # and only run the pipeline once per ticker+click.
+                _key = f"od_result_{ticker_input}"
+                _running_key = f"od_running_{ticker_input}"
 
-                def update_progress(fraction: float, message: str):
-                    progress_bar.progress(min(fraction, 1.0))
-                    status_text.markdown(
-                        f'<div style="font-family:var(--mono);font-size:0.75rem;'
-                        f'color:#9AA0B4">{message}</div>',
-                        unsafe_allow_html=True,
-                    )
+                if not st.session_state.get(_running_key, False):
+                    # Mark as running so reruns don't re-enter
+                    st.session_state[_running_key] = True
+                    st.session_state.pop(_key, None)   # clear any old result
 
-                try:
-                    from src.pipeline.on_demand import run_on_demand
-                    result = run_on_demand(
-                        ticker_input,
-                        monthly_usd=float(monthly_usd),
-                        horizon_years=horizon,
-                        n_runs=1000,
-                        progress_cb=update_progress,
-                    )
-                    progress_bar.progress(1.0)
-                    status_text.empty()
-                except Exception as e:
-                    st.error(f"Pipeline failed: {e}")
+                    progress_bar = st.progress(0)
+                    status_text  = st.empty()
+
+                    def update_progress(fraction: float, message: str):
+                        try:
+                            progress_bar.progress(min(fraction, 1.0))
+                            status_text.markdown(
+                                f'<div style="font-family:var(--mono);font-size:0.75rem;'
+                                f'color:#9AA0B4">{message}</div>',
+                                unsafe_allow_html=True,
+                            )
+                        except Exception:
+                            pass   # rerun may have cleared the placeholder
+
+                    try:
+                        from src.pipeline.on_demand import run_on_demand
+                        _res = run_on_demand(
+                            ticker_input,
+                            monthly_usd=float(monthly_usd),
+                            horizon_years=horizon,
+                            n_runs=1000,
+                            progress_cb=update_progress,
+                        )
+                        st.session_state[_key] = _res
+                        progress_bar.progress(1.0)
+                        status_text.empty()
+                    except Exception as e:
+                        st.session_state[_running_key] = False
+                        st.error(f"Pipeline failed: {e}")
+                        return
+                    finally:
+                        st.session_state[_running_key] = False
+
+                # Use session_state result if available
+                if _key in st.session_state:
+                    result = st.session_state[_key]
+                else:
+                    st.info("Pipeline running — please wait...")
                     return
 
         if result is None:

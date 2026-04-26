@@ -25,9 +25,11 @@ data/features/
 data/macro/
 data/cache/
 
-# ── ML artefacts — too large for git, rebuilt by pipeline ────────────────────
-models/*.pkl
-models/*.model
+# ── ML artefacts ─────────────────────────────────────────────────────────────
+# PKL files ARE committed (2-3MB each, 61MB total — fine for GitHub)
+# They are required on Streamlit Cloud since the pipeline can't retrain there
+# models/*.pkl  <-- intentionally NOT excluded
+
 mlflow.db
 mlflow.db-shm
 mlflow.db-wal
@@ -52,14 +54,7 @@ Thumbs.db
 .idea/
 
 # ── Streamlit ────────────────────────────────────────────────────────────────
-# Keep .streamlit/config.toml (theme) but never secrets
 .streamlit/secrets.toml
 
-# ── On-demand cache — large, rebuilt on first run, not needed in repo ─────────
+# ── On-demand cache — large, rebuilt on first user request ───────────────────
 dashboard/cache/on_demand/
-
-# ── KEEP these (explicitly un-ignore) ────────────────────────────────────────
-# dashboard/cache/execution_plan.json  ← committed by GitHub Actions each month
-# results/portfolio_simulation.json   ← committed by GitHub Actions each month
-# models/*_backtest.csv               ← small, useful for Evidence tab
-# models/backtest_summary.json        ← small summary
