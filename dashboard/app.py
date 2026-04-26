@@ -23,7 +23,7 @@ st.set_page_config(
     page_title="TemporalEdge",
     page_icon="⏱",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 
 # ── Design system ─────────────────────────────────────────────────────────────
@@ -114,22 +114,28 @@ section[data-testid="stSidebar"] .stButton > button[kind="primary"]:hover {
     margin-right: auto !important;
 }
 
-/* ── Sidebar toggle button — make it visible and styled ────────────────── */
+/* ── Native sidebar toggle arrow — green, always visible ───────────────── */
 button[data-testid="collapsedControl"] {
-    background: #141720 !important;
-    border: 1px solid #252A38 !important;
+    background: #0D2B1A !important;
+    border: 1px solid #2DB37A !important;
+    border-left: none !important;
     border-radius: 0 6px 6px 0 !important;
-    color: #9AA0B4 !important;
-    top: 1.5rem !important;
+    color: #2DB37A !important;
+    top: 3.5rem !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
 }
 button[data-testid="collapsedControl"]:hover {
-    background: #1A1E2A !important;
-    border-color: #2DB37A !important;
-    color: #2DB37A !important;
+    background: #2DB37A !important;
+    color: #0D0F14 !important;
+}
+button[data-testid="collapsedControl"] svg {
+    fill: currentColor !important;
+    stroke: currentColor !important;
 }
 
 /* Hide Streamlit chrome */
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer { visibility: hidden; }
 .block-container { padding: 1.5rem 2rem 3rem !important; max-width: 1400px; }
 
 /* Top nav */
@@ -347,42 +353,35 @@ def load_simulation_results():
 # ── Header ────────────────────────────────────────────────────────────────────
 
 def render_header(active_tab: str):
-    now = datetime.now().strftime("%d %b %Y  %H:%M")
-    active = get_active_portfolio()
-    n_tickers  = len(active)
-    total_mo   = sum(v["monthly_usd"] for v in active.values())
+    now      = datetime.now().strftime("%d %b %Y  %H:%M")
+    active   = get_active_portfolio()
+    total_mo = sum(v["monthly_usd"] for v in active.values())
+    n_tickers = len(active)
 
-    st.markdown(f"""
-    <div class="te-header">
-        <div>
-            <div class="te-logo">TEMPORAL<span>EDGE</span></div>
-            <div class="te-meta">portfolio-aware DCA timing system</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:1.5rem;">
-            <div style="font-family:var(--mono);font-size:0.68rem;color:#5C6378;
-                        text-align:right;line-height:1.6;">
-                {now} UTC<br>
-                <span style="color:#9AA0B4">{n_tickers} tickers · <span style="color:#2DB37A">${total_mo}/mo</span></span>
+    # Header: logo left, portfolio summary + native sidebar hint right
+    c_logo, c_meta = st.columns([5, 2])
+    with c_logo:
+        st.markdown(f"""
+        <div class="te-header" style="padding-bottom:0">
+            <div>
+                <div class="te-logo">TEMPORAL<span>EDGE</span></div>
+                <div class="te-meta">portfolio-aware DCA timing system</div>
             </div>
-            <button onclick="
-                var btn = window.parent.document.querySelector('button[data-testid=\"collapsedControl\"]');
-                var sidebar = window.parent.document.querySelector('section[data-testid=\"stSidebar\"]');
-                if (btn) btn.click();
-            " style="
-                background:#141720;border:1px solid #252A38;border-radius:5px;
-                color:#9AA0B4;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;
-                padding:0.35rem 0.75rem;cursor:pointer;letter-spacing:0.04em;
-                transition:all 0.15s;
-            "
-            onmouseover="this.style.borderColor='#2DB37A';this.style.color='#2DB37A'"
-            onmouseout="this.style.borderColor='#252A38';this.style.color='#9AA0B4'"
-            >⚙ Portfolio</button>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
+    with c_meta:
+        st.markdown(f"""
+        <div style="font-family:var(--mono);font-size:0.68rem;color:#5C6378;
+                    text-align:right;line-height:1.9;padding-top:0.4rem;">
+            {now} UTC<br>
+            <span style="color:#9AA0B4">{n_tickers} tickers · </span>
+            <span style="color:#2DB37A">${total_mo}/mo</span><br>
+            <span style="color:#3C4258;font-size:0.6rem;">
+                ← click <strong style="color:#5C6378">&gt;</strong> to edit portfolio
+            </span>
+        </div>
+        """, unsafe_allow_html=True)
 
-
-# ── Page 1: Execution Plan ────────────────────────────────────────────────────
 
 def render_execution_plan():
     plan_data = load_execution_plan()
@@ -422,7 +421,74 @@ def render_execution_plan():
     summary = plan_data.get("summary", {})
     g, a, gr = summary.get("green_count",0), summary.get("amber_count",0), summary.get("grey_count",0)
 
-    st.markdown(f"""
+    # Stat bar placeholder — will be filled after ep is built with live counts
+    stat_bar_placeholder = st.empty()
+
+    # ── Tier legend ────────────────────────────────────────────────────────
+    st.markdown("""
+    <div class="tier-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#2DB37A"></div>ACT ON MODEL — high confidence, stable signal</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#E8A020"></div>USE LOOSELY — review context before acting</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#6B7280"></div>SKIP TIMING — keep day 27 schedule</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Ticker cards ───────────────────────────────────────────────────────
+    ep = plan_data.get("execution_plan", {})
+    active_portfolio = get_active_portfolio()
+
+    # Show only tickers in the user's active portfolio.
+    # A ticker is "known" if it's in the monthly execution_plan cache OR
+    # in the on-demand cache (i.e. user already ran it in the Simulator).
+    from src.pipeline.on_demand import _cache_valid, _load_cache, CACHE_DIR as OD_CACHE_DIR
+    cached_tickers  = set(ep.keys())
+    user_tickers    = set(active_portfolio.keys())
+
+    # Also check on-demand cache — inject those results into ep so cards render
+    for t in user_tickers - cached_tickers:
+        if _cache_valid(t):
+            od = _load_cache(t)
+            if od and "summary" in od:
+                s = od["summary"]
+                # Build a minimal execution plan entry from on-demand result
+                win   = s.get("win_rate_pct", 50)
+                tier  = s.get("tier", "B")
+                score = {"A": 7, "B": 5, "C": 3}.get(tier, 5)
+                ep[t] = {
+                    "ticker":           t,
+                    "name":             s.get("ticker_meta", {}).get("name", t),
+                    "monthly_usd":      active_portfolio[t]["monthly_usd"],
+                    "recommended_day":  od.get("recommended_day", 27),
+                    "top_3_days":       od.get("top_3_days", [27]),
+                    "confidence":       od.get("confidence", 0.5),
+                    "predicted_saving": s.get("avg_saving_pct", 0.0),
+                    "suggested_window": od.get("suggested_window", ""),
+                    "advisory":         od.get("advisory", ""),
+                    "key_factor":       od.get("key_factor", ""),
+                    "llm_action":       od.get("llm_action", "consider"),
+                    "exec_tier":        {"A":"green","B":"amber","C":"grey"}.get(tier,"amber"),
+                    "exec_score":       score,
+                    "exec_reason":      s.get("trust_summary", ""),
+                    "win_rate_pct":     win,
+                }
+                cached_tickers.add(t)
+
+    known_tickers   = user_tickers & cached_tickers
+    unknown_tickers = user_tickers - cached_tickers
+
+    # Patch monthly_usd on every card from the live active portfolio
+    # (the cached plan has stale amounts; user may have edited them)
+    for t in known_tickers:
+        if t in active_portfolio:
+            ep[t]["monthly_usd"] = active_portfolio[t]["monthly_usd"]
+
+    # Recount tiers from the live merged ep (includes on-demand tickers)
+    live_g = sum(1 for t in known_tickers if ep[t].get("exec_tier") == "green")
+    live_a = sum(1 for t in known_tickers if ep[t].get("exec_tier") == "amber")
+    live_gr= sum(1 for t in known_tickers if ep[t].get("exec_tier") == "grey")
+
+    # Now render the stat bar with live counts into the placeholder
+    stat_bar_placeholder.markdown(f"""
     <div class="stat-row">
       <div class="stat-box">
         <div class="stat-val" style="color:{vix_color}">{vix:.1f}</div>
@@ -442,11 +508,11 @@ def render_execution_plan():
       </div>
       <div class="stat-box">
         <div class="stat-val">
-          <span style="color:#2DB37A">{g}</span>
+          <span style="color:#2DB37A">{live_g}</span>
           <span style="color:#5C6378; font-size:1rem"> / </span>
-          <span style="color:#E8A020">{a}</span>
+          <span style="color:#E8A020">{live_a}</span>
           <span style="color:#5C6378; font-size:1rem"> / </span>
-          <span style="color:#6B7280">{gr}</span>
+          <span style="color:#6B7280">{live_gr}</span>
         </div>
         <div class="stat-lbl">Act · Consider · Skip</div>
       </div>
@@ -456,26 +522,6 @@ def render_execution_plan():
     </div>
     """, unsafe_allow_html=True)
 
-    # ── Tier legend ────────────────────────────────────────────────────────
-    st.markdown("""
-    <div class="tier-legend">
-      <div class="legend-item"><div class="legend-dot" style="background:#2DB37A"></div>ACT ON MODEL — high confidence, stable signal</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#E8A020"></div>USE LOOSELY — review context before acting</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#6B7280"></div>SKIP TIMING — keep day 27 schedule</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # ── Ticker cards ───────────────────────────────────────────────────────
-    ep = plan_data.get("execution_plan", {})
-    active_portfolio = get_active_portfolio()
-
-    # Show only tickers in the user's active portfolio.
-    # Unknown tickers (not in cache) get a "queued" card.
-    cached_tickers  = set(ep.keys())
-    user_tickers    = set(active_portfolio.keys())
-    known_tickers   = user_tickers & cached_tickers
-    unknown_tickers = user_tickers - cached_tickers
-
     # Sort known: green first, then amber, then grey; within tier by score desc
     tier_order = {"green": 0, "amber": 1, "grey": 2}
     sorted_tickers = sorted(
@@ -484,7 +530,7 @@ def render_execution_plan():
                        -ep[t].get("exec_score", 0))
     )
 
-    # Show warning cards for unknown tickers
+    # Show warning for tickers not yet run in either cache
     if unknown_tickers:
         unknown_list = ", ".join(sorted(unknown_tickers))
         st.markdown(f"""
@@ -494,7 +540,7 @@ def render_execution_plan():
             ⏳ <strong>NOT YET ANALYSED:</strong> {unknown_list}<br>
             <span style="color:#9AA0B4;font-size:0.7rem;">
             Go to the Simulator tab → run each ticker once → come back here.
-            Results are cached for future visits.
+            Results cached automatically.
             </span>
         </div>
         """, unsafe_allow_html=True)
@@ -1062,107 +1108,166 @@ def render_evidence():
 
 def render_sidebar():
     """
-    Sidebar portfolio editor.
-    Users can customise their tickers + monthly amounts.
-    Everything stays in st.session_state — no data ever leaves their browser.
+    Sidebar portfolio editor — stateful, rerun-safe.
+
+    Key design: widget values are read from session_state keys directly
+    (st.session_state[f"ticker_input_{i}"]) instead of from return values,
+    so add/delete operations don't lose data on rerun.
     """
     with st.sidebar:
         st.markdown("""
         <div style="font-family:var(--mono);font-size:0.9rem;font-weight:600;
-                    color:#E8EAF0;letter-spacing:0.06em;margin-bottom:0.25rem;">
-            MY PORTFOLIO
-        </div>
+                    color:#E8EAF0;letter-spacing:0.06em;padding-top:0.2rem;
+                    margin-bottom:0.25rem;">MY PORTFOLIO</div>
         <div style="font-family:var(--mono);font-size:0.68rem;color:#5C6378;
                     margin-bottom:1rem;line-height:1.5;">
-            Your data never leaves this browser session.<br>
-            Resets on refresh — no account needed.
-        </div>
+            Session only · no data stored</div>
         """, unsafe_allow_html=True)
 
-        # ── Initialise from defaults on first load ────────────────────────
-        if "user_portfolio" not in st.session_state:
-            st.session_state["user_portfolio"] = dict(_DEFAULT_PORTFOLIO)
+        # ── Initialise state ──────────────────────────────────────────────
         if "sidebar_rows" not in st.session_state:
             st.session_state["sidebar_rows"] = [
                 {"ticker": t, "amount": v["monthly_usd"]}
                 for t, v in _DEFAULT_PORTFOLIO.items()
             ]
+        if "user_portfolio" not in st.session_state:
+            st.session_state["user_portfolio"] = dict(_DEFAULT_PORTFOLIO)
 
         rows = st.session_state["sidebar_rows"]
+        n_rows = len(rows)
 
-        # ── Editable rows ─────────────────────────────────────────────────
+        # ── Column header ─────────────────────────────────────────────────
         st.markdown(
-            '<div style="font-family:var(--mono);font-size:0.68rem;'
-            'color:#9AA0B4;margin-bottom:0.4rem;">TICKER · $/MONTH</div>',
+            '<div style="font-family:var(--mono);font-size:0.65rem;'
+            'color:#5C6378;margin-bottom:0.3rem;letter-spacing:0.08em;">'
+            'TICKER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $/MO</div>',
             unsafe_allow_html=True
         )
 
-        updated_rows = []
-        for i, row in enumerate(rows):
-            c1, c2, c3 = st.columns([2, 1.5, 0.6])
+        # ── Render each row ───────────────────────────────────────────────
+        # IMPORTANT: we do NOT read widget return values here.
+        # Instead we read st.session_state[key] after render.
+        # This prevents the add/delete race condition.
+        delete_idx = None
+        for i in range(n_rows):
+            c1, c2, c3 = st.columns([2, 1.4, 0.6])
             with c1:
-                t = st.text_input(
-                    f"t_{i}", value=row["ticker"],
+                st.text_input(
+                    f"t_{i}",
+                    value=rows[i]["ticker"],
                     label_visibility="collapsed",
                     key=f"ticker_input_{i}",
-                    placeholder="e.g. VOO"
-                ).upper().strip()
+                    placeholder="e.g. VOO",
+                    max_chars=10,
+                )
             with c2:
-                a = st.number_input(
-                    f"a_{i}", value=float(row["amount"]),
+                st.number_input(
+                    f"a_{i}",
+                    value=float(rows[i]["amount"]),
                     min_value=1.0, max_value=50000.0, step=1.0,
                     label_visibility="collapsed",
                     key=f"amount_input_{i}",
-                    format="%.0f"
+                    format="%.0f",
                 )
             with c3:
-                if st.button("✕", key=f"del_{i}", help="Remove"):
-                    # Remove this row — rerun will rebuild
-                    st.session_state["sidebar_rows"].pop(i)
-                    st.rerun()
-            if t:
-                updated_rows.append({"ticker": t, "amount": int(a)})
+                if st.button("✕", key=f"del_{i}", help="Remove row"):
+                    delete_idx = i
 
-        st.session_state["sidebar_rows"] = updated_rows
+        # ── Handle delete — flush widget values first, then remove row ────
+        if delete_idx is not None:
+            # Save current widget values back into rows before deleting
+            for i in range(n_rows):
+                t = st.session_state.get(f"ticker_input_{i}", rows[i]["ticker"])
+                a = st.session_state.get(f"amount_input_{i}", rows[i]["amount"])
+                rows[i] = {"ticker": str(t).upper().strip(), "amount": int(float(a))}
+            rows.pop(delete_idx)
+            # Clean up the widget keys for the deleted row
+            for key in [f"ticker_input_{delete_idx}", f"amount_input_{delete_idx}",
+                        f"del_{delete_idx}"]:
+                st.session_state.pop(key, None)
+            st.session_state["sidebar_rows"] = rows
+            st.rerun()
 
-        # ── Add ticker button ─────────────────────────────────────────────
-        st.markdown("<div style='margin-top:0.5rem'></div>", unsafe_allow_html=True)
-        if len(rows) < 15:
-            if st.button("＋  Add ticker", use_container_width=True):
-                st.session_state["sidebar_rows"].append({"ticker": "", "amount": 10})
+        # ── Add ticker ────────────────────────────────────────────────────
+        st.markdown("<div style='margin-top:0.4rem'></div>", unsafe_allow_html=True)
+        if n_rows < 15:
+            if st.button("＋  Add ticker", key="add_ticker_btn",
+                         use_container_width=True):
+                # Flush current widget values into rows before appending
+                for i in range(n_rows):
+                    t = st.session_state.get(f"ticker_input_{i}", rows[i]["ticker"])
+                    a = st.session_state.get(f"amount_input_{i}", rows[i]["amount"])
+                    rows[i] = {"ticker": str(t).upper().strip(), "amount": int(float(a))}
+                rows.append({"ticker": "", "amount": 10})
+                st.session_state["sidebar_rows"] = rows
                 st.rerun()
         else:
-            st.markdown(
-                '<div style="font-family:var(--mono);font-size:0.68rem;'
-                'color:#5C6378;">Max 15 tickers</div>',
-                unsafe_allow_html=True
-            )
+            st.caption("Max 15 tickers")
 
-        st.markdown("<hr style='border-color:#252A38;margin:1rem 0'>", unsafe_allow_html=True)
+        st.markdown("<hr style='border-color:#252A38;margin:0.75rem 0'>",
+                    unsafe_allow_html=True)
 
-        # ── Apply / Reset buttons ─────────────────────────────────────────
+        # ── Pending changes indicator ─────────────────────────────────────
+        # Check if any widget value differs from the last applied portfolio
+        applied = st.session_state.get("user_portfolio", {})
+        has_pending = False
+        current_tickers = [
+            str(st.session_state.get(f"ticker_input_{i}", rows[i]["ticker"])).upper().strip()
+            for i in range(n_rows)
+        ]
+        if set(current_tickers) - {""} != set(applied.keys()):
+            has_pending = True
+        if not has_pending:
+            for i in range(n_rows):
+                t = current_tickers[i]
+                a = int(float(st.session_state.get(f"amount_input_{i}", rows[i]["amount"])))
+                if t and applied.get(t, {}).get("monthly_usd") != a:
+                    has_pending = True
+                    break
+        if has_pending:
+            st.markdown("""
+            <div style="font-family:var(--mono);font-size:0.65rem;color:#E8A020;
+                        margin-bottom:0.4rem;text-align:center;">
+                ⚠ unsaved changes — click Apply
+            </div>""", unsafe_allow_html=True)
+
+        # ── Apply / Reset ─────────────────────────────────────────────────
         col_a, col_b = st.columns(2)
         with col_a:
-            if st.button("✓  Apply", use_container_width=True, type="primary"):
+            if st.button("✓  Apply", key="apply_btn",
+                         use_container_width=True, type="primary"):
+                # Flush widget values → build portfolio dict
                 new_portfolio = {}
-                for row in st.session_state["sidebar_rows"]:
-                    t = row["ticker"].upper().strip()
+                for i in range(n_rows):
+                    t = str(st.session_state.get(
+                            f"ticker_input_{i}", rows[i]["ticker"])
+                        ).upper().strip()
+                    a = st.session_state.get(
+                            f"amount_input_{i}", rows[i]["amount"])
                     if t:
+                        # Update rows too so next render shows edited values
+                        if i < len(rows):
+                            rows[i] = {"ticker": t, "amount": int(float(a))}
                         new_portfolio[t] = {
-                            "name":        t,
-                            "monthly_usd": int(row["amount"]),
+                            "name": t,
+                            "monthly_usd": int(float(a)),
                         }
                 if new_portfolio:
                     st.session_state["user_portfolio"] = new_portfolio
-                    st.success(f"Portfolio updated — {len(new_portfolio)} tickers")
-                    # Clear old execution plan cache so it re-renders
+                    st.session_state["sidebar_rows"]   = rows
                     st.cache_data.clear()
+                    st.toast(f"✓ Portfolio saved — {len(new_portfolio)} tickers",
+                             icon="✅")
                     st.rerun()
                 else:
                     st.warning("Add at least one ticker")
 
         with col_b:
-            if st.button("↺  Reset", use_container_width=True):
+            if st.button("↺  Reset", key="reset_btn", use_container_width=True):
+                # Clear all widget keys so fresh values render
+                for i in range(n_rows):
+                    st.session_state.pop(f"ticker_input_{i}", None)
+                    st.session_state.pop(f"amount_input_{i}", None)
                 st.session_state["user_portfolio"] = dict(_DEFAULT_PORTFOLIO)
                 st.session_state["sidebar_rows"] = [
                     {"ticker": t, "amount": v["monthly_usd"]}
@@ -1170,27 +1275,23 @@ def render_sidebar():
                 ]
                 st.rerun()
 
-        # ── Portfolio summary ─────────────────────────────────────────────
-        active = get_active_portfolio()
+        # ── Active portfolio summary ───────────────────────────────────────
+        active   = get_active_portfolio()
         total_mo = sum(v["monthly_usd"] for v in active.values())
         n        = len(active)
         st.markdown(f"""
         <div style="background:#141720;border:1px solid #252A38;border-radius:6px;
-                    padding:0.6rem 0.8rem;margin-top:0.75rem;">
-            <div style="font-family:var(--mono);font-size:0.68rem;color:#5C6378;
-                        margin-bottom:0.4rem;">ACTIVE PORTFOLIO</div>
-            <div style="font-family:var(--mono);font-size:0.85rem;color:#E8EAF0;">
-                {n} tickers · <span style="color:#2DB37A">${total_mo}/mo</span>
+                    padding:0.55rem 0.8rem;margin-top:0.6rem;">
+            <div style="font-family:var(--mono);font-size:0.62rem;color:#5C6378;
+                        margin-bottom:0.25rem;letter-spacing:0.08em;">ACTIVE PORTFOLIO</div>
+            <div style="font-family:var(--mono);font-size:0.82rem;color:#E8EAF0;">
+                {n} tickers ·
+                <span style="color:#2DB37A">${total_mo}/mo</span>
             </div>
         </div>
-        """, unsafe_allow_html=True)
-
-        # Privacy note
-        st.markdown("""
-        <div style="font-family:var(--mono);font-size:0.63rem;color:#3C4258;
-                    margin-top:1rem;line-height:1.6;">
-            🔒 Session only. No data stored or transmitted.<br>
-            Resets when you close the tab.
+        <div style="font-family:var(--mono);font-size:0.6rem;color:#3C4258;
+                    margin-top:0.75rem;line-height:1.6;">
+            🔒 Session only. No data stored.<br>Resets on tab close.
         </div>
         """, unsafe_allow_html=True)
 
