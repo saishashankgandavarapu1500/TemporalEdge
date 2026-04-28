@@ -1,0 +1,284 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:        #0D0F14;
+  --bg-card:   #141720;
+  --bg-hover:  #1A1E2A;
+  --border:    #252A38;
+  --border-hi: #323848;
+  --text-1:    #E8EAF0;
+  --text-2:    #9AA0B4;
+  --text-3:    #5C6378;
+  --green:     #2DB37A;
+  --green-bg:  rgba(45,179,122,0.08);
+  --green-brd: rgba(45,179,122,0.25);
+  --amber:     #E8A020;
+  --amber-bg:  rgba(232,160,32,0.08);
+  --amber-brd: rgba(232,160,32,0.25);
+  --grey:      #6B7280;
+  --grey-bg:   rgba(107,114,128,0.06);
+  --grey-brd:  rgba(107,114,128,0.2);
+  --blue:      #4D9EF5;
+  --red:       #E05C5C;
+  --mono:      'IBM Plex Mono', monospace;
+  --sans:      'IBM Plex Sans', sans-serif;
+}
+
+html, body, [class*="css"] {
+  font-family: var(--sans) !important;
+  background-color: var(--bg) !important;
+  color: var(--text-1) !important;
+}
+
+/* ── Hide Streamlit chrome (but NOT the sidebar toggle) ─────────────────── */
+#MainMenu, footer { visibility: hidden; }
+header[data-testid="stHeader"] { display: none !important; }
+
+/* ── Main content — let Streamlit handle sidebar offset naturally ────────── */
+/* Do NOT set margin-left: auto — that fights the sidebar offset.           */
+/* Just control padding and max-width. Streamlit handles the rest.          */
+.block-container {
+    padding: 2rem 2.5rem 3rem !important;
+    max-width: 1200px !important;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+    display: block !important;
+    visibility: visible !important;
+    transform: none !important;
+    min-width: 255px !important;
+    max-width: 270px !important;
+}
+section[data-testid="stSidebar"] .stTextInput input {
+    background: #141720 !important;
+    border: 1px solid #252A38 !important;
+    color: #E8EAF0 !important;
+    font-family: var(--mono) !important;
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.4rem !important;
+    border-radius: 4px !important;
+    height: 2rem !important;
+}
+section[data-testid="stSidebar"] .stNumberInput input {
+    background: #141720 !important;
+    border: 1px solid #252A38 !important;
+    color: #E8EAF0 !important;
+    font-family: var(--mono) !important;
+    font-size: 0.75rem !important;
+    height: 2rem !important;
+    padding: 0.25rem 0.4rem !important;
+}
+section[data-testid="stSidebar"] .stNumberInput button {
+    display: none !important;
+}
+section[data-testid="stSidebar"] .stHorizontalBlock {
+    gap: 0.25rem !important;
+    align-items: center !important;
+}
+section[data-testid="stSidebar"] [data-testid="column"] {
+    padding: 0 !important;
+    min-height: unset !important;
+}
+section[data-testid="stSidebar"] .stTextInput,
+section[data-testid="stSidebar"] .stNumberInput {
+    margin-bottom: 0 !important;
+}
+section[data-testid="stSidebar"] .stTextInput label,
+section[data-testid="stSidebar"] .stNumberInput label {
+    display: none !important;
+}
+section[data-testid="stSidebar"] button {
+    font-family: var(--mono) !important;
+    font-size: 0.7rem !important;
+    border-radius: 4px !important;
+    padding: 0.2rem 0.4rem !important;
+    height: 2rem !important;
+    min-height: unset !important;
+}
+section[data-testid="stSidebar"] .stButton > button[kind="primary"] {
+    background: #1E3A2B !important;
+    border: 1px solid #2DB37A !important;
+    color: #2DB37A !important;
+    font-weight: 600 !important;
+}
+section[data-testid="stSidebar"] .stButton > button[kind="primary"]:hover {
+    background: #2DB37A !important;
+    color: #0D0F14 !important;
+}
+
+/* ── Sidebar toggle — nuclear option: target every possible selector ─────── */
+button[data-testid="collapsedControl"],
+button[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapseButton"] > button,
+div[data-testid="stSidebarCollapsedControl"] > button,
+section[data-testid="stSidebar"] + div > button,
+section[data-testid="stSidebar"] ~ div > button:first-child,
+.st-emotion-cache-czk5ss,
+.st-emotion-cache-1f3w014 {
+    background: #0D2B1A !important;
+    border: 1px solid #2DB37A !important;
+    border-left: none !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: #2DB37A !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: 3.5rem !important;
+    z-index: 99999 !important;
+}
+[data-testid="collapsedControl"],
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarHeader"],
+button[kind="header"],
+button[aria-label="Close sidebar"],
+button[aria-label="Open sidebar"],
+button[title="Close sidebar"],
+button[title="Open sidebar"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+button[data-testid="collapsedControl"]:hover,
+button[data-testid="stSidebarCollapseButton"]:hover {
+    background: #2DB37A !important;
+    color: #0D0F14 !important;
+}
+button[data-testid="collapsedControl"] svg,
+button[data-testid="stSidebarCollapseButton"] svg {
+    fill: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.te-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.75rem;
+}
+.te-logo {
+  font-family: var(--mono); font-size: 1.15rem; font-weight: 600;
+  letter-spacing: 0.08em; color: var(--text-1); margin-bottom: 2px;
+}
+.te-logo span { color: var(--green); }
+.te-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); }
+
+/* ── Ticker cards ────────────────────────────────────────────────────────── */
+.ticker-card {
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 1.1rem 1.25rem; margin-bottom: 0.75rem;
+  background: var(--bg-card); transition: border-color 0.15s;
+}
+.ticker-card:hover { border-color: var(--border-hi); }
+.ticker-card.green { border-left: 3px solid var(--green); background: linear-gradient(90deg, rgba(45,179,122,0.04) 0%, var(--bg-card) 40%); }
+.ticker-card.amber { border-left: 3px solid var(--amber); background: linear-gradient(90deg, rgba(232,160,32,0.04) 0%, var(--bg-card) 40%); }
+.ticker-card.grey  { border-left: 3px solid var(--grey);  background: var(--bg-card); }
+
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
+.card-ticker { font-family: var(--mono); font-size: 1.05rem; font-weight: 600; }
+.card-name   { font-size: 0.78rem; color: var(--text-2); margin-top: 2px; }
+.card-badge  {
+  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
+  padding: 3px 8px; border-radius: 4px; letter-spacing: 0.06em; white-space: nowrap;
+}
+.badge-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-brd); }
+.badge-amber { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-brd); }
+.badge-grey  { background: var(--grey-bg);  color: var(--grey);  border: 1px solid var(--grey-brd); }
+
+.card-rec { display: flex; gap: 2rem; margin-bottom: 0.6rem; align-items: baseline; }
+.rec-day  { font-family: var(--mono); font-size: 1.4rem; font-weight: 600; }
+.rec-label{ font-size: 0.72rem; color: var(--text-3); margin-top: 3px; }
+.rec-conf { font-family: var(--mono); font-size: 0.78rem; color: var(--text-2); }
+
+.conf-bar-wrap { background: var(--border); border-radius: 2px; height: 4px; margin: 0.4rem 0; }
+.conf-bar { height: 4px; border-radius: 2px; }
+.conf-green { background: var(--green); }
+.conf-amber { background: var(--amber); }
+.conf-grey  { background: var(--grey); }
+
+.card-advisory {
+  font-size: 0.80rem; color: var(--text-2); line-height: 1.55;
+  border-top: 1px solid var(--border); padding-top: 0.6rem; margin-top: 0.4rem;
+}
+.key-factor { display: inline-block; font-family: var(--mono); font-size: 0.68rem;
+              color: var(--text-3); background: var(--border); padding: 2px 7px;
+              border-radius: 3px; margin-top: 0.4rem; }
+
+/* ── Section headers ─────────────────────────────────────────────────────── */
+.section-label {
+  font-family: var(--mono); font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.12em; color: var(--text-3); text-transform: uppercase;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+/* ── Tier legend ─────────────────────────────────────────────────────────── */
+.tier-legend { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 0.4rem;
+               font-size: 0.75rem; color: var(--text-2); }
+.legend-dot  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── Stat boxes ──────────────────────────────────────────────────────────── */
+.stat-row { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.stat-box {
+  flex: 1; min-width: 130px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.9rem 1.1rem;
+}
+.stat-val  { font-family: var(--mono); font-size: 1.35rem; font-weight: 600; }
+.stat-lbl  { font-size: 0.72rem; color: var(--text-3); margin-top: 3px; }
+.stat-green { color: var(--green); }
+.stat-amber { color: var(--amber); }
+.stat-white { color: var(--text-1); }
+
+/* ── Tabs ────────────────────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+  background: transparent !important;
+  border-bottom: 1px solid var(--border) !important;
+  gap: 0 !important;
+}
+.stTabs [data-baseweb="tab"] {
+  font-family: var(--mono) !important; font-size: 0.78rem !important;
+  letter-spacing: 0.06em !important; color: var(--text-3) !important;
+  background: transparent !important; border: none !important;
+  padding: 0.6rem 1.25rem !important;
+}
+.stTabs [aria-selected="true"] {
+  color: var(--text-1) !important;
+  border-bottom: 2px solid var(--green) !important;
+}
+
+/* ── Inputs (main area) ──────────────────────────────────────────────────── */
+.stTextInput input, .stNumberInput input, .stSelectbox select {
+  background: var(--bg-card) !important; border: 1px solid var(--border) !important;
+  color: var(--text-1) !important; font-family: var(--mono) !important;
+  font-size: 0.85rem !important; border-radius: 6px !important;
+}
+.stSlider > div > div { background: var(--border) !important; }
+
+/* ── Buttons (main area) ─────────────────────────────────────────────────── */
+.stButton > button {
+  background: transparent !important; border: 1px solid var(--border) !important;
+  color: var(--text-2) !important; font-family: var(--mono) !important;
+  font-size: 0.78rem !important; letter-spacing: 0.06em !important;
+  border-radius: 6px !important; transition: all 0.15s !important;
+}
+.stButton > button:hover {
+  border-color: var(--green) !important; color: var(--green) !important;
+}
+
+/* ── Plotly / Table ──────────────────────────────────────────────────────── */
+.js-plotly-plot { border-radius: 8px; }
+.te-table { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 0.78rem; }
+.te-table th { color: var(--text-3); font-weight: 500; padding: 0.4rem 0.75rem;
+               border-bottom: 1px solid var(--border); text-align: left; letter-spacing: 0.06em; }
+.te-table td { color: var(--text-1); padding: 0.45rem 0.75rem;
+               border-bottom: 1px solid rgba(37,42,56,0.5); }
+.te-table tr:hover td { background: var(--bg-hover); }
+.td-green { color: var(--green) !important; }
+.td-amber { color: var(--amber) !important; }
+.td-red   { color: var(--red)   !important; }
+.td-grey  { color: var(--grey)  !important; }
