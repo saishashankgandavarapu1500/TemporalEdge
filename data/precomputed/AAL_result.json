@@ -1,0 +1,267 @@
+{
+  "ticker": "AAL",
+  "summary": {
+    "ticker": "AAL",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (75%)",
+      "well-trained (212 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (10.3pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (68%); strong capture (75%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (10.3pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 67.8,
+    "avg_saving_pct": 1.969,
+    "median_saving_pct": 1.361,
+    "percentiles": {
+      "p10": -2.642,
+      "p25": 0.0,
+      "p50": 1.361,
+      "p75": 4.519,
+      "p90": 7.628
+    },
+    "clipped_values": 153,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.24,
+    "avg_dollar_per_year": 2.88,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 474,
+        "extra": 23
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 967,
+        "extra": 81
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3353,
+        "extra": 600
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23741,
+        "extra": 8769
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.77,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 812,
+            "extra": 37,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2270,
+            "extra": 221,
+            "lift_pct": 10.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9594,
+            "extra": 2000,
+            "lift_pct": 26.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.19,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 967,
+            "extra": 81,
+            "lift_pct": 9.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3353,
+            "extra": 600,
+            "lift_pct": 21.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23741,
+            "extra": 8769,
+            "lift_pct": 58.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.09,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 504,
+            "extra": 53,
+            "lift_pct": 11.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1080,
+            "extra": 194,
+            "lift_pct": 21.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4305,
+            "extra": 1552,
+            "lift_pct": 56.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 42714,
+            "extra": 27741,
+            "lift_pct": 185.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 324,
+        "win_rate": 63.9,
+        "avg_saving": 1.296,
+        "pct_of_runs": 32.4
+      },
+      "normal": {
+        "n_runs": 316,
+        "win_rate": 71.8,
+        "avg_saving": 2.019,
+        "pct_of_runs": 31.6
+      },
+      "elevated": {
+        "n_runs": 283,
+        "win_rate": 71.7,
+        "avg_saving": 2.801,
+        "pct_of_runs": 28.3
+      },
+      "fear": {
+        "n_runs": 77,
+        "win_rate": 53.2,
+        "avg_saving": 1.536,
+        "pct_of_runs": 7.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AAL",
+      "n_months": 212,
+      "win_rate_pct": 68.9,
+      "avg_saving_pct": 2.358,
+      "median_saving_pct": 1.678,
+      "avg_capture_rate": 74.7,
+      "best_month": 26.79,
+      "worst_month": -32.63
+    },
+    "ticker_meta": {
+      "rows": 5179,
+      "start": "2005-09-27",
+      "end": "2026-04-29",
+      "name": "American Airlines Group Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.248
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider AAL's dip below SMA20 and macro signals. Oil's surge may impact AAL. ",
+      "suggested_window": "days 21-23",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "AAL",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 11.9,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        21,
+        23
+      ],
+      "predicted_saving": 0.006,
+      "day_scores": {
+        "20": 0.0006,
+        "21": 0.2057,
+        "22": 0.2408,
+        "23": 0.189,
+        "24": 0.0813,
+        "27": 0.1038,
+        "28": 0.0442,
+        "29": 0.0587
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1371
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 131.6,
+  "generated": "2026-04-30T00:59:48.949768",
+  "cached": false
+}

@@ -1,0 +1,267 @@
+{
+  "ticker": "ELV",
+  "summary": {
+    "ticker": "ELV",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (67%)",
+      "strong capture (100%)",
+      "low beta (0.5) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (67%); strong capture (100%). ",
+    "win_rate_pct": 66.6,
+    "avg_saving_pct": 1.033,
+    "median_saving_pct": 1.02,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": -0.068,
+      "p50": 1.02,
+      "p75": 2.5,
+      "p90": 2.5
+    },
+    "clipped_values": 480,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1299,
+    "avg_dollar_per_year": 1.56,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 463,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 927,
+        "extra": 42
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3050,
+        "extra": 298
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19026,
+        "extra": 4054
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.93,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 794,
+            "extra": 19,
+            "lift_pct": 2.5
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2161,
+            "extra": 113,
+            "lift_pct": 5.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8577,
+            "extra": 983,
+            "lift_pct": 12.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.67,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 463,
+            "extra": 12,
+            "lift_pct": 2.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 927,
+            "extra": 42,
+            "lift_pct": 4.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3050,
+            "extra": 298,
+            "lift_pct": 10.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19026,
+            "extra": 4054,
+            "lift_pct": 27.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.72,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 478,
+            "extra": 27,
+            "lift_pct": 6.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 982,
+            "extra": 96,
+            "lift_pct": 10.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3467,
+            "extra": 715,
+            "lift_pct": 26.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25683,
+            "extra": 10711,
+            "lift_pct": 71.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 337,
+        "win_rate": 63.8,
+        "avg_saving": 0.851,
+        "pct_of_runs": 33.7
+      },
+      "normal": {
+        "n_runs": 342,
+        "win_rate": 71.3,
+        "avg_saving": 1.111,
+        "pct_of_runs": 34.2
+      },
+      "elevated": {
+        "n_runs": 249,
+        "win_rate": 65.9,
+        "avg_saving": 1.153,
+        "pct_of_runs": 24.9
+      },
+      "fear": {
+        "n_runs": 72,
+        "win_rate": 59.7,
+        "avg_saving": 1.101,
+        "pct_of_runs": 7.2
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "ELV",
+      "n_months": 225,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 1.891,
+      "median_saving_pct": 1.636,
+      "avg_capture_rate": 100.0,
+      "best_month": 14.07,
+      "worst_month": -8.81
+    },
+    "ticker_meta": {
+      "rows": 6164,
+      "start": "2001-10-30",
+      "end": "2026-04-30",
+      "name": "Elevance Health, Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.498
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 20th, with oil's 12% rise and ELV's momentum above SMA20.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "ELV's momentum"
+    },
+    "lgbm_rec": {
+      "ticker": "ELV",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        22,
+        21
+      ],
+      "predicted_saving": 0.073,
+      "day_scores": {
+        "20": 0.5976,
+        "21": 0.2263,
+        "22": 0.2268,
+        "23": 0.1083,
+        "24": 0.1082,
+        "27": 0.0019,
+        "28": 0.0047,
+        "29": 0.0159,
+        "30": 0.0221
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5957
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 65.9,
+  "generated": "2026-04-30T20:08:04.294600",
+  "cached": false
+}

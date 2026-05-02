@@ -1,0 +1,268 @@
+{
+  "ticker": "PCG",
+  "summary": {
+    "ticker": "PCG",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "strong capture (87%)",
+      "low beta (0.3) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (64%) \u2014 barely above random"
+    ],
+    "trust_summary": "Trust 79/100. Strengths: strong capture (87%); low beta (0.3) \u2014 stable patterns. Concerns: low win rate (64%) \u2014 barely above random.",
+    "win_rate_pct": 63.7,
+    "avg_saving_pct": 0.908,
+    "median_saving_pct": 0.653,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": -0.133,
+      "p50": 0.653,
+      "p75": 2.284,
+      "p90": 2.5
+    },
+    "clipped_values": 403,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1392,
+    "avg_dollar_per_year": 1.67,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 10
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 922,
+        "extra": 36
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3012,
+        "extra": 260
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18475,
+        "extra": 3503
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.82,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 791,
+            "extra": 17,
+            "lift_pct": 2.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2147,
+            "extra": 99,
+            "lift_pct": 4.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8450,
+            "extra": 856,
+            "lift_pct": 11.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.47,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 922,
+            "extra": 36,
+            "lift_pct": 4.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3012,
+            "extra": 260,
+            "lift_pct": 9.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18475,
+            "extra": 3503,
+            "lift_pct": 23.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.27,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 969,
+            "extra": 84,
+            "lift_pct": 9.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3369,
+            "extra": 617,
+            "lift_pct": 22.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24023,
+            "extra": 9050,
+            "lift_pct": 60.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 62.8,
+        "avg_saving": 0.812,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 70.6,
+        "avg_saving": 1.009,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 56.4,
+        "avg_saving": 0.778,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 65.8,
+        "avg_saving": 1.337,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "PCG",
+      "n_months": 225,
+      "win_rate_pct": 72.4,
+      "avg_saving_pct": 1.848,
+      "median_saving_pct": 1.138,
+      "avg_capture_rate": 87.2,
+      "best_month": 34.58,
+      "worst_month": -4.46
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "PG&E Corporation",
+      "sector": "Utilities",
+      "type": "EQUITY",
+      "beta": 0.343
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 28th, but gold's decline and oil's surge may impact PCG. Consider days 24-28.",
+      "suggested_window": "days 24-28",
+      "action": "consider",
+      "key_factor": "Model confidence 75%"
+    },
+    "lgbm_rec": {
+      "ticker": "PCG",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        24
+      ],
+      "predicted_saving": -0.018,
+      "day_scores": {
+        "20": 0.0054,
+        "21": 0.0371,
+        "22": 0.1031,
+        "23": 0.1355,
+        "24": 0.2426,
+        "27": 0.4284,
+        "28": 0.4362,
+        "29": 0.0841,
+        "30": 0.019
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0078
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 80.7,
+  "generated": "2026-04-30T20:39:49.472726",
+  "cached": false
+}

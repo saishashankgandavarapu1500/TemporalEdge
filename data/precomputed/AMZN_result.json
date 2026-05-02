@@ -1,0 +1,267 @@
+{
+  "ticker": "AMZN",
+  "summary": {
+    "ticker": "AMZN",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (96%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.4) \u2014 volatile, patterns weaker",
+      "wide spread (9.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (69%); strong capture (96%). Concerns: high beta (1.4) \u2014 volatile, patterns weaker; wide spread (9.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 69.2,
+    "avg_saving_pct": 2.267,
+    "median_saving_pct": 1.921,
+    "percentiles": {
+      "p10": -1.905,
+      "p25": 0.0,
+      "p50": 1.921,
+      "p75": 4.719,
+      "p90": 8.0
+    },
+    "clipped_values": 145,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2679,
+    "avg_dollar_per_year": 3.22,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 478,
+        "extra": 27
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 980,
+        "extra": 95
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3456,
+        "extra": 704
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 25498,
+        "extra": 10526
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.04,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 431,
+            "extra": 13,
+            "lift_pct": 3.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 818,
+            "extra": 43,
+            "lift_pct": 5.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2306,
+            "extra": 257,
+            "lift_pct": 12.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9946,
+            "extra": 2352,
+            "lift_pct": 31.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.67,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 478,
+            "extra": 27,
+            "lift_pct": 5.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 980,
+            "extra": 95,
+            "lift_pct": 10.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3456,
+            "extra": 704,
+            "lift_pct": 25.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25498,
+            "extra": 10526,
+            "lift_pct": 70.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 23.16,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 134,
+            "extra": 5,
+            "lift_pct": 3.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 513,
+            "extra": 62,
+            "lift_pct": 13.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1113,
+            "extra": 228,
+            "lift_pct": 25.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4618,
+            "extra": 1866,
+            "lift_pct": 67.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 50404,
+            "extra": 35432,
+            "lift_pct": 236.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 76.2,
+        "avg_saving": 2.412,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 69.7,
+        "avg_saving": 2.128,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.5,
+        "avg_saving": 2.621,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 47.4,
+        "avg_saving": 0.915,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AMZN",
+      "n_months": 225,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 2.54,
+      "median_saving_pct": 1.833,
+      "avg_capture_rate": 96.2,
+      "best_month": 22.19,
+      "worst_month": -9.84
+    },
+    "ticker_meta": {
+      "rows": 6620,
+      "start": "2000-01-03",
+      "end": "2026-04-29",
+      "name": "Amazon.com, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.383
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends days 20-23, considering normal VIX and momentum in AMZN.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "AMZN",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 11.9,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        23
+      ],
+      "predicted_saving": 0.043,
+      "day_scores": {
+        "20": 0.5848,
+        "21": 0.195,
+        "22": 0.1165,
+        "23": 0.1617,
+        "24": 0.0412,
+        "27": 0.0148,
+        "28": 0.0068,
+        "29": 0.0074
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.57
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 134.8,
+  "generated": "2026-04-30T00:58:33.325739",
+  "cached": false
+}

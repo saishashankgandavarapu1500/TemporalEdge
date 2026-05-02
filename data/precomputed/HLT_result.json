@@ -1,0 +1,268 @@
+{
+  "ticker": "HLT",
+  "summary": {
+    "ticker": "HLT",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (77%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "adequately trained (113 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (72%); strong capture (77%). Concerns: wide spread (6.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 72.4,
+    "avg_saving_pct": 1.795,
+    "median_saving_pct": 1.468,
+    "percentiles": {
+      "p10": -0.764,
+      "p25": 0.0,
+      "p50": 1.468,
+      "p75": 3.328,
+      "p90": 5.399
+    },
+    "clipped_values": 40,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1861,
+    "avg_dollar_per_year": 2.23,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 472,
+        "extra": 21
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 960,
+        "extra": 74
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3294,
+        "extra": 542
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22778,
+        "extra": 7806
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.62,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 808,
+            "extra": 34,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2249,
+            "extra": 201,
+            "lift_pct": 9.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9395,
+            "extra": 1801,
+            "lift_pct": 23.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.91,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 960,
+            "extra": 74,
+            "lift_pct": 8.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3294,
+            "extra": 542,
+            "lift_pct": 19.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22778,
+            "extra": 7806,
+            "lift_pct": 52.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.46,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 499,
+            "extra": 48,
+            "lift_pct": 10.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1061,
+            "extra": 175,
+            "lift_pct": 19.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4133,
+            "extra": 1381,
+            "lift_pct": 50.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 38816,
+            "extra": 23844,
+            "lift_pct": 159.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 398,
+        "win_rate": 79.9,
+        "avg_saving": 1.465,
+        "pct_of_runs": 39.8
+      },
+      "normal": {
+        "n_runs": 325,
+        "win_rate": 65.8,
+        "avg_saving": 1.636,
+        "pct_of_runs": 32.5
+      },
+      "elevated": {
+        "n_runs": 248,
+        "win_rate": 68.5,
+        "avg_saving": 2.255,
+        "pct_of_runs": 24.8
+      },
+      "fear": {
+        "n_runs": 29,
+        "win_rate": 75.9,
+        "avg_saving": 4.168,
+        "pct_of_runs": 2.9
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "HLT",
+      "n_months": 113,
+      "win_rate_pct": 70.8,
+      "avg_saving_pct": 1.822,
+      "median_saving_pct": 1.369,
+      "avg_capture_rate": 77.0,
+      "best_month": 9.61,
+      "worst_month": -4.56
+    },
+    "ticker_meta": {
+      "rows": 3113,
+      "start": "2013-12-12",
+      "end": "2026-04-30",
+      "name": "Hilton Worldwide Holdings Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.11
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro stability and HLT's neutral SMA20 position. Oil's inflation signal may impact. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "HLT",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        28,
+        27
+      ],
+      "predicted_saving": 0.02,
+      "day_scores": {
+        "20": 0.0003,
+        "21": 0.007,
+        "22": 0.061,
+        "23": 0.0705,
+        "24": 0.0748,
+        "27": 0.2449,
+        "28": 0.2564,
+        "29": 0.3876,
+        "30": 0.1984
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1427
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 44.6,
+  "generated": "2026-04-30T20:16:42.339306",
+  "cached": false
+}

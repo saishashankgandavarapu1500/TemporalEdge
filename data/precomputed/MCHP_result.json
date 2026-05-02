@@ -1,0 +1,268 @@
+{
+  "ticker": "MCHP",
+  "summary": {
+    "ticker": "MCHP",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (90%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (8.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (66%); strong capture (90%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (8.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 65.8,
+    "avg_saving_pct": 1.66,
+    "median_saving_pct": 1.122,
+    "percentiles": {
+      "p10": -2.118,
+      "p25": 0.0,
+      "p50": 1.122,
+      "p75": 3.528,
+      "p90": 6.734
+    },
+    "clipped_values": 109,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1694,
+    "avg_dollar_per_year": 2.03,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 954,
+        "extra": 68
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3249,
+        "extra": 497
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22059,
+        "extra": 7086
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.49,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 806,
+            "extra": 31,
+            "lift_pct": 4.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2233,
+            "extra": 185,
+            "lift_pct": 9.0
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9244,
+            "extra": 1650,
+            "lift_pct": 21.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.69,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 954,
+            "extra": 68,
+            "lift_pct": 7.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3249,
+            "extra": 497,
+            "lift_pct": 18.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22059,
+            "extra": 7086,
+            "lift_pct": 47.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.98,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 495,
+            "extra": 44,
+            "lift_pct": 9.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1046,
+            "extra": 160,
+            "lift_pct": 18.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4005,
+            "extra": 1253,
+            "lift_pct": 45.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 36045,
+            "extra": 21073,
+            "lift_pct": 140.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 64.9,
+        "avg_saving": 1.083,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 66.8,
+        "avg_saving": 1.496,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 63.6,
+        "avg_saving": 1.961,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 73.7,
+        "avg_saving": 3.324,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MCHP",
+      "n_months": 225,
+      "win_rate_pct": 70.7,
+      "avg_saving_pct": 1.786,
+      "median_saving_pct": 1.355,
+      "avg_capture_rate": 89.5,
+      "best_month": 11.64,
+      "worst_month": -8.12
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Microchip Technology Incorporated",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.474
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 20th, oil inflation signal supports, gold risk-off signal conflicts.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "oil inflation signal"
+    },
+    "lgbm_rec": {
+      "ticker": "MCHP",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        22
+      ],
+      "predicted_saving": 0.053,
+      "day_scores": {
+        "20": 0.5939,
+        "21": 0.2293,
+        "22": 0.1812,
+        "23": 0.0116,
+        "24": 0.0001,
+        "27": 0.0096,
+        "28": 0.0766,
+        "29": 0.0114,
+        "30": 0.0062
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5843
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 78.5,
+  "generated": "2026-04-30T20:27:02.258468",
+  "cached": false
+}

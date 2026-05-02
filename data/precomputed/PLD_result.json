@@ -1,0 +1,268 @@
+{
+  "ticker": "PLD",
+  "summary": {
+    "ticker": "PLD",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (88%)",
+      "moderate spread (5.1pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.4) \u2014 volatile, patterns weaker"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (88%). Concerns: high beta (1.4) \u2014 volatile, patterns weaker.",
+    "win_rate_pct": 69.7,
+    "avg_saving_pct": 1.374,
+    "median_saving_pct": 1.075,
+    "percentiles": {
+      "p10": -0.872,
+      "p25": 0.0,
+      "p50": 1.075,
+      "p75": 2.514,
+      "p90": 4.269
+    },
+    "clipped_values": 38,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1428,
+    "avg_dollar_per_year": 1.71,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 942,
+        "extra": 56
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3156,
+        "extra": 404
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20615,
+        "extra": 5643
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.24,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 800,
+            "extra": 26,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2200,
+            "extra": 152,
+            "lift_pct": 7.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8933,
+            "extra": 1339,
+            "lift_pct": 17.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.23,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 942,
+            "extra": 56,
+            "lift_pct": 6.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3156,
+            "extra": 404,
+            "lift_pct": 14.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20615,
+            "extra": 5643,
+            "lift_pct": 37.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.95,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 487,
+            "extra": 36,
+            "lift_pct": 8.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1016,
+            "extra": 130,
+            "lift_pct": 14.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3748,
+            "extra": 996,
+            "lift_pct": 36.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30852,
+            "extra": 15880,
+            "lift_pct": 106.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 65.6,
+        "avg_saving": 0.893,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 78.9,
+        "avg_saving": 1.414,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 64.3,
+        "avg_saving": 1.631,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 65.8,
+        "avg_saving": 1.953,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "PLD",
+      "n_months": 225,
+      "win_rate_pct": 73.8,
+      "avg_saving_pct": 1.852,
+      "median_saving_pct": 1.469,
+      "avg_capture_rate": 88.2,
+      "best_month": 27.07,
+      "worst_month": -10.76
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Prologis, Inc.",
+      "sector": "Real Estate",
+      "type": "EQUITY",
+      "beta": 1.412
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "PLD",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        27,
+        28
+      ],
+      "predicted_saving": 0.0,
+      "day_scores": {
+        "20": 0.0053,
+        "21": 0.2449,
+        "22": 0.2228,
+        "23": 0.1814,
+        "24": 0.1999,
+        "27": 0.3337,
+        "28": 0.2457,
+        "29": 0.3875,
+        "30": 0.0192
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0537
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 69.0,
+  "generated": "2026-04-30T23:00:11.252090",
+  "cached": false
+}

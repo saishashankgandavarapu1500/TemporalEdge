@@ -1,0 +1,268 @@
+{
+  "ticker": "ANET",
+  "summary": {
+    "ticker": "ANET",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (73%)",
+      "adequately trained (107 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (7.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: moderate win rate (74%); strong capture (73%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (7.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 73.8,
+    "avg_saving_pct": 1.978,
+    "median_saving_pct": 1.607,
+    "percentiles": {
+      "p10": -1.853,
+      "p25": 0.0,
+      "p50": 1.607,
+      "p75": 3.933,
+      "p90": 6.086
+    },
+    "clipped_values": 93,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2034,
+    "avg_dollar_per_year": 2.44,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 443,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 857,
+        "extra": 40
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2557,
+        "extra": 256
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12621,
+        "extra": 2728
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.07,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 412,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 756,
+            "extra": 21,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1943,
+            "extra": 113,
+            "lift_pct": 6.2
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6737,
+            "extra": 847,
+            "lift_pct": 14.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.78,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 443,
+            "extra": 12,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 857,
+            "extra": 40,
+            "lift_pct": 4.9
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2557,
+            "extra": 256,
+            "lift_pct": 11.1
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12621,
+            "extra": 2728,
+            "lift_pct": 27.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.2,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 968,
+            "extra": 82,
+            "lift_pct": 9.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3356,
+            "extra": 604,
+            "lift_pct": 21.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23797,
+            "extra": 8824,
+            "lift_pct": 58.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 367,
+        "win_rate": 73.6,
+        "avg_saving": 1.587,
+        "pct_of_runs": 36.7
+      },
+      "normal": {
+        "n_runs": 332,
+        "win_rate": 70.8,
+        "avg_saving": 2.259,
+        "pct_of_runs": 33.2
+      },
+      "elevated": {
+        "n_runs": 274,
+        "win_rate": 76.3,
+        "avg_saving": 2.125,
+        "pct_of_runs": 27.4
+      },
+      "fear": {
+        "n_runs": 27,
+        "win_rate": 88.9,
+        "avg_saving": 2.352,
+        "pct_of_runs": 2.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "ANET",
+      "n_months": 107,
+      "win_rate_pct": 70.1,
+      "avg_saving_pct": 2.218,
+      "median_saving_pct": 1.874,
+      "avg_capture_rate": 73.2,
+      "best_month": 14.02,
+      "worst_month": -8.95
+    },
+    "ticker_meta": {
+      "rows": 2993,
+      "start": "2014-06-06",
+      "end": "2026-04-30",
+      "name": "Arista Networks, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.475
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 11.6% rise may impact ANET. ",
+      "suggested_window": "days 20-21",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "ANET",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        29,
+        21
+      ],
+      "predicted_saving": 0.012,
+      "day_scores": {
+        "20": 0.2407,
+        "21": 0.1369,
+        "22": 0.0701,
+        "23": 0.1271,
+        "24": 0.0661,
+        "27": 0.0257,
+        "28": 0.0956,
+        "29": 0.1379,
+        "30": 0.1133
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2149
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 40.9,
+  "generated": "2026-04-30T21:09:54.100451",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "CLX",
+  "summary": {
+    "ticker": "CLX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "strong capture (82%)",
+      "low beta (0.6) \u2014 stable patterns",
+      "moderate spread (4.1pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (65%) \u2014 barely above random"
+    ],
+    "trust_summary": "Trust 79/100. Strengths: strong capture (82%); low beta (0.6) \u2014 stable patterns. Concerns: low win rate (65%) \u2014 barely above random.",
+    "win_rate_pct": 64.6,
+    "avg_saving_pct": 0.824,
+    "median_saving_pct": 0.596,
+    "percentiles": {
+      "p10": -1.124,
+      "p25": -0.018,
+      "p50": 0.596,
+      "p75": 1.778,
+      "p90": 2.926
+    },
+    "clipped_values": 68,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.0855,
+    "avg_dollar_per_year": 1.03,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 461,
+        "extra": 9
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 919,
+        "extra": 33
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 2987,
+        "extra": 235
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18117,
+        "extra": 3145
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.74,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.3
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.1
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 790,
+            "extra": 15,
+            "lift_pct": 2.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2138,
+            "extra": 89,
+            "lift_pct": 4.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8366,
+            "extra": 773,
+            "lift_pct": 10.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.34,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 461,
+            "extra": 9,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 919,
+            "extra": 33,
+            "lift_pct": 3.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2987,
+            "extra": 235,
+            "lift_pct": 8.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18117,
+            "extra": 3145,
+            "lift_pct": 21.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 17.97,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 473,
+            "extra": 21,
+            "lift_pct": 4.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 961,
+            "extra": 76,
+            "lift_pct": 8.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3306,
+            "extra": 554,
+            "lift_pct": 20.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22978,
+            "extra": 8005,
+            "lift_pct": 53.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 63.1,
+        "avg_saving": 0.68,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 62.3,
+        "avg_saving": 0.736,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 68.9,
+        "avg_saving": 1.039,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 63.2,
+        "avg_saving": 0.891,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CLX",
+      "n_months": 225,
+      "win_rate_pct": 72.0,
+      "avg_saving_pct": 1.08,
+      "median_saving_pct": 0.833,
+      "avg_capture_rate": 82.2,
+      "best_month": 12.02,
+      "worst_month": -4.24
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "The Clorox Company",
+      "sector": "Consumer Defensive",
+      "type": "EQUITY",
+      "beta": 0.645
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 12.2% rise may impact CLX. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "CLX",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        22,
+        27
+      ],
+      "predicted_saving": 0.003,
+      "day_scores": {
+        "20": 0.0058,
+        "21": 0.1095,
+        "22": 0.1913,
+        "23": 0.1225,
+        "24": 0.0001,
+        "27": 0.1898,
+        "28": 0.1641,
+        "29": 0.3348,
+        "30": 0.0882
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.145
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 57.9,
+  "generated": "2026-04-30T21:32:49.542330",
+  "cached": false
+}

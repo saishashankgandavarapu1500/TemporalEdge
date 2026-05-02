@@ -1,0 +1,268 @@
+{
+  "ticker": "AXON",
+  "summary": {
+    "ticker": "AXON",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (94%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.6) \u2014 volatile, patterns weaker",
+      "wide spread (10.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (72%); strong capture (94%). Concerns: high beta (1.6) \u2014 volatile, patterns weaker; wide spread (10.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 72.2,
+    "avg_saving_pct": 2.739,
+    "median_saving_pct": 2.287,
+    "percentiles": {
+      "p10": -1.988,
+      "p25": 0.0,
+      "p50": 2.287,
+      "p75": 5.19,
+      "p90": 8.903
+    },
+    "clipped_values": 46,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.2601,
+    "avg_dollar_per_year": 3.12,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 3
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 484,
+        "extra": 32
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 1002,
+        "extra": 116
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3628,
+        "extra": 876
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 28579,
+        "extra": 13606
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.47,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 434,
+            "extra": 16,
+            "lift_pct": 3.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 827,
+            "extra": 53,
+            "lift_pct": 6.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2364,
+            "extra": 316,
+            "lift_pct": 15.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 10535,
+            "extra": 2941,
+            "lift_pct": 38.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 19.44,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 484,
+            "extra": 32,
+            "lift_pct": 7.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1002,
+            "extra": 116,
+            "lift_pct": 13.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3628,
+            "extra": 876,
+            "lift_pct": 31.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 28579,
+            "extra": 13606,
+            "lift_pct": 90.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 24.86,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 135,
+            "extra": 6,
+            "lift_pct": 4.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 527,
+            "extra": 76,
+            "lift_pct": 16.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1169,
+            "extra": 284,
+            "lift_pct": 32.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 5171,
+            "extra": 2419,
+            "lift_pct": 87.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 65737,
+            "extra": 50765,
+            "lift_pct": 339.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 313,
+        "win_rate": 71.6,
+        "avg_saving": 1.948,
+        "pct_of_runs": 31.3
+      },
+      "normal": {
+        "n_runs": 335,
+        "win_rate": 76.4,
+        "avg_saving": 3.428,
+        "pct_of_runs": 33.5
+      },
+      "elevated": {
+        "n_runs": 259,
+        "win_rate": 70.3,
+        "avg_saving": 2.759,
+        "pct_of_runs": 25.9
+      },
+      "fear": {
+        "n_runs": 93,
+        "win_rate": 64.5,
+        "avg_saving": 2.866,
+        "pct_of_runs": 9.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AXON",
+      "n_months": 225,
+      "win_rate_pct": 78.2,
+      "avg_saving_pct": 3.012,
+      "median_saving_pct": 2.49,
+      "avg_capture_rate": 93.6,
+      "best_month": 29.3,
+      "worst_month": -15.67
+    },
+    "ticker_meta": {
+      "rows": 6253,
+      "start": "2001-06-19",
+      "end": "2026-04-30",
+      "name": "Axon Enterprise, Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.605
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider normal VIX and momentum above SMA20. Oil's inflation signal conflicts with gold's risk-off signal. ",
+      "suggested_window": "days 23-28",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "AXON",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        27,
+        28
+      ],
+      "predicted_saving": 0.03,
+      "day_scores": {
+        "20": 0.0289,
+        "21": 0.005,
+        "22": 0.05,
+        "23": 0.5708,
+        "24": 0.1469,
+        "27": 0.2819,
+        "28": 0.2025,
+        "29": 0.1902,
+        "30": 0.2016
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2888
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 68.1,
+  "generated": "2026-04-30T21:14:32.326213",
+  "cached": false
+}

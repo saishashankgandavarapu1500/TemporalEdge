@@ -1,0 +1,268 @@
+{
+  "ticker": "NRG",
+  "summary": {
+    "ticker": "NRG",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (67%)",
+      "strong capture (75%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (6.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (67%); strong capture (75%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (6.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 67.2,
+    "avg_saving_pct": 1.647,
+    "median_saving_pct": 1.234,
+    "percentiles": {
+      "p10": -1.505,
+      "p25": 0.0,
+      "p50": 1.234,
+      "p75": 3.249,
+      "p90": 5.436
+    },
+    "clipped_values": 65,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1697,
+    "avg_dollar_per_year": 2.04,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 953,
+        "extra": 68
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3245,
+        "extra": 493
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21991,
+        "extra": 7018
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.48,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 805,
+            "extra": 31,
+            "lift_pct": 4.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2232,
+            "extra": 183,
+            "lift_pct": 8.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9229,
+            "extra": 1636,
+            "lift_pct": 21.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.67,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 953,
+            "extra": 68,
+            "lift_pct": 7.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3245,
+            "extra": 493,
+            "lift_pct": 17.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21991,
+            "extra": 7018,
+            "lift_pct": 46.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.93,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 495,
+            "extra": 44,
+            "lift_pct": 9.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1045,
+            "extra": 159,
+            "lift_pct": 17.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3993,
+            "extra": 1241,
+            "lift_pct": 45.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 35791,
+            "extra": 20819,
+            "lift_pct": 139.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 377,
+        "win_rate": 67.4,
+        "avg_saving": 1.419,
+        "pct_of_runs": 37.7
+      },
+      "normal": {
+        "n_runs": 324,
+        "win_rate": 63.0,
+        "avg_saving": 1.686,
+        "pct_of_runs": 32.4
+      },
+      "elevated": {
+        "n_runs": 243,
+        "win_rate": 71.6,
+        "avg_saving": 1.712,
+        "pct_of_runs": 24.3
+      },
+      "fear": {
+        "n_runs": 56,
+        "win_rate": 71.4,
+        "avg_saving": 2.682,
+        "pct_of_runs": 5.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "NRG",
+      "n_months": 225,
+      "win_rate_pct": 70.7,
+      "avg_saving_pct": 1.836,
+      "median_saving_pct": 1.252,
+      "avg_capture_rate": 74.9,
+      "best_month": 25.79,
+      "worst_month": -17.0
+    },
+    "ticker_meta": {
+      "rows": 5638,
+      "start": "2003-12-02",
+      "end": "2026-04-30",
+      "name": "NRG Energy, Inc.",
+      "sector": "Utilities",
+      "type": "EQUITY",
+      "beta": 1.338
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "NRG",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        21,
+        22
+      ],
+      "predicted_saving": 0.006,
+      "day_scores": {
+        "20": 0.1137,
+        "21": 0.2523,
+        "22": 0.2447,
+        "23": 0.204,
+        "24": 0.0648,
+        "27": 0.0195,
+        "28": 0.1184,
+        "29": 0.3907,
+        "30": 0.0902
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.3712
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 66.5,
+  "generated": "2026-04-30T22:52:54.638837",
+  "cached": false
+}

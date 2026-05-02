@@ -1,0 +1,267 @@
+{
+  "ticker": "IEX",
+  "summary": {
+    "ticker": "IEX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (86%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (5.4pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (72%); strong capture (86%). ",
+    "win_rate_pct": 72.1,
+    "avg_saving_pct": 1.325,
+    "median_saving_pct": 1.167,
+    "percentiles": {
+      "p10": -0.958,
+      "p25": 0.0,
+      "p50": 1.167,
+      "p75": 2.374,
+      "p90": 4.455
+    },
+    "clipped_values": 120,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1464,
+    "avg_dollar_per_year": 1.76,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 466,
+        "extra": 15
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 940,
+        "extra": 54
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3141,
+        "extra": 389
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20377,
+        "extra": 5405
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.19,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 8,
+            "lift_pct": 1.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 799,
+            "extra": 25,
+            "lift_pct": 3.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2194,
+            "extra": 146,
+            "lift_pct": 7.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8880,
+            "extra": 1286,
+            "lift_pct": 16.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.15,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 466,
+            "extra": 15,
+            "lift_pct": 3.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 940,
+            "extra": 54,
+            "lift_pct": 6.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3141,
+            "extra": 389,
+            "lift_pct": 14.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20377,
+            "extra": 5405,
+            "lift_pct": 36.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.77,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 486,
+            "extra": 35,
+            "lift_pct": 7.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1011,
+            "extra": 125,
+            "lift_pct": 14.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3706,
+            "extra": 954,
+            "lift_pct": 34.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30042,
+            "extra": 15070,
+            "lift_pct": 100.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.9,
+        "avg_saving": 0.888,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 74.5,
+        "avg_saving": 1.328,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 72.5,
+        "avg_saving": 1.588,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 64.5,
+        "avg_saving": 1.884,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "IEX",
+      "n_months": 225,
+      "win_rate_pct": 76.0,
+      "avg_saving_pct": 1.592,
+      "median_saving_pct": 1.314,
+      "avg_capture_rate": 86.5,
+      "best_month": 14.41,
+      "worst_month": -12.93
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "IDEX Corporation",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 0.98
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and recent IEX momentum.",
+      "suggested_window": "days 21-24",
+      "action": "consider",
+      "key_factor": "IEX above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "IEX",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        24,
+        21
+      ],
+      "predicted_saving": 0.014,
+      "day_scores": {
+        "20": 0.1585,
+        "21": 0.2068,
+        "22": 0.5944,
+        "23": 0.1515,
+        "24": 0.2265,
+        "27": 0.0411,
+        "28": 0.089,
+        "29": 0.0091,
+        "30": 0.0026
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5533
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 72.1,
+  "generated": "2026-04-30T20:17:54.450280",
+  "cached": false
+}

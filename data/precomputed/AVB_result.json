@@ -1,0 +1,267 @@
+{
+  "ticker": "AVB",
+  "summary": {
+    "ticker": "AVB",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (89%)",
+      "low beta (0.8) \u2014 stable patterns",
+      "moderate spread (4.8pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (69%); strong capture (89%). ",
+    "win_rate_pct": 68.9,
+    "avg_saving_pct": 1.191,
+    "median_saving_pct": 0.919,
+    "percentiles": {
+      "p10": -0.95,
+      "p25": 0.0,
+      "p50": 0.919,
+      "p75": 2.358,
+      "p90": 3.851
+    },
+    "clipped_values": 108,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.129,
+    "avg_dollar_per_year": 1.55,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 14
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 934,
+        "extra": 48
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3099,
+        "extra": 347
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19744,
+        "extra": 4771
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.07,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 797,
+            "extra": 22,
+            "lift_pct": 2.9
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2179,
+            "extra": 131,
+            "lift_pct": 6.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8739,
+            "extra": 1146,
+            "lift_pct": 15.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.93,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 14,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 934,
+            "extra": 48,
+            "lift_pct": 5.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3099,
+            "extra": 347,
+            "lift_pct": 12.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19744,
+            "extra": 4771,
+            "lift_pct": 31.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.29,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 482,
+            "extra": 31,
+            "lift_pct": 6.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 997,
+            "extra": 112,
+            "lift_pct": 12.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3594,
+            "extra": 842,
+            "lift_pct": 30.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27948,
+            "extra": 12975,
+            "lift_pct": 86.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 64.2,
+        "avg_saving": 0.704,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 74.2,
+        "avg_saving": 1.396,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 65.6,
+        "avg_saving": 1.315,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 76.3,
+        "avg_saving": 1.589,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AVB",
+      "n_months": 225,
+      "win_rate_pct": 75.1,
+      "avg_saving_pct": 1.553,
+      "median_saving_pct": 1.274,
+      "avg_capture_rate": 88.9,
+      "best_month": 28.97,
+      "worst_month": -6.52
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "AvalonBay Communities, Inc.",
+      "sector": "Real Estate",
+      "type": "EQUITY",
+      "beta": 0.763
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and AVB's momentum.",
+      "suggested_window": "days 21-24",
+      "action": "consider",
+      "key_factor": "AVB's momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "AVB",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        21,
+        24
+      ],
+      "predicted_saving": 0.021,
+      "day_scores": {
+        "20": 0.1495,
+        "21": 0.2958,
+        "22": 0.5865,
+        "23": 0.2079,
+        "24": 0.2207,
+        "27": 0.1241,
+        "28": 0.0009,
+        "29": 0.044,
+        "30": 0.0982
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4624
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 68.7,
+  "generated": "2026-04-30T21:13:56.466477",
+  "cached": false
+}

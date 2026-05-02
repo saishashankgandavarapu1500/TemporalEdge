@@ -1,0 +1,268 @@
+{
+  "ticker": "ROL",
+  "summary": {
+    "ticker": "ROL",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "strong capture (85%)",
+      "moderate beta (0.8) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (65%) \u2014 barely above random",
+      "wide spread (6.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: strong capture (85%); moderate beta (0.8) \u2014 predictable enough. Concerns: low win rate (65%) \u2014 barely above random; wide spread (6.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 64.6,
+    "avg_saving_pct": 1.293,
+    "median_saving_pct": 1.039,
+    "percentiles": {
+      "p10": -1.468,
+      "p25": 0.0,
+      "p50": 1.039,
+      "p75": 2.661,
+      "p90": 4.951
+    },
+    "clipped_values": 169,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1337,
+    "avg_dollar_per_year": 1.6,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 466,
+        "extra": 15
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 938,
+        "extra": 53
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3131,
+        "extra": 379
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20225,
+        "extra": 5253
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.16,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 799,
+            "extra": 24,
+            "lift_pct": 3.1
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2191,
+            "extra": 142,
+            "lift_pct": 6.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8847,
+            "extra": 1253,
+            "lift_pct": 16.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.1,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 466,
+            "extra": 15,
+            "lift_pct": 3.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 938,
+            "extra": 53,
+            "lift_pct": 5.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3131,
+            "extra": 379,
+            "lift_pct": 13.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20225,
+            "extra": 5253,
+            "lift_pct": 35.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.66,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 485,
+            "extra": 34,
+            "lift_pct": 7.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1008,
+            "extra": 122,
+            "lift_pct": 13.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3679,
+            "extra": 927,
+            "lift_pct": 33.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 29532,
+            "extra": 14560,
+            "lift_pct": 97.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 61.7,
+        "avg_saving": 1.087,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 64.4,
+        "avg_saving": 1.13,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 1.563,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 65.8,
+        "avg_saving": 1.703,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "ROL",
+      "n_months": 225,
+      "win_rate_pct": 73.3,
+      "avg_saving_pct": 1.535,
+      "median_saving_pct": 1.248,
+      "avg_capture_rate": 85.1,
+      "best_month": 13.36,
+      "worst_month": -9.71
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Rollins, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 0.84
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 21 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 20-22",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "ROL",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        20,
+        29
+      ],
+      "predicted_saving": 0.006,
+      "day_scores": {
+        "20": 0.2482,
+        "21": 0.5691,
+        "22": 0.1478,
+        "23": 0.0014,
+        "24": 0.0217,
+        "27": 0.1136,
+        "28": 0.1706,
+        "29": 0.2258,
+        "30": 0.207
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4555
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 97.1,
+  "generated": "2026-04-30T23:07:18.964873",
+  "cached": false
+}

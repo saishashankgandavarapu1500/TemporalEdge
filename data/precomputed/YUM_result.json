@@ -1,0 +1,267 @@
+{
+  "ticker": "YUM",
+  "summary": {
+    "ticker": "YUM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (93%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "moderate spread (5.2pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (68%); strong capture (93%). ",
+    "win_rate_pct": 67.5,
+    "avg_saving_pct": 1.171,
+    "median_saving_pct": 0.814,
+    "percentiles": {
+      "p10": -1.134,
+      "p25": 0.0,
+      "p50": 0.814,
+      "p75": 2.267,
+      "p90": 4.113
+    },
+    "clipped_values": 114,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1245,
+    "avg_dollar_per_year": 1.49,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 14
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 933,
+        "extra": 47
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3093,
+        "extra": 340
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19652,
+        "extra": 4679
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.05,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2177,
+            "extra": 128,
+            "lift_pct": 6.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8719,
+            "extra": 1125,
+            "lift_pct": 14.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.9,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 14,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 933,
+            "extra": 47,
+            "lift_pct": 5.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3093,
+            "extra": 340,
+            "lift_pct": 12.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19652,
+            "extra": 4679,
+            "lift_pct": 31.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.22,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 482,
+            "extra": 31,
+            "lift_pct": 6.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 995,
+            "extra": 110,
+            "lift_pct": 12.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3578,
+            "extra": 825,
+            "lift_pct": 30.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27651,
+            "extra": 12679,
+            "lift_pct": 84.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.6,
+        "avg_saving": 1.067,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 65.6,
+        "avg_saving": 0.996,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 1.279,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 65.8,
+        "avg_saving": 1.902,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "YUM",
+      "n_months": 225,
+      "win_rate_pct": 75.1,
+      "avg_saving_pct": 1.559,
+      "median_saving_pct": 1.13,
+      "avg_capture_rate": 93.3,
+      "best_month": 17.53,
+      "worst_month": -5.21
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Yum! Brands, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 0.662
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and macro signals.",
+      "suggested_window": "days 27-30",
+      "action": "consider",
+      "key_factor": "VIX and yield curve normalcy"
+    },
+    "lgbm_rec": {
+      "ticker": "YUM",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        30
+      ],
+      "predicted_saving": -0.009,
+      "day_scores": {
+        "20": 0.1329,
+        "21": 0.005,
+        "22": 0.1191,
+        "23": 0.0261,
+        "24": 0.0681,
+        "27": 0.2731,
+        "28": 0.3185,
+        "29": 0.1286,
+        "30": 0.1875
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0454
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 66.9,
+  "generated": "2026-04-30T20:59:07.225706",
+  "cached": false
+}

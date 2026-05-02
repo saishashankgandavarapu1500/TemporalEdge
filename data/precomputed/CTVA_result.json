@@ -1,0 +1,268 @@
+{
+  "ticker": "CTVA",
+  "summary": {
+    "ticker": "CTVA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 78,
+    "trust_reasons": [
+      "high win rate (76%)",
+      "strong capture (81%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "moderate spread (6.0pp)"
+    ],
+    "trust_penalties": [
+      "limited training (48 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 78/100. Strengths: high win rate (76%); strong capture (81%). Concerns: limited training (48 folds) \u2014 newer ticker, less history.",
+    "win_rate_pct": 76.2,
+    "avg_saving_pct": 1.794,
+    "median_saving_pct": 1.674,
+    "percentiles": {
+      "p10": -0.977,
+      "p25": 0.088,
+      "p50": 1.674,
+      "p75": 3.499,
+      "p90": 5.0
+    },
+    "clipped_values": 154,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1922,
+    "avg_dollar_per_year": 2.31,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 472,
+        "extra": 21
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 960,
+        "extra": 74
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3294,
+        "extra": 541
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22774,
+        "extra": 7802
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.61,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 808,
+            "extra": 34,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2249,
+            "extra": 201,
+            "lift_pct": 9.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9394,
+            "extra": 1800,
+            "lift_pct": 23.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.91,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 960,
+            "extra": 74,
+            "lift_pct": 8.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3294,
+            "extra": 541,
+            "lift_pct": 19.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22774,
+            "extra": 7802,
+            "lift_pct": 52.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.46,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 499,
+            "extra": 48,
+            "lift_pct": 10.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1060,
+            "extra": 175,
+            "lift_pct": 19.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4132,
+            "extra": 1380,
+            "lift_pct": 50.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 38799,
+            "extra": 23827,
+            "lift_pct": 159.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 178,
+        "win_rate": 83.1,
+        "avg_saving": 1.817,
+        "pct_of_runs": 17.8
+      },
+      "normal": {
+        "n_runs": 405,
+        "win_rate": 69.4,
+        "avg_saving": 1.633,
+        "pct_of_runs": 40.5
+      },
+      "elevated": {
+        "n_runs": 367,
+        "win_rate": 79.8,
+        "avg_saving": 1.943,
+        "pct_of_runs": 36.7
+      },
+      "fear": {
+        "n_runs": 50,
+        "win_rate": 80.0,
+        "avg_saving": 1.925,
+        "pct_of_runs": 5.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CTVA",
+      "n_months": 48,
+      "win_rate_pct": 83.3,
+      "avg_saving_pct": 1.892,
+      "median_saving_pct": 1.776,
+      "avg_capture_rate": 81.4,
+      "best_month": 8.82,
+      "worst_month": -5.34
+    },
+    "ticker_meta": {
+      "rows": 1743,
+      "start": "2019-05-24",
+      "end": "2026-04-30",
+      "name": "Corteva, Inc.",
+      "sector": "Basic Materials",
+      "type": "EQUITY",
+      "beta": 0.68
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider CTVA purchase with neutral macro and model recommendation.",
+      "suggested_window": "days 22-28",
+      "action": "consider",
+      "key_factor": "model recommendation"
+    },
+    "lgbm_rec": {
+      "ticker": "CTVA",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        28,
+        27
+      ],
+      "predicted_saving": -0.003,
+      "day_scores": {
+        "20": 0.1599,
+        "21": 0.2018,
+        "22": 0.2421,
+        "23": 0.2029,
+        "24": 0.1858,
+        "27": 0.2165,
+        "28": 0.2245,
+        "29": 0.1421,
+        "30": 0.0003
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0257
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 23.4,
+  "generated": "2026-04-30T20:00:35.510988",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "CHTR",
+  "summary": {
+    "ticker": "CHTR",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "strong capture (89%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "well-trained (160 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (63%) \u2014 barely above random",
+      "wide spread (7.3pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: strong capture (89%); moderate beta (1.0) \u2014 predictable enough. Concerns: low win rate (63%) \u2014 barely above random; wide spread (7.3pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 63.1,
+    "avg_saving_pct": 1.566,
+    "median_saving_pct": 1.084,
+    "percentiles": {
+      "p10": -1.449,
+      "p25": 0.0,
+      "p50": 1.084,
+      "p75": 3.281,
+      "p90": 5.868
+    },
+    "clipped_values": 65,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1518,
+    "avg_dollar_per_year": 1.82,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 469,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 950,
+        "extra": 64
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3218,
+        "extra": 466
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21570,
+        "extra": 6598
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.41,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 804,
+            "extra": 30,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2222,
+            "extra": 174,
+            "lift_pct": 8.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9140,
+            "extra": 1546,
+            "lift_pct": 20.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.54,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 469,
+            "extra": 18,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 950,
+            "extra": 64,
+            "lift_pct": 7.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3218,
+            "extra": 466,
+            "lift_pct": 16.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21570,
+            "extra": 6598,
+            "lift_pct": 44.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.64,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 493,
+            "extra": 42,
+            "lift_pct": 9.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1036,
+            "extra": 150,
+            "lift_pct": 17.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3918,
+            "extra": 1166,
+            "lift_pct": 42.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34234,
+            "extra": 19262,
+            "lift_pct": 128.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 327,
+        "win_rate": 64.5,
+        "avg_saving": 1.672,
+        "pct_of_runs": 32.7
+      },
+      "normal": {
+        "n_runs": 356,
+        "win_rate": 66.6,
+        "avg_saving": 1.327,
+        "pct_of_runs": 35.6
+      },
+      "elevated": {
+        "n_runs": 272,
+        "win_rate": 58.1,
+        "avg_saving": 1.755,
+        "pct_of_runs": 27.2
+      },
+      "fear": {
+        "n_runs": 45,
+        "win_rate": 55.6,
+        "avg_saving": 1.543,
+        "pct_of_runs": 4.5
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CHTR",
+      "n_months": 160,
+      "win_rate_pct": 69.4,
+      "avg_saving_pct": 2.057,
+      "median_saving_pct": 1.32,
+      "avg_capture_rate": 89.2,
+      "best_month": 13.71,
+      "worst_month": -13.6
+    },
+    "ticker_meta": {
+      "rows": 4105,
+      "start": "2010-01-05",
+      "end": "2026-04-30",
+      "name": "Charter Communications, Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 1.026
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider CHTR's dip below SMA20 and macro signals. Oil's 11.8% rise may impact. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "CHTR",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        27,
+        28
+      ],
+      "predicted_saving": 0.054,
+      "day_scores": {
+        "20": 0.0103,
+        "21": 0.018,
+        "22": 0.0,
+        "23": 0.0474,
+        "24": 0.2021,
+        "27": 0.2744,
+        "28": 0.2574,
+        "29": 0.2932,
+        "30": 0.2478
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0189
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 50.1,
+  "generated": "2026-04-30T19:55:17.086260",
+  "cached": false
+}

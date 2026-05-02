@@ -1,0 +1,268 @@
+{
+  "ticker": "GS",
+  "summary": {
+    "ticker": "GS",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (78%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (6.1pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (68%); strong capture (78%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (6.1pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.3,
+    "avg_saving_pct": 1.469,
+    "median_saving_pct": 1.181,
+    "percentiles": {
+      "p10": -1.415,
+      "p25": 0.0,
+      "p50": 1.181,
+      "p75": 2.796,
+      "p90": 4.716
+    },
+    "clipped_values": 52,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1521,
+    "avg_dollar_per_year": 1.83,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 468,
+        "extra": 17
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 946,
+        "extra": 60
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3187,
+        "extra": 434
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21079,
+        "extra": 6107
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.32,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 9,
+            "lift_pct": 2.0
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 802,
+            "extra": 28,
+            "lift_pct": 3.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2211,
+            "extra": 162,
+            "lift_pct": 7.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9034,
+            "extra": 1440,
+            "lift_pct": 19.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.38,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 468,
+            "extra": 17,
+            "lift_pct": 3.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 946,
+            "extra": 60,
+            "lift_pct": 6.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3187,
+            "extra": 434,
+            "lift_pct": 15.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21079,
+            "extra": 6107,
+            "lift_pct": 40.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.29,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 490,
+            "extra": 39,
+            "lift_pct": 8.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1026,
+            "extra": 140,
+            "lift_pct": 15.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3831,
+            "extra": 1079,
+            "lift_pct": 39.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 32471,
+            "extra": 17499,
+            "lift_pct": 116.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 66.7,
+        "avg_saving": 1.076,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 67.7,
+        "avg_saving": 1.164,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 69.8,
+        "avg_saving": 1.932,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 71.1,
+        "avg_saving": 2.415,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "GS",
+      "n_months": 225,
+      "win_rate_pct": 72.0,
+      "avg_saving_pct": 1.804,
+      "median_saving_pct": 1.159,
+      "avg_capture_rate": 78.4,
+      "best_month": 27.56,
+      "worst_month": -10.07
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "The Goldman Sachs Group, Inc.",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 1.311
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 29th, considering normal VIX and GS above SMA20. Oil's inflation signal may conflict. ",
+      "suggested_window": "days 21-29",
+      "action": "consider",
+      "key_factor": "normal VIX"
+    },
+    "lgbm_rec": {
+      "ticker": "GS",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        21,
+        24
+      ],
+      "predicted_saving": 0.009,
+      "day_scores": {
+        "20": 0.001,
+        "21": 0.241,
+        "22": 0.0682,
+        "23": 0.1909,
+        "24": 0.2065,
+        "27": 0.1126,
+        "28": 0.197,
+        "29": 0.3597,
+        "30": 0.1619
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.247
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 76.7,
+  "generated": "2026-04-30T20:14:31.072456",
+  "cached": false
+}

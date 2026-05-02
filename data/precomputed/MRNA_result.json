@@ -1,0 +1,268 @@
+{
+  "ticker": "MRNA",
+  "summary": {
+    "ticker": "MRNA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 53,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (55%)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (10.7pp) \u2014 outcomes vary a lot month to month",
+      "limited training (53 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 53/100. Strengths: moderate win rate (69%); strong capture (55%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (10.7pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.7,
+    "avg_saving_pct": 2.885,
+    "median_saving_pct": 2.449,
+    "percentiles": {
+      "p10": -2.684,
+      "p25": 0.0,
+      "p50": 2.449,
+      "p75": 7.568,
+      "p90": 8.0
+    },
+    "clipped_values": 297,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.3893,
+    "avg_dollar_per_year": 4.67,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 448,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 876,
+        "extra": 59
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2686,
+        "extra": 385
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 14145,
+        "extra": 4252
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.56,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 415,
+            "extra": 10,
+            "lift_pct": 2.4
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 765,
+            "extra": 31,
+            "lift_pct": 4.2
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1997,
+            "extra": 168,
+            "lift_pct": 9.2
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 7173,
+            "extra": 1282,
+            "lift_pct": 21.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 14.6,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 448,
+            "extra": 18,
+            "lift_pct": 4.1
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 876,
+            "extra": 59,
+            "lift_pct": 7.3
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2686,
+            "extra": 385,
+            "lift_pct": 16.7
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 14145,
+            "extra": 4252,
+            "lift_pct": 43.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 19.67,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 485,
+            "extra": 34,
+            "lift_pct": 7.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1008,
+            "extra": 123,
+            "lift_pct": 13.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3683,
+            "extra": 931,
+            "lift_pct": 33.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 29610,
+            "extra": 14638,
+            "lift_pct": 97.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 209,
+        "win_rate": 73.7,
+        "avg_saving": 2.89,
+        "pct_of_runs": 20.9
+      },
+      "normal": {
+        "n_runs": 398,
+        "win_rate": 73.1,
+        "avg_saving": 3.275,
+        "pct_of_runs": 39.8
+      },
+      "elevated": {
+        "n_runs": 359,
+        "win_rate": 59.3,
+        "avg_saving": 2.336,
+        "pct_of_runs": 35.9
+      },
+      "fear": {
+        "n_runs": 34,
+        "win_rate": 85.3,
+        "avg_saving": 4.096,
+        "pct_of_runs": 3.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MRNA",
+      "n_months": 53,
+      "win_rate_pct": 56.6,
+      "avg_saving_pct": 2.159,
+      "median_saving_pct": 1.836,
+      "avg_capture_rate": 54.6,
+      "best_month": 14.87,
+      "worst_month": -11.95
+    },
+    "ticker_meta": {
+      "rows": 1858,
+      "start": "2018-12-07",
+      "end": "2026-04-30",
+      "name": "Moderna, Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.336
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider MRNA's dip below SMA20 and macro signals. Oil's inflation signal conflicts with Gold's risk-off signal. ",
+      "suggested_window": "days 27-30",
+      "action": "consider",
+      "key_factor": "MRNA's 5-day return"
+    },
+    "lgbm_rec": {
+      "ticker": "MRNA",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        30
+      ],
+      "predicted_saving": 0.091,
+      "day_scores": {
+        "20": 0.018,
+        "21": 0.0233,
+        "22": 0.0,
+        "23": 0.0505,
+        "24": 0.0948,
+        "27": 0.4205,
+        "28": 0.4586,
+        "29": 0.3367,
+        "30": 0.3462
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0381
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 26.0,
+  "generated": "2026-04-30T20:26:35.252716",
+  "cached": false
+}

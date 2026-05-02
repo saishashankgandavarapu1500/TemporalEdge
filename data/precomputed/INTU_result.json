@@ -1,0 +1,268 @@
+{
+  "ticker": "INTU",
+  "summary": {
+    "ticker": "INTU",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (89%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (8.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (68%); strong capture (89%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (8.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.4,
+    "avg_saving_pct": 1.665,
+    "median_saving_pct": 1.211,
+    "percentiles": {
+      "p10": -1.833,
+      "p25": 0.0,
+      "p50": 1.211,
+      "p75": 3.371,
+      "p90": 6.175
+    },
+    "clipped_values": 84,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1785,
+    "avg_dollar_per_year": 2.14,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 471,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 954,
+        "extra": 68
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3251,
+        "extra": 498
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22083,
+        "extra": 7111
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.5,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 806,
+            "extra": 31,
+            "lift_pct": 4.1
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2234,
+            "extra": 185,
+            "lift_pct": 9.0
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9249,
+            "extra": 1655,
+            "lift_pct": 21.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.7,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 471,
+            "extra": 19,
+            "lift_pct": 4.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 954,
+            "extra": 68,
+            "lift_pct": 7.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3251,
+            "extra": 498,
+            "lift_pct": 18.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22083,
+            "extra": 7111,
+            "lift_pct": 47.5
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.99,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 496,
+            "extra": 44,
+            "lift_pct": 9.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1047,
+            "extra": 161,
+            "lift_pct": 18.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4009,
+            "extra": 1257,
+            "lift_pct": 45.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 36137,
+            "extra": 21165,
+            "lift_pct": 141.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 67.4,
+        "avg_saving": 1.187,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 65.6,
+        "avg_saving": 1.348,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 72.8,
+        "avg_saving": 2.421,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 67.1,
+        "avg_saving": 1.808,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "INTU",
+      "n_months": 225,
+      "win_rate_pct": 76.4,
+      "avg_saving_pct": 2.01,
+      "median_saving_pct": 1.523,
+      "avg_capture_rate": 89.0,
+      "best_month": 12.1,
+      "worst_month": -9.49
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Intuit Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.213
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 23rd, considering normal VIX and flat S&P 500. Oil's inflation signal may impact. Consider days 23-27",
+      "suggested_window": "days 23-27",
+      "action": "consider",
+      "key_factor": "normal VIX"
+    },
+    "lgbm_rec": {
+      "ticker": "INTU",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        27,
+        30
+      ],
+      "predicted_saving": 0.019,
+      "day_scores": {
+        "20": 0.0009,
+        "21": 0.0224,
+        "22": 0.0186,
+        "23": 0.5979,
+        "24": 0.1087,
+        "27": 0.1916,
+        "28": 0.1685,
+        "29": 0.1522,
+        "30": 0.1757
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4063
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 73.7,
+  "generated": "2026-04-30T20:19:56.146876",
+  "cached": false
+}

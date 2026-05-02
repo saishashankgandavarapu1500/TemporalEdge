@@ -1,0 +1,268 @@
+{
+  "ticker": "BEN",
+  "summary": {
+    "ticker": "BEN",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (100%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (6.1pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (70%); strong capture (100%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (6.1pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.1,
+    "avg_saving_pct": 1.568,
+    "median_saving_pct": 1.249,
+    "percentiles": {
+      "p10": -1.264,
+      "p25": 0.0,
+      "p50": 1.249,
+      "p75": 3.07,
+      "p90": 4.855
+    },
+    "clipped_values": 43,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1537,
+    "avg_dollar_per_year": 1.84,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 469,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 950,
+        "extra": 64
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3219,
+        "extra": 467
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21580,
+        "extra": 6608
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.41,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 804,
+            "extra": 30,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2222,
+            "extra": 174,
+            "lift_pct": 8.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9142,
+            "extra": 1548,
+            "lift_pct": 20.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.54,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 469,
+            "extra": 18,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 950,
+            "extra": 64,
+            "lift_pct": 7.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3219,
+            "extra": 467,
+            "lift_pct": 17.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21580,
+            "extra": 6608,
+            "lift_pct": 44.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.64,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 493,
+            "extra": 42,
+            "lift_pct": 9.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1036,
+            "extra": 151,
+            "lift_pct": 17.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3920,
+            "extra": 1168,
+            "lift_pct": 42.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34271,
+            "extra": 19299,
+            "lift_pct": 128.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 66.7,
+        "avg_saving": 0.951,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 77.2,
+        "avg_saving": 1.789,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 65.9,
+        "avg_saving": 1.678,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 68.4,
+        "avg_saving": 2.432,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "BEN",
+      "n_months": 225,
+      "win_rate_pct": 76.4,
+      "avg_saving_pct": 2.098,
+      "median_saving_pct": 1.704,
+      "avg_capture_rate": 100.0,
+      "best_month": 12.61,
+      "worst_month": -6.76
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Franklin Resources, Inc.",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 1.473
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 23 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 22-24",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "BEN",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        24,
+        21
+      ],
+      "predicted_saving": 0.012,
+      "day_scores": {
+        "20": 0.1741,
+        "21": 0.1853,
+        "22": 0.1846,
+        "23": 0.5891,
+        "24": 0.2184,
+        "27": 0.0172,
+        "28": 0.0007,
+        "29": 0.0017,
+        "30": 0.0067
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5719
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 59.6,
+  "generated": "2026-04-30T22:01:57.900492",
+  "cached": false
+}

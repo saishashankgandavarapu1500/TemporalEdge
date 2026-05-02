@@ -1,0 +1,268 @@
+{
+  "ticker": "ILMN",
+  "summary": {
+    "ticker": "ILMN",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (77%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (9.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (66%); strong capture (77%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (9.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.0,
+    "avg_saving_pct": 2.05,
+    "median_saving_pct": 1.434,
+    "percentiles": {
+      "p10": -1.923,
+      "p25": 0.0,
+      "p50": 1.434,
+      "p75": 4.397,
+      "p90": 8.0
+    },
+    "clipped_values": 158,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2382,
+    "avg_dollar_per_year": 2.86,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 475,
+        "extra": 24
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 971,
+        "extra": 85
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3380,
+        "extra": 628
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24206,
+        "extra": 9234
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.84,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 813,
+            "extra": 39,
+            "lift_pct": 5.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2280,
+            "extra": 231,
+            "lift_pct": 11.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9688,
+            "extra": 2094,
+            "lift_pct": 27.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.32,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 971,
+            "extra": 85,
+            "lift_pct": 9.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3380,
+            "extra": 628,
+            "lift_pct": 22.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24206,
+            "extra": 9234,
+            "lift_pct": 61.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.38,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 5,
+            "lift_pct": 3.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 507,
+            "extra": 55,
+            "lift_pct": 12.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1089,
+            "extra": 203,
+            "lift_pct": 22.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4388,
+            "extra": 1635,
+            "lift_pct": 59.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 44676,
+            "extra": 29703,
+            "lift_pct": 198.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 303,
+        "win_rate": 69.3,
+        "avg_saving": 1.797,
+        "pct_of_runs": 30.3
+      },
+      "normal": {
+        "n_runs": 322,
+        "win_rate": 66.1,
+        "avg_saving": 2.105,
+        "pct_of_runs": 32.2
+      },
+      "elevated": {
+        "n_runs": 275,
+        "win_rate": 64.7,
+        "avg_saving": 2.443,
+        "pct_of_runs": 27.5
+      },
+      "fear": {
+        "n_runs": 100,
+        "win_rate": 59.0,
+        "avg_saving": 1.555,
+        "pct_of_runs": 10.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "ILMN",
+      "n_months": 225,
+      "win_rate_pct": 68.0,
+      "avg_saving_pct": 1.96,
+      "median_saving_pct": 1.516,
+      "avg_capture_rate": 77.3,
+      "best_month": 29.77,
+      "worst_month": -14.04
+    },
+    "ticker_meta": {
+      "rows": 6477,
+      "start": "2000-07-28",
+      "end": "2026-04-30",
+      "name": "Illumina, Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.493
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 28 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 27-29",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "ILMN",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        23
+      ],
+      "predicted_saving": 0.01,
+      "day_scores": {
+        "20": 0.1191,
+        "21": 0.0779,
+        "22": 0.0823,
+        "23": 0.2696,
+        "24": 0.1723,
+        "27": 0.2847,
+        "28": 0.3831,
+        "29": 0.0368,
+        "30": 0.1812
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0985
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 68.6,
+  "generated": "2026-04-30T22:17:55.744670",
+  "cached": false
+}

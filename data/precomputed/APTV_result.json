@@ -1,0 +1,268 @@
+{
+  "ticker": "APTV",
+  "summary": {
+    "ticker": "APTV",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (96%)",
+      "adequately trained (138 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (7.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: moderate win rate (74%); strong capture (96%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (7.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 73.6,
+    "avg_saving_pct": 1.801,
+    "median_saving_pct": 1.38,
+    "percentiles": {
+      "p10": -1.348,
+      "p25": 0.0,
+      "p50": 1.38,
+      "p75": 3.553,
+      "p90": 5.818
+    },
+    "clipped_values": 6,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.1834,
+    "avg_dollar_per_year": 2.2,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 442,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 853,
+        "extra": 36
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2532,
+        "extra": 232
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12344,
+        "extra": 2452
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 8.97,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 411,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 754,
+            "extra": 19,
+            "lift_pct": 2.6
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1932,
+            "extra": 103,
+            "lift_pct": 5.6
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6656,
+            "extra": 765,
+            "lift_pct": 13.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.62,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 442,
+            "extra": 11,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 853,
+            "extra": 36,
+            "lift_pct": 4.5
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2532,
+            "extra": 232,
+            "lift_pct": 10.1
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12344,
+            "extra": 2452,
+            "lift_pct": 24.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.92,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 960,
+            "extra": 74,
+            "lift_pct": 8.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3296,
+            "extra": 544,
+            "lift_pct": 19.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22811,
+            "extra": 7838,
+            "lift_pct": 52.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 392,
+        "win_rate": 75.5,
+        "avg_saving": 1.287,
+        "pct_of_runs": 39.2
+      },
+      "normal": {
+        "n_runs": 352,
+        "win_rate": 74.7,
+        "avg_saving": 2.163,
+        "pct_of_runs": 35.2
+      },
+      "elevated": {
+        "n_runs": 233,
+        "win_rate": 69.5,
+        "avg_saving": 1.846,
+        "pct_of_runs": 23.3
+      },
+      "fear": {
+        "n_runs": 23,
+        "win_rate": 65.2,
+        "avg_saving": 4.56,
+        "pct_of_runs": 2.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "APTV",
+      "n_months": 138,
+      "win_rate_pct": 71.7,
+      "avg_saving_pct": 1.936,
+      "median_saving_pct": 1.363,
+      "avg_capture_rate": 96.5,
+      "best_month": 18.01,
+      "worst_month": -13.29
+    },
+    "ticker_meta": {
+      "rows": 3632,
+      "start": "2011-11-17",
+      "end": "2026-04-30",
+      "name": "Aptiv PLC",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.511
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and neutral SMA20.",
+      "suggested_window": "days 24-29",
+      "action": "consider",
+      "key_factor": "Model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "APTV",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        28,
+        24
+      ],
+      "predicted_saving": 0.012,
+      "day_scores": {
+        "20": 0.0278,
+        "21": 0.0308,
+        "22": 0.0002,
+        "23": 0.1158,
+        "24": 0.1334,
+        "27": 0.0764,
+        "28": 0.1981,
+        "29": 0.2787,
+        "30": 0.0608
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2023
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 39.9,
+  "generated": "2026-04-30T19:50:32.372719",
+  "cached": false
+}

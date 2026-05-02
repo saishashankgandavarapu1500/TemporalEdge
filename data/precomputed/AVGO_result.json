@@ -1,0 +1,268 @@
+{
+  "ticker": "AVGO",
+  "summary": {
+    "ticker": "AVGO",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (95%)",
+      "well-trained (165 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (7.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (74%); strong capture (95%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (7.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 73.6,
+    "avg_saving_pct": 2.1,
+    "median_saving_pct": 1.778,
+    "percentiles": {
+      "p10": -1.349,
+      "p25": 0.0,
+      "p50": 1.778,
+      "p75": 3.938,
+      "p90": 6.501
+    },
+    "clipped_values": 96,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2275,
+    "avg_dollar_per_year": 2.73,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 476,
+        "extra": 25
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 973,
+        "extra": 87
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3398,
+        "extra": 646
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24498,
+        "extra": 9526
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.89,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 814,
+            "extra": 40,
+            "lift_pct": 5.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2286,
+            "extra": 237,
+            "lift_pct": 11.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9747,
+            "extra": 2153,
+            "lift_pct": 28.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.4,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 476,
+            "extra": 25,
+            "lift_pct": 5.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 973,
+            "extra": 87,
+            "lift_pct": 9.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3398,
+            "extra": 646,
+            "lift_pct": 23.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24498,
+            "extra": 9526,
+            "lift_pct": 63.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.56,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 5,
+            "lift_pct": 3.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 508,
+            "extra": 57,
+            "lift_pct": 12.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1094,
+            "extra": 209,
+            "lift_pct": 23.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4440,
+            "extra": 1688,
+            "lift_pct": 61.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 45936,
+            "extra": 30964,
+            "lift_pct": 206.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 330,
+        "win_rate": 77.3,
+        "avg_saving": 1.922,
+        "pct_of_runs": 33.0
+      },
+      "normal": {
+        "n_runs": 358,
+        "win_rate": 70.9,
+        "avg_saving": 1.823,
+        "pct_of_runs": 35.8
+      },
+      "elevated": {
+        "n_runs": 263,
+        "win_rate": 74.5,
+        "avg_saving": 2.448,
+        "pct_of_runs": 26.3
+      },
+      "fear": {
+        "n_runs": 49,
+        "win_rate": 63.3,
+        "avg_saving": 3.448,
+        "pct_of_runs": 4.9
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AVGO",
+      "n_months": 165,
+      "win_rate_pct": 75.8,
+      "avg_saving_pct": 2.292,
+      "median_saving_pct": 1.809,
+      "avg_capture_rate": 94.7,
+      "best_month": 16.68,
+      "worst_month": -7.72
+    },
+    "ticker_meta": {
+      "rows": 4209,
+      "start": "2009-08-06",
+      "end": "2026-04-30",
+      "name": "Broadcom Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.253
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal VIX and flat S&P 500, consider days 20-23",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "model recommendation"
+    },
+    "lgbm_rec": {
+      "ticker": "AVGO",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        28
+      ],
+      "predicted_saving": 0.021,
+      "day_scores": {
+        "20": 0.531,
+        "21": 0.244,
+        "22": 0.0005,
+        "23": 0.06,
+        "24": 0.0399,
+        "27": 0.1137,
+        "28": 0.2062,
+        "29": 0.1214,
+        "30": 0.1138
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4173
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 56.5,
+  "generated": "2026-04-30T21:18:31.228177",
+  "cached": false
+}

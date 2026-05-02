@@ -1,0 +1,227 @@
+{
+  "ticker": "AMD",
+  "summary": {
+    "ticker": "AMD",
+    "monthly_usd": 3456.0,
+    "n_runs": 1000,
+    "tier": "C",
+    "tier_label": "Low precision \u2014 timing not reliably learnable for this asset",
+    "trust_score": 37,
+    "trust_reasons": [
+      "moderate win rate (67%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "very low capture (-17%) \u2014 timing not learnable",
+      "very high beta (2.0) \u2014 macro-disconnected",
+      "very wide spread (12.1pp) \u2014 high variance, results unreliable"
+    ],
+    "trust_summary": "Trust 37/100. Strengths: moderate win rate (67%); well-trained (225 folds). Concerns: very low capture (-17%) \u2014 timing not learnable; very high beta (2.0) \u2014 macro-disconnected.",
+    "win_rate_pct": 67.4,
+    "avg_saving_pct": 2.881,
+    "median_saving_pct": 2.374,
+    "percentiles": {
+      "p10": -2.375,
+      "p25": 0.0,
+      "p50": 2.374,
+      "p75": 5.695,
+      "p90": 9.774
+    },
+    "clipped_values": 56,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 100.5616,
+    "avg_dollar_per_year": 1206.74,
+    "projections": {
+      "1": {
+        "fixed": 43427,
+        "optimised": 43741,
+        "extra": 314
+      },
+      "3": {
+        "fixed": 144398,
+        "optimised": 147865,
+        "extra": 3467
+      },
+      "5": {
+        "fixed": 267623,
+        "optimised": 278916,
+        "extra": 11293
+      },
+      "10": {
+        "fixed": 707944,
+        "optimised": 774597,
+        "extra": 66652
+      },
+      "20": {
+        "fixed": 2624379,
+        "optimised": 3221027,
+        "extra": 596648
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 5.0,
+        "capture_rate": 10.0,
+        "opt_rate": 6.04,
+        "projections": {
+          "1": {
+            "fixed": 42436,
+            "optimised": 42639,
+            "extra": 203,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 133932,
+            "optimised": 136021,
+            "extra": 2090,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 235029,
+            "optimised": 241356,
+            "extra": 6326,
+            "lift_pct": 2.7
+          },
+          "10": {
+            "fixed": 536656,
+            "optimised": 567510,
+            "extra": 30854,
+            "lift_pct": 5.7
+          },
+          "20": {
+            "fixed": 1420532,
+            "optimised": 1603859,
+            "extra": 183326,
+            "lift_pct": 12.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 10.0,
+        "capture_rate": 15.0,
+        "opt_rate": 11.56,
+        "projections": {
+          "1": {
+            "fixed": 43427,
+            "optimised": 43741,
+            "extra": 314,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 144398,
+            "optimised": 147865,
+            "extra": 3467,
+            "lift_pct": 2.4
+          },
+          "5": {
+            "fixed": 267623,
+            "optimised": 278916,
+            "extra": 11293,
+            "lift_pct": 4.2
+          },
+          "10": {
+            "fixed": 707944,
+            "optimised": 774597,
+            "extra": 66652,
+            "lift_pct": 9.4
+          },
+          "20": {
+            "fixed": 2624379,
+            "optimised": 3221027,
+            "extra": 596648,
+            "lift_pct": 22.7
+          }
+        }
+      }
+    },
+    "show_optimistic": false,
+    "projection_note": "\u26a0\ufe0f  Tier C: projections use conservative assumptions. This asset's timing signal is weak \u2014 treat with caution.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 279,
+        "win_rate": 73.5,
+        "avg_saving": 2.557,
+        "pct_of_runs": 27.9
+      },
+      "normal": {
+        "n_runs": 340,
+        "win_rate": 66.2,
+        "avg_saving": 2.41,
+        "pct_of_runs": 34.0
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 64.6,
+        "avg_saving": 3.295,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 61.8,
+        "avg_saving": 4.517,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AMD",
+      "n_months": 225,
+      "win_rate_pct": 71.6,
+      "avg_saving_pct": 3.013,
+      "median_saving_pct": 2.595,
+      "avg_capture_rate": -17.0,
+      "best_month": 29.76,
+      "worst_month": -38.14
+    },
+    "ticker_meta": {
+      "rows": 6617,
+      "start": "2000-01-03",
+      "end": "2026-04-24",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.963
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider AMD's momentum and macro signals. Model recommends days 20-22.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "AMD",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        22
+      ],
+      "predicted_saving": 0.141,
+      "day_scores": {
+        "20": 0.583,
+        "21": 0.2556,
+        "22": 0.1818,
+        "23": 0.1596,
+        "24": 0.0004
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 16
+  },
+  "elapsed_s": 42.9,
+  "generated": "2026-04-24T20:06:10.266889",
+  "cached": false
+}

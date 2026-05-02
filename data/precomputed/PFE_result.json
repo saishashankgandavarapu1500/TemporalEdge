@@ -1,0 +1,267 @@
+{
+  "ticker": "PFE",
+  "summary": {
+    "ticker": "PFE",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (87%)",
+      "low beta (0.4) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (69%); strong capture (87%). ",
+    "win_rate_pct": 68.6,
+    "avg_saving_pct": 0.952,
+    "median_saving_pct": 0.736,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.736,
+      "p75": 2.225,
+      "p90": 2.5
+    },
+    "clipped_values": 319,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1151,
+    "avg_dollar_per_year": 1.38,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 924,
+        "extra": 38
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3025,
+        "extra": 273
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18668,
+        "extra": 3696
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.86,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 792,
+            "extra": 18,
+            "lift_pct": 2.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2152,
+            "extra": 104,
+            "lift_pct": 5.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8495,
+            "extra": 901,
+            "lift_pct": 11.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.54,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 11,
+            "lift_pct": 2.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 924,
+            "extra": 38,
+            "lift_pct": 4.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3025,
+            "extra": 273,
+            "lift_pct": 9.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18668,
+            "extra": 3696,
+            "lift_pct": 24.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.43,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 476,
+            "extra": 25,
+            "lift_pct": 5.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 974,
+            "extra": 88,
+            "lift_pct": 9.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3403,
+            "extra": 651,
+            "lift_pct": 23.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24596,
+            "extra": 9624,
+            "lift_pct": 64.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.4,
+        "avg_saving": 0.794,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 65.9,
+        "avg_saving": 0.908,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 68.2,
+        "avg_saving": 0.998,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 82.9,
+        "avg_saving": 1.558,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "PFE",
+      "n_months": 225,
+      "win_rate_pct": 70.7,
+      "avg_saving_pct": 1.185,
+      "median_saving_pct": 0.771,
+      "avg_capture_rate": 87.1,
+      "best_month": 8.98,
+      "worst_month": -4.55
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Pfizer Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.388
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider PFE's dip below SMA20 and macro signals. Oil's 11.9% gain may indicate inflation. ",
+      "suggested_window": "days 28-29",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "PFE",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        28,
+        23
+      ],
+      "predicted_saving": 0.002,
+      "day_scores": {
+        "20": 0.014,
+        "21": 0.0006,
+        "22": 0.1695,
+        "23": 0.2438,
+        "24": 0.1119,
+        "27": 0.1803,
+        "28": 0.4346,
+        "29": 0.4378,
+        "30": 0.1054
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2575
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 83.6,
+  "generated": "2026-04-30T20:39:38.823826",
+  "cached": false
+}

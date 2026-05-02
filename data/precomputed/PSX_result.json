@@ -1,0 +1,267 @@
+{
+  "ticker": "PSX",
+  "summary": {
+    "ticker": "PSX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (93%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (6.0pp)",
+      "adequately trained (133 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (74%); strong capture (93%). ",
+    "win_rate_pct": 73.6,
+    "avg_saving_pct": 1.646,
+    "median_saving_pct": 1.339,
+    "percentiles": {
+      "p10": -0.995,
+      "p25": 0.0,
+      "p50": 1.339,
+      "p75": 3.2,
+      "p90": 5.0
+    },
+    "clipped_values": 206,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1905,
+    "avg_dollar_per_year": 2.29,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 953,
+        "extra": 68
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3244,
+        "extra": 492
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21986,
+        "extra": 7014
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.48,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 805,
+            "extra": 31,
+            "lift_pct": 4.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2232,
+            "extra": 183,
+            "lift_pct": 8.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9228,
+            "extra": 1635,
+            "lift_pct": 21.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.67,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 953,
+            "extra": 68,
+            "lift_pct": 7.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3244,
+            "extra": 492,
+            "lift_pct": 17.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21986,
+            "extra": 7014,
+            "lift_pct": 46.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.93,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 495,
+            "extra": 44,
+            "lift_pct": 9.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1045,
+            "extra": 159,
+            "lift_pct": 17.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3992,
+            "extra": 1240,
+            "lift_pct": 45.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 35773,
+            "extra": 20801,
+            "lift_pct": 138.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 411,
+        "win_rate": 72.5,
+        "avg_saving": 1.355,
+        "pct_of_runs": 41.1
+      },
+      "normal": {
+        "n_runs": 330,
+        "win_rate": 72.1,
+        "avg_saving": 1.547,
+        "pct_of_runs": 33.0
+      },
+      "elevated": {
+        "n_runs": 239,
+        "win_rate": 76.2,
+        "avg_saving": 2.161,
+        "pct_of_runs": 23.9
+      },
+      "fear": {
+        "n_runs": 20,
+        "win_rate": 90.0,
+        "avg_saving": 3.128,
+        "pct_of_runs": 2.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "PSX",
+      "n_months": 133,
+      "win_rate_pct": 78.9,
+      "avg_saving_pct": 2.016,
+      "median_saving_pct": 1.596,
+      "avg_capture_rate": 93.2,
+      "best_month": 17.87,
+      "worst_month": -13.12
+    },
+    "ticker_meta": {
+      "rows": 3533,
+      "start": "2012-04-12",
+      "end": "2026-04-30",
+      "name": "Phillips 66",
+      "sector": "Energy",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider recent market momentum and oil price surge.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "PSX",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        23
+      ],
+      "predicted_saving": 0.038,
+      "day_scores": {
+        "20": 0.5958,
+        "21": 0.2005,
+        "22": 0.185,
+        "23": 0.1902,
+        "24": 0.1401,
+        "27": 0.0712,
+        "28": 0.08,
+        "29": 0.0658,
+        "30": 0.0019
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5247
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 47.2,
+  "generated": "2026-04-30T20:40:36.681647",
+  "cached": false
+}

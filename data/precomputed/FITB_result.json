@@ -1,0 +1,268 @@
+{
+  "ticker": "FITB",
+  "summary": {
+    "ticker": "FITB",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (96%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (96%). Concerns: wide spread (6.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.5,
+    "avg_saving_pct": 1.467,
+    "median_saving_pct": 1.249,
+    "percentiles": {
+      "p10": -1.2,
+      "p25": 0.0,
+      "p50": 1.249,
+      "p75": 2.963,
+      "p90": 5.0
+    },
+    "clipped_values": 174,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1841,
+    "avg_dollar_per_year": 2.21,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 468,
+        "extra": 17
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 946,
+        "extra": 60
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3186,
+        "extra": 434
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21071,
+        "extra": 6098
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.32,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 2.0
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 802,
+            "extra": 28,
+            "lift_pct": 3.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2211,
+            "extra": 162,
+            "lift_pct": 7.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9032,
+            "extra": 1438,
+            "lift_pct": 18.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.38,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 468,
+            "extra": 17,
+            "lift_pct": 3.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 946,
+            "extra": 60,
+            "lift_pct": 6.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3186,
+            "extra": 434,
+            "lift_pct": 15.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21071,
+            "extra": 6098,
+            "lift_pct": 40.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.28,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 490,
+            "extra": 39,
+            "lift_pct": 8.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1026,
+            "extra": 140,
+            "lift_pct": 15.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3829,
+            "extra": 1077,
+            "lift_pct": 39.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 32440,
+            "extra": 17467,
+            "lift_pct": 116.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 71.3,
+        "avg_saving": 1.037,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 70.6,
+        "avg_saving": 1.298,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 68.5,
+        "avg_saving": 1.747,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 75.0,
+        "avg_saving": 2.688,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "FITB",
+      "n_months": 225,
+      "win_rate_pct": 73.3,
+      "avg_saving_pct": 2.572,
+      "median_saving_pct": 1.416,
+      "avg_capture_rate": 95.5,
+      "best_month": 51.18,
+      "worst_month": -10.16
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Fifth Third Bancorp",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 0.973
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 24 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 23-25",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "FITB",
+      "recommended_day": 24,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        24,
+        29,
+        27
+      ],
+      "predicted_saving": 0.014,
+      "day_scores": {
+        "20": 0.0009,
+        "21": 0.0247,
+        "22": 0.0679,
+        "23": 0.1065,
+        "24": 0.5844,
+        "27": 0.2318,
+        "28": 0.2245,
+        "29": 0.4436,
+        "30": 0.1426
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.3526
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 62.9,
+  "generated": "2026-04-30T21:58:50.587437",
+  "cached": false
+}

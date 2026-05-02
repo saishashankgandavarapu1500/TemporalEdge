@@ -1,0 +1,268 @@
+{
+  "ticker": "JBHT",
+  "summary": {
+    "ticker": "JBHT",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (98%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (6.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (70%); strong capture (98%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (6.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.5,
+    "avg_saving_pct": 1.554,
+    "median_saving_pct": 1.068,
+    "percentiles": {
+      "p10": -0.944,
+      "p25": 0.0,
+      "p50": 1.068,
+      "p75": 2.867,
+      "p90": 5.104
+    },
+    "clipped_values": 29,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.156,
+    "avg_dollar_per_year": 1.87,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 469,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 949,
+        "extra": 64
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3214,
+        "extra": 462
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21510,
+        "extra": 6538
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.4,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 804,
+            "extra": 29,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2221,
+            "extra": 172,
+            "lift_pct": 8.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9127,
+            "extra": 1533,
+            "lift_pct": 20.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.52,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 469,
+            "extra": 18,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 949,
+            "extra": 64,
+            "lift_pct": 7.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3214,
+            "extra": 462,
+            "lift_pct": 16.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21510,
+            "extra": 6538,
+            "lift_pct": 43.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.59,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 492,
+            "extra": 41,
+            "lift_pct": 9.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1035,
+            "extra": 149,
+            "lift_pct": 16.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3907,
+            "extra": 1155,
+            "lift_pct": 42.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34016,
+            "extra": 19044,
+            "lift_pct": 127.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 64.2,
+        "avg_saving": 0.824,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 75.4,
+        "avg_saving": 1.643,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 68.2,
+        "avg_saving": 1.865,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 81.6,
+        "avg_saving": 2.621,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "JBHT",
+      "n_months": 225,
+      "win_rate_pct": 75.6,
+      "avg_saving_pct": 1.741,
+      "median_saving_pct": 1.31,
+      "avg_capture_rate": 98.4,
+      "best_month": 14.59,
+      "worst_month": -15.7
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "J.B. Hunt Transport Services, Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.221
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider normal VIX and momentum above SMA20. Oil's inflation signal conflicts with Gold's risk-off signal. ",
+      "suggested_window": "days 22-29",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "JBHT",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        24,
+        22
+      ],
+      "predicted_saving": 0.005,
+      "day_scores": {
+        "20": 0.0007,
+        "21": 0.1059,
+        "22": 0.1739,
+        "23": 0.1228,
+        "24": 0.2242,
+        "27": 0.1658,
+        "28": 0.1224,
+        "29": 0.2458,
+        "30": 0.1594
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.08
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 92.6,
+  "generated": "2026-04-30T22:22:32.786135",
+  "cached": false
+}

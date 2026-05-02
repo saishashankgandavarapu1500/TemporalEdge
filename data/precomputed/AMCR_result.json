@@ -1,0 +1,267 @@
+{
+  "ticker": "AMCR",
+  "summary": {
+    "ticker": "AMCR",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 65,
+    "trust_reasons": [
+      "strong capture (100%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "moderate spread (4.2pp)",
+      "adequately trained (127 folds)"
+    ],
+    "trust_penalties": [
+      "win rate 51% \u2248 random \u2014 no reliable signal"
+    ],
+    "trust_summary": "Trust 65/100. Strengths: strong capture (100%); low beta (0.7) \u2014 stable patterns. Concerns: win rate 51% \u2248 random \u2014 no reliable signal.",
+    "win_rate_pct": 51.3,
+    "avg_saving_pct": 1.056,
+    "median_saving_pct": 0.235,
+    "percentiles": {
+      "p10": -0.317,
+      "p25": 0.0,
+      "p50": 0.235,
+      "p75": 2.01,
+      "p90": 3.897
+    },
+    "clipped_values": 81,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.104,
+    "avg_dollar_per_year": 1.25,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 463,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 928,
+        "extra": 43
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3057,
+        "extra": 305
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19126,
+        "extra": 4154
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.95,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 794,
+            "extra": 20,
+            "lift_pct": 2.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2164,
+            "extra": 115,
+            "lift_pct": 5.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8600,
+            "extra": 1006,
+            "lift_pct": 13.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.71,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 463,
+            "extra": 12,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 928,
+            "extra": 43,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3057,
+            "extra": 305,
+            "lift_pct": 11.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19126,
+            "extra": 4154,
+            "lift_pct": 27.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.8,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 28,
+            "lift_pct": 6.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 984,
+            "extra": 98,
+            "lift_pct": 11.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3485,
+            "extra": 732,
+            "lift_pct": 26.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25992,
+            "extra": 11020,
+            "lift_pct": 73.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 411,
+        "win_rate": 37.7,
+        "avg_saving": 0.617,
+        "pct_of_runs": 41.1
+      },
+      "normal": {
+        "n_runs": 323,
+        "win_rate": 57.9,
+        "avg_saving": 1.355,
+        "pct_of_runs": 32.3
+      },
+      "elevated": {
+        "n_runs": 245,
+        "win_rate": 62.0,
+        "avg_saving": 1.258,
+        "pct_of_runs": 24.5
+      },
+      "fear": {
+        "n_runs": 21,
+        "win_rate": 90.5,
+        "avg_saving": 2.688,
+        "pct_of_runs": 2.1
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AMCR",
+      "n_months": 126,
+      "win_rate_pct": 60.3,
+      "avg_saving_pct": 1.384,
+      "median_saving_pct": 0.978,
+      "avg_capture_rate": 100.0,
+      "best_month": 18.08,
+      "worst_month": -8.57
+    },
+    "ticker_meta": {
+      "rows": 3509,
+      "start": "2012-05-15",
+      "end": "2026-04-29",
+      "name": "Amcor plc",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 0.708
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro signals and AMCR's dip below SMA20. Oil's surge may impact. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "AMCR",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 11.9,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        29
+      ],
+      "predicted_saving": 0.014,
+      "day_scores": {
+        "20": 0.0313,
+        "21": 0.0012,
+        "22": 0.074,
+        "23": 0.1906,
+        "24": 0.2576,
+        "27": 0.4893,
+        "28": 0.4227,
+        "29": 0.3771
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 70.1,
+  "generated": "2026-04-30T00:58:05.679073",
+  "cached": false
+}

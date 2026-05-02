@@ -1,0 +1,267 @@
+{
+  "ticker": "BR",
+  "summary": {
+    "ticker": "BR",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (81%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (4.9pp)",
+      "well-trained (194 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (72%); strong capture (81%). ",
+    "win_rate_pct": 72.2,
+    "avg_saving_pct": 1.329,
+    "median_saving_pct": 1.133,
+    "percentiles": {
+      "p10": -1.141,
+      "p25": 0.0,
+      "p50": 1.133,
+      "p75": 2.474,
+      "p90": 3.78
+    },
+    "clipped_values": 13,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1297,
+    "avg_dollar_per_year": 1.56,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 15
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 940,
+        "extra": 54
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3142,
+        "extra": 390
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20395,
+        "extra": 5422
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.2,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 799,
+            "extra": 25,
+            "lift_pct": 3.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2195,
+            "extra": 146,
+            "lift_pct": 7.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8884,
+            "extra": 1290,
+            "lift_pct": 17.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.15,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 15,
+            "lift_pct": 3.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 940,
+            "extra": 54,
+            "lift_pct": 6.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3142,
+            "extra": 390,
+            "lift_pct": 14.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20395,
+            "extra": 5422,
+            "lift_pct": 36.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.78,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 486,
+            "extra": 35,
+            "lift_pct": 7.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1011,
+            "extra": 126,
+            "lift_pct": 14.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3709,
+            "extra": 957,
+            "lift_pct": 34.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30101,
+            "extra": 15129,
+            "lift_pct": 101.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 296,
+        "win_rate": 71.3,
+        "avg_saving": 1.025,
+        "pct_of_runs": 29.6
+      },
+      "normal": {
+        "n_runs": 309,
+        "win_rate": 76.4,
+        "avg_saving": 1.241,
+        "pct_of_runs": 30.9
+      },
+      "elevated": {
+        "n_runs": 303,
+        "win_rate": 69.0,
+        "avg_saving": 1.435,
+        "pct_of_runs": 30.3
+      },
+      "fear": {
+        "n_runs": 92,
+        "win_rate": 71.7,
+        "avg_saving": 2.251,
+        "pct_of_runs": 9.2
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "BR",
+      "n_months": 194,
+      "win_rate_pct": 75.3,
+      "avg_saving_pct": 1.304,
+      "median_saving_pct": 1.066,
+      "avg_capture_rate": 81.0,
+      "best_month": 7.93,
+      "worst_month": -11.07
+    },
+    "ticker_meta": {
+      "rows": 4808,
+      "start": "2007-03-22",
+      "end": "2026-04-30",
+      "name": "Broadridge Financial Solutions, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.015
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro stability and BR's dip below SMA20. Oil's surge may impact. ",
+      "suggested_window": "days 23-30",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "BR",
+      "recommended_day": 30,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        30,
+        24,
+        23
+      ],
+      "predicted_saving": -0.005,
+      "day_scores": {
+        "20": 0.0564,
+        "21": 0.0241,
+        "22": 0.0789,
+        "23": 0.2287,
+        "24": 0.2416,
+        "27": 0.1541,
+        "28": 0.0072,
+        "29": 0.1235,
+        "30": 0.2449
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0907
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 70.7,
+  "generated": "2026-04-30T21:19:27.757224",
+  "cached": false
+}

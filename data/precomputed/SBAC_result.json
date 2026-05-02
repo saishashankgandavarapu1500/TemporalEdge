@@ -1,0 +1,267 @@
+{
+  "ticker": "SBAC",
+  "summary": {
+    "ticker": "SBAC",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (94%)",
+      "moderate beta (0.9) \u2014 predictable enough",
+      "moderate spread (5.8pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (74%); strong capture (94%). ",
+    "win_rate_pct": 74.4,
+    "avg_saving_pct": 1.863,
+    "median_saving_pct": 1.683,
+    "percentiles": {
+      "p10": -0.796,
+      "p25": 0.0,
+      "p50": 1.683,
+      "p75": 3.859,
+      "p90": 5.0
+    },
+    "clipped_values": 242,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.267,
+    "avg_dollar_per_year": 3.2,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 473,
+        "extra": 22
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 963,
+        "extra": 77
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3317,
+        "extra": 564
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23148,
+        "extra": 8176
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.68,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 810,
+            "extra": 35,
+            "lift_pct": 4.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2257,
+            "extra": 209,
+            "lift_pct": 10.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9472,
+            "extra": 1878,
+            "lift_pct": 24.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.02,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 473,
+            "extra": 22,
+            "lift_pct": 4.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 963,
+            "extra": 77,
+            "lift_pct": 8.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3317,
+            "extra": 564,
+            "lift_pct": 20.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23148,
+            "extra": 8176,
+            "lift_pct": 54.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.71,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 501,
+            "extra": 50,
+            "lift_pct": 11.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1068,
+            "extra": 182,
+            "lift_pct": 20.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4199,
+            "extra": 1447,
+            "lift_pct": 52.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 40288,
+            "extra": 25315,
+            "lift_pct": 169.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 77.3,
+        "avg_saving": 1.467,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 70.6,
+        "avg_saving": 1.678,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 76.1,
+        "avg_saving": 2.243,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 73.7,
+        "avg_saving": 2.622,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SBAC",
+      "n_months": 225,
+      "win_rate_pct": 80.9,
+      "avg_saving_pct": 2.089,
+      "median_saving_pct": 1.576,
+      "avg_capture_rate": 93.7,
+      "best_month": 13.52,
+      "worst_month": -6.49
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "SBA Communications Corporation",
+      "sector": "Real Estate",
+      "type": "EQUITY",
+      "beta": 0.88
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider normal VIX and momentum above SMA20. Oil's inflation signal conflicts with Gold's risk-off signal. Consider days 21-22.",
+      "suggested_window": "days 21-22",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "SBAC",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        21,
+        29
+      ],
+      "predicted_saving": 0.01,
+      "day_scores": {
+        "20": 0.0284,
+        "21": 0.2478,
+        "22": 0.5967,
+        "23": 0.0293,
+        "24": 0.0295,
+        "27": 0.0029,
+        "28": 0.0133,
+        "29": 0.0738,
+        "30": 0.0221
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5938
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 66.8,
+  "generated": "2026-04-30T20:48:11.444857",
+  "cached": false
+}

@@ -1,0 +1,267 @@
+{
+  "ticker": "IWM",
+  "summary": {
+    "ticker": "IWM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (86%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (5.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (70%); strong capture (86%). ",
+    "win_rate_pct": 70.0,
+    "avg_saving_pct": 1.173,
+    "median_saving_pct": 1.069,
+    "percentiles": {
+      "p10": -1.202,
+      "p25": 0.0,
+      "p50": 1.069,
+      "p75": 2.297,
+      "p90": 3.835
+    },
+    "clipped_values": 85,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1212,
+    "avg_dollar_per_year": 1.45,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 14
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 933,
+        "extra": 48
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3093,
+        "extra": 341
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19661,
+        "extra": 4689
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.06,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2177,
+            "extra": 129,
+            "lift_pct": 6.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8721,
+            "extra": 1127,
+            "lift_pct": 14.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.9,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 14,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 933,
+            "extra": 48,
+            "lift_pct": 5.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3093,
+            "extra": 341,
+            "lift_pct": 12.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19661,
+            "extra": 4689,
+            "lift_pct": 31.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.22,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 482,
+            "extra": 31,
+            "lift_pct": 6.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 996,
+            "extra": 110,
+            "lift_pct": 12.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3579,
+            "extra": 827,
+            "lift_pct": 30.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27682,
+            "extra": 12709,
+            "lift_pct": 84.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 296,
+        "win_rate": 69.3,
+        "avg_saving": 0.793,
+        "pct_of_runs": 29.6
+      },
+      "normal": {
+        "n_runs": 317,
+        "win_rate": 75.1,
+        "avg_saving": 1.19,
+        "pct_of_runs": 31.7
+      },
+      "elevated": {
+        "n_runs": 290,
+        "win_rate": 65.9,
+        "avg_saving": 1.391,
+        "pct_of_runs": 29.0
+      },
+      "fear": {
+        "n_runs": 97,
+        "win_rate": 68.0,
+        "avg_saving": 1.628,
+        "pct_of_runs": 9.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "IWM",
+      "n_months": 225,
+      "win_rate_pct": 80.4,
+      "avg_saving_pct": 1.426,
+      "median_saving_pct": 1.184,
+      "avg_capture_rate": 85.5,
+      "best_month": 11.59,
+      "worst_month": -7.54
+    },
+    "ticker_meta": {
+      "rows": 6520,
+      "start": "2000-05-26",
+      "end": "2026-04-30",
+      "name": "iShares Russell 2000 ETF",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 11.7% rise may impact IWM.",
+      "suggested_window": "days 28-29",
+      "action": "consider",
+      "key_factor": "Model confidence and oil price surge"
+    },
+    "lgbm_rec": {
+      "ticker": "IWM",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        28,
+        21
+      ],
+      "predicted_saving": 0.009,
+      "day_scores": {
+        "20": 0.0096,
+        "21": 0.2436,
+        "22": 0.1129,
+        "23": 0.2097,
+        "24": 0.0613,
+        "27": 0.186,
+        "28": 0.279,
+        "29": 0.391,
+        "30": 0.034
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2049
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 61.1,
+  "generated": "2026-04-30T21:00:39.387282",
+  "cached": false
+}

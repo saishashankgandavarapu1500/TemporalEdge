@@ -1,0 +1,268 @@
+{
+  "ticker": "MGM",
+  "summary": {
+    "ticker": "MGM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "strong capture (94%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (64%) \u2014 barely above random",
+      "high beta (1.4) \u2014 volatile, patterns weaker",
+      "wide spread (9.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: strong capture (94%); well-trained (225 folds). Concerns: low win rate (64%) \u2014 barely above random; high beta (1.4) \u2014 volatile, patterns weaker.",
+    "win_rate_pct": 64.5,
+    "avg_saving_pct": 1.952,
+    "median_saving_pct": 1.672,
+    "percentiles": {
+      "p10": -1.912,
+      "p25": 0.0,
+      "p50": 1.672,
+      "p75": 3.829,
+      "p90": 7.238
+    },
+    "clipped_values": 126,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2212,
+    "avg_dollar_per_year": 2.65,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 443,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 856,
+        "extra": 40
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2553,
+        "extra": 253
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12578,
+        "extra": 2686
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.05,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 412,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 755,
+            "extra": 21,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1941,
+            "extra": 112,
+            "lift_pct": 6.1
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6725,
+            "extra": 835,
+            "lift_pct": 14.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.76,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 443,
+            "extra": 12,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 856,
+            "extra": 40,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2553,
+            "extra": 253,
+            "lift_pct": 11.0
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12578,
+            "extra": 2686,
+            "lift_pct": 27.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.16,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 966,
+            "extra": 81,
+            "lift_pct": 9.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3347,
+            "extra": 595,
+            "lift_pct": 21.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23645,
+            "extra": 8672,
+            "lift_pct": 57.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 67.4,
+        "avg_saving": 1.654,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 59.6,
+        "avg_saving": 1.556,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 66.2,
+        "avg_saving": 2.262,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 68.4,
+        "avg_saving": 3.566,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MGM",
+      "n_months": 225,
+      "win_rate_pct": 71.6,
+      "avg_saving_pct": 2.352,
+      "median_saving_pct": 2.025,
+      "avg_capture_rate": 94.1,
+      "best_month": 23.16,
+      "worst_month": -43.38
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "MGM Resorts International",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.351
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 23 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 22-24",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "MGM",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        29,
+        30
+      ],
+      "predicted_saving": 0.029,
+      "day_scores": {
+        "20": 0.0879,
+        "21": 0.2503,
+        "22": 0.1561,
+        "23": 0.5824,
+        "24": 0.1664,
+        "27": 0.009,
+        "28": 0.0782,
+        "29": 0.2779,
+        "30": 0.2641
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5734
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 66.5,
+  "generated": "2026-04-30T22:41:54.332957",
+  "cached": false
+}

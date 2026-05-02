@@ -1,0 +1,268 @@
+{
+  "ticker": "EMR",
+  "summary": {
+    "ticker": "EMR",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (85%)",
+      "moderate spread (5.2pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (71%); strong capture (85%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker.",
+    "win_rate_pct": 70.9,
+    "avg_saving_pct": 1.396,
+    "median_saving_pct": 1.114,
+    "percentiles": {
+      "p10": -0.904,
+      "p25": 0.0,
+      "p50": 1.114,
+      "p75": 2.649,
+      "p90": 4.339
+    },
+    "clipped_values": 27,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.137,
+    "avg_dollar_per_year": 1.64,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 943,
+        "extra": 57
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3163,
+        "extra": 411
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20721,
+        "extra": 5749
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.26,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 801,
+            "extra": 26,
+            "lift_pct": 3.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2203,
+            "extra": 154,
+            "lift_pct": 7.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8956,
+            "extra": 1362,
+            "lift_pct": 17.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.26,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 943,
+            "extra": 57,
+            "lift_pct": 6.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3163,
+            "extra": 411,
+            "lift_pct": 14.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20721,
+            "extra": 5749,
+            "lift_pct": 38.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.03,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 488,
+            "extra": 37,
+            "lift_pct": 8.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1018,
+            "extra": 133,
+            "lift_pct": 15.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3767,
+            "extra": 1015,
+            "lift_pct": 36.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 31218,
+            "extra": 16246,
+            "lift_pct": 108.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.4,
+        "avg_saving": 1.015,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 69.4,
+        "avg_saving": 1.125,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 74.8,
+        "avg_saving": 1.896,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 71.1,
+        "avg_saving": 2.006,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "EMR",
+      "n_months": 225,
+      "win_rate_pct": 72.9,
+      "avg_saving_pct": 1.373,
+      "median_saving_pct": 1.102,
+      "avg_capture_rate": 84.8,
+      "best_month": 13.13,
+      "worst_month": -9.16
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Emerson Electric Co.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.278
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 28th, oil inflation signal supports, gold risk-off signal conflicts.",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "oil inflation signal"
+    },
+    "lgbm_rec": {
+      "ticker": "EMR",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        29,
+        27
+      ],
+      "predicted_saving": 0.011,
+      "day_scores": {
+        "20": 0.1056,
+        "21": 0.0704,
+        "22": 0.035,
+        "23": 0.013,
+        "24": 0.083,
+        "27": 0.3729,
+        "28": 0.4788,
+        "29": 0.4511,
+        "30": 0.1069
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1059
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 104.5,
+  "generated": "2026-04-30T21:49:03.618082",
+  "cached": false
+}

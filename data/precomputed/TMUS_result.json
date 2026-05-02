@@ -1,0 +1,267 @@
+{
+  "ticker": "TMUS",
+  "summary": {
+    "ticker": "TMUS",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 92,
+    "trust_reasons": [
+      "high win rate (76%)",
+      "strong capture (82%)",
+      "low beta (0.4) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (193 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 92/100. Strengths: high win rate (76%); strong capture (82%). ",
+    "win_rate_pct": 75.6,
+    "avg_saving_pct": 1.257,
+    "median_saving_pct": 1.358,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.039,
+      "p50": 1.358,
+      "p75": 2.5,
+      "p90": 2.5
+    },
+    "clipped_values": 468,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.2144,
+    "avg_dollar_per_year": 2.57,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 466,
+        "extra": 15
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 937,
+        "extra": 51
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3119,
+        "extra": 367
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20052,
+        "extra": 5079
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.13,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.7
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 798,
+            "extra": 24,
+            "lift_pct": 3.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2187,
+            "extra": 138,
+            "lift_pct": 6.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8808,
+            "extra": 1214,
+            "lift_pct": 16.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.04,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 466,
+            "extra": 15,
+            "lift_pct": 3.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 937,
+            "extra": 51,
+            "lift_pct": 5.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3119,
+            "extra": 367,
+            "lift_pct": 13.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20052,
+            "extra": 5079,
+            "lift_pct": 33.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.52,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 484,
+            "extra": 33,
+            "lift_pct": 7.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1004,
+            "extra": 118,
+            "lift_pct": 13.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3648,
+            "extra": 896,
+            "lift_pct": 32.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 28955,
+            "extra": 13982,
+            "lift_pct": 93.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 299,
+        "win_rate": 79.6,
+        "avg_saving": 1.273,
+        "pct_of_runs": 29.9
+      },
+      "normal": {
+        "n_runs": 315,
+        "win_rate": 70.2,
+        "avg_saving": 1.087,
+        "pct_of_runs": 31.5
+      },
+      "elevated": {
+        "n_runs": 303,
+        "win_rate": 76.2,
+        "avg_saving": 1.366,
+        "pct_of_runs": 30.3
+      },
+      "fear": {
+        "n_runs": 83,
+        "win_rate": 79.5,
+        "avg_saving": 1.445,
+        "pct_of_runs": 8.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "TMUS",
+      "n_months": 193,
+      "win_rate_pct": 74.6,
+      "avg_saving_pct": 1.765,
+      "median_saving_pct": 1.314,
+      "avg_capture_rate": 81.7,
+      "best_month": 30.97,
+      "worst_month": -13.27
+    },
+    "ticker_meta": {
+      "rows": 4789,
+      "start": "2007-04-19",
+      "end": "2026-04-30",
+      "name": "T-Mobile US, Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 0.422
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 27 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 26-28",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "TMUS",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        30
+      ],
+      "predicted_saving": 0.003,
+      "day_scores": {
+        "20": 0.0428,
+        "21": 0.0034,
+        "22": 0.1861,
+        "23": 0.0145,
+        "24": 0.0906,
+        "27": 0.5419,
+        "28": 0.2921,
+        "29": 0.1314,
+        "30": 0.2399
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 58.3,
+  "generated": "2026-04-30T23:16:13.966758",
+  "cached": false
+}

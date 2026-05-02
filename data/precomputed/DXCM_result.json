@@ -1,0 +1,268 @@
+{
+  "ticker": "DXCM",
+  "summary": {
+    "ticker": "DXCM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (100%)",
+      "well-trained (217 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.6) \u2014 volatile, patterns weaker",
+      "wide spread (10.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (69%); strong capture (100%). Concerns: high beta (1.6) \u2014 volatile, patterns weaker; wide spread (10.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.8,
+    "avg_saving_pct": 2.549,
+    "median_saving_pct": 2.056,
+    "percentiles": {
+      "p10": -2.217,
+      "p25": 0.0,
+      "p50": 2.056,
+      "p75": 4.71,
+      "p90": 8.184
+    },
+    "clipped_values": 27,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.2663,
+    "avg_dollar_per_year": 3.2,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 481,
+        "extra": 30
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 993,
+        "extra": 107
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3558,
+        "extra": 806
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 27293,
+        "extra": 12321
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.29,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 433,
+            "extra": 15,
+            "lift_pct": 3.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 823,
+            "extra": 49,
+            "lift_pct": 6.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2341,
+            "extra": 292,
+            "lift_pct": 14.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 10293,
+            "extra": 2700,
+            "lift_pct": 35.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 19.13,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 481,
+            "extra": 30,
+            "lift_pct": 6.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 993,
+            "extra": 107,
+            "lift_pct": 12.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3558,
+            "extra": 806,
+            "lift_pct": 29.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27293,
+            "extra": 12321,
+            "lift_pct": 82.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 24.18,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 134,
+            "extra": 6,
+            "lift_pct": 4.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 521,
+            "extra": 70,
+            "lift_pct": 15.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1146,
+            "extra": 261,
+            "lift_pct": 29.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4940,
+            "extra": 2188,
+            "lift_pct": 79.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 59046,
+            "extra": 44074,
+            "lift_pct": 294.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 342,
+        "win_rate": 64.9,
+        "avg_saving": 1.975,
+        "pct_of_runs": 34.2
+      },
+      "normal": {
+        "n_runs": 317,
+        "win_rate": 70.3,
+        "avg_saving": 2.163,
+        "pct_of_runs": 31.7
+      },
+      "elevated": {
+        "n_runs": 264,
+        "win_rate": 70.1,
+        "avg_saving": 3.084,
+        "pct_of_runs": 26.4
+      },
+      "fear": {
+        "n_runs": 77,
+        "win_rate": 75.3,
+        "avg_saving": 4.854,
+        "pct_of_runs": 7.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "DXCM",
+      "n_months": 217,
+      "win_rate_pct": 74.2,
+      "avg_saving_pct": 3.077,
+      "median_saving_pct": 2.389,
+      "avg_capture_rate": 100.0,
+      "best_month": 37.43,
+      "worst_month": -11.58
+    },
+    "ticker_meta": {
+      "rows": 5295,
+      "start": "2005-04-14",
+      "end": "2026-04-30",
+      "name": "DexCom, Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.556
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 28 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 27-29",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "DXCM",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        29,
+        27
+      ],
+      "predicted_saving": 0.021,
+      "day_scores": {
+        "20": 0.0092,
+        "21": 0.0475,
+        "22": 0.0211,
+        "23": 0.1027,
+        "24": 0.1696,
+        "27": 0.3006,
+        "28": 0.5599,
+        "29": 0.3666,
+        "30": 0.2933
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2593
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 62.0,
+  "generated": "2026-04-30T21:41:12.504827",
+  "cached": false
+}

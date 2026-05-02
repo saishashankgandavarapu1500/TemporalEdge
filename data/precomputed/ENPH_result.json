@@ -1,0 +1,268 @@
+{
+  "ticker": "ENPH",
+  "summary": {
+    "ticker": "ENPH",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (73%)",
+      "adequately trained (134 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.4) \u2014 volatile, patterns weaker",
+      "wide spread (11.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: moderate win rate (66%); strong capture (73%). Concerns: high beta (1.4) \u2014 volatile, patterns weaker; wide spread (11.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.3,
+    "avg_saving_pct": 2.817,
+    "median_saving_pct": 2.721,
+    "percentiles": {
+      "p10": -3.244,
+      "p25": 0.0,
+      "p50": 2.721,
+      "p75": 7.019,
+      "p90": 8.0
+    },
+    "clipped_values": 297,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.346,
+    "avg_dollar_per_year": 4.15,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 448,
+        "extra": 17
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 875,
+        "extra": 58
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2676,
+        "extra": 375
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 14024,
+        "extra": 4132
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.52,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 415,
+            "extra": 9,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 765,
+            "extra": 30,
+            "lift_pct": 4.1
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1993,
+            "extra": 164,
+            "lift_pct": 9.0
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 7139,
+            "extra": 1249,
+            "lift_pct": 21.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 14.54,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 448,
+            "extra": 17,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 875,
+            "extra": 58,
+            "lift_pct": 7.1
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2676,
+            "extra": 375,
+            "lift_pct": 16.3
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 14024,
+            "extra": 4132,
+            "lift_pct": 41.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 19.56,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 485,
+            "extra": 33,
+            "lift_pct": 7.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1005,
+            "extra": 119,
+            "lift_pct": 13.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3658,
+            "extra": 905,
+            "lift_pct": 32.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 29127,
+            "extra": 14155,
+            "lift_pct": 94.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 411,
+        "win_rate": 69.3,
+        "avg_saving": 3.076,
+        "pct_of_runs": 41.1
+      },
+      "normal": {
+        "n_runs": 330,
+        "win_rate": 65.8,
+        "avg_saving": 2.806,
+        "pct_of_runs": 33.0
+      },
+      "elevated": {
+        "n_runs": 239,
+        "win_rate": 63.2,
+        "avg_saving": 2.52,
+        "pct_of_runs": 23.9
+      },
+      "fear": {
+        "n_runs": 20,
+        "win_rate": 50.0,
+        "avg_saving": 1.239,
+        "pct_of_runs": 2.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "ENPH",
+      "n_months": 134,
+      "win_rate_pct": 72.4,
+      "avg_saving_pct": 2.996,
+      "median_saving_pct": 2.764,
+      "avg_capture_rate": 73.1,
+      "best_month": 20.55,
+      "worst_month": -38.79
+    },
+    "ticker_meta": {
+      "rows": 3541,
+      "start": "2012-03-30",
+      "end": "2026-04-30",
+      "name": "Enphase Energy, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.381
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro stability and ENPH's recent decline. Oil's surge may impact. ",
+      "suggested_window": "days 28-30",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "ENPH",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        30,
+        28
+      ],
+      "predicted_saving": 0.098,
+      "day_scores": {
+        "20": 0.0986,
+        "21": 0.107,
+        "22": 0.0093,
+        "23": 0.0002,
+        "24": 0.002,
+        "27": 0.1156,
+        "28": 0.245,
+        "29": 0.4872,
+        "30": 0.338
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.3716
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 48.7,
+  "generated": "2026-04-30T20:08:23.607384",
+  "cached": false
+}

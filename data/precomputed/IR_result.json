@@ -1,0 +1,268 @@
+{
+  "ticker": "IR",
+  "summary": {
+    "ticker": "IR",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 53,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (95%)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (7.5pp) \u2014 outcomes vary a lot month to month",
+      "limited training (72 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 53/100. Strengths: moderate win rate (68%); strong capture (95%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (7.5pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.3,
+    "avg_saving_pct": 1.654,
+    "median_saving_pct": 1.245,
+    "percentiles": {
+      "p10": -1.534,
+      "p25": -0.035,
+      "p50": 1.245,
+      "p75": 3.486,
+      "p90": 5.917
+    },
+    "clipped_values": 58,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1721,
+    "avg_dollar_per_year": 2.07,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 441,
+        "extra": 10
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 850,
+        "extra": 33
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2512,
+        "extra": 212
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12121,
+        "extra": 2228
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 8.89,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 411,
+            "extra": 6,
+            "lift_pct": 1.4
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 752,
+            "extra": 17,
+            "lift_pct": 2.4
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1923,
+            "extra": 94,
+            "lift_pct": 5.1
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6589,
+            "extra": 699,
+            "lift_pct": 11.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.49,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 441,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 850,
+            "extra": 33,
+            "lift_pct": 4.1
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2512,
+            "extra": 212,
+            "lift_pct": 9.2
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12121,
+            "extra": 2228,
+            "lift_pct": 22.5
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.68,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 954,
+            "extra": 68,
+            "lift_pct": 7.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3247,
+            "extra": 495,
+            "lift_pct": 18.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22027,
+            "extra": 7054,
+            "lift_pct": 47.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 293,
+        "win_rate": 74.1,
+        "avg_saving": 1.555,
+        "pct_of_runs": 29.3
+      },
+      "normal": {
+        "n_runs": 390,
+        "win_rate": 66.9,
+        "avg_saving": 1.454,
+        "pct_of_runs": 39.0
+      },
+      "elevated": {
+        "n_runs": 289,
+        "win_rate": 61.6,
+        "avg_saving": 1.601,
+        "pct_of_runs": 28.9
+      },
+      "fear": {
+        "n_runs": 28,
+        "win_rate": 96.4,
+        "avg_saving": 6.026,
+        "pct_of_runs": 2.8
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "IR",
+      "n_months": 72,
+      "win_rate_pct": 69.4,
+      "avg_saving_pct": 1.912,
+      "median_saving_pct": 1.468,
+      "avg_capture_rate": 94.6,
+      "best_month": 12.04,
+      "worst_month": -6.57
+    },
+    "ticker_meta": {
+      "rows": 2254,
+      "start": "2017-05-12",
+      "end": "2026-04-30",
+      "name": "Ingersoll Rand Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.333
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider IR's dip below SMA20 and macro signals. Oil's 12.1% gain may impact. ",
+      "suggested_window": "days 28-30",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "IR",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        29,
+        30
+      ],
+      "predicted_saving": 0.041,
+      "day_scores": {
+        "20": 0.0012,
+        "21": 0.0329,
+        "22": 0.0665,
+        "23": 0.0398,
+        "24": 0.0769,
+        "27": 0.2183,
+        "28": 0.562,
+        "29": 0.5549,
+        "30": 0.4985
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.3437
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 25.8,
+  "generated": "2026-04-30T20:18:20.246238",
+  "cached": false
+}

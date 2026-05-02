@@ -1,0 +1,267 @@
+{
+  "ticker": "CL",
+  "summary": {
+    "ticker": "CL",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (100%)",
+      "low beta (0.3) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (66%); strong capture (100%). ",
+    "win_rate_pct": 65.7,
+    "avg_saving_pct": 0.841,
+    "median_saving_pct": 0.62,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.62,
+      "p75": 1.809,
+      "p90": 2.5
+    },
+    "clipped_values": 301,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.0955,
+    "avg_dollar_per_year": 1.15,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 461,
+        "extra": 10
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 919,
+        "extra": 34
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 2992,
+        "extra": 239
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18186,
+        "extra": 3214
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.76,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 790,
+            "extra": 16,
+            "lift_pct": 2.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2140,
+            "extra": 91,
+            "lift_pct": 4.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8383,
+            "extra": 789,
+            "lift_pct": 10.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.36,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 461,
+            "extra": 10,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 919,
+            "extra": 34,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2992,
+            "extra": 239,
+            "lift_pct": 8.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18186,
+            "extra": 3214,
+            "lift_pct": 21.5
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.03,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 473,
+            "extra": 22,
+            "lift_pct": 4.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 963,
+            "extra": 77,
+            "lift_pct": 8.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3318,
+            "extra": 566,
+            "lift_pct": 20.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23177,
+            "extra": 8205,
+            "lift_pct": 54.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 61.7,
+        "avg_saving": 0.676,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 62.9,
+        "avg_saving": 0.826,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 72.5,
+        "avg_saving": 0.961,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 65.8,
+        "avg_saving": 1.035,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CL",
+      "n_months": 225,
+      "win_rate_pct": 78.2,
+      "avg_saving_pct": 1.223,
+      "median_saving_pct": 0.987,
+      "avg_capture_rate": 100.0,
+      "best_month": 9.31,
+      "worst_month": -4.39
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Colgate-Palmolive Company",
+      "sector": "Consumer Defensive",
+      "type": "EQUITY",
+      "beta": 0.331
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "CL",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        22,
+        20
+      ],
+      "predicted_saving": 0.024,
+      "day_scores": {
+        "20": 0.1338,
+        "21": 0.5977,
+        "22": 0.2172,
+        "23": 0.0707,
+        "24": 0.0001,
+        "27": 0.0635,
+        "28": 0.0012,
+        "29": 0.0757,
+        "30": 0.0283
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5342
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 77.2,
+  "generated": "2026-04-30T19:57:47.082528",
+  "cached": false
+}

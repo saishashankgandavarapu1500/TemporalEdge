@@ -1,0 +1,268 @@
+{
+  "ticker": "STZ",
+  "summary": {
+    "ticker": "STZ",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "strong capture (100%)",
+      "low beta (0.4) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (64%) \u2014 barely above random"
+    ],
+    "trust_summary": "Trust 79/100. Strengths: strong capture (100%); low beta (0.4) \u2014 stable patterns. Concerns: low win rate (64%) \u2014 barely above random.",
+    "win_rate_pct": 64.4,
+    "avg_saving_pct": 0.937,
+    "median_saving_pct": 0.818,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": -0.104,
+      "p50": 0.818,
+      "p75": 2.231,
+      "p90": 2.5
+    },
+    "clipped_values": 401,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1151,
+    "avg_dollar_per_year": 1.38,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 923,
+        "extra": 38
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3021,
+        "extra": 268
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18600,
+        "extra": 3628
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.84,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 792,
+            "extra": 18,
+            "lift_pct": 2.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2150,
+            "extra": 102,
+            "lift_pct": 5.0
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8479,
+            "extra": 885,
+            "lift_pct": 11.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.52,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 11,
+            "lift_pct": 2.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 923,
+            "extra": 38,
+            "lift_pct": 4.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3021,
+            "extra": 268,
+            "lift_pct": 9.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18600,
+            "extra": 3628,
+            "lift_pct": 24.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.37,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 476,
+            "extra": 24,
+            "lift_pct": 5.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 972,
+            "extra": 86,
+            "lift_pct": 9.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3391,
+            "extra": 639,
+            "lift_pct": 23.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24393,
+            "extra": 9421,
+            "lift_pct": 62.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.4,
+        "avg_saving": 0.845,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 65.3,
+        "avg_saving": 0.992,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 59.3,
+        "avg_saving": 0.884,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 65.8,
+        "avg_saving": 1.244,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "STZ",
+      "n_months": 225,
+      "win_rate_pct": 74.7,
+      "avg_saving_pct": 1.502,
+      "median_saving_pct": 1.349,
+      "avg_capture_rate": 100.0,
+      "best_month": 16.31,
+      "worst_month": -7.89
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Constellation Brands, Inc.",
+      "sector": "Consumer Defensive",
+      "type": "EQUITY",
+      "beta": 0.432
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro stability and STZ's neutral trend.",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "STZ",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        27,
+        28
+      ],
+      "predicted_saving": 0.004,
+      "day_scores": {
+        "20": 0.0954,
+        "21": 0.198,
+        "22": 0.1743,
+        "23": 0.1293,
+        "24": 0.2753,
+        "27": 0.4119,
+        "28": 0.2793,
+        "29": 0.5637,
+        "30": 0.0032
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1518
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 65.1,
+  "generated": "2026-04-30T21:35:28.940695",
+  "cached": false
+}

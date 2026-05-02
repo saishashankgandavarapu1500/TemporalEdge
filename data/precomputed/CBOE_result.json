@@ -1,0 +1,267 @@
+{
+  "ticker": "CBOE",
+  "summary": {
+    "ticker": "CBOE",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (100%)",
+      "low beta (0.4) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (155 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (70%); strong capture (100%). ",
+    "win_rate_pct": 70.3,
+    "avg_saving_pct": 0.991,
+    "median_saving_pct": 0.809,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.809,
+      "p75": 2.337,
+      "p90": 2.5
+    },
+    "clipped_values": 351,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1258,
+    "avg_dollar_per_year": 1.51,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 463,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 926,
+        "extra": 40
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3037,
+        "extra": 285
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18836,
+        "extra": 3864
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.89,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 793,
+            "extra": 19,
+            "lift_pct": 2.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2156,
+            "extra": 108,
+            "lift_pct": 5.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8533,
+            "extra": 940,
+            "lift_pct": 12.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.61,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 463,
+            "extra": 11,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 926,
+            "extra": 40,
+            "lift_pct": 4.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3037,
+            "extra": 285,
+            "lift_pct": 10.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18836,
+            "extra": 3864,
+            "lift_pct": 25.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.57,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 477,
+            "extra": 26,
+            "lift_pct": 5.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 977,
+            "extra": 92,
+            "lift_pct": 10.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3433,
+            "extra": 681,
+            "lift_pct": 24.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25104,
+            "extra": 10131,
+            "lift_pct": 67.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 361,
+        "win_rate": 67.0,
+        "avg_saving": 0.822,
+        "pct_of_runs": 36.1
+      },
+      "normal": {
+        "n_runs": 347,
+        "win_rate": 69.5,
+        "avg_saving": 0.95,
+        "pct_of_runs": 34.7
+      },
+      "elevated": {
+        "n_runs": 244,
+        "win_rate": 74.6,
+        "avg_saving": 1.262,
+        "pct_of_runs": 24.4
+      },
+      "fear": {
+        "n_runs": 48,
+        "win_rate": 79.2,
+        "avg_saving": 1.174,
+        "pct_of_runs": 4.8
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CBOE",
+      "n_months": 155,
+      "win_rate_pct": 77.4,
+      "avg_saving_pct": 1.559,
+      "median_saving_pct": 1.189,
+      "avg_capture_rate": 100.0,
+      "best_month": 12.32,
+      "worst_month": -3.97
+    },
+    "ticker_meta": {
+      "rows": 3994,
+      "start": "2010-06-15",
+      "end": "2026-04-30",
+      "name": "Cboe Global Markets, Inc.",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 0.369
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and neutral SMA20.",
+      "suggested_window": "days 21-22",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "CBOE",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        27,
+        21
+      ],
+      "predicted_saving": 0.005,
+      "day_scores": {
+        "20": 0.1105,
+        "21": 0.2711,
+        "22": 0.5923,
+        "23": 0.1705,
+        "24": 0.0002,
+        "27": 0.3224,
+        "28": 0.053,
+        "29": 0.0869,
+        "30": 0.2131
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2699
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 50.0,
+  "generated": "2026-04-30T21:24:51.595856",
+  "cached": false
+}

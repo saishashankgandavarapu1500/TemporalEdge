@@ -1,0 +1,268 @@
+{
+  "ticker": "CRL",
+  "summary": {
+    "ticker": "CRL",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (85%)",
+      "moderate spread (6.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.6) \u2014 volatile, patterns weaker"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (71%); strong capture (85%). Concerns: high beta (1.6) \u2014 volatile, patterns weaker.",
+    "win_rate_pct": 71.4,
+    "avg_saving_pct": 1.768,
+    "median_saving_pct": 1.258,
+    "percentiles": {
+      "p10": -1.165,
+      "p25": 0.0,
+      "p50": 1.258,
+      "p75": 2.819,
+      "p90": 4.829
+    },
+    "clipped_values": 12,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.1804,
+    "avg_dollar_per_year": 2.16,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 472,
+        "extra": 21
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 959,
+        "extra": 73
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3285,
+        "extra": 533
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22631,
+        "extra": 7659
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.59,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 808,
+            "extra": 33,
+            "lift_pct": 4.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2246,
+            "extra": 197,
+            "lift_pct": 9.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9364,
+            "extra": 1771,
+            "lift_pct": 23.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.86,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 959,
+            "extra": 73,
+            "lift_pct": 8.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3285,
+            "extra": 533,
+            "lift_pct": 19.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22631,
+            "extra": 7659,
+            "lift_pct": 51.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.36,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 3.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 499,
+            "extra": 47,
+            "lift_pct": 10.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1058,
+            "extra": 172,
+            "lift_pct": 19.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4107,
+            "extra": 1355,
+            "lift_pct": 49.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 38239,
+            "extra": 23267,
+            "lift_pct": 155.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 309,
+        "win_rate": 67.3,
+        "avg_saving": 1.143,
+        "pct_of_runs": 30.9
+      },
+      "normal": {
+        "n_runs": 311,
+        "win_rate": 74.3,
+        "avg_saving": 1.831,
+        "pct_of_runs": 31.1
+      },
+      "elevated": {
+        "n_runs": 286,
+        "win_rate": 73.4,
+        "avg_saving": 2.035,
+        "pct_of_runs": 28.6
+      },
+      "fear": {
+        "n_runs": 94,
+        "win_rate": 69.1,
+        "avg_saving": 2.801,
+        "pct_of_runs": 9.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CRL",
+      "n_months": 225,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 1.781,
+      "median_saving_pct": 1.55,
+      "avg_capture_rate": 84.6,
+      "best_month": 21.65,
+      "worst_month": -26.28
+    },
+    "ticker_meta": {
+      "rows": 6501,
+      "start": "2000-06-23",
+      "end": "2026-04-30",
+      "name": "Charles River Laboratories International, Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.616
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 11.8% rise may impact CRL. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "CRL",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        29,
+        27
+      ],
+      "predicted_saving": 0.008,
+      "day_scores": {
+        "20": 0.0016,
+        "21": 0.0008,
+        "22": 0.007,
+        "23": 0.2487,
+        "24": 0.1949,
+        "27": 0.3141,
+        "28": 0.4833,
+        "29": 0.4107,
+        "30": 0.2265
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1692
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 69.6,
+  "generated": "2026-04-30T19:55:18.497897",
+  "cached": false
+}

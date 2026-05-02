@@ -1,0 +1,267 @@
+{
+  "ticker": "XOM",
+  "summary": {
+    "ticker": "XOM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (93%)",
+      "low beta (0.3) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (74%); strong capture (93%). ",
+    "win_rate_pct": 73.5,
+    "avg_saving_pct": 1.033,
+    "median_saving_pct": 0.923,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.923,
+      "p75": 2.391,
+      "p90": 2.5
+    },
+    "clipped_values": 361,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1289,
+    "avg_dollar_per_year": 1.55,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 463,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 927,
+        "extra": 42
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3050,
+        "extra": 298
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19026,
+        "extra": 4053
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.93,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 794,
+            "extra": 19,
+            "lift_pct": 2.5
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2161,
+            "extra": 113,
+            "lift_pct": 5.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8577,
+            "extra": 983,
+            "lift_pct": 12.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.67,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 463,
+            "extra": 12,
+            "lift_pct": 2.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 927,
+            "extra": 42,
+            "lift_pct": 4.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3050,
+            "extra": 298,
+            "lift_pct": 10.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19026,
+            "extra": 4053,
+            "lift_pct": 27.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.72,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 478,
+            "extra": 27,
+            "lift_pct": 6.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 982,
+            "extra": 96,
+            "lift_pct": 10.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3467,
+            "extra": 715,
+            "lift_pct": 26.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25682,
+            "extra": 10710,
+            "lift_pct": 71.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 72.3,
+        "avg_saving": 0.776,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 78.3,
+        "avg_saving": 1.077,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 70.8,
+        "avg_saving": 1.131,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 67.1,
+        "avg_saving": 1.406,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "XOM",
+      "n_months": 225,
+      "win_rate_pct": 78.2,
+      "avg_saving_pct": 1.501,
+      "median_saving_pct": 1.137,
+      "avg_capture_rate": 92.9,
+      "best_month": 14.88,
+      "worst_month": -6.27
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Exxon Mobil Corporation",
+      "sector": "Energy",
+      "type": "EQUITY",
+      "beta": 0.288
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "XOM",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        24
+      ],
+      "predicted_saving": 0.011,
+      "day_scores": {
+        "20": 0.5919,
+        "21": 0.1677,
+        "22": 0.1262,
+        "23": 0.1162,
+        "24": 0.1599,
+        "27": 0.0111,
+        "28": 0.0343,
+        "29": 0.0614,
+        "30": 0.0659
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5808
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 64.3,
+  "generated": "2026-04-30T21:56:12.787408",
+  "cached": false
+}

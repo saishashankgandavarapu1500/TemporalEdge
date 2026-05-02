@@ -1,0 +1,268 @@
+{
+  "ticker": "NCLH",
+  "summary": {
+    "ticker": "NCLH",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 55,
+    "trust_reasons": [
+      "moderate win rate (67%)",
+      "strong capture (79%)",
+      "adequately trained (124 folds)"
+    ],
+    "trust_penalties": [
+      "very high beta (2.1) \u2014 macro-disconnected",
+      "wide spread (9.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 55/100. Strengths: moderate win rate (67%); strong capture (79%). Concerns: very high beta (2.1) \u2014 macro-disconnected; wide spread (9.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.8,
+    "avg_saving_pct": 2.287,
+    "median_saving_pct": 1.565,
+    "percentiles": {
+      "p10": -2.209,
+      "p25": 0.0,
+      "p50": 1.565,
+      "p75": 4.328,
+      "p90": 7.241
+    },
+    "clipped_values": 22,
+    "clip_bounds": {
+      "low": -10.0,
+      "high": 18.0
+    },
+    "avg_dollar_per_month": 0.2428,
+    "avg_dollar_per_year": 2.91,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 445,
+        "extra": 14
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 863,
+        "extra": 47
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2600,
+        "extra": 299
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 13118,
+        "extra": 3225
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.24,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 413,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 759,
+            "extra": 24,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1961,
+            "extra": 132,
+            "lift_pct": 7.2
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6882,
+            "extra": 992,
+            "lift_pct": 16.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 14.06,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 445,
+            "extra": 14,
+            "lift_pct": 3.2
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 863,
+            "extra": 47,
+            "lift_pct": 5.7
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2600,
+            "extra": 299,
+            "lift_pct": 13.0
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 13118,
+            "extra": 3225,
+            "lift_pct": 32.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.71,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 478,
+            "extra": 27,
+            "lift_pct": 6.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 981,
+            "extra": 96,
+            "lift_pct": 10.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3463,
+            "extra": 711,
+            "lift_pct": 25.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25624,
+            "extra": 10652,
+            "lift_pct": 71.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 433,
+        "win_rate": 64.9,
+        "avg_saving": 1.336,
+        "pct_of_runs": 43.3
+      },
+      "normal": {
+        "n_runs": 294,
+        "win_rate": 71.1,
+        "avg_saving": 2.234,
+        "pct_of_runs": 29.4
+      },
+      "elevated": {
+        "n_runs": 252,
+        "win_rate": 65.5,
+        "avg_saving": 3.558,
+        "pct_of_runs": 25.2
+      },
+      "fear": {
+        "n_runs": 21,
+        "win_rate": 61.9,
+        "avg_saving": 7.386,
+        "pct_of_runs": 2.1
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "NCLH",
+      "n_months": 124,
+      "win_rate_pct": 73.4,
+      "avg_saving_pct": 2.619,
+      "median_saving_pct": 1.957,
+      "avg_capture_rate": 79.0,
+      "best_month": 29.33,
+      "worst_month": -15.78
+    },
+    "ticker_meta": {
+      "rows": 3340,
+      "start": "2013-01-18",
+      "end": "2026-04-30",
+      "name": "Norwegian Cruise Line Holdings Ltd.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 2.113
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider NCLH's dip below SMA20 and macro signals. Oil's 12.3% gain may indicate inflation. ",
+      "suggested_window": "days 22-24",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "NCLH",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        24,
+        22
+      ],
+      "predicted_saving": -0.001,
+      "day_scores": {
+        "20": 0.0179,
+        "21": 0.1097,
+        "22": 0.1299,
+        "23": 0.252,
+        "24": 0.2312,
+        "27": 0.1296,
+        "28": 0.1101,
+        "29": 0.0546,
+        "30": 0.0949
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1224
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 38.0,
+  "generated": "2026-04-30T20:30:20.844036",
+  "cached": false
+}

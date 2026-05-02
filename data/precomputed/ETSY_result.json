@@ -1,0 +1,268 @@
+{
+  "ticker": "ETSY",
+  "summary": {
+    "ticker": "ETSY",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (99%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "adequately trained (97 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (7.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (66%); strong capture (99%). Concerns: wide spread (7.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.4,
+    "avg_saving_pct": 1.965,
+    "median_saving_pct": 2.129,
+    "percentiles": {
+      "p10": -2.0,
+      "p25": 0.0,
+      "p50": 2.129,
+      "p75": 5.0,
+      "p90": 5.0
+    },
+    "clipped_values": 403,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.2817,
+    "avg_dollar_per_year": 3.38,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 474,
+        "extra": 23
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 967,
+        "extra": 81
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3351,
+        "extra": 599
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23721,
+        "extra": 8748
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.77,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 812,
+            "extra": 37,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2269,
+            "extra": 221,
+            "lift_pct": 10.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9589,
+            "extra": 1996,
+            "lift_pct": 26.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.18,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 967,
+            "extra": 81,
+            "lift_pct": 9.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3351,
+            "extra": 599,
+            "lift_pct": 21.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23721,
+            "extra": 8748,
+            "lift_pct": 58.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.07,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 504,
+            "extra": 53,
+            "lift_pct": 11.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1079,
+            "extra": 193,
+            "lift_pct": 21.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4301,
+            "extra": 1549,
+            "lift_pct": 56.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 42629,
+            "extra": 27657,
+            "lift_pct": 184.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 388,
+        "win_rate": 69.1,
+        "avg_saving": 1.941,
+        "pct_of_runs": 38.8
+      },
+      "normal": {
+        "n_runs": 300,
+        "win_rate": 61.3,
+        "avg_saving": 1.628,
+        "pct_of_runs": 30.0
+      },
+      "elevated": {
+        "n_runs": 276,
+        "win_rate": 64.1,
+        "avg_saving": 2.001,
+        "pct_of_runs": 27.6
+      },
+      "fear": {
+        "n_runs": 36,
+        "win_rate": 97.2,
+        "avg_saving": 4.754,
+        "pct_of_runs": 3.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "ETSY",
+      "n_months": 97,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 4.263,
+      "median_saving_pct": 3.035,
+      "avg_capture_rate": 99.3,
+      "best_month": 26.08,
+      "worst_month": -10.95
+    },
+    "ticker_meta": {
+      "rows": 2777,
+      "start": "2015-04-16",
+      "end": "2026-04-30",
+      "name": "Etsy, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro stability and ETSY's momentum.",
+      "suggested_window": "days 20-24",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "ETSY",
+      "recommended_day": 24,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        24,
+        23,
+        20
+      ],
+      "predicted_saving": 0.032,
+      "day_scores": {
+        "20": 0.1682,
+        "21": 0.1494,
+        "22": 0.1077,
+        "23": 0.2224,
+        "24": 0.5973,
+        "27": 0.0829,
+        "28": 0.1073,
+        "29": 0.0001,
+        "30": 0.1385
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5144
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 34.1,
+  "generated": "2026-04-30T20:08:57.764570",
+  "cached": false
+}

@@ -1,0 +1,264 @@
+{
+  "ticker": "GLD",
+  "summary": {
+    "ticker": "GLD",
+    "monthly_usd": 50.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (76%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.5pp)",
+      "well-trained (222 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (71%); strong capture (76%). ",
+    "win_rate_pct": 70.6,
+    "avg_saving_pct": 0.867,
+    "median_saving_pct": 0.709,
+    "percentiles": {
+      "p10": -0.702,
+      "p25": 0.0,
+      "p50": 0.709,
+      "p75": 1.653,
+      "p90": 2.761
+    },
+    "clipped_values": 35,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.4302,
+    "avg_dollar_per_year": 5.16,
+    "projections": {
+      "1": {
+        "fixed": 643,
+        "optimised": 647,
+        "extra": 4
+      },
+      "3": {
+        "fixed": 2256,
+        "optimised": 2306,
+        "extra": 50
+      },
+      "5": {
+        "fixed": 4429,
+        "optimised": 4603,
+        "extra": 174
+      },
+      "10": {
+        "fixed": 13761,
+        "optimised": 14998,
+        "extra": 1237
+      },
+      "20": {
+        "fixed": 74862,
+        "optimised": 91496,
+        "extra": 16635
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.78,
+        "projections": {
+          "1": {
+            "fixed": 628,
+            "optimised": 631,
+            "extra": 2,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 2089,
+            "optimised": 2114,
+            "extra": 25,
+            "lift_pct": 1.2
+          },
+          "5": {
+            "fixed": 3872,
+            "optimised": 3953,
+            "extra": 81,
+            "lift_pct": 2.1
+          },
+          "10": {
+            "fixed": 10242,
+            "optimised": 10713,
+            "extra": 471,
+            "lift_pct": 4.6
+          },
+          "20": {
+            "fixed": 37968,
+            "optimised": 42046,
+            "extra": 4077,
+            "lift_pct": 10.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.4,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 647,
+            "extra": 4,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2306,
+            "extra": 50,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 4603,
+            "extra": 174,
+            "lift_pct": 3.9
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 14998,
+            "extra": 1237,
+            "lift_pct": 9.0
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 91496,
+            "extra": 16635,
+            "lift_pct": 22.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.12,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 652,
+            "extra": 9,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2368,
+            "extra": 113,
+            "lift_pct": 5.0
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 4827,
+            "extra": 398,
+            "lift_pct": 9.0
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 16691,
+            "extra": 2931,
+            "lift_pct": 21.3
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 117529,
+            "extra": 42667,
+            "lift_pct": 57.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 361,
+        "win_rate": 73.1,
+        "avg_saving": 0.759,
+        "pct_of_runs": 36.1
+      },
+      "normal": {
+        "n_runs": 318,
+        "win_rate": 67.9,
+        "avg_saving": 0.915,
+        "pct_of_runs": 31.8
+      },
+      "elevated": {
+        "n_runs": 265,
+        "win_rate": 71.7,
+        "avg_saving": 0.885,
+        "pct_of_runs": 26.5
+      },
+      "fear": {
+        "n_runs": 56,
+        "win_rate": 64.3,
+        "avg_saving": 1.208,
+        "pct_of_runs": 5.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "GLD",
+      "n_months": 222,
+      "win_rate_pct": 69.4,
+      "avg_saving_pct": 0.913,
+      "median_saving_pct": 0.715,
+      "avg_capture_rate": 76.4,
+      "best_month": 10.65,
+      "worst_month": -6.61
+    },
+    "ticker_meta": {
+      "rows": 5392,
+      "start": "2004-11-18",
+      "end": "2026-04-27",
+      "name": "SPDR Gold Shares",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 21st, VIX and yield curve are normal, gold is flat.",
+      "suggested_window": "days 21-27",
+      "action": "consider",
+      "key_factor": "VIX and yield curve stability"
+    },
+    "lgbm_rec": {
+      "ticker": "GLD",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 15.9,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        27,
+        23
+      ],
+      "predicted_saving": 0.0,
+      "day_scores": {
+        "20": 0.0067,
+        "21": 0.5156,
+        "22": 0.0994,
+        "23": 0.1728,
+        "24": 0.0865,
+        "27": 0.2748
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2408
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 44.8,
+  "generated": "2026-04-27T16:51:38.749592",
+  "cached": false
+}

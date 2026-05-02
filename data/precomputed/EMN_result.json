@@ -1,0 +1,268 @@
+{
+  "ticker": "EMN",
+  "summary": {
+    "ticker": "EMN",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "strong capture (91%)",
+      "moderate beta (1.2) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (64%) \u2014 barely above random",
+      "wide spread (6.7pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: strong capture (91%); moderate beta (1.2) \u2014 predictable enough. Concerns: low win rate (64%) \u2014 barely above random; wide spread (6.7pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 63.6,
+    "avg_saving_pct": 1.583,
+    "median_saving_pct": 1.02,
+    "percentiles": {
+      "p10": -1.13,
+      "p25": 0.0,
+      "p50": 1.02,
+      "p75": 3.211,
+      "p90": 5.608
+    },
+    "clipped_values": 71,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1633,
+    "avg_dollar_per_year": 1.96,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 951,
+        "extra": 65
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3224,
+        "extra": 472
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21661,
+        "extra": 6688
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.43,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 804,
+            "extra": 30,
+            "lift_pct": 3.9
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2224,
+            "extra": 176,
+            "lift_pct": 8.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9159,
+            "extra": 1565,
+            "lift_pct": 20.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.57,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 18,
+            "lift_pct": 4.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 951,
+            "extra": 65,
+            "lift_pct": 7.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3224,
+            "extra": 472,
+            "lift_pct": 17.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21661,
+            "extra": 6688,
+            "lift_pct": 44.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.7,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 493,
+            "extra": 42,
+            "lift_pct": 9.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1038,
+            "extra": 152,
+            "lift_pct": 17.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3934,
+            "extra": 1182,
+            "lift_pct": 42.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34566,
+            "extra": 19594,
+            "lift_pct": 130.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 62.1,
+        "avg_saving": 1.186,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 62.0,
+        "avg_saving": 1.278,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 68.9,
+        "avg_saving": 2.184,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 55.3,
+        "avg_saving": 2.006,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "EMN",
+      "n_months": 225,
+      "win_rate_pct": 75.1,
+      "avg_saving_pct": 1.953,
+      "median_saving_pct": 1.591,
+      "avg_capture_rate": 90.9,
+      "best_month": 21.81,
+      "worst_month": -15.14
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Eastman Chemical Company",
+      "sector": "Basic Materials",
+      "type": "EQUITY",
+      "beta": 1.174
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "EMN",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        23,
+        28
+      ],
+      "predicted_saving": 0.007,
+      "day_scores": {
+        "20": 0.0072,
+        "21": 0.1622,
+        "22": 0.0799,
+        "23": 0.2584,
+        "24": 0.1741,
+        "27": 0.163,
+        "28": 0.2029,
+        "29": 0.4881,
+        "30": 0.1492
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.3251
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 64.8,
+  "generated": "2026-04-30T21:45:11.112579",
+  "cached": false
+}

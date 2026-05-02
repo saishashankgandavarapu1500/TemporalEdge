@@ -1,0 +1,268 @@
+{
+  "ticker": "GLW",
+  "summary": {
+    "ticker": "GLW",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (88%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (9.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (88%). Concerns: wide spread (9.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.0,
+    "avg_saving_pct": 1.932,
+    "median_saving_pct": 1.518,
+    "percentiles": {
+      "p10": -1.765,
+      "p25": 0.0,
+      "p50": 1.518,
+      "p75": 3.595,
+      "p90": 7.443
+    },
+    "clipped_values": 130,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2039,
+    "avg_dollar_per_year": 2.45,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 474,
+        "extra": 23
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 966,
+        "extra": 80
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3340,
+        "extra": 588
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23533,
+        "extra": 8561
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.74,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 811,
+            "extra": 37,
+            "lift_pct": 4.7
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2265,
+            "extra": 217,
+            "lift_pct": 10.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9551,
+            "extra": 1957,
+            "lift_pct": 25.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.13,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 966,
+            "extra": 80,
+            "lift_pct": 9.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3340,
+            "extra": 588,
+            "lift_pct": 21.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23533,
+            "extra": 8561,
+            "lift_pct": 57.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.95,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 503,
+            "extra": 52,
+            "lift_pct": 11.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1076,
+            "extra": 190,
+            "lift_pct": 21.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4268,
+            "extra": 1515,
+            "lift_pct": 55.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 41854,
+            "extra": 26882,
+            "lift_pct": 179.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 77.3,
+        "avg_saving": 1.592,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 70.0,
+        "avg_saving": 2.082,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 65.6,
+        "avg_saving": 1.927,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 60.5,
+        "avg_saving": 2.547,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "GLW",
+      "n_months": 225,
+      "win_rate_pct": 78.2,
+      "avg_saving_pct": 2.132,
+      "median_saving_pct": 1.745,
+      "avg_capture_rate": 87.5,
+      "best_month": 15.65,
+      "worst_month": -18.33
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Corning Incorporated",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.053
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and macro signals. Oil's 11.8% gain may impact GLW. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "GLW",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        28,
+        27
+      ],
+      "predicted_saving": 0.057,
+      "day_scores": {
+        "20": 0.1767,
+        "21": 0.1411,
+        "22": 0.0735,
+        "23": 0.0588,
+        "24": 0.0,
+        "27": 0.2068,
+        "28": 0.3245,
+        "29": 0.3932,
+        "30": 0.1983
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1864
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 65.2,
+  "generated": "2026-04-30T20:00:17.448084",
+  "cached": false
+}

@@ -1,0 +1,264 @@
+{
+  "ticker": "GOOG",
+  "summary": {
+    "ticker": "GOOG",
+    "monthly_usd": 50.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (85%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "moderate spread (5.9pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (71%); strong capture (85%). ",
+    "win_rate_pct": 71.1,
+    "avg_saving_pct": 1.54,
+    "median_saving_pct": 1.175,
+    "percentiles": {
+      "p10": -0.986,
+      "p25": 0.0,
+      "p50": 1.175,
+      "p75": 3.023,
+      "p90": 4.872
+    },
+    "clipped_values": 40,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.7987,
+    "avg_dollar_per_year": 9.58,
+    "projections": {
+      "1": {
+        "fixed": 643,
+        "optimised": 651,
+        "extra": 8
+      },
+      "3": {
+        "fixed": 2256,
+        "optimised": 2345,
+        "extra": 89
+      },
+      "5": {
+        "fixed": 4429,
+        "optimised": 4744,
+        "extra": 315
+      },
+      "10": {
+        "fixed": 13761,
+        "optimised": 16049,
+        "extra": 2288
+      },
+      "20": {
+        "fixed": 74862,
+        "optimised": 107205,
+        "extra": 32343
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.39,
+        "projections": {
+          "1": {
+            "fixed": 628,
+            "optimised": 632,
+            "extra": 4,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 2089,
+            "optimised": 2134,
+            "extra": 45,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 3872,
+            "optimised": 4017,
+            "extra": 145,
+            "lift_pct": 3.7
+          },
+          "10": {
+            "fixed": 10242,
+            "optimised": 11096,
+            "extra": 854,
+            "lift_pct": 8.3
+          },
+          "20": {
+            "fixed": 37968,
+            "optimised": 45559,
+            "extra": 7591,
+            "lift_pct": 20.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.5,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 651,
+            "extra": 8,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2345,
+            "extra": 89,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 4744,
+            "extra": 315,
+            "lift_pct": 7.1
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 16049,
+            "extra": 2288,
+            "lift_pct": 16.6
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 107205,
+            "extra": 32343,
+            "lift_pct": 43.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.55,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 660,
+            "extra": 17,
+            "lift_pct": 2.6
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2461,
+            "extra": 205,
+            "lift_pct": 9.1
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 5167,
+            "extra": 738,
+            "lift_pct": 16.7
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 19475,
+            "extra": 5714,
+            "lift_pct": 41.5
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 168826,
+            "extra": 93964,
+            "lift_pct": 125.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 353,
+        "win_rate": 68.3,
+        "avg_saving": 1.249,
+        "pct_of_runs": 35.3
+      },
+      "normal": {
+        "n_runs": 325,
+        "win_rate": 69.5,
+        "avg_saving": 1.571,
+        "pct_of_runs": 32.5
+      },
+      "elevated": {
+        "n_runs": 264,
+        "win_rate": 78.4,
+        "avg_saving": 1.962,
+        "pct_of_runs": 26.4
+      },
+      "fear": {
+        "n_runs": 58,
+        "win_rate": 63.8,
+        "avg_saving": 1.223,
+        "pct_of_runs": 5.8
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "GOOG",
+      "n_months": 225,
+      "win_rate_pct": 74.2,
+      "avg_saving_pct": 1.629,
+      "median_saving_pct": 1.383,
+      "avg_capture_rate": 85.1,
+      "best_month": 14.7,
+      "worst_month": -9.14
+    },
+    "ticker_meta": {
+      "rows": 5456,
+      "start": "2004-08-19",
+      "end": "2026-04-27",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 1.128
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider recent S&P 500 rally and GOOG's momentum. Model recommends 21st. ",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "GOOG's momentum"
+    },
+    "lgbm_rec": {
+      "ticker": "GOOG",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 15.9,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        20,
+        22
+      ],
+      "predicted_saving": 0.043,
+      "day_scores": {
+        "20": 0.1964,
+        "21": 0.5967,
+        "22": 0.1948,
+        "23": 0.1825,
+        "24": 0.1438,
+        "27": 0.0038
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.593
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 48.9,
+  "generated": "2026-04-27T22:40:40.760321",
+  "cached": false
+}

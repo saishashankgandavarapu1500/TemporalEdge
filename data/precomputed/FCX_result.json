@@ -1,0 +1,268 @@
+{
+  "ticker": "FCX",
+  "summary": {
+    "ticker": "FCX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (82%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (10.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (69%); strong capture (82%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (10.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.8,
+    "avg_saving_pct": 2.366,
+    "median_saving_pct": 1.854,
+    "percentiles": {
+      "p10": -1.977,
+      "p25": 0.0,
+      "p50": 1.854,
+      "p75": 5.165,
+      "p90": 8.0
+    },
+    "clipped_values": 152,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2597,
+    "avg_dollar_per_year": 3.12,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 479,
+        "extra": 28
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 985,
+        "extra": 99
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3492,
+        "extra": 740
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 26118,
+        "extra": 11146
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.13,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 432,
+            "extra": 14,
+            "lift_pct": 3.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 820,
+            "extra": 45,
+            "lift_pct": 5.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2318,
+            "extra": 270,
+            "lift_pct": 13.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 10067,
+            "extra": 2474,
+            "lift_pct": 32.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.83,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 28,
+            "lift_pct": 6.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 985,
+            "extra": 99,
+            "lift_pct": 11.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3492,
+            "extra": 740,
+            "lift_pct": 26.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 26118,
+            "extra": 11146,
+            "lift_pct": 74.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 23.52,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 134,
+            "extra": 5,
+            "lift_pct": 4.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 516,
+            "extra": 65,
+            "lift_pct": 14.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1125,
+            "extra": 239,
+            "lift_pct": 27.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4729,
+            "extra": 1977,
+            "lift_pct": 71.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 53299,
+            "extra": 38326,
+            "lift_pct": 256.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.9,
+        "avg_saving": 2.098,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.0,
+        "avg_saving": 2.176,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 2.468,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 71.1,
+        "avg_saving": 3.797,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "FCX",
+      "n_months": 225,
+      "win_rate_pct": 73.8,
+      "avg_saving_pct": 2.628,
+      "median_saving_pct": 2.18,
+      "avg_capture_rate": 82.1,
+      "best_month": 19.58,
+      "worst_month": -27.14
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Freeport-McMoRan Inc.",
+      "sector": "Basic Materials",
+      "type": "EQUITY",
+      "beta": 1.473
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 28 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 27-29",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "FCX",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        29,
+        27
+      ],
+      "predicted_saving": 0.008,
+      "day_scores": {
+        "20": 0.0625,
+        "21": 0.0885,
+        "22": 0.0001,
+        "23": 0.2186,
+        "24": 0.2465,
+        "27": 0.3396,
+        "28": 0.4068,
+        "29": 0.3983,
+        "30": 0.2694
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0673
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 64.5,
+  "generated": "2026-04-30T22:02:24.831665",
+  "cached": false
+}

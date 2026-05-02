@@ -1,0 +1,268 @@
+{
+  "ticker": "SOXX",
+  "summary": {
+    "ticker": "SOXX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (99%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.8pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (66%); strong capture (99%). Concerns: wide spread (6.8pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 65.6,
+    "avg_saving_pct": 1.35,
+    "median_saving_pct": 1.039,
+    "percentiles": {
+      "p10": -1.922,
+      "p25": -0.065,
+      "p50": 1.039,
+      "p75": 3.024,
+      "p90": 4.834
+    },
+    "clipped_values": 186,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1315,
+    "avg_dollar_per_year": 1.58,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 941,
+        "extra": 55
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3149,
+        "extra": 397
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20499,
+        "extra": 5527
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.22,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 800,
+            "extra": 25,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2197,
+            "extra": 149,
+            "lift_pct": 7.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8907,
+            "extra": 1313,
+            "lift_pct": 17.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.19,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 941,
+            "extra": 55,
+            "lift_pct": 6.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3149,
+            "extra": 397,
+            "lift_pct": 14.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20499,
+            "extra": 5527,
+            "lift_pct": 36.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.86,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 487,
+            "extra": 36,
+            "lift_pct": 7.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1014,
+            "extra": 128,
+            "lift_pct": 14.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3728,
+            "extra": 976,
+            "lift_pct": 35.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30456,
+            "extra": 15483,
+            "lift_pct": 103.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 308,
+        "win_rate": 64.6,
+        "avg_saving": 1.183,
+        "pct_of_runs": 30.8
+      },
+      "normal": {
+        "n_runs": 341,
+        "win_rate": 64.5,
+        "avg_saving": 1.261,
+        "pct_of_runs": 34.1
+      },
+      "elevated": {
+        "n_runs": 260,
+        "win_rate": 67.7,
+        "avg_saving": 1.524,
+        "pct_of_runs": 26.0
+      },
+      "fear": {
+        "n_runs": 91,
+        "win_rate": 67.0,
+        "avg_saving": 1.758,
+        "pct_of_runs": 9.1
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SOXX",
+      "n_months": 225,
+      "win_rate_pct": 80.4,
+      "avg_saving_pct": 1.953,
+      "median_saving_pct": 1.836,
+      "avg_capture_rate": 98.7,
+      "best_month": 11.46,
+      "worst_month": -11.14
+    },
+    "ticker_meta": {
+      "rows": 6236,
+      "start": "2001-07-13",
+      "end": "2026-04-30",
+      "name": "iShares Semiconductor ETF",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends purchase around 20th, considering normal VIX and momentum in SOXX. Oil's inflation signal may impact. ",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "SOXX",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        22
+      ],
+      "predicted_saving": 0.035,
+      "day_scores": {
+        "20": 0.5376,
+        "21": 0.2463,
+        "22": 0.1863,
+        "23": 0.1667,
+        "24": 0.0878,
+        "27": 0.0076,
+        "28": 0.0547,
+        "29": 0.0382,
+        "30": 0.008
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.53
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 46.2,
+  "generated": "2026-04-30T21:00:59.553317",
+  "cached": false
+}

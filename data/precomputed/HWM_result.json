@@ -1,0 +1,268 @@
+{
+  "ticker": "HWM",
+  "summary": {
+    "ticker": "HWM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 59,
+    "trust_reasons": [
+      "high win rate (75%)",
+      "strong capture (88%)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (6.9pp) \u2014 outcomes vary a lot month to month",
+      "limited training (78 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 59/100. Strengths: high win rate (75%); strong capture (88%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (6.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 75.3,
+    "avg_saving_pct": 1.966,
+    "median_saving_pct": 1.708,
+    "percentiles": {
+      "p10": -1.2,
+      "p25": 0.052,
+      "p50": 1.708,
+      "p75": 3.66,
+      "p90": 5.686
+    },
+    "clipped_values": 63,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2139,
+    "avg_dollar_per_year": 2.57,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 443,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 857,
+        "extra": 40
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2555,
+        "extra": 255
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12601,
+        "extra": 2708
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.06,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 412,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 755,
+            "extra": 21,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1942,
+            "extra": 112,
+            "lift_pct": 6.1
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6731,
+            "extra": 841,
+            "lift_pct": 14.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.77,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 443,
+            "extra": 12,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 857,
+            "extra": 40,
+            "lift_pct": 4.9
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2555,
+            "extra": 255,
+            "lift_pct": 11.1
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12601,
+            "extra": 2708,
+            "lift_pct": 27.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.18,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 967,
+            "extra": 81,
+            "lift_pct": 9.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3352,
+            "extra": 599,
+            "lift_pct": 21.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23725,
+            "extra": 8753,
+            "lift_pct": 58.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 337,
+        "win_rate": 78.9,
+        "avg_saving": 2.079,
+        "pct_of_runs": 33.7
+      },
+      "normal": {
+        "n_runs": 354,
+        "win_rate": 76.8,
+        "avg_saving": 1.966,
+        "pct_of_runs": 35.4
+      },
+      "elevated": {
+        "n_runs": 280,
+        "win_rate": 70.4,
+        "avg_saving": 1.872,
+        "pct_of_runs": 28.0
+      },
+      "fear": {
+        "n_runs": 29,
+        "win_rate": 62.1,
+        "avg_saving": 1.548,
+        "pct_of_runs": 2.9
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "HWM",
+      "n_months": 78,
+      "win_rate_pct": 79.5,
+      "avg_saving_pct": 2.647,
+      "median_saving_pct": 2.274,
+      "avg_capture_rate": 88.0,
+      "best_month": 28.12,
+      "worst_month": -9.45
+    },
+    "ticker_meta": {
+      "rows": 2386,
+      "start": "2016-11-01",
+      "end": "2026-04-30",
+      "name": "Howmet Aerospace Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.235
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "HWM",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        24,
+        22
+      ],
+      "predicted_saving": -0.026,
+      "day_scores": {
+        "20": 0.0014,
+        "21": 0.1766,
+        "22": 0.2375,
+        "23": 0.2345,
+        "24": 0.2409,
+        "27": 0.0836,
+        "28": 0.2272,
+        "29": 0.3801,
+        "30": 0.0742
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2965
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 28.5,
+  "generated": "2026-04-30T22:12:53.325148",
+  "cached": false
+}

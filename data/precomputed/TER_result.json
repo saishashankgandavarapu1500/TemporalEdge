@@ -1,0 +1,268 @@
+{
+  "ticker": "TER",
+  "summary": {
+    "ticker": "TER",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (70%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.8) \u2014 volatile, patterns weaker",
+      "wide spread (10.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (68%); strong capture (70%). Concerns: high beta (1.8) \u2014 volatile, patterns weaker; wide spread (10.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 67.6,
+    "avg_saving_pct": 2.382,
+    "median_saving_pct": 1.815,
+    "percentiles": {
+      "p10": -2.423,
+      "p25": 0.0,
+      "p50": 1.815,
+      "p75": 4.652,
+      "p90": 8.437
+    },
+    "clipped_values": 37,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.2315,
+    "avg_dollar_per_year": 2.78,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 479,
+        "extra": 28
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 985,
+        "extra": 100
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3497,
+        "extra": 745
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 26214,
+        "extra": 11242
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.14,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 432,
+            "extra": 14,
+            "lift_pct": 3.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 820,
+            "extra": 45,
+            "lift_pct": 5.9
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2320,
+            "extra": 271,
+            "lift_pct": 13.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 10086,
+            "extra": 2492,
+            "lift_pct": 32.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.86,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 28,
+            "lift_pct": 6.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 985,
+            "extra": 100,
+            "lift_pct": 11.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3497,
+            "extra": 745,
+            "lift_pct": 27.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 26214,
+            "extra": 11242,
+            "lift_pct": 75.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 23.57,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 134,
+            "extra": 5,
+            "lift_pct": 4.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 516,
+            "extra": 65,
+            "lift_pct": 14.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1127,
+            "extra": 241,
+            "lift_pct": 27.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4747,
+            "extra": 1994,
+            "lift_pct": 72.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 53753,
+            "extra": 38781,
+            "lift_pct": 259.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 66.0,
+        "avg_saving": 1.537,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 69.4,
+        "avg_saving": 2.272,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.9,
+        "avg_saving": 3.078,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 64.5,
+        "avg_saving": 3.209,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "TER",
+      "n_months": 225,
+      "win_rate_pct": 68.9,
+      "avg_saving_pct": 2.055,
+      "median_saving_pct": 1.608,
+      "avg_capture_rate": 69.9,
+      "best_month": 17.78,
+      "worst_month": -39.84
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Teradyne, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.794
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "TER",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        29
+      ],
+      "predicted_saving": 0.039,
+      "day_scores": {
+        "20": 0.2501,
+        "21": 0.2355,
+        "22": 0.1953,
+        "23": 0.1077,
+        "24": 0.0014,
+        "27": 0.0512,
+        "28": 0.1107,
+        "29": 0.2254,
+        "30": 0.1998
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1988
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 68.8,
+  "generated": "2026-04-30T23:20:41.750057",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "STLD",
+  "summary": {
+    "ticker": "STLD",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (88%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.4) \u2014 volatile, patterns weaker",
+      "wide spread (10.2pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (66%); strong capture (88%). Concerns: high beta (1.4) \u2014 volatile, patterns weaker; wide spread (10.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 65.5,
+    "avg_saving_pct": 2.048,
+    "median_saving_pct": 1.74,
+    "percentiles": {
+      "p10": -2.203,
+      "p25": -0.035,
+      "p50": 1.74,
+      "p75": 4.331,
+      "p90": 8.0
+    },
+    "clipped_values": 149,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2269,
+    "avg_dollar_per_year": 2.72,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 475,
+        "extra": 24
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 971,
+        "extra": 85
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3380,
+        "extra": 627
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24195,
+        "extra": 9222
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.84,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 813,
+            "extra": 39,
+            "lift_pct": 5.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2279,
+            "extra": 231,
+            "lift_pct": 11.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9686,
+            "extra": 2092,
+            "lift_pct": 27.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.32,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 971,
+            "extra": 85,
+            "lift_pct": 9.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3380,
+            "extra": 627,
+            "lift_pct": 22.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24195,
+            "extra": 9222,
+            "lift_pct": 61.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.37,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 507,
+            "extra": 55,
+            "lift_pct": 12.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1088,
+            "extra": 203,
+            "lift_pct": 22.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4385,
+            "extra": 1633,
+            "lift_pct": 59.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 44627,
+            "extra": 29654,
+            "lift_pct": 198.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.6,
+        "avg_saving": 1.935,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 63.2,
+        "avg_saving": 1.786,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 63.9,
+        "avg_saving": 2.323,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 63.2,
+        "avg_saving": 2.526,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "STLD",
+      "n_months": 225,
+      "win_rate_pct": 77.8,
+      "avg_saving_pct": 3.043,
+      "median_saving_pct": 2.308,
+      "avg_capture_rate": 87.8,
+      "best_month": 30.08,
+      "worst_month": -12.67
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Steel Dynamics, Inc.",
+      "sector": "Basic Materials",
+      "type": "EQUITY",
+      "beta": 1.4
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "STLD",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        23,
+        29
+      ],
+      "predicted_saving": 0.023,
+      "day_scores": {
+        "20": 0.5842,
+        "21": 0.0849,
+        "22": 0.0017,
+        "23": 0.1432,
+        "24": 0.0836,
+        "27": 0.0745,
+        "28": 0.0788,
+        "29": 0.1026,
+        "30": 0.0714
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5097
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 68.5,
+  "generated": "2026-04-30T23:14:38.387927",
+  "cached": false
+}

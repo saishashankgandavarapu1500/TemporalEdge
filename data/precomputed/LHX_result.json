@@ -1,0 +1,268 @@
+{
+  "ticker": "LHX",
+  "summary": {
+    "ticker": "LHX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (100%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 79/100. Strengths: moderate win rate (66%); strong capture (100%). Concerns: wide spread (6.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.1,
+    "avg_saving_pct": 1.265,
+    "median_saving_pct": 0.907,
+    "percentiles": {
+      "p10": -1.512,
+      "p25": 0.0,
+      "p50": 0.907,
+      "p75": 2.722,
+      "p90": 4.893
+    },
+    "clipped_values": 169,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1326,
+    "avg_dollar_per_year": 1.59,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 466,
+        "extra": 15
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 937,
+        "extra": 51
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3122,
+        "extra": 370
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20092,
+        "extra": 5120
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.14,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 798,
+            "extra": 24,
+            "lift_pct": 3.1
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2188,
+            "extra": 139,
+            "lift_pct": 6.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8817,
+            "extra": 1223,
+            "lift_pct": 16.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.05,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 466,
+            "extra": 15,
+            "lift_pct": 3.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 937,
+            "extra": 51,
+            "lift_pct": 5.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3122,
+            "extra": 370,
+            "lift_pct": 13.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20092,
+            "extra": 5120,
+            "lift_pct": 34.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.56,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 484,
+            "extra": 33,
+            "lift_pct": 7.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1005,
+            "extra": 119,
+            "lift_pct": 13.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3656,
+            "extra": 903,
+            "lift_pct": 32.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 29089,
+            "extra": 14116,
+            "lift_pct": 94.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 63.5,
+        "avg_saving": 0.915,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 67.7,
+        "avg_saving": 1.21,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.9,
+        "avg_saving": 1.556,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 61.8,
+        "avg_saving": 1.648,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "LHX",
+      "n_months": 225,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 1.671,
+      "median_saving_pct": 1.434,
+      "avg_capture_rate": 100.0,
+      "best_month": 9.74,
+      "worst_month": -10.22
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "L3Harris Technologies, Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 0.746
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 24 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 23-25",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "LHX",
+      "recommended_day": 24,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        24,
+        27,
+        29
+      ],
+      "predicted_saving": 0.015,
+      "day_scores": {
+        "20": 0.0285,
+        "21": 0.0424,
+        "22": 0.0898,
+        "23": 0.1402,
+        "24": 0.5926,
+        "27": 0.539,
+        "28": 0.2339,
+        "29": 0.3215,
+        "30": 0.2582
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0536
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 67.6,
+  "generated": "2026-04-30T22:29:06.383685",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "UBER",
+  "summary": {
+    "ticker": "UBER",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 53,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (88%)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (8.2pp) \u2014 outcomes vary a lot month to month",
+      "limited training (48 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 53/100. Strengths: moderate win rate (68%); strong capture (88%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (8.2pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.3,
+    "avg_saving_pct": 1.785,
+    "median_saving_pct": 1.787,
+    "percentiles": {
+      "p10": -2.09,
+      "p25": 0.0,
+      "p50": 1.787,
+      "p75": 3.612,
+      "p90": 6.117
+    },
+    "clipped_values": 89,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2034,
+    "avg_dollar_per_year": 2.44,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 442,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 853,
+        "extra": 36
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2530,
+        "extra": 230
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12320,
+        "extra": 2427
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 8.96,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 411,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 754,
+            "extra": 19,
+            "lift_pct": 2.6
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1931,
+            "extra": 102,
+            "lift_pct": 5.6
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6648,
+            "extra": 758,
+            "lift_pct": 12.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.61,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 442,
+            "extra": 11,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 853,
+            "extra": 36,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2530,
+            "extra": 230,
+            "lift_pct": 10.0
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12320,
+            "extra": 2427,
+            "lift_pct": 24.5
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.89,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 959,
+            "extra": 74,
+            "lift_pct": 8.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3290,
+            "extra": 538,
+            "lift_pct": 19.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22724,
+            "extra": 7752,
+            "lift_pct": 51.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 178,
+        "win_rate": 78.1,
+        "avg_saving": 1.412,
+        "pct_of_runs": 17.8
+      },
+      "normal": {
+        "n_runs": 405,
+        "win_rate": 69.1,
+        "avg_saving": 1.729,
+        "pct_of_runs": 40.5
+      },
+      "elevated": {
+        "n_runs": 367,
+        "win_rate": 58.9,
+        "avg_saving": 1.531,
+        "pct_of_runs": 36.7
+      },
+      "fear": {
+        "n_runs": 50,
+        "win_rate": 96.0,
+        "avg_saving": 5.432,
+        "pct_of_runs": 5.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "UBER",
+      "n_months": 48,
+      "win_rate_pct": 70.8,
+      "avg_saving_pct": 1.897,
+      "median_saving_pct": 1.803,
+      "avg_capture_rate": 88.0,
+      "best_month": 8.84,
+      "worst_month": -8.57
+    },
+    "ticker_meta": {
+      "rows": 1753,
+      "start": "2019-05-10",
+      "end": "2026-04-30",
+      "name": "Uber Technologies, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.206
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 23 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 22-24",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "UBER",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        24,
+        22
+      ],
+      "predicted_saving": 0.02,
+      "day_scores": {
+        "20": 0.0636,
+        "21": 0.1266,
+        "22": 0.2003,
+        "23": 0.2461,
+        "24": 0.2033,
+        "27": 0.0105,
+        "28": 0.0171,
+        "29": 0.0181,
+        "30": 0.022
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2356
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 22.5,
+  "generated": "2026-04-30T23:26:32.049987",
+  "cached": false
+}

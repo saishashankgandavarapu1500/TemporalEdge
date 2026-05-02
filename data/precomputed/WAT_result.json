@@ -1,0 +1,268 @@
+{
+  "ticker": "WAT",
+  "summary": {
+    "ticker": "WAT",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (96%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (7.3pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (71%); strong capture (96%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (7.3pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.6,
+    "avg_saving_pct": 1.788,
+    "median_saving_pct": 1.259,
+    "percentiles": {
+      "p10": -0.877,
+      "p25": 0.0,
+      "p50": 1.259,
+      "p75": 3.081,
+      "p90": 6.438
+    },
+    "clipped_values": 86,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1893,
+    "avg_dollar_per_year": 2.27,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 472,
+        "extra": 21
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 959,
+        "extra": 74
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3291,
+        "extra": 539
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22741,
+        "extra": 7768
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.61,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 808,
+            "extra": 34,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2248,
+            "extra": 200,
+            "lift_pct": 9.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9387,
+            "extra": 1793,
+            "lift_pct": 23.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.9,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 959,
+            "extra": 74,
+            "lift_pct": 8.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3291,
+            "extra": 539,
+            "lift_pct": 19.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22741,
+            "extra": 7768,
+            "lift_pct": 51.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.44,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 499,
+            "extra": 48,
+            "lift_pct": 10.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1060,
+            "extra": 174,
+            "lift_pct": 19.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4126,
+            "extra": 1374,
+            "lift_pct": 49.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 38667,
+            "extra": 23695,
+            "lift_pct": 158.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 63.5,
+        "avg_saving": 0.948,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 76.9,
+        "avg_saving": 1.777,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 69.5,
+        "avg_saving": 2.257,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 73.7,
+        "avg_saving": 3.075,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "WAT",
+      "n_months": 225,
+      "win_rate_pct": 73.3,
+      "avg_saving_pct": 1.839,
+      "median_saving_pct": 1.51,
+      "avg_capture_rate": 95.5,
+      "best_month": 13.16,
+      "worst_month": -28.32
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Waters Corporation",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.203
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 27 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 26-28",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "WAT",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        29,
+        28
+      ],
+      "predicted_saving": 0.02,
+      "day_scores": {
+        "20": 0.0209,
+        "21": 0.0032,
+        "22": 0.0233,
+        "23": 0.1516,
+        "24": 0.1424,
+        "27": 0.5269,
+        "28": 0.4099,
+        "29": 0.475,
+        "30": 0.1536
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 69.0,
+  "generated": "2026-04-30T23:37:53.078270",
+  "cached": false
+}

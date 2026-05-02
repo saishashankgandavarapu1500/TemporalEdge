@@ -1,0 +1,268 @@
+{
+  "ticker": "CBRE",
+  "summary": {
+    "ticker": "CBRE",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (91%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (7.7pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (71%); strong capture (91%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (7.7pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.8,
+    "avg_saving_pct": 1.991,
+    "median_saving_pct": 1.523,
+    "percentiles": {
+      "p10": -1.25,
+      "p25": 0.0,
+      "p50": 1.523,
+      "p75": 3.767,
+      "p90": 6.466
+    },
+    "clipped_values": 96,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2165,
+    "avg_dollar_per_year": 2.6,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 474,
+        "extra": 23
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 968,
+        "extra": 82
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3360,
+        "extra": 608
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23868,
+        "extra": 8895
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.79,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 12,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 812,
+            "extra": 38,
+            "lift_pct": 4.9
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2272,
+            "extra": 224,
+            "lift_pct": 10.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9619,
+            "extra": 2026,
+            "lift_pct": 26.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.23,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 968,
+            "extra": 82,
+            "lift_pct": 9.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3360,
+            "extra": 608,
+            "lift_pct": 22.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23868,
+            "extra": 8895,
+            "lift_pct": 59.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.17,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 505,
+            "extra": 54,
+            "lift_pct": 11.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1082,
+            "extra": 196,
+            "lift_pct": 22.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4327,
+            "extra": 1575,
+            "lift_pct": 57.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 43242,
+            "extra": 28270,
+            "lift_pct": 188.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 365,
+        "win_rate": 72.3,
+        "avg_saving": 1.599,
+        "pct_of_runs": 36.5
+      },
+      "normal": {
+        "n_runs": 327,
+        "win_rate": 68.2,
+        "avg_saving": 1.679,
+        "pct_of_runs": 32.7
+      },
+      "elevated": {
+        "n_runs": 254,
+        "win_rate": 73.6,
+        "avg_saving": 2.825,
+        "pct_of_runs": 25.4
+      },
+      "fear": {
+        "n_runs": 54,
+        "win_rate": 63.0,
+        "avg_saving": 2.605,
+        "pct_of_runs": 5.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CBRE",
+      "n_months": 225,
+      "win_rate_pct": 75.1,
+      "avg_saving_pct": 2.584,
+      "median_saving_pct": 1.74,
+      "avg_capture_rate": 91.4,
+      "best_month": 44.47,
+      "worst_month": -12.8
+    },
+    "ticker_meta": {
+      "rows": 5507,
+      "start": "2004-06-10",
+      "end": "2026-04-30",
+      "name": "CBRE Group, Inc.",
+      "sector": "Real Estate",
+      "type": "EQUITY",
+      "beta": 1.348
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider CBRE's dip below SMA20 and macro signals. Oil's 11.8% gain may indicate inflation. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "CBRE",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        29
+      ],
+      "predicted_saving": 0.023,
+      "day_scores": {
+        "20": 0.0092,
+        "21": 0.0621,
+        "22": 0.0002,
+        "23": 0.0965,
+        "24": 0.1007,
+        "27": 0.4674,
+        "28": 0.3707,
+        "29": 0.3235,
+        "30": 0.2867
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 67.6,
+  "generated": "2026-04-30T21:25:36.250708",
+  "cached": false
+}

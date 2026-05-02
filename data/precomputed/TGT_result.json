@@ -1,0 +1,267 @@
+{
+  "ticker": "TGT",
+  "summary": {
+    "ticker": "TGT",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (77%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (5.8pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (71%); strong capture (77%). ",
+    "win_rate_pct": 71.0,
+    "avg_saving_pct": 1.566,
+    "median_saving_pct": 1.127,
+    "percentiles": {
+      "p10": -1.166,
+      "p25": 0.0,
+      "p50": 1.127,
+      "p75": 2.959,
+      "p90": 4.673
+    },
+    "clipped_values": 49,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1616,
+    "avg_dollar_per_year": 1.94,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 469,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 950,
+        "extra": 64
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3218,
+        "extra": 466
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21573,
+        "extra": 6601
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.41,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 804,
+            "extra": 30,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2222,
+            "extra": 174,
+            "lift_pct": 8.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9140,
+            "extra": 1547,
+            "lift_pct": 20.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.54,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 469,
+            "extra": 18,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 950,
+            "extra": 64,
+            "lift_pct": 7.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3218,
+            "extra": 466,
+            "lift_pct": 16.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21573,
+            "extra": 6601,
+            "lift_pct": 44.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.64,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 493,
+            "extra": 42,
+            "lift_pct": 9.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1036,
+            "extra": 150,
+            "lift_pct": 17.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3919,
+            "extra": 1166,
+            "lift_pct": 42.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34246,
+            "extra": 19274,
+            "lift_pct": 128.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 73.4,
+        "avg_saving": 1.22,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.5,
+        "avg_saving": 1.335,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 72.5,
+        "avg_saving": 2.038,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 67.1,
+        "avg_saving": 1.985,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "TGT",
+      "n_months": 225,
+      "win_rate_pct": 74.7,
+      "avg_saving_pct": 1.562,
+      "median_saving_pct": 1.22,
+      "avg_capture_rate": 76.9,
+      "best_month": 18.31,
+      "worst_month": -8.08
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Target Corporation",
+      "sector": "Consumer Defensive",
+      "type": "EQUITY",
+      "beta": 1.032
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "TGT",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        24,
+        28
+      ],
+      "predicted_saving": 0.003,
+      "day_scores": {
+        "20": 0.2436,
+        "21": 0.0307,
+        "22": 0.1399,
+        "23": 0.1034,
+        "24": 0.1806,
+        "27": 0.0398,
+        "28": 0.1628,
+        "29": 0.0542,
+        "30": 0.0029
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2038
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 70.4,
+  "generated": "2026-04-30T23:18:30.122854",
+  "cached": false
+}

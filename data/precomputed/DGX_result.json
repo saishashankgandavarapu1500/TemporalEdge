@@ -1,0 +1,267 @@
+{
+  "ticker": "DGX",
+  "summary": {
+    "ticker": "DGX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (78%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "moderate spread (5.8pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (68%); strong capture (78%). ",
+    "win_rate_pct": 67.9,
+    "avg_saving_pct": 1.149,
+    "median_saving_pct": 0.714,
+    "percentiles": {
+      "p10": -1.228,
+      "p25": 0.0,
+      "p50": 0.714,
+      "p75": 2.275,
+      "p90": 4.605
+    },
+    "clipped_values": 141,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1319,
+    "avg_dollar_per_year": 1.58,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 464,
+        "extra": 13
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 932,
+        "extra": 46
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3086,
+        "extra": 333
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19548,
+        "extra": 4576
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.03,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2174,
+            "extra": 126,
+            "lift_pct": 6.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8695,
+            "extra": 1102,
+            "lift_pct": 14.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.86,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 464,
+            "extra": 13,
+            "lift_pct": 2.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 932,
+            "extra": 46,
+            "lift_pct": 5.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3086,
+            "extra": 333,
+            "lift_pct": 12.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19548,
+            "extra": 4576,
+            "lift_pct": 30.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.14,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 1.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 481,
+            "extra": 30,
+            "lift_pct": 6.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 993,
+            "extra": 107,
+            "lift_pct": 12.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3559,
+            "extra": 807,
+            "lift_pct": 29.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27319,
+            "extra": 12347,
+            "lift_pct": 82.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 67.7,
+        "avg_saving": 0.752,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.8,
+        "avg_saving": 1.041,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 64.9,
+        "avg_saving": 1.279,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 76.3,
+        "avg_saving": 2.577,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "DGX",
+      "n_months": 225,
+      "win_rate_pct": 71.6,
+      "avg_saving_pct": 1.105,
+      "median_saving_pct": 0.85,
+      "avg_capture_rate": 77.9,
+      "best_month": 18.58,
+      "worst_month": -11.57
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Quest Diagnostics Incorporated",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.654
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and neutral SMA20. Oil's 11.4% gain may indicate inflation.",
+      "suggested_window": "days 24-29",
+      "action": "consider",
+      "key_factor": "Model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "DGX",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        24,
+        28
+      ],
+      "predicted_saving": -0.005,
+      "day_scores": {
+        "20": 0.1954,
+        "21": 0.0008,
+        "22": 0.049,
+        "23": 0.1478,
+        "24": 0.2428,
+        "27": 0.2003,
+        "28": 0.2126,
+        "29": 0.3627,
+        "30": 0.1458
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1623
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 73.4,
+  "generated": "2026-04-30T20:44:24.278396",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "SLB",
+  "summary": {
+    "ticker": "SLB",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (90%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.6pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 79/100. Strengths: moderate win rate (69%); strong capture (90%). Concerns: wide spread (6.6pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 69.0,
+    "avg_saving_pct": 1.597,
+    "median_saving_pct": 1.236,
+    "percentiles": {
+      "p10": -1.632,
+      "p25": 0.0,
+      "p50": 1.236,
+      "p75": 3.645,
+      "p90": 5.0
+    },
+    "clipped_values": 248,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1908,
+    "avg_dollar_per_year": 2.29,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 951,
+        "extra": 65
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3228,
+        "extra": 476
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21731,
+        "extra": 6759
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.44,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 805,
+            "extra": 30,
+            "lift_pct": 3.9
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2226,
+            "extra": 177,
+            "lift_pct": 8.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9174,
+            "extra": 1580,
+            "lift_pct": 20.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.59,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 951,
+            "extra": 65,
+            "lift_pct": 7.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3228,
+            "extra": 476,
+            "lift_pct": 17.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21731,
+            "extra": 6759,
+            "lift_pct": 45.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.75,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 494,
+            "extra": 43,
+            "lift_pct": 9.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1039,
+            "extra": 154,
+            "lift_pct": 17.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3947,
+            "extra": 1194,
+            "lift_pct": 43.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34825,
+            "extra": 19852,
+            "lift_pct": 132.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 67.4,
+        "avg_saving": 1.183,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.5,
+        "avg_saving": 1.493,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 73.8,
+        "avg_saving": 2.063,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 57.9,
+        "avg_saving": 1.723,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SLB",
+      "n_months": 225,
+      "win_rate_pct": 72.4,
+      "avg_saving_pct": 2.1,
+      "median_saving_pct": 1.334,
+      "avg_capture_rate": 89.8,
+      "best_month": 15.29,
+      "worst_month": -15.24
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "SLB N.V.",
+      "sector": "Energy",
+      "type": "EQUITY",
+      "beta": 0.695
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "SLB",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        23
+      ],
+      "predicted_saving": 0.037,
+      "day_scores": {
+        "20": 0.5856,
+        "21": 0.225,
+        "22": 0.1109,
+        "23": 0.1156,
+        "24": 0.0557,
+        "27": 0.0077,
+        "28": 0.0129,
+        "29": 0.0306,
+        "30": 0.0327
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5779
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 63.4,
+  "generated": "2026-04-30T23:09:34.921426",
+  "cached": false
+}

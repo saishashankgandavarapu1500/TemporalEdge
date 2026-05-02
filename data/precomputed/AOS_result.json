@@ -1,0 +1,267 @@
+{
+  "ticker": "AOS",
+  "summary": {
+    "ticker": "AOS",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (73%)",
+      "strong capture (93%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (7.1pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (73%); strong capture (93%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (7.1pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 72.9,
+    "avg_saving_pct": 1.796,
+    "median_saving_pct": 1.362,
+    "percentiles": {
+      "p10": -1.126,
+      "p25": 0.0,
+      "p50": 1.362,
+      "p75": 3.113,
+      "p90": 5.934
+    },
+    "clipped_values": 82,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1837,
+    "avg_dollar_per_year": 2.2,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 472,
+        "extra": 21
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 960,
+        "extra": 74
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3294,
+        "extra": 542
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22786,
+        "extra": 7813
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.62,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 808,
+            "extra": 34,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2249,
+            "extra": 201,
+            "lift_pct": 9.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9397,
+            "extra": 1803,
+            "lift_pct": 23.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.91,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 960,
+            "extra": 74,
+            "lift_pct": 8.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3294,
+            "extra": 542,
+            "lift_pct": 19.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22786,
+            "extra": 7813,
+            "lift_pct": 52.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.47,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 499,
+            "extra": 48,
+            "lift_pct": 10.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1061,
+            "extra": 175,
+            "lift_pct": 19.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4134,
+            "extra": 1382,
+            "lift_pct": 50.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 38846,
+            "extra": 23873,
+            "lift_pct": 159.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 66.7,
+        "avg_saving": 1.196,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 75.4,
+        "avg_saving": 1.636,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 76.7,
+        "avg_saving": 2.169,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 69.7,
+        "avg_saving": 3.241,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AOS",
+      "n_months": 225,
+      "win_rate_pct": 83.1,
+      "avg_saving_pct": 2.237,
+      "median_saving_pct": 1.675,
+      "avg_capture_rate": 92.6,
+      "best_month": 18.21,
+      "worst_month": -7.43
+    },
+    "ticker_meta": {
+      "rows": 6620,
+      "start": "2000-01-03",
+      "end": "2026-04-29",
+      "name": "A. O. Smith Corporation",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.346
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider AOS purchase with model's 75% confidence and normal VIX.",
+      "suggested_window": "days 23-24",
+      "action": "consider",
+      "key_factor": "Model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "AOS",
+      "recommended_day": 24,
+      "confidence": 0.75,
+      "vix_level": 11.9,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        24,
+        29,
+        23
+      ],
+      "predicted_saving": 0.004,
+      "day_scores": {
+        "20": 0.0051,
+        "21": 0.1143,
+        "22": 0.108,
+        "23": 0.1476,
+        "24": 0.2417,
+        "27": 0.0015,
+        "28": 0.0877,
+        "29": 0.167
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2402
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 139.7,
+  "generated": "2026-04-30T00:49:43.335563",
+  "cached": false
+}

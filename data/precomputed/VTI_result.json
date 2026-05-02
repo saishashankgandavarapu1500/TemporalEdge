@@ -1,0 +1,261 @@
+{
+  "ticker": "VTI",
+  "summary": {
+    "ticker": "VTI",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "strong capture (88%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.5pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "win rate 51% \u2248 random \u2014 no reliable signal"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: strong capture (88%); moderate beta (1.0) \u2014 predictable enough. Concerns: win rate 51% \u2248 random \u2014 no reliable signal.",
+    "win_rate_pct": 50.9,
+    "avg_saving_pct": 0.133,
+    "median_saving_pct": 0.052,
+    "percentiles": {
+      "p10": -1.756,
+      "p25": -0.762,
+      "p50": 0.052,
+      "p75": 0.9,
+      "p90": 1.781
+    },
+    "clipped_values": 74,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.0055,
+    "avg_dollar_per_year": 0.07,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 0
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 453,
+        "extra": 2
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 891,
+        "extra": 5
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 2788,
+        "extra": 36
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 15435,
+        "extra": 462
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.12,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.1
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 419,
+            "extra": 1,
+            "lift_pct": 0.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 777,
+            "extra": 2,
+            "lift_pct": 0.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2063,
+            "extra": 14,
+            "lift_pct": 0.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 7712,
+            "extra": 119,
+            "lift_pct": 1.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 15.21,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 0,
+            "lift_pct": 0.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 453,
+            "extra": 2,
+            "lift_pct": 0.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 891,
+            "extra": 5,
+            "lift_pct": 0.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2788,
+            "extra": 36,
+            "lift_pct": 1.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 15435,
+            "extra": 462,
+            "lift_pct": 3.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 15.48,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 0,
+            "lift_pct": 0.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 455,
+            "extra": 3,
+            "lift_pct": 0.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 897,
+            "extra": 12,
+            "lift_pct": 1.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2833,
+            "extra": 81,
+            "lift_pct": 3.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 16022,
+            "extra": 1049,
+            "lift_pct": 7.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 322,
+        "win_rate": 54.7,
+        "avg_saving": 0.175,
+        "pct_of_runs": 32.2
+      },
+      "normal": {
+        "n_runs": 361,
+        "win_rate": 49.0,
+        "avg_saving": -0.069,
+        "pct_of_runs": 36.1
+      },
+      "elevated": {
+        "n_runs": 272,
+        "win_rate": 50.0,
+        "avg_saving": 0.321,
+        "pct_of_runs": 27.2
+      },
+      "fear": {
+        "n_runs": 45,
+        "win_rate": 44.4,
+        "avg_saving": 0.312,
+        "pct_of_runs": 4.5
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "VTI",
+      "n_months": 225,
+      "win_rate_pct": 76.4,
+      "avg_saving_pct": 1.125,
+      "median_saving_pct": 0.876,
+      "avg_capture_rate": 88.0,
+      "best_month": 9.7,
+      "worst_month": -6.32
+    },
+    "ticker_meta": {
+      "name": "VTI",
+      "sector": "Unknown",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 21st, consider days 20-23",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "VTI",
+      "recommended_day": 21,
+      "confidence": 0.896,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        23,
+        20
+      ],
+      "predicted_saving": 0.008,
+      "day_scores": {
+        "20": 0.1203,
+        "21": 0.5983,
+        "22": 0.0274,
+        "23": 0.2481,
+        "24": 0.0001
+      },
+      "current_day": 27,
+      "model_reliability": 0.895,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.478
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 3.9,
+  "generated": "2026-04-30T01:02:13.983599",
+  "cached": false
+}

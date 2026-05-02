@@ -1,0 +1,260 @@
+{
+  "ticker": "SCHD",
+  "summary": {
+    "ticker": "SCHD",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 88,
+    "trust_reasons": [
+      "high win rate (80%)",
+      "strong capture (92%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "tight distribution (p10-p90 range 2.7pp)",
+      "adequately trained (139 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 88/100. Strengths: high win rate (80%); strong capture (92%). ",
+    "win_rate_pct": 79.7,
+    "avg_saving_pct": 1.05,
+    "median_saving_pct": 0.882,
+    "percentiles": {
+      "p10": -0.177,
+      "p25": 0.175,
+      "p50": 0.882,
+      "p75": 1.688,
+      "p90": 2.552
+    },
+    "clipped_values": 26,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1079,
+    "avg_dollar_per_year": 1.3,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 463,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 928,
+        "extra": 42
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3055,
+        "extra": 303
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19099,
+        "extra": 4126
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.94,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 794,
+            "extra": 20,
+            "lift_pct": 2.5
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2163,
+            "extra": 115,
+            "lift_pct": 5.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8593,
+            "extra": 1000,
+            "lift_pct": 13.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.7,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 463,
+            "extra": 12,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 928,
+            "extra": 42,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3055,
+            "extra": 303,
+            "lift_pct": 11.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19099,
+            "extra": 4126,
+            "lift_pct": 27.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.78,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 27,
+            "lift_pct": 6.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 983,
+            "extra": 98,
+            "lift_pct": 11.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3480,
+            "extra": 727,
+            "lift_pct": 26.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25908,
+            "extra": 10935,
+            "lift_pct": 73.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 382,
+        "win_rate": 79.1,
+        "avg_saving": 0.696,
+        "pct_of_runs": 38.2
+      },
+      "normal": {
+        "n_runs": 353,
+        "win_rate": 77.9,
+        "avg_saving": 0.929,
+        "pct_of_runs": 35.3
+      },
+      "elevated": {
+        "n_runs": 239,
+        "win_rate": 84.1,
+        "avg_saving": 1.599,
+        "pct_of_runs": 23.9
+      },
+      "fear": {
+        "n_runs": 26,
+        "win_rate": 73.1,
+        "avg_saving": 2.839,
+        "pct_of_runs": 2.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SCHD",
+      "n_months": 139,
+      "win_rate_pct": 77.7,
+      "avg_saving_pct": 0.921,
+      "median_saving_pct": 0.799,
+      "avg_capture_rate": 92.3,
+      "best_month": 11.98,
+      "worst_month": -8.07
+    },
+    "ticker_meta": {
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 21st, with oil's 11.8% rise and SCHD above SMA20.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "momentum and oil price surge"
+    },
+    "lgbm_rec": {
+      "ticker": "SCHD",
+      "recommended_day": 21,
+      "confidence": 0.728,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        22,
+        20
+      ],
+      "predicted_saving": 0.006,
+      "day_scores": {
+        "20": 0.1424,
+        "21": 0.5992,
+        "22": 0.2013,
+        "23": 0.0007,
+        "24": 0.1375
+      },
+      "current_day": 27,
+      "model_reliability": 0.729,
+      "uncertainty_days": 2,
+      "timing_precision": "window",
+      "improvement_vs_current": 0.4568
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 4.0,
+  "generated": "2026-04-30T20:59:25.556124",
+  "cached": false
+}

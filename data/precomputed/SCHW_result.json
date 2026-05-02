@@ -1,0 +1,268 @@
+{
+  "ticker": "SCHW",
+  "summary": {
+    "ticker": "SCHW",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (77%)",
+      "moderate beta (0.9) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.8pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (66%); strong capture (77%). Concerns: wide spread (6.8pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.4,
+    "avg_saving_pct": 1.366,
+    "median_saving_pct": 1.219,
+    "percentiles": {
+      "p10": -1.84,
+      "p25": 0.0,
+      "p50": 1.219,
+      "p75": 2.852,
+      "p90": 5.0
+    },
+    "clipped_values": 197,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1385,
+    "avg_dollar_per_year": 1.66,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 941,
+        "extra": 56
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3154,
+        "extra": 401
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20572,
+        "extra": 5600
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.23,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 800,
+            "extra": 26,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2199,
+            "extra": 151,
+            "lift_pct": 7.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8923,
+            "extra": 1329,
+            "lift_pct": 17.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.21,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 941,
+            "extra": 56,
+            "lift_pct": 6.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3154,
+            "extra": 401,
+            "lift_pct": 14.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20572,
+            "extra": 5600,
+            "lift_pct": 37.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.92,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 487,
+            "extra": 36,
+            "lift_pct": 8.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1015,
+            "extra": 129,
+            "lift_pct": 14.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3741,
+            "extra": 989,
+            "lift_pct": 35.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30705,
+            "extra": 15733,
+            "lift_pct": 105.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 67.4,
+        "avg_saving": 1.066,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 64.4,
+        "avg_saving": 1.084,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 66.9,
+        "avg_saving": 1.73,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 69.7,
+        "avg_saving": 2.263,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SCHW",
+      "n_months": 225,
+      "win_rate_pct": 71.6,
+      "avg_saving_pct": 1.58,
+      "median_saving_pct": 1.298,
+      "avg_capture_rate": 77.3,
+      "best_month": 11.49,
+      "worst_month": -9.5
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "The Charles Schwab Corporation",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 0.901
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider SCHW purchase with VIX at 16.89 and recent 3.5% gain.",
+      "suggested_window": "days 23-24",
+      "action": "consider",
+      "key_factor": "recent price dip below SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "SCHW",
+      "recommended_day": 24,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        24,
+        23,
+        27
+      ],
+      "predicted_saving": 0.009,
+      "day_scores": {
+        "20": 0.0084,
+        "21": 0.1428,
+        "22": 0.1231,
+        "23": 0.281,
+        "24": 0.5364,
+        "27": 0.2521,
+        "28": 0.2514,
+        "29": 0.2114,
+        "30": 0.1655
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2843
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 61.4,
+  "generated": "2026-04-30T21:28:38.024637",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "MKTX",
+  "summary": {
+    "ticker": "MKTX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "strong capture (89%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "well-trained (222 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (64%) \u2014 barely above random",
+      "wide spread (7.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: strong capture (89%); moderate beta (1.0) \u2014 predictable enough. Concerns: low win rate (64%) \u2014 barely above random; wide spread (7.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 64.1,
+    "avg_saving_pct": 1.543,
+    "median_saving_pct": 1.11,
+    "percentiles": {
+      "p10": -1.56,
+      "p25": -0.024,
+      "p50": 1.11,
+      "p75": 3.239,
+      "p90": 5.801
+    },
+    "clipped_values": 76,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1553,
+    "avg_dollar_per_year": 1.86,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 469,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 949,
+        "extra": 63
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3211,
+        "extra": 459
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21456,
+        "extra": 6484
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.39,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 803,
+            "extra": 29,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2220,
+            "extra": 171,
+            "lift_pct": 8.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9115,
+            "extra": 1521,
+            "lift_pct": 20.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.5,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 469,
+            "extra": 18,
+            "lift_pct": 4.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 949,
+            "extra": 63,
+            "lift_pct": 7.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3211,
+            "extra": 459,
+            "lift_pct": 16.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21456,
+            "extra": 6484,
+            "lift_pct": 43.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.56,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 492,
+            "extra": 41,
+            "lift_pct": 9.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1034,
+            "extra": 148,
+            "lift_pct": 16.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3898,
+            "extra": 1146,
+            "lift_pct": 41.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 33820,
+            "extra": 18847,
+            "lift_pct": 125.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 365,
+        "win_rate": 64.7,
+        "avg_saving": 1.504,
+        "pct_of_runs": 36.5
+      },
+      "normal": {
+        "n_runs": 314,
+        "win_rate": 69.4,
+        "avg_saving": 1.618,
+        "pct_of_runs": 31.4
+      },
+      "elevated": {
+        "n_runs": 265,
+        "win_rate": 58.1,
+        "avg_saving": 1.426,
+        "pct_of_runs": 26.5
+      },
+      "fear": {
+        "n_runs": 56,
+        "win_rate": 58.9,
+        "avg_saving": 1.935,
+        "pct_of_runs": 5.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MKTX",
+      "n_months": 222,
+      "win_rate_pct": 70.7,
+      "avg_saving_pct": 2.219,
+      "median_saving_pct": 1.668,
+      "avg_capture_rate": 88.6,
+      "best_month": 20.5,
+      "worst_month": -10.63
+    },
+    "ticker_meta": {
+      "rows": 5404,
+      "start": "2004-11-05",
+      "end": "2026-04-30",
+      "name": "MarketAxess Holdings Inc.",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 1.004
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 28 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 27-29",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "MKTX",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        30,
+        27
+      ],
+      "predicted_saving": 0.007,
+      "day_scores": {
+        "20": 0.0104,
+        "21": 0.0051,
+        "22": 0.1127,
+        "23": 0.0481,
+        "24": 0.0463,
+        "27": 0.4875,
+        "28": 0.5243,
+        "29": 0.1616,
+        "30": 0.4929
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0369
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 66.3,
+  "generated": "2026-04-30T22:35:53.035195",
+  "cached": false
+}

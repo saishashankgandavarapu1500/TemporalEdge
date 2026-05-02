@@ -1,0 +1,262 @@
+{
+  "ticker": "GEHC",
+  "summary": {
+    "ticker": "GEHC",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 46,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "moderate capture (39%)",
+      "moderate beta (1.0) \u2014 predictable enough"
+    ],
+    "trust_penalties": [
+      "wide spread (6.3pp) \u2014 outcomes vary a lot month to month",
+      "insufficient training (5 folds) \u2014 results provisional"
+    ],
+    "trust_summary": "Trust 46/100. Strengths: moderate win rate (74%); moderate capture (39%). Concerns: wide spread (6.3pp) \u2014 outcomes vary a lot month to month; insufficient training (5 folds) \u2014 results provisional.",
+    "win_rate_pct": 73.6,
+    "avg_saving_pct": 1.486,
+    "median_saving_pct": 1.142,
+    "percentiles": {
+      "p10": -1.293,
+      "p25": 0.0,
+      "p50": 1.142,
+      "p75": 2.816,
+      "p90": 5.0
+    },
+    "clipped_values": 194,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.191,
+    "avg_dollar_per_year": 2.29,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 440,
+        "extra": 9
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 847,
+        "extra": 30
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2490,
+        "extra": 189
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 11870,
+        "extra": 1977
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 8.8,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 410,
+            "extra": 5,
+            "lift_pct": 1.2
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 750,
+            "extra": 16,
+            "lift_pct": 2.1
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1914,
+            "extra": 84,
+            "lift_pct": 4.6
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6514,
+            "extra": 623,
+            "lift_pct": 10.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.34,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 440,
+            "extra": 9,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 847,
+            "extra": 30,
+            "lift_pct": 3.7
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2490,
+            "extra": 189,
+            "lift_pct": 8.2
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 11870,
+            "extra": 1977,
+            "lift_pct": 20.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.41,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 468,
+            "extra": 17,
+            "lift_pct": 3.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 946,
+            "extra": 61,
+            "lift_pct": 6.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3192,
+            "extra": 440,
+            "lift_pct": 16.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21166,
+            "extra": 6193,
+            "lift_pct": 41.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 261,
+        "win_rate": 65.9,
+        "avg_saving": 1.225,
+        "pct_of_runs": 26.1
+      },
+      "normal": {
+        "n_runs": 575,
+        "win_rate": 77.7,
+        "avg_saving": 1.567,
+        "pct_of_runs": 57.5
+      },
+      "elevated": {
+        "n_runs": 164,
+        "win_rate": 71.3,
+        "avg_saving": 1.617,
+        "pct_of_runs": 16.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "GEHC",
+      "n_months": 5,
+      "win_rate_pct": 60.0,
+      "avg_saving_pct": 0.729,
+      "median_saving_pct": 0.486,
+      "avg_capture_rate": 39.3,
+      "best_month": 1.86,
+      "worst_month": 0.0
+    },
+    "ticker_meta": {
+      "rows": 845,
+      "start": "2022-12-15",
+      "end": "2026-04-30",
+      "name": "GE HealthCare Technologies Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "GEHC",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        30,
+        28
+      ],
+      "predicted_saving": 0.036,
+      "day_scores": {
+        "20": 0.0001,
+        "21": 0.0106,
+        "22": 0.0868,
+        "23": 0.1367,
+        "24": 0.1831,
+        "27": 0.1167,
+        "28": 0.4197,
+        "29": 0.5925,
+        "30": 0.5893
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4758
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 6.8,
+  "generated": "2026-04-30T22:03:10.874238",
+  "cached": false
+}

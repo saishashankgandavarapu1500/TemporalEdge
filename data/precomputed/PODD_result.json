@@ -1,0 +1,268 @@
+{
+  "ticker": "PODD",
+  "summary": {
+    "ticker": "PODD",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (88%)",
+      "well-trained (192 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (8.6pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (66%); strong capture (88%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (8.6pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 66.4,
+    "avg_saving_pct": 1.865,
+    "median_saving_pct": 1.278,
+    "percentiles": {
+      "p10": -1.934,
+      "p25": 0.0,
+      "p50": 1.278,
+      "p75": 4.064,
+      "p90": 6.699
+    },
+    "clipped_values": 118,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2005,
+    "avg_dollar_per_year": 2.41,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 473,
+        "extra": 22
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 963,
+        "extra": 77
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3317,
+        "extra": 565
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23162,
+        "extra": 8190
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.68,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 810,
+            "extra": 35,
+            "lift_pct": 4.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2257,
+            "extra": 209,
+            "lift_pct": 10.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9475,
+            "extra": 1881,
+            "lift_pct": 24.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.02,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 473,
+            "extra": 22,
+            "lift_pct": 4.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 963,
+            "extra": 77,
+            "lift_pct": 8.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3317,
+            "extra": 565,
+            "lift_pct": 20.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23162,
+            "extra": 8190,
+            "lift_pct": 54.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.71,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 501,
+            "extra": 50,
+            "lift_pct": 11.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1068,
+            "extra": 182,
+            "lift_pct": 20.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4201,
+            "extra": 1449,
+            "lift_pct": 52.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 40343,
+            "extra": 25371,
+            "lift_pct": 169.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 293,
+        "win_rate": 74.1,
+        "avg_saving": 2.028,
+        "pct_of_runs": 29.3
+      },
+      "normal": {
+        "n_runs": 319,
+        "win_rate": 68.7,
+        "avg_saving": 1.587,
+        "pct_of_runs": 31.9
+      },
+      "elevated": {
+        "n_runs": 304,
+        "win_rate": 60.5,
+        "avg_saving": 1.996,
+        "pct_of_runs": 30.4
+      },
+      "fear": {
+        "n_runs": 84,
+        "win_rate": 52.4,
+        "avg_saving": 1.88,
+        "pct_of_runs": 8.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "PODD",
+      "n_months": 192,
+      "win_rate_pct": 70.8,
+      "avg_saving_pct": 1.936,
+      "median_saving_pct": 1.757,
+      "avg_capture_rate": 88.4,
+      "best_month": 13.76,
+      "worst_month": -12.79
+    },
+    "ticker_meta": {
+      "rows": 4771,
+      "start": "2007-05-15",
+      "end": "2026-04-30",
+      "name": "Insulet Corporation",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.47
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 28 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 27-29",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "PODD",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        29
+      ],
+      "predicted_saving": 0.006,
+      "day_scores": {
+        "20": 0.0106,
+        "21": 0.1338,
+        "22": 0.1033,
+        "23": 0.1662,
+        "24": 0.1711,
+        "27": 0.4013,
+        "28": 0.4052,
+        "29": 0.3991,
+        "30": 0.2988
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0039
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 55.1,
+  "generated": "2026-04-30T22:18:50.837920",
+  "cached": false
+}

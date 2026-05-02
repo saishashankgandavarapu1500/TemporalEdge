@@ -1,0 +1,268 @@
+{
+  "ticker": "RVTY",
+  "summary": {
+    "ticker": "RVTY",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (86%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (7.8pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (69%); strong capture (86%). Concerns: wide spread (7.8pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 69.3,
+    "avg_saving_pct": 1.764,
+    "median_saving_pct": 1.429,
+    "percentiles": {
+      "p10": -1.542,
+      "p25": 0.0,
+      "p50": 1.429,
+      "p75": 3.272,
+      "p90": 6.213
+    },
+    "clipped_values": 74,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.184,
+    "avg_dollar_per_year": 2.21,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 472,
+        "extra": 21
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 958,
+        "extra": 73
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3283,
+        "extra": 531
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22609,
+        "extra": 7637
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.59,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 808,
+            "extra": 33,
+            "lift_pct": 4.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2245,
+            "extra": 197,
+            "lift_pct": 9.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9360,
+            "extra": 1766,
+            "lift_pct": 23.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.86,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 472,
+            "extra": 21,
+            "lift_pct": 4.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 958,
+            "extra": 73,
+            "lift_pct": 8.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3283,
+            "extra": 531,
+            "lift_pct": 19.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22609,
+            "extra": 7637,
+            "lift_pct": 51.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.35,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 3.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 498,
+            "extra": 47,
+            "lift_pct": 10.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1057,
+            "extra": 171,
+            "lift_pct": 19.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4103,
+            "extra": 1351,
+            "lift_pct": 49.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 38154,
+            "extra": 23182,
+            "lift_pct": 154.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 65.2,
+        "avg_saving": 1.126,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 74.5,
+        "avg_saving": 1.869,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.9,
+        "avg_saving": 1.901,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 67.1,
+        "avg_saving": 3.113,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "RVTY",
+      "n_months": 225,
+      "win_rate_pct": 69.8,
+      "avg_saving_pct": 1.626,
+      "median_saving_pct": 1.186,
+      "avg_capture_rate": 86.2,
+      "best_month": 12.49,
+      "worst_month": -8.59
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Revvity, Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 1.129
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 11.5% gain may impact RVTY. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "RVTY",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        28,
+        27
+      ],
+      "predicted_saving": 0.079,
+      "day_scores": {
+        "20": 0.0266,
+        "21": 0.002,
+        "22": 0.0,
+        "23": 0.1325,
+        "24": 0.1297,
+        "27": 0.1619,
+        "28": 0.2515,
+        "29": 0.317,
+        "30": 0.1052
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1551
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 75.4,
+  "generated": "2026-04-30T20:46:53.722848",
+  "cached": false
+}

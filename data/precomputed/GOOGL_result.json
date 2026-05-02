@@ -1,0 +1,264 @@
+{
+  "ticker": "GOOGL",
+  "summary": {
+    "ticker": "GOOGL",
+    "monthly_usd": 500.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 54,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "very low capture (-9%) \u2014 timing not learnable",
+      "wide spread (6.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 54/100. Strengths: moderate win rate (71%); moderate beta (1.1) \u2014 predictable enough. Concerns: very low capture (-9%) \u2014 timing not learnable; wide spread (6.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 71.3,
+    "avg_saving_pct": 1.534,
+    "median_saving_pct": 1.156,
+    "percentiles": {
+      "p10": -1.141,
+      "p25": 0.0,
+      "p50": 1.156,
+      "p75": 2.994,
+      "p90": 4.878
+    },
+    "clipped_values": 37,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 7.9528,
+    "avg_dollar_per_year": 95.43,
+    "projections": {
+      "1": {
+        "fixed": 6341,
+        "optimised": 6382,
+        "extra": 41
+      },
+      "3": {
+        "fixed": 21538,
+        "optimised": 22000,
+        "extra": 462
+      },
+      "5": {
+        "fixed": 40835,
+        "optimised": 42381,
+        "extra": 1546
+      },
+      "10": {
+        "fixed": 115019,
+        "optimised": 124817,
+        "extra": 9798
+      },
+      "20": {
+        "fixed": 494628,
+        "optimised": 597070,
+        "extra": 102442
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 8.83,
+        "projections": {
+          "1": {
+            "fixed": 6225,
+            "optimised": 6249,
+            "extra": 24,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 20268,
+            "optimised": 20523,
+            "extra": 255,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 36738,
+            "optimised": 37543,
+            "extra": 804,
+            "lift_pct": 2.2
+          },
+          "10": {
+            "fixed": 91473,
+            "optimised": 95824,
+            "extra": 4351,
+            "lift_pct": 4.8
+          },
+          "20": {
+            "fixed": 294510,
+            "optimised": 326757,
+            "extra": 32247,
+            "lift_pct": 10.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.38,
+        "projections": {
+          "1": {
+            "fixed": 6341,
+            "optimised": 6382,
+            "extra": 41,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 21538,
+            "optimised": 22000,
+            "extra": 462,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 40835,
+            "optimised": 42381,
+            "extra": 1546,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 115019,
+            "optimised": 124817,
+            "extra": 9798,
+            "lift_pct": 8.5
+          },
+          "20": {
+            "fixed": 494628,
+            "optimised": 597070,
+            "extra": 102442,
+            "lift_pct": 20.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.49,
+        "projections": {
+          "1": {
+            "fixed": 6430,
+            "optimised": 6505,
+            "extra": 75,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 22558,
+            "optimised": 23448,
+            "extra": 890,
+            "lift_pct": 3.9
+          },
+          "5": {
+            "fixed": 44287,
+            "optimised": 47424,
+            "extra": 3137,
+            "lift_pct": 7.1
+          },
+          "10": {
+            "fixed": 137609,
+            "optimised": 160390,
+            "extra": 22781,
+            "lift_pct": 16.6
+          },
+          "20": {
+            "fixed": 748620,
+            "optimised": 1070460,
+            "extra": 321841,
+            "lift_pct": 43.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 353,
+        "win_rate": 69.4,
+        "avg_saving": 1.268,
+        "pct_of_runs": 35.3
+      },
+      "normal": {
+        "n_runs": 325,
+        "win_rate": 68.6,
+        "avg_saving": 1.627,
+        "pct_of_runs": 32.5
+      },
+      "elevated": {
+        "n_runs": 264,
+        "win_rate": 79.5,
+        "avg_saving": 1.9,
+        "pct_of_runs": 26.4
+      },
+      "fear": {
+        "n_runs": 58,
+        "win_rate": 60.3,
+        "avg_saving": 0.968,
+        "pct_of_runs": 5.8
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "GOOGL",
+      "n_months": 225,
+      "win_rate_pct": 72.9,
+      "avg_saving_pct": 1.542,
+      "median_saving_pct": 1.368,
+      "avg_capture_rate": -8.9,
+      "best_month": 14.7,
+      "worst_month": -9.72
+    },
+    "ticker_meta": {
+      "rows": 5455,
+      "start": "2004-08-19",
+      "end": "2026-04-24",
+      "name": "Alphabet Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 1.128
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 21st, with gold's decline and oil's rise.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "GOOGL",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        20,
+        23
+      ],
+      "predicted_saving": 0.03,
+      "day_scores": {
+        "20": 0.1281,
+        "21": 0.597,
+        "22": 0.0714,
+        "23": 0.0851,
+        "24": 0.0
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4689
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 46.6,
+  "generated": "2026-04-24T20:04:38.214398",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "CMG",
+  "summary": {
+    "ticker": "CMG",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (76%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "well-trained (208 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (8.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (76%). Concerns: wide spread (8.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.3,
+    "avg_saving_pct": 2.022,
+    "median_saving_pct": 1.555,
+    "percentiles": {
+      "p10": -1.426,
+      "p25": 0.0,
+      "p50": 1.555,
+      "p75": 3.6,
+      "p90": 6.929
+    },
+    "clipped_values": 100,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2379,
+    "avg_dollar_per_year": 2.85,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 475,
+        "extra": 24
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 970,
+        "extra": 84
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3371,
+        "extra": 619
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24048,
+        "extra": 9076
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.82,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 813,
+            "extra": 38,
+            "lift_pct": 5.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2276,
+            "extra": 228,
+            "lift_pct": 11.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9656,
+            "extra": 2062,
+            "lift_pct": 27.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.28,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 970,
+            "extra": 84,
+            "lift_pct": 9.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3371,
+            "extra": 619,
+            "lift_pct": 22.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24048,
+            "extra": 9076,
+            "lift_pct": 60.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.28,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 506,
+            "extra": 55,
+            "lift_pct": 12.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1086,
+            "extra": 200,
+            "lift_pct": 22.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4359,
+            "extra": 1607,
+            "lift_pct": 58.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 44003,
+            "extra": 29030,
+            "lift_pct": 193.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 310,
+        "win_rate": 64.8,
+        "avg_saving": 1.271,
+        "pct_of_runs": 31.0
+      },
+      "normal": {
+        "n_runs": 305,
+        "win_rate": 77.4,
+        "avg_saving": 2.432,
+        "pct_of_runs": 30.5
+      },
+      "elevated": {
+        "n_runs": 297,
+        "win_rate": 66.0,
+        "avg_saving": 1.967,
+        "pct_of_runs": 29.7
+      },
+      "fear": {
+        "n_runs": 88,
+        "win_rate": 79.5,
+        "avg_saving": 3.437,
+        "pct_of_runs": 8.8
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CMG",
+      "n_months": 208,
+      "win_rate_pct": 67.3,
+      "avg_saving_pct": 1.696,
+      "median_saving_pct": 1.009,
+      "avg_capture_rate": 76.3,
+      "best_month": 15.57,
+      "worst_month": -14.35
+    },
+    "ticker_meta": {
+      "rows": 5097,
+      "start": "2006-01-26",
+      "end": "2026-04-30",
+      "name": "Chipotle Mexican Grill, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.064
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 27th, with neutral macro and CMG near SMA20. Oil's 12.1% rise may indicate inflation. Consider days 23-28.",
+      "suggested_window": "days 23-28",
+      "action": "consider",
+      "key_factor": "neutral macro"
+    },
+    "lgbm_rec": {
+      "ticker": "CMG",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        23
+      ],
+      "predicted_saving": -0.003,
+      "day_scores": {
+        "20": 0.0728,
+        "21": 0.0026,
+        "22": 0.1362,
+        "23": 0.2499,
+        "24": 0.2166,
+        "27": 0.5165,
+        "28": 0.4836,
+        "29": 0.2279,
+        "30": 0.1118
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 61.0,
+  "generated": "2026-04-30T21:28:37.874325",
+  "cached": false
+}

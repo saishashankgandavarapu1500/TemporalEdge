@@ -1,0 +1,260 @@
+{
+  "ticker": "BND",
+  "summary": {
+    "ticker": "BND",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 89,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (100%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "tight distribution (p10-p90 range 0.9pp)",
+      "well-trained (193 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 89/100. Strengths: moderate win rate (72%); strong capture (100%). ",
+    "win_rate_pct": 72.0,
+    "avg_saving_pct": 0.293,
+    "median_saving_pct": 0.215,
+    "percentiles": {
+      "p10": -0.144,
+      "p25": 0.0,
+      "p50": 0.215,
+      "p75": 0.513,
+      "p90": 0.736
+    },
+    "clipped_values": 3,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.0296,
+    "avg_dollar_per_year": 0.36,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 0
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 454,
+        "extra": 3
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 897,
+        "extra": 12
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 2833,
+        "extra": 81
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 16016,
+        "extra": 1044
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.26,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.1
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 419,
+            "extra": 2,
+            "lift_pct": 0.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 780,
+            "extra": 5,
+            "lift_pct": 0.7
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2080,
+            "extra": 31,
+            "lift_pct": 1.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 7859,
+            "extra": 265,
+            "lift_pct": 3.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 15.47,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 0,
+            "lift_pct": 0.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 454,
+            "extra": 3,
+            "lift_pct": 0.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 897,
+            "extra": 12,
+            "lift_pct": 1.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2833,
+            "extra": 81,
+            "lift_pct": 2.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 16016,
+            "extra": 1044,
+            "lift_pct": 7.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 16.06,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 459,
+            "extra": 7,
+            "lift_pct": 1.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 912,
+            "extra": 26,
+            "lift_pct": 2.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2936,
+            "extra": 183,
+            "lift_pct": 6.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 17402,
+            "extra": 2429,
+            "lift_pct": 16.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 294,
+        "win_rate": 74.8,
+        "avg_saving": 0.229,
+        "pct_of_runs": 29.4
+      },
+      "normal": {
+        "n_runs": 320,
+        "win_rate": 77.2,
+        "avg_saving": 0.327,
+        "pct_of_runs": 32.0
+      },
+      "elevated": {
+        "n_runs": 303,
+        "win_rate": 66.7,
+        "avg_saving": 0.242,
+        "pct_of_runs": 30.3
+      },
+      "fear": {
+        "n_runs": 83,
+        "win_rate": 61.4,
+        "avg_saving": 0.576,
+        "pct_of_runs": 8.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "BND",
+      "n_months": 193,
+      "win_rate_pct": 76.2,
+      "avg_saving_pct": 0.257,
+      "median_saving_pct": 0.22,
+      "avg_capture_rate": 100.0,
+      "best_month": 2.41,
+      "worst_month": -1.77
+    },
+    "ticker_meta": {
+      "name": "BND",
+      "sector": "Unknown",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends days 20-23, with 63% confidence.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "Model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "BND",
+      "recommended_day": 23,
+      "confidence": 0.633,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        22,
+        20
+      ],
+      "predicted_saving": 0.001,
+      "day_scores": {
+        "20": 0.2014,
+        "21": 0.0443,
+        "22": 0.2226,
+        "23": 0.5988,
+        "24": 0.0014
+      },
+      "current_day": 27,
+      "model_reliability": 0.633,
+      "uncertainty_days": 2,
+      "timing_precision": "window",
+      "improvement_vs_current": 0.3974
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 6.2,
+  "generated": "2026-04-30T01:02:36.135726",
+  "cached": false
+}

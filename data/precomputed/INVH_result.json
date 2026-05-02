@@ -1,0 +1,268 @@
+{
+  "ticker": "INVH",
+  "summary": {
+    "ticker": "INVH",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (99%)",
+      "moderate beta (0.8) \u2014 predictable enough",
+      "moderate spread (4.5pp)"
+    ],
+    "trust_penalties": [
+      "limited training (75 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (68%); strong capture (99%). Concerns: limited training (75 folds) \u2014 newer ticker, less history.",
+    "win_rate_pct": 68.5,
+    "avg_saving_pct": 1.048,
+    "median_saving_pct": 0.851,
+    "percentiles": {
+      "p10": -0.956,
+      "p25": 0.0,
+      "p50": 0.851,
+      "p75": 2.267,
+      "p90": 3.52
+    },
+    "clipped_values": 72,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1001,
+    "avg_dollar_per_year": 1.2,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 463,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 928,
+        "extra": 42
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3054,
+        "extra": 302
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19092,
+        "extra": 4119
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.94,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 794,
+            "extra": 20,
+            "lift_pct": 2.5
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2163,
+            "extra": 114,
+            "lift_pct": 5.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8592,
+            "extra": 998,
+            "lift_pct": 13.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.7,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 463,
+            "extra": 12,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 928,
+            "extra": 42,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3054,
+            "extra": 302,
+            "lift_pct": 11.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19092,
+            "extra": 4119,
+            "lift_pct": 27.5
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.77,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 27,
+            "lift_pct": 6.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 983,
+            "extra": 97,
+            "lift_pct": 11.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3478,
+            "extra": 726,
+            "lift_pct": 26.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25885,
+            "extra": 10913,
+            "lift_pct": 72.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 320,
+        "win_rate": 62.8,
+        "avg_saving": 0.538,
+        "pct_of_runs": 32.0
+      },
+      "normal": {
+        "n_runs": 355,
+        "win_rate": 75.5,
+        "avg_saving": 1.348,
+        "pct_of_runs": 35.5
+      },
+      "elevated": {
+        "n_runs": 298,
+        "win_rate": 63.4,
+        "avg_saving": 1.072,
+        "pct_of_runs": 29.8
+      },
+      "fear": {
+        "n_runs": 27,
+        "win_rate": 100.0,
+        "avg_saving": 2.886,
+        "pct_of_runs": 2.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "INVH",
+      "n_months": 75,
+      "win_rate_pct": 73.3,
+      "avg_saving_pct": 1.606,
+      "median_saving_pct": 1.446,
+      "avg_capture_rate": 99.4,
+      "best_month": 22.49,
+      "worst_month": -8.47
+    },
+    "ticker_meta": {
+      "rows": 2324,
+      "start": "2017-02-01",
+      "end": "2026-04-30",
+      "name": "Invitation Homes Inc.",
+      "sector": "Real Estate",
+      "type": "EQUITY",
+      "beta": 0.816
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 22 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 21-23",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "INVH",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        21,
+        24
+      ],
+      "predicted_saving": 0.019,
+      "day_scores": {
+        "20": 0.0398,
+        "21": 0.1742,
+        "22": 0.592,
+        "23": 0.1313,
+        "24": 0.152,
+        "27": 0.101,
+        "28": 0.0003,
+        "29": 0.0349,
+        "30": 0.02
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.491
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 25.6,
+  "generated": "2026-04-30T22:20:59.301170",
+  "cached": false
+}

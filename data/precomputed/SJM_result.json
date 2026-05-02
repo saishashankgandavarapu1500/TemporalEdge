@@ -1,0 +1,267 @@
+{
+  "ticker": "SJM",
+  "summary": {
+    "ticker": "SJM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (82%)",
+      "low beta (0.3) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (66%); strong capture (82%). ",
+    "win_rate_pct": 66.2,
+    "avg_saving_pct": 0.908,
+    "median_saving_pct": 0.757,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.757,
+      "p75": 1.948,
+      "p90": 2.5
+    },
+    "clipped_values": 341,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1075,
+    "avg_dollar_per_year": 1.29,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 10
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 922,
+        "extra": 36
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3012,
+        "extra": 260
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18475,
+        "extra": 3502
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.82,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 791,
+            "extra": 17,
+            "lift_pct": 2.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2147,
+            "extra": 99,
+            "lift_pct": 4.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8450,
+            "extra": 856,
+            "lift_pct": 11.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.47,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 922,
+            "extra": 36,
+            "lift_pct": 4.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3012,
+            "extra": 260,
+            "lift_pct": 9.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18475,
+            "extra": 3502,
+            "lift_pct": 23.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.27,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 969,
+            "extra": 84,
+            "lift_pct": 9.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3369,
+            "extra": 617,
+            "lift_pct": 22.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24021,
+            "extra": 9049,
+            "lift_pct": 60.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.8,
+        "avg_saving": 0.867,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.0,
+        "avg_saving": 0.96,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 64.3,
+        "avg_saving": 0.896,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 56.6,
+        "avg_saving": 0.878,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SJM",
+      "n_months": 225,
+      "win_rate_pct": 70.2,
+      "avg_saving_pct": 1.101,
+      "median_saving_pct": 0.969,
+      "avg_capture_rate": 82.0,
+      "best_month": 12.27,
+      "worst_month": -15.93
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "The J. M. Smucker Company",
+      "sector": "Consumer Defensive",
+      "type": "EQUITY",
+      "beta": 0.259
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 22 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 21-23",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "SJM",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        20,
+        21
+      ],
+      "predicted_saving": 0.01,
+      "day_scores": {
+        "20": 0.1583,
+        "21": 0.1525,
+        "22": 0.5799,
+        "23": 0.1278,
+        "24": 0.1131,
+        "27": 0.1177,
+        "28": 0.0081,
+        "29": 0.1063,
+        "30": 0.0329
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4622
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 62.1,
+  "generated": "2026-04-30T23:12:34.922445",
+  "cached": false
+}

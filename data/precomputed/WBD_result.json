@@ -1,0 +1,268 @@
+{
+  "ticker": "WBD",
+  "summary": {
+    "ticker": "WBD",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (99%)",
+      "well-trained (214 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.6) \u2014 volatile, patterns weaker",
+      "wide spread (7.8pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (69%); strong capture (99%). Concerns: high beta (1.6) \u2014 volatile, patterns weaker; wide spread (7.8pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.6,
+    "avg_saving_pct": 1.958,
+    "median_saving_pct": 1.392,
+    "percentiles": {
+      "p10": -1.629,
+      "p25": 0.0,
+      "p50": 1.392,
+      "p75": 3.828,
+      "p90": 6.133
+    },
+    "clipped_values": 26,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.1968,
+    "avg_dollar_per_year": 2.36,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 474,
+        "extra": 23
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 967,
+        "extra": 81
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3349,
+        "extra": 597
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23682,
+        "extra": 8710
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.76,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 812,
+            "extra": 37,
+            "lift_pct": 4.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2269,
+            "extra": 220,
+            "lift_pct": 10.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9582,
+            "extra": 1988,
+            "lift_pct": 26.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.17,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 23,
+            "lift_pct": 5.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 967,
+            "extra": 81,
+            "lift_pct": 9.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3349,
+            "extra": 597,
+            "lift_pct": 21.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23682,
+            "extra": 8710,
+            "lift_pct": 58.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.05,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 504,
+            "extra": 53,
+            "lift_pct": 11.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1078,
+            "extra": 193,
+            "lift_pct": 21.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4294,
+            "extra": 1542,
+            "lift_pct": 56.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 42468,
+            "extra": 27496,
+            "lift_pct": 183.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 331,
+        "win_rate": 68.0,
+        "avg_saving": 1.468,
+        "pct_of_runs": 33.1
+      },
+      "normal": {
+        "n_runs": 333,
+        "win_rate": 69.7,
+        "avg_saving": 2.022,
+        "pct_of_runs": 33.3
+      },
+      "elevated": {
+        "n_runs": 262,
+        "win_rate": 66.0,
+        "avg_saving": 1.921,
+        "pct_of_runs": 26.2
+      },
+      "fear": {
+        "n_runs": 74,
+        "win_rate": 75.7,
+        "avg_saving": 3.995,
+        "pct_of_runs": 7.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "WBD",
+      "n_months": 214,
+      "win_rate_pct": 73.8,
+      "avg_saving_pct": 2.505,
+      "median_saving_pct": 1.752,
+      "avg_capture_rate": 99.2,
+      "best_month": 28.61,
+      "worst_month": -14.75
+    },
+    "ticker_meta": {
+      "rows": 5236,
+      "start": "2005-07-08",
+      "end": "2026-04-30",
+      "name": "Warner Bros. Discovery, Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 1.637
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 27 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 26-28",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "WBD",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        23,
+        28
+      ],
+      "predicted_saving": 0.002,
+      "day_scores": {
+        "20": 0.0644,
+        "21": 0.0439,
+        "22": 0.0021,
+        "23": 0.3084,
+        "24": 0.1816,
+        "27": 0.4941,
+        "28": 0.2381,
+        "29": 0.1708,
+        "30": 0.1673
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 65.8,
+  "generated": "2026-04-30T23:36:44.099994",
+  "cached": false
+}

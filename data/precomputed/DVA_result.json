@@ -1,0 +1,267 @@
+{
+  "ticker": "DVA",
+  "summary": {
+    "ticker": "DVA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (82%)",
+      "moderate beta (0.9) \u2014 predictable enough",
+      "moderate spread (5.6pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (70%); strong capture (82%). ",
+    "win_rate_pct": 69.7,
+    "avg_saving_pct": 1.283,
+    "median_saving_pct": 0.992,
+    "percentiles": {
+      "p10": -1.174,
+      "p25": 0.0,
+      "p50": 0.992,
+      "p75": 2.614,
+      "p90": 4.424
+    },
+    "clipped_values": 135,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1431,
+    "avg_dollar_per_year": 1.72,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 466,
+        "extra": 15
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 938,
+        "extra": 52
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3128,
+        "extra": 375
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20177,
+        "extra": 5205
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.15,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 798,
+            "extra": 24,
+            "lift_pct": 3.1
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2190,
+            "extra": 141,
+            "lift_pct": 6.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8836,
+            "extra": 1242,
+            "lift_pct": 16.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.08,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 466,
+            "extra": 15,
+            "lift_pct": 3.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 938,
+            "extra": 52,
+            "lift_pct": 5.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3128,
+            "extra": 375,
+            "lift_pct": 13.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20177,
+            "extra": 5205,
+            "lift_pct": 34.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.62,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 485,
+            "extra": 34,
+            "lift_pct": 7.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1007,
+            "extra": 121,
+            "lift_pct": 13.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3671,
+            "extra": 918,
+            "lift_pct": 33.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 29371,
+            "extra": 14399,
+            "lift_pct": 96.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 66.7,
+        "avg_saving": 0.826,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 73.3,
+        "avg_saving": 1.46,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 70.2,
+        "avg_saving": 1.397,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 63.2,
+        "avg_saving": 1.738,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "DVA",
+      "n_months": 225,
+      "win_rate_pct": 74.2,
+      "avg_saving_pct": 1.763,
+      "median_saving_pct": 1.31,
+      "avg_capture_rate": 81.6,
+      "best_month": 27.09,
+      "worst_month": -8.68
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "DaVita Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.915
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal VIX and yield curve support the model's recommendation, while gold's decline and oil's surge present mixed signals.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "Model confidence at 75%"
+    },
+    "lgbm_rec": {
+      "ticker": "DVA",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        27,
+        28
+      ],
+      "predicted_saving": 0.001,
+      "day_scores": {
+        "20": 0.5346,
+        "21": 0.1795,
+        "22": 0.0395,
+        "23": 0.0017,
+        "24": 0.1363,
+        "27": 0.3249,
+        "28": 0.275,
+        "29": 0.2747,
+        "30": 0.1957
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2097
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 62.2,
+  "generated": "2026-04-30T21:38:38.442717",
+  "cached": false
+}

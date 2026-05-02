@@ -1,0 +1,267 @@
+{
+  "ticker": "EIX",
+  "summary": {
+    "ticker": "EIX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (79%)",
+      "low beta (0.8) \u2014 stable patterns",
+      "moderate spread (5.6pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (68%); strong capture (79%). ",
+    "win_rate_pct": 67.7,
+    "avg_saving_pct": 1.177,
+    "median_saving_pct": 0.861,
+    "percentiles": {
+      "p10": -1.342,
+      "p25": 0.0,
+      "p50": 0.861,
+      "p75": 2.375,
+      "p90": 4.231
+    },
+    "clipped_values": 134,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1237,
+    "avg_dollar_per_year": 1.48,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 14
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 933,
+        "extra": 48
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3094,
+        "extra": 342
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19676,
+        "extra": 4704
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.06,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2177,
+            "extra": 129,
+            "lift_pct": 6.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8724,
+            "extra": 1130,
+            "lift_pct": 14.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.91,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 14,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 933,
+            "extra": 48,
+            "lift_pct": 5.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3094,
+            "extra": 342,
+            "lift_pct": 12.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19676,
+            "extra": 4704,
+            "lift_pct": 31.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.24,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 482,
+            "extra": 31,
+            "lift_pct": 6.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 996,
+            "extra": 110,
+            "lift_pct": 12.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3582,
+            "extra": 830,
+            "lift_pct": 30.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27729,
+            "extra": 12757,
+            "lift_pct": 85.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.4,
+        "avg_saving": 0.733,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 71.5,
+        "avg_saving": 1.295,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 60.3,
+        "avg_saving": 1.157,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 77.6,
+        "avg_saving": 2.376,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "EIX",
+      "n_months": 225,
+      "win_rate_pct": 72.9,
+      "avg_saving_pct": 1.379,
+      "median_saving_pct": 1.021,
+      "avg_capture_rate": 78.9,
+      "best_month": 15.35,
+      "worst_month": -8.64
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Edison International",
+      "sector": "Utilities",
+      "type": "EQUITY",
+      "beta": 0.767
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider EIX purchase with VIX at 16.89 and price below SMA20.",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "price below SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "EIX",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        27,
+        28
+      ],
+      "predicted_saving": -0.012,
+      "day_scores": {
+        "20": 0.0918,
+        "21": 0.1726,
+        "22": 0.2019,
+        "23": 0.1595,
+        "24": 0.2461,
+        "27": 0.3982,
+        "28": 0.396,
+        "29": 0.4005,
+        "30": 0.0108
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0022
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 75.6,
+  "generated": "2026-04-30T20:07:34.871790",
+  "cached": false
+}

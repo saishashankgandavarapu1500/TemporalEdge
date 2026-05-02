@@ -1,0 +1,261 @@
+{
+  "ticker": "NVDA",
+  "summary": {
+    "ticker": "NVDA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (96%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (7.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (69%); strong capture (96%). Concerns: wide spread (7.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.6,
+    "avg_saving_pct": 2.035,
+    "median_saving_pct": 2.231,
+    "percentiles": {
+      "p10": -2.0,
+      "p25": 0.0,
+      "p50": 2.231,
+      "p75": 5.0,
+      "p90": 5.0
+    },
+    "clipped_values": 393,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.2555,
+    "avg_dollar_per_year": 3.07,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 475,
+        "extra": 24
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 970,
+        "extra": 84
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3375,
+        "extra": 623
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24120,
+        "extra": 9148
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.83,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 813,
+            "extra": 39,
+            "lift_pct": 5.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2278,
+            "extra": 229,
+            "lift_pct": 11.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9671,
+            "extra": 2077,
+            "lift_pct": 27.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.3,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 970,
+            "extra": 84,
+            "lift_pct": 9.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3375,
+            "extra": 623,
+            "lift_pct": 22.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24120,
+            "extra": 9148,
+            "lift_pct": 61.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.33,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 506,
+            "extra": 55,
+            "lift_pct": 12.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1087,
+            "extra": 201,
+            "lift_pct": 22.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4372,
+            "extra": 1620,
+            "lift_pct": 58.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 44308,
+            "extra": 29336,
+            "lift_pct": 195.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 279,
+        "win_rate": 71.7,
+        "avg_saving": 1.737,
+        "pct_of_runs": 27.9
+      },
+      "normal": {
+        "n_runs": 340,
+        "win_rate": 67.1,
+        "avg_saving": 1.945,
+        "pct_of_runs": 34.0
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 2.248,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 69.7,
+        "avg_saving": 2.676,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "NVDA",
+      "n_months": 225,
+      "win_rate_pct": 70.7,
+      "avg_saving_pct": 3.017,
+      "median_saving_pct": 2.23,
+      "avg_capture_rate": 95.8,
+      "best_month": 19.75,
+      "worst_month": -12.46
+    },
+    "ticker_meta": {
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 2.335
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider NVDA purchase with normal VIX and momentum above SMA20.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "NVDA",
+      "recommended_day": 23,
+      "confidence": 0.692,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        21,
+        20
+      ],
+      "predicted_saving": 0.033,
+      "day_scores": {
+        "20": 0.2108,
+        "21": 0.2549,
+        "22": 0.1455,
+        "23": 0.559,
+        "24": 0.0002
+      },
+      "current_day": 27,
+      "model_reliability": 0.692,
+      "uncertainty_days": 2,
+      "timing_precision": "window",
+      "improvement_vs_current": 0.3483
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 4.0,
+  "generated": "2026-04-30T20:30:36.711177",
+  "cached": false
+}

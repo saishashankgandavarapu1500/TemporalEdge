@@ -1,0 +1,267 @@
+{
+  "ticker": "KDP",
+  "summary": {
+    "ticker": "KDP",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (95%)",
+      "low beta (0.4) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (180 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (68%); strong capture (95%). ",
+    "win_rate_pct": 67.8,
+    "avg_saving_pct": 0.966,
+    "median_saving_pct": 0.777,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.777,
+      "p75": 2.305,
+      "p90": 2.5
+    },
+    "clipped_values": 380,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.0991,
+    "avg_dollar_per_year": 1.19,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 925,
+        "extra": 39
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3029,
+        "extra": 277
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18727,
+        "extra": 3755
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.87,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 6,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 792,
+            "extra": 18,
+            "lift_pct": 2.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2154,
+            "extra": 105,
+            "lift_pct": 5.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8508,
+            "extra": 915,
+            "lift_pct": 12.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.56,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 11,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 925,
+            "extra": 39,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3029,
+            "extra": 277,
+            "lift_pct": 10.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18727,
+            "extra": 3755,
+            "lift_pct": 25.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.48,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 476,
+            "extra": 25,
+            "lift_pct": 5.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 975,
+            "extra": 89,
+            "lift_pct": 10.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3414,
+            "extra": 662,
+            "lift_pct": 24.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24775,
+            "extra": 9802,
+            "lift_pct": 65.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 294,
+        "win_rate": 63.3,
+        "avg_saving": 0.786,
+        "pct_of_runs": 29.4
+      },
+      "normal": {
+        "n_runs": 333,
+        "win_rate": 70.9,
+        "avg_saving": 1.0,
+        "pct_of_runs": 33.3
+      },
+      "elevated": {
+        "n_runs": 300,
+        "win_rate": 75.3,
+        "avg_saving": 1.237,
+        "pct_of_runs": 30.0
+      },
+      "fear": {
+        "n_runs": 73,
+        "win_rate": 41.1,
+        "avg_saving": 0.422,
+        "pct_of_runs": 7.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "KDP",
+      "n_months": 180,
+      "win_rate_pct": 67.2,
+      "avg_saving_pct": 1.309,
+      "median_saving_pct": 1.106,
+      "avg_capture_rate": 95.2,
+      "best_month": 18.33,
+      "worst_month": -24.36
+    },
+    "ticker_meta": {
+      "rows": 4524,
+      "start": "2008-05-07",
+      "end": "2026-04-30",
+      "name": "Keurig Dr Pepper Inc.",
+      "sector": "Consumer Defensive",
+      "type": "EQUITY",
+      "beta": 0.361
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 21 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 20-22",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "KDP",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        20,
+        22
+      ],
+      "predicted_saving": 0.041,
+      "day_scores": {
+        "20": 0.257,
+        "21": 0.5867,
+        "22": 0.2315,
+        "23": 0.0612,
+        "24": 0.0002,
+        "27": 0.093,
+        "28": 0.1011,
+        "29": 0.096,
+        "30": 0.0696
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4937
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 51.4,
+  "generated": "2026-04-30T22:24:37.635152",
+  "cached": false
+}

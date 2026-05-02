@@ -1,0 +1,264 @@
+{
+  "ticker": "SPY",
+  "summary": {
+    "ticker": "SPY",
+    "monthly_usd": 50.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 66,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.5pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low capture (18%) \u2014 wins but misses exact dip"
+    ],
+    "trust_summary": "Trust 66/100. Strengths: moderate win rate (68%); moderate beta (1.0) \u2014 predictable enough. Concerns: low capture (18%) \u2014 wins but misses exact dip.",
+    "win_rate_pct": 68.2,
+    "avg_saving_pct": 0.838,
+    "median_saving_pct": 0.57,
+    "percentiles": {
+      "p10": -0.728,
+      "p25": 0.0,
+      "p50": 0.57,
+      "p75": 1.686,
+      "p90": 2.764
+    },
+    "clipped_values": 52,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.4092,
+    "avg_dollar_per_year": 4.91,
+    "projections": {
+      "1": {
+        "fixed": 643,
+        "optimised": 647,
+        "extra": 4
+      },
+      "3": {
+        "fixed": 2256,
+        "optimised": 2304,
+        "extra": 48
+      },
+      "5": {
+        "fixed": 4429,
+        "optimised": 4597,
+        "extra": 168
+      },
+      "10": {
+        "fixed": 13761,
+        "optimised": 14954,
+        "extra": 1193
+      },
+      "20": {
+        "fixed": 74862,
+        "optimised": 90871,
+        "extra": 16009
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.75,
+        "projections": {
+          "1": {
+            "fixed": 628,
+            "optimised": 630,
+            "extra": 2,
+            "lift_pct": 0.3
+          },
+          "3": {
+            "fixed": 2089,
+            "optimised": 2113,
+            "extra": 24,
+            "lift_pct": 1.2
+          },
+          "5": {
+            "fixed": 3872,
+            "optimised": 3950,
+            "extra": 78,
+            "lift_pct": 2.0
+          },
+          "10": {
+            "fixed": 10242,
+            "optimised": 10696,
+            "extra": 454,
+            "lift_pct": 4.4
+          },
+          "20": {
+            "fixed": 37968,
+            "optimised": 41899,
+            "extra": 3931,
+            "lift_pct": 10.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.36,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 647,
+            "extra": 4,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2304,
+            "extra": 48,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 4597,
+            "extra": 168,
+            "lift_pct": 3.8
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 14954,
+            "extra": 1193,
+            "lift_pct": 8.7
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 90871,
+            "extra": 16009,
+            "lift_pct": 21.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.02,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 652,
+            "extra": 9,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2364,
+            "extra": 109,
+            "lift_pct": 4.8
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 4813,
+            "extra": 384,
+            "lift_pct": 8.7
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 16581,
+            "extra": 2820,
+            "lift_pct": 20.5
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 115712,
+            "extra": 40850,
+            "lift_pct": 54.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 279,
+        "win_rate": 68.1,
+        "avg_saving": 0.474,
+        "pct_of_runs": 27.9
+      },
+      "normal": {
+        "n_runs": 340,
+        "win_rate": 70.3,
+        "avg_saving": 0.722,
+        "pct_of_runs": 34.0
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 1.115,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 63.2,
+        "avg_saving": 1.579,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "SPY",
+      "n_months": 225,
+      "win_rate_pct": 75.6,
+      "avg_saving_pct": 1.172,
+      "median_saving_pct": 0.929,
+      "avg_capture_rate": 17.7,
+      "best_month": 11.92,
+      "worst_month": -3.18
+    },
+    "ticker_meta": {
+      "rows": 6617,
+      "start": "2000-01-03",
+      "end": "2026-04-24",
+      "name": "State Street SPDR S&P 500 ETF Trust",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal VIX and yield curve support the model's recommendation, while gold's decline and oil's rise introduce mixed signals.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "SPY",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        23,
+        20
+      ],
+      "predicted_saving": 0.009,
+      "day_scores": {
+        "20": 0.0987,
+        "21": 0.5973,
+        "22": 0.0663,
+        "23": 0.1881,
+        "24": 0.0001
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4986
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 47.9,
+  "generated": "2026-04-24T19:58:30.485003",
+  "cached": false
+}

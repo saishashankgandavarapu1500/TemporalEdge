@@ -1,0 +1,267 @@
+{
+  "ticker": "NWSA",
+  "summary": {
+    "ticker": "NWSA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (72%)",
+      "moderate beta (0.9) \u2014 predictable enough",
+      "moderate spread (4.4pp)",
+      "adequately trained (119 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (72%); strong capture (72%). ",
+    "win_rate_pct": 72.0,
+    "avg_saving_pct": 1.382,
+    "median_saving_pct": 1.428,
+    "percentiles": {
+      "p10": -0.713,
+      "p25": 0.0,
+      "p50": 1.428,
+      "p75": 2.547,
+      "p90": 3.68
+    },
+    "clipped_values": 59,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1426,
+    "avg_dollar_per_year": 1.71,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 942,
+        "extra": 56
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3159,
+        "extra": 407
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20653,
+        "extra": 5681
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.24,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 800,
+            "extra": 26,
+            "lift_pct": 3.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2201,
+            "extra": 153,
+            "lift_pct": 7.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8941,
+            "extra": 1347,
+            "lift_pct": 17.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.24,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 942,
+            "extra": 56,
+            "lift_pct": 6.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3159,
+            "extra": 407,
+            "lift_pct": 14.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20653,
+            "extra": 5681,
+            "lift_pct": 37.9
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.98,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 488,
+            "extra": 37,
+            "lift_pct": 8.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1017,
+            "extra": 131,
+            "lift_pct": 14.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3755,
+            "extra": 1003,
+            "lift_pct": 36.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30984,
+            "extra": 16012,
+            "lift_pct": 106.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 430,
+        "win_rate": 77.2,
+        "avg_saving": 1.351,
+        "pct_of_runs": 43.0
+      },
+      "normal": {
+        "n_runs": 303,
+        "win_rate": 67.0,
+        "avg_saving": 1.251,
+        "pct_of_runs": 30.3
+      },
+      "elevated": {
+        "n_runs": 237,
+        "win_rate": 69.2,
+        "avg_saving": 1.558,
+        "pct_of_runs": 23.7
+      },
+      "fear": {
+        "n_runs": 30,
+        "win_rate": 70.0,
+        "avg_saving": 1.757,
+        "pct_of_runs": 3.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "NWSA",
+      "n_months": 119,
+      "win_rate_pct": 70.6,
+      "avg_saving_pct": 1.303,
+      "median_saving_pct": 1.08,
+      "avg_capture_rate": 72.1,
+      "best_month": 10.78,
+      "worst_month": -5.28
+    },
+    "ticker_meta": {
+      "rows": 3236,
+      "start": "2013-06-19",
+      "end": "2026-04-30",
+      "name": "News Corporation",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 0.924
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 20th, with normal VIX and momentum above SMA20.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "NWSA",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        28,
+        27
+      ],
+      "predicted_saving": 0.012,
+      "day_scores": {
+        "20": 0.5978,
+        "21": 0.1103,
+        "22": 0.0006,
+        "23": 0.1826,
+        "24": 0.2011,
+        "27": 0.3053,
+        "28": 0.4632,
+        "29": 0.2428,
+        "30": 0.231
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2925
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 48.6,
+  "generated": "2026-04-30T20:29:42.798365",
+  "cached": false
+}

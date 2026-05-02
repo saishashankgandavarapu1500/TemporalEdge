@@ -1,0 +1,267 @@
+{
+  "ticker": "MPC",
+  "summary": {
+    "ticker": "MPC",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (84%)",
+      "low beta (0.6) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "adequately trained (143 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 79/100. Strengths: moderate win rate (74%); strong capture (84%). ",
+    "win_rate_pct": 73.6,
+    "avg_saving_pct": 1.375,
+    "median_saving_pct": 1.782,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 1.782,
+      "p75": 2.5,
+      "p90": 2.5
+    },
+    "clipped_values": 547,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.2538,
+    "avg_dollar_per_year": 3.05,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 942,
+        "extra": 56
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3157,
+        "extra": 405
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20620,
+        "extra": 5647
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.24,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 800,
+            "extra": 26,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2200,
+            "extra": 152,
+            "lift_pct": 7.4
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8934,
+            "extra": 1340,
+            "lift_pct": 17.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.23,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 942,
+            "extra": 56,
+            "lift_pct": 6.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3157,
+            "extra": 405,
+            "lift_pct": 14.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20620,
+            "extra": 5647,
+            "lift_pct": 37.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.95,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 488,
+            "extra": 36,
+            "lift_pct": 8.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1016,
+            "extra": 130,
+            "lift_pct": 14.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3749,
+            "extra": 997,
+            "lift_pct": 36.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30869,
+            "extra": 15896,
+            "lift_pct": 106.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 364,
+        "win_rate": 72.5,
+        "avg_saving": 1.248,
+        "pct_of_runs": 36.4
+      },
+      "normal": {
+        "n_runs": 360,
+        "win_rate": 71.7,
+        "avg_saving": 1.302,
+        "pct_of_runs": 36.0
+      },
+      "elevated": {
+        "n_runs": 231,
+        "win_rate": 78.4,
+        "avg_saving": 1.642,
+        "pct_of_runs": 23.1
+      },
+      "fear": {
+        "n_runs": 45,
+        "win_rate": 73.3,
+        "avg_saving": 1.624,
+        "pct_of_runs": 4.5
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MPC",
+      "n_months": 143,
+      "win_rate_pct": 74.1,
+      "avg_saving_pct": 2.08,
+      "median_saving_pct": 1.872,
+      "avg_capture_rate": 83.9,
+      "best_month": 11.73,
+      "worst_month": -16.57
+    },
+    "ticker_meta": {
+      "rows": 3734,
+      "start": "2011-06-24",
+      "end": "2026-04-30",
+      "name": "Marathon Petroleum Corporation",
+      "sector": "Energy",
+      "type": "EQUITY",
+      "beta": 0.577
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "MPC",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        23
+      ],
+      "predicted_saving": 0.039,
+      "day_scores": {
+        "20": 0.5928,
+        "21": 0.2039,
+        "22": 0.1836,
+        "23": 0.1991,
+        "24": 0.1674,
+        "27": 0.0429,
+        "28": 0.0205,
+        "29": 0.0003,
+        "30": 0.0105
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5499
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 42.6,
+  "generated": "2026-04-30T22:35:16.637835",
+  "cached": false
+}

@@ -1,0 +1,260 @@
+{
+  "ticker": "VXUS",
+  "summary": {
+    "ticker": "VXUS",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (67%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.0pp)",
+      "adequately trained (148 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (72%); strong capture (67%). ",
+    "win_rate_pct": 72.1,
+    "avg_saving_pct": 0.915,
+    "median_saving_pct": 0.758,
+    "percentiles": {
+      "p10": -0.508,
+      "p25": 0.0,
+      "p50": 0.758,
+      "p75": 1.575,
+      "p90": 2.495
+    },
+    "clipped_values": 22,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.0946,
+    "avg_dollar_per_year": 1.14,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 923,
+        "extra": 37
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3014,
+        "extra": 262
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18507,
+        "extra": 3534
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.82,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 791,
+            "extra": 17,
+            "lift_pct": 2.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2148,
+            "extra": 99,
+            "lift_pct": 4.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8457,
+            "extra": 864,
+            "lift_pct": 11.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.48,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 11,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 923,
+            "extra": 37,
+            "lift_pct": 4.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3014,
+            "extra": 262,
+            "lift_pct": 9.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18507,
+            "extra": 3534,
+            "lift_pct": 23.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.3,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 970,
+            "extra": 84,
+            "lift_pct": 9.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3375,
+            "extra": 623,
+            "lift_pct": 22.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24115,
+            "extra": 9143,
+            "lift_pct": 61.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 354,
+        "win_rate": 76.0,
+        "avg_saving": 0.769,
+        "pct_of_runs": 35.4
+      },
+      "normal": {
+        "n_runs": 367,
+        "win_rate": 73.3,
+        "avg_saving": 0.955,
+        "pct_of_runs": 36.7
+      },
+      "elevated": {
+        "n_runs": 226,
+        "win_rate": 62.8,
+        "avg_saving": 0.803,
+        "pct_of_runs": 22.6
+      },
+      "fear": {
+        "n_runs": 53,
+        "win_rate": 77.4,
+        "avg_saving": 2.099,
+        "pct_of_runs": 5.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "VXUS",
+      "n_months": 148,
+      "win_rate_pct": 70.9,
+      "avg_saving_pct": 0.792,
+      "median_saving_pct": 0.717,
+      "avg_capture_rate": 67.4,
+      "best_month": 10.11,
+      "worst_month": -3.32
+    },
+    "ticker_meta": {
+      "name": "VXUS",
+      "sector": "Unknown",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends days 20-23, gold's flat return may support this.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "Model confidence 54%"
+    },
+    "lgbm_rec": {
+      "ticker": "VXUS",
+      "recommended_day": 23,
+      "confidence": 0.544,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        21,
+        20
+      ],
+      "predicted_saving": 0.012,
+      "day_scores": {
+        "20": 0.0071,
+        "21": 0.2164,
+        "22": 0.0064,
+        "23": 0.5986,
+        "24": 0.0002
+      },
+      "current_day": 27,
+      "model_reliability": 0.544,
+      "uncertainty_days": 3,
+      "timing_precision": "loose",
+      "improvement_vs_current": 0.5915
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 4.3,
+  "generated": "2026-04-30T01:02:29.911186",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "VICI",
+  "summary": {
+    "ticker": "VICI",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 72,
+    "trust_reasons": [
+      "moderate win rate (72%)",
+      "strong capture (94%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "moderate spread (5.0pp)"
+    ],
+    "trust_penalties": [
+      "limited training (64 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 72/100. Strengths: moderate win rate (72%); strong capture (94%). Concerns: limited training (64 folds) \u2014 newer ticker, less history.",
+    "win_rate_pct": 71.7,
+    "avg_saving_pct": 1.344,
+    "median_saving_pct": 1.039,
+    "percentiles": {
+      "p10": -0.956,
+      "p25": 0.0,
+      "p50": 1.039,
+      "p75": 2.734,
+      "p90": 4.023
+    },
+    "clipped_values": 102,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1578,
+    "avg_dollar_per_year": 1.89,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 467,
+        "extra": 16
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 940,
+        "extra": 55
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3147,
+        "extra": 395
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20467,
+        "extra": 5494
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.21,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 800,
+            "extra": 25,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2197,
+            "extra": 148,
+            "lift_pct": 7.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8900,
+            "extra": 1306,
+            "lift_pct": 17.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.18,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 467,
+            "extra": 16,
+            "lift_pct": 3.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 940,
+            "extra": 55,
+            "lift_pct": 6.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3147,
+            "extra": 395,
+            "lift_pct": 14.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20467,
+            "extra": 5494,
+            "lift_pct": 36.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.84,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 487,
+            "extra": 35,
+            "lift_pct": 7.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1013,
+            "extra": 127,
+            "lift_pct": 14.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3722,
+            "extra": 970,
+            "lift_pct": 35.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 30347,
+            "extra": 15374,
+            "lift_pct": 102.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 229,
+        "win_rate": 62.4,
+        "avg_saving": 0.774,
+        "pct_of_runs": 22.9
+      },
+      "normal": {
+        "n_runs": 409,
+        "win_rate": 76.3,
+        "avg_saving": 1.376,
+        "pct_of_runs": 40.9
+      },
+      "elevated": {
+        "n_runs": 327,
+        "win_rate": 72.5,
+        "avg_saving": 1.55,
+        "pct_of_runs": 32.7
+      },
+      "fear": {
+        "n_runs": 35,
+        "win_rate": 71.4,
+        "avg_saving": 2.771,
+        "pct_of_runs": 3.5
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "VICI",
+      "n_months": 64,
+      "win_rate_pct": 78.1,
+      "avg_saving_pct": 1.544,
+      "median_saving_pct": 1.281,
+      "avg_capture_rate": 94.1,
+      "best_month": 7.3,
+      "worst_month": -5.39
+    },
+    "ticker_meta": {
+      "rows": 2093,
+      "start": "2018-01-02",
+      "end": "2026-04-30",
+      "name": "VICI Properties Inc.",
+      "sector": "Real Estate",
+      "type": "EQUITY",
+      "beta": 0.728
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal VIX and yield curve, with VICI above SMA20. Consider days 22-29",
+      "suggested_window": "days 22-29",
+      "action": "consider",
+      "key_factor": "momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "VICI",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        28,
+        29
+      ],
+      "predicted_saving": 0.004,
+      "day_scores": {
+        "20": 0.0648,
+        "21": 0.2595,
+        "22": 0.5624,
+        "23": 0.1861,
+        "24": 0.13,
+        "27": 0.2535,
+        "28": 0.3195,
+        "29": 0.2844,
+        "30": 0.0786
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.309
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 19.9,
+  "generated": "2026-04-30T20:55:54.301713",
+  "cached": false
+}

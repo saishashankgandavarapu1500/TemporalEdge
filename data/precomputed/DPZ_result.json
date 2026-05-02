@@ -1,0 +1,268 @@
+{
+  "ticker": "DPZ",
+  "summary": {
+    "ticker": "DPZ",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (83%)",
+      "moderate beta (1.2) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (7.3pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (83%). Concerns: wide spread (7.3pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 69.8,
+    "avg_saving_pct": 1.641,
+    "median_saving_pct": 1.281,
+    "percentiles": {
+      "p10": -1.529,
+      "p25": 0.0,
+      "p50": 1.281,
+      "p75": 2.954,
+      "p90": 5.785
+    },
+    "clipped_values": 83,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1743,
+    "avg_dollar_per_year": 2.09,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 953,
+        "extra": 67
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3243,
+        "extra": 490
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21958,
+        "extra": 6985
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.48,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 10,
+            "lift_pct": 2.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 805,
+            "extra": 31,
+            "lift_pct": 4.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2231,
+            "extra": 183,
+            "lift_pct": 8.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9222,
+            "extra": 1629,
+            "lift_pct": 21.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.66,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 953,
+            "extra": 67,
+            "lift_pct": 7.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3243,
+            "extra": 490,
+            "lift_pct": 17.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21958,
+            "extra": 6985,
+            "lift_pct": 46.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.91,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 495,
+            "extra": 44,
+            "lift_pct": 9.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1044,
+            "extra": 158,
+            "lift_pct": 17.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3987,
+            "extra": 1235,
+            "lift_pct": 44.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 35667,
+            "extra": 20694,
+            "lift_pct": 138.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 350,
+        "win_rate": 65.7,
+        "avg_saving": 1.296,
+        "pct_of_runs": 35.0
+      },
+      "normal": {
+        "n_runs": 339,
+        "win_rate": 71.1,
+        "avg_saving": 1.329,
+        "pct_of_runs": 33.9
+      },
+      "elevated": {
+        "n_runs": 257,
+        "win_rate": 72.4,
+        "avg_saving": 2.239,
+        "pct_of_runs": 25.7
+      },
+      "fear": {
+        "n_runs": 54,
+        "win_rate": 75.9,
+        "avg_saving": 2.985,
+        "pct_of_runs": 5.4
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "DPZ",
+      "n_months": 225,
+      "win_rate_pct": 73.8,
+      "avg_saving_pct": 2.048,
+      "median_saving_pct": 1.632,
+      "avg_capture_rate": 83.0,
+      "best_month": 23.6,
+      "worst_month": -28.77
+    },
+    "ticker_meta": {
+      "rows": 5486,
+      "start": "2004-07-13",
+      "end": "2026-04-30",
+      "name": "Domino's Pizza, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.185
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider DPZ's dip below SMA20 and macro signals. Oil's 12% gain may impact DPZ. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "DPZ's 7.7% 5-day decline"
+    },
+    "lgbm_rec": {
+      "ticker": "DPZ",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        29
+      ],
+      "predicted_saving": 0.014,
+      "day_scores": {
+        "20": 0.0275,
+        "21": 0.0029,
+        "22": 0.0258,
+        "23": 0.0076,
+        "24": 0.0248,
+        "27": 0.3024,
+        "28": 0.1815,
+        "29": 0.1694,
+        "30": 0.1657
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 71.3,
+  "generated": "2026-04-30T20:05:45.032505",
+  "cached": false
+}

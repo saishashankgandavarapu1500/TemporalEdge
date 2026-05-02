@@ -1,0 +1,268 @@
+{
+  "ticker": "HPE",
+  "summary": {
+    "ticker": "HPE",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (79%)",
+      "adequately trained (91 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker",
+      "wide spread (7.6pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: moderate win rate (71%); strong capture (79%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker; wide spread (7.6pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 71.4,
+    "avg_saving_pct": 1.842,
+    "median_saving_pct": 1.482,
+    "percentiles": {
+      "p10": -1.413,
+      "p25": 0.0,
+      "p50": 1.482,
+      "p75": 3.484,
+      "p90": 6.157
+    },
+    "clipped_values": 70,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1885,
+    "avg_dollar_per_year": 2.26,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 442,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 854,
+        "extra": 37
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2538,
+        "extra": 238
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 12408,
+        "extra": 2515
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 8.99,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 411,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 754,
+            "extra": 19,
+            "lift_pct": 2.6
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 1935,
+            "extra": 105,
+            "lift_pct": 5.7
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 6674,
+            "extra": 784,
+            "lift_pct": 13.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 13.66,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 442,
+            "extra": 11,
+            "lift_pct": 2.6
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 854,
+            "extra": 37,
+            "lift_pct": 4.6
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2538,
+            "extra": 238,
+            "lift_pct": 10.3
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 12408,
+            "extra": 2515,
+            "lift_pct": 25.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.98,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 473,
+            "extra": 21,
+            "lift_pct": 4.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 962,
+            "extra": 76,
+            "lift_pct": 8.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3310,
+            "extra": 557,
+            "lift_pct": 20.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23034,
+            "extra": 8062,
+            "lift_pct": 53.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 359,
+        "win_rate": 66.9,
+        "avg_saving": 1.214,
+        "pct_of_runs": 35.9
+      },
+      "normal": {
+        "n_runs": 326,
+        "win_rate": 76.4,
+        "avg_saving": 2.14,
+        "pct_of_runs": 32.6
+      },
+      "elevated": {
+        "n_runs": 278,
+        "win_rate": 72.3,
+        "avg_saving": 2.214,
+        "pct_of_runs": 27.8
+      },
+      "fear": {
+        "n_runs": 37,
+        "win_rate": 64.9,
+        "avg_saving": 2.511,
+        "pct_of_runs": 3.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "HPE",
+      "n_months": 91,
+      "win_rate_pct": 72.5,
+      "avg_saving_pct": 2.254,
+      "median_saving_pct": 1.916,
+      "avg_capture_rate": 78.6,
+      "best_month": 13.14,
+      "worst_month": -11.08
+    },
+    "ticker_meta": {
+      "rows": 2648,
+      "start": "2015-10-19",
+      "end": "2026-04-30",
+      "name": "Hewlett Packard Enterprise Company",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.215
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider normal VIX and HPE's momentum. Oil's inflation signal conflicts with Gold's risk-off signal. ",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "model recommendation with 75% confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "HPE",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        23,
+        24
+      ],
+      "predicted_saving": 0.005,
+      "day_scores": {
+        "20": 0.4919,
+        "21": 0.1057,
+        "22": 0.0928,
+        "23": 0.241,
+        "24": 0.2306,
+        "27": 0.0774,
+        "28": 0.106,
+        "29": 0.0714,
+        "30": 0.0009
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4145
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 35.3,
+  "generated": "2026-04-30T20:16:18.995798",
+  "cached": false
+}

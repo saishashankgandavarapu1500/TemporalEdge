@@ -1,0 +1,260 @@
+{
+  "ticker": "VYM",
+  "summary": {
+    "ticker": "VYM",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 87,
+    "trust_reasons": [
+      "high win rate (76%)",
+      "strong capture (100%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.2pp)",
+      "well-trained (198 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 87/100. Strengths: high win rate (76%); strong capture (100%). ",
+    "win_rate_pct": 76.4,
+    "avg_saving_pct": 1.088,
+    "median_saving_pct": 0.914,
+    "percentiles": {
+      "p10": -0.315,
+      "p25": 0.064,
+      "p50": 0.914,
+      "p75": 1.772,
+      "p90": 2.891
+    },
+    "clipped_values": 30,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1138,
+    "avg_dollar_per_year": 1.37,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 464,
+        "extra": 13
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 930,
+        "extra": 44
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3067,
+        "extra": 314
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19270,
+        "extra": 4297
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.98,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 795,
+            "extra": 20,
+            "lift_pct": 2.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2167,
+            "extra": 119,
+            "lift_pct": 5.8
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8632,
+            "extra": 1039,
+            "lift_pct": 13.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.76,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 464,
+            "extra": 13,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 930,
+            "extra": 44,
+            "lift_pct": 5.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3067,
+            "extra": 314,
+            "lift_pct": 11.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19270,
+            "extra": 4297,
+            "lift_pct": 28.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.92,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 480,
+            "extra": 28,
+            "lift_pct": 6.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 987,
+            "extra": 101,
+            "lift_pct": 11.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3510,
+            "extra": 758,
+            "lift_pct": 27.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 26440,
+            "extra": 11467,
+            "lift_pct": 76.6
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 303,
+        "win_rate": 80.5,
+        "avg_saving": 0.692,
+        "pct_of_runs": 30.3
+      },
+      "normal": {
+        "n_runs": 321,
+        "win_rate": 73.2,
+        "avg_saving": 0.812,
+        "pct_of_runs": 32.1
+      },
+      "elevated": {
+        "n_runs": 284,
+        "win_rate": 75.4,
+        "avg_saving": 1.501,
+        "pct_of_runs": 28.4
+      },
+      "fear": {
+        "n_runs": 92,
+        "win_rate": 77.2,
+        "avg_saving": 2.074,
+        "pct_of_runs": 9.2
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "VYM",
+      "n_months": 198,
+      "win_rate_pct": 79.3,
+      "avg_saving_pct": 1.039,
+      "median_saving_pct": 0.949,
+      "avg_capture_rate": 100.0,
+      "best_month": 5.69,
+      "worst_month": -5.16
+    },
+    "ticker_meta": {
+      "name": "VYM",
+      "sector": "Unknown",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=18), market flat (+0.0% past 5 days). Model recommends day 21 with 78% confidence. Standard timing conditions.",
+      "suggested_window": "days 20-22",
+      "action": "act",
+      "key_factor": "VIX=18 (normal)"
+    },
+    "lgbm_rec": {
+      "ticker": "VYM",
+      "recommended_day": 21,
+      "confidence": 0.776,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        24,
+        20
+      ],
+      "predicted_saving": 0.002,
+      "day_scores": {
+        "20": 0.133,
+        "21": 0.5981,
+        "22": 0.0996,
+        "23": 0.0013,
+        "24": 0.1792
+      },
+      "current_day": 27,
+      "model_reliability": 0.776,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4652
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 3.9,
+  "generated": "2026-04-30T01:02:38.992614",
+  "cached": false
+}

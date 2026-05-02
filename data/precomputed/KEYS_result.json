@@ -1,0 +1,268 @@
+{
+  "ticker": "KEYS",
+  "summary": {
+    "ticker": "KEYS",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (86%)",
+      "moderate beta (1.2) \u2014 predictable enough",
+      "adequately trained (103 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (7.3pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (70%); strong capture (86%). Concerns: wide spread (7.3pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.5,
+    "avg_saving_pct": 1.716,
+    "median_saving_pct": 1.492,
+    "percentiles": {
+      "p10": -1.572,
+      "p25": 0.0,
+      "p50": 1.492,
+      "p75": 3.208,
+      "p90": 5.682
+    },
+    "clipped_values": 68,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1847,
+    "avg_dollar_per_year": 2.22,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 471,
+        "extra": 20
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 956,
+        "extra": 71
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3268,
+        "extra": 515
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 22356,
+        "extra": 7384
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.54,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 428,
+            "extra": 10,
+            "lift_pct": 2.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 807,
+            "extra": 32,
+            "lift_pct": 4.2
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2240,
+            "extra": 191,
+            "lift_pct": 9.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9307,
+            "extra": 1713,
+            "lift_pct": 22.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.78,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.3
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 471,
+            "extra": 20,
+            "lift_pct": 4.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 956,
+            "extra": 71,
+            "lift_pct": 8.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3268,
+            "extra": 515,
+            "lift_pct": 18.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 22356,
+            "extra": 7384,
+            "lift_pct": 49.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.18,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 497,
+            "extra": 46,
+            "lift_pct": 10.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1052,
+            "extra": 166,
+            "lift_pct": 18.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4058,
+            "extra": 1306,
+            "lift_pct": 47.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 37176,
+            "extra": 22203,
+            "lift_pct": 148.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 354,
+        "win_rate": 79.7,
+        "avg_saving": 1.636,
+        "pct_of_runs": 35.4
+      },
+      "normal": {
+        "n_runs": 327,
+        "win_rate": 60.6,
+        "avg_saving": 1.52,
+        "pct_of_runs": 32.7
+      },
+      "elevated": {
+        "n_runs": 288,
+        "win_rate": 72.2,
+        "avg_saving": 2.18,
+        "pct_of_runs": 28.8
+      },
+      "fear": {
+        "n_runs": 31,
+        "win_rate": 54.8,
+        "avg_saving": 0.402,
+        "pct_of_runs": 3.1
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "KEYS",
+      "n_months": 103,
+      "win_rate_pct": 69.9,
+      "avg_saving_pct": 1.912,
+      "median_saving_pct": 1.657,
+      "avg_capture_rate": 86.1,
+      "best_month": 22.06,
+      "worst_month": -13.49
+    },
+    "ticker_meta": {
+      "rows": 2899,
+      "start": "2014-10-20",
+      "end": "2026-04-30",
+      "name": "Keysight Technologies, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.152
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 30 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 29-31",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "KEYS",
+      "recommended_day": 30,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        30,
+        20,
+        27
+      ],
+      "predicted_saving": 0.035,
+      "day_scores": {
+        "20": 0.1841,
+        "21": 0.0783,
+        "22": 0.0502,
+        "23": 0.0007,
+        "24": 0.0275,
+        "27": 0.1625,
+        "28": 0.1314,
+        "29": 0.1334,
+        "30": 0.2554
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0929
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 31.2,
+  "generated": "2026-04-30T22:25:09.446322",
+  "cached": false
+}

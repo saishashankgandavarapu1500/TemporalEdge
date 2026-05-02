@@ -1,0 +1,265 @@
+{
+  "ticker": "META",
+  "summary": {
+    "ticker": "META",
+    "monthly_usd": 50.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "moderate win rate (74%)",
+      "strong capture (100%)",
+      "adequately trained (132 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.3) \u2014 volatile, patterns weaker",
+      "wide spread (9.1pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: moderate win rate (74%); strong capture (100%). Concerns: high beta (1.3) \u2014 volatile, patterns weaker; wide spread (9.1pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 74.2,
+    "avg_saving_pct": 2.348,
+    "median_saving_pct": 2.088,
+    "percentiles": {
+      "p10": -1.386,
+      "p25": 0.0,
+      "p50": 2.088,
+      "p75": 4.569,
+      "p90": 7.754
+    },
+    "clipped_values": 130,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 1.2923,
+    "avg_dollar_per_year": 15.51,
+    "projections": {
+      "1": {
+        "fixed": 634,
+        "optimised": 640,
+        "extra": 6
+      },
+      "3": {
+        "fixed": 2154,
+        "optimised": 2225,
+        "extra": 71
+      },
+      "5": {
+        "fixed": 4083,
+        "optimised": 4323,
+        "extra": 240
+      },
+      "10": {
+        "fixed": 11502,
+        "optimised": 13042,
+        "extra": 1540
+      },
+      "20": {
+        "fixed": 49463,
+        "optimised": 66094,
+        "extra": 16631
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.27,
+        "projections": {
+          "1": {
+            "fixed": 622,
+            "optimised": 626,
+            "extra": 4,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 2027,
+            "optimised": 2066,
+            "extra": 39,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 3674,
+            "optimised": 3798,
+            "extra": 124,
+            "lift_pct": 3.4
+          },
+          "10": {
+            "fixed": 9147,
+            "optimised": 9824,
+            "extra": 676,
+            "lift_pct": 7.4
+          },
+          "20": {
+            "fixed": 29451,
+            "optimised": 34554,
+            "extra": 5103,
+            "lift_pct": 17.3
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 14.11,
+        "projections": {
+          "1": {
+            "fixed": 634,
+            "optimised": 640,
+            "extra": 6,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 2154,
+            "optimised": 2225,
+            "extra": 71,
+            "lift_pct": 3.3
+          },
+          "5": {
+            "fixed": 4083,
+            "optimised": 4323,
+            "extra": 240,
+            "lift_pct": 5.9
+          },
+          "10": {
+            "fixed": 11502,
+            "optimised": 13042,
+            "extra": 1540,
+            "lift_pct": 13.4
+          },
+          "20": {
+            "fixed": 49463,
+            "optimised": 66094,
+            "extra": 16631,
+            "lift_pct": 33.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.8,
+        "projections": {
+          "1": {
+            "fixed": 643,
+            "optimised": 655,
+            "extra": 11,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 2256,
+            "optimised": 2394,
+            "extra": 138,
+            "lift_pct": 6.1
+          },
+          "5": {
+            "fixed": 4429,
+            "optimised": 4920,
+            "extra": 491,
+            "lift_pct": 11.1
+          },
+          "10": {
+            "fixed": 13761,
+            "optimised": 17426,
+            "extra": 3665,
+            "lift_pct": 26.6
+          },
+          "20": {
+            "fixed": 74862,
+            "optimised": 130014,
+            "extra": 55152,
+            "lift_pct": 73.7
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 405,
+        "win_rate": 76.3,
+        "avg_saving": 2.084,
+        "pct_of_runs": 40.5
+      },
+      "normal": {
+        "n_runs": 329,
+        "win_rate": 76.6,
+        "avg_saving": 2.649,
+        "pct_of_runs": 32.9
+      },
+      "elevated": {
+        "n_runs": 245,
+        "win_rate": 66.1,
+        "avg_saving": 2.246,
+        "pct_of_runs": 24.5
+      },
+      "fear": {
+        "n_runs": 21,
+        "win_rate": 90.5,
+        "avg_saving": 3.924,
+        "pct_of_runs": 2.1
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "META",
+      "n_months": 132,
+      "win_rate_pct": 72.0,
+      "avg_saving_pct": 2.291,
+      "median_saving_pct": 2.013,
+      "avg_capture_rate": 100.0,
+      "best_month": 12.34,
+      "worst_month": -7.98
+    },
+    "ticker_meta": {
+      "rows": 3504,
+      "start": "2012-05-18",
+      "end": "2026-04-27",
+      "name": "Meta Platforms, Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 1.309
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider recent S&P 500 rally and META's momentum. Model recommends 23rd. ",
+      "suggested_window": "days 21-24",
+      "action": "consider",
+      "key_factor": "META's momentum above SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "META",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 15.9,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        21,
+        24
+      ],
+      "predicted_saving": 0.027,
+      "day_scores": {
+        "20": 0.0537,
+        "21": 0.1056,
+        "22": 0.0751,
+        "23": 0.5976,
+        "24": 0.0873,
+        "27": 0.0204
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5772
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 34.0,
+  "generated": "2026-04-27T22:44:51.039056",
+  "cached": false
+}

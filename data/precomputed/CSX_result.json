@@ -1,0 +1,268 @@
+{
+  "ticker": "CSX",
+  "summary": {
+    "ticker": "CSX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (92%)",
+      "moderate spread (5.5pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.2) \u2014 volatile, patterns weaker"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (92%). Concerns: high beta (1.2) \u2014 volatile, patterns weaker.",
+    "win_rate_pct": 70.2,
+    "avg_saving_pct": 1.481,
+    "median_saving_pct": 1.146,
+    "percentiles": {
+      "p10": -1.054,
+      "p25": 0.0,
+      "p50": 1.146,
+      "p75": 2.724,
+      "p90": 4.483
+    },
+    "clipped_values": 39,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1509,
+    "avg_dollar_per_year": 1.81,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 468,
+        "extra": 17
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 946,
+        "extra": 60
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3191,
+        "extra": 439
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21143,
+        "extra": 6170
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.33,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 9,
+            "lift_pct": 2.1
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 802,
+            "extra": 28,
+            "lift_pct": 3.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2212,
+            "extra": 164,
+            "lift_pct": 8.0
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9047,
+            "extra": 1454,
+            "lift_pct": 19.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.4,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 468,
+            "extra": 17,
+            "lift_pct": 3.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 946,
+            "extra": 60,
+            "lift_pct": 6.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3191,
+            "extra": 439,
+            "lift_pct": 15.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21143,
+            "extra": 6170,
+            "lift_pct": 41.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.33,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 490,
+            "extra": 39,
+            "lift_pct": 8.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1027,
+            "extra": 141,
+            "lift_pct": 16.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3842,
+            "extra": 1090,
+            "lift_pct": 39.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 32694,
+            "extra": 17722,
+            "lift_pct": 118.4
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.1,
+        "avg_saving": 0.989,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.5,
+        "avg_saving": 1.224,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 75.7,
+        "avg_saving": 2.078,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 63.2,
+        "avg_saving": 2.056,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CSX",
+      "n_months": 225,
+      "win_rate_pct": 74.2,
+      "avg_saving_pct": 1.704,
+      "median_saving_pct": 1.442,
+      "avg_capture_rate": 92.5,
+      "best_month": 15.33,
+      "worst_month": -11.92
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "CSX Corporation",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.246
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal VIX and yield curve support the model's recommendation, while gold's decline and oil's surge present mixed signals.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "Model confidence and momentum"
+    },
+    "lgbm_rec": {
+      "ticker": "CSX",
+      "recommended_day": 22,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        22,
+        21,
+        20
+      ],
+      "predicted_saving": 0.036,
+      "day_scores": {
+        "20": 0.2105,
+        "21": 0.2285,
+        "22": 0.5949,
+        "23": 0.0221,
+        "24": 0.0478,
+        "27": 0.0004,
+        "28": 0.0275,
+        "29": 0.0581,
+        "30": 0.057
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5945
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 72.0,
+  "generated": "2026-04-30T20:02:39.990648",
+  "cached": false
+}

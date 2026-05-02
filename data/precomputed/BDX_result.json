@@ -1,0 +1,267 @@
+{
+  "ticker": "BDX",
+  "summary": {
+    "ticker": "BDX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (95%)",
+      "low beta (0.4) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (68%); strong capture (95%). ",
+    "win_rate_pct": 68.1,
+    "avg_saving_pct": 0.978,
+    "median_saving_pct": 0.84,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 0.84,
+      "p75": 2.261,
+      "p90": 2.5
+    },
+    "clipped_values": 385,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1195,
+    "avg_dollar_per_year": 1.43,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 462,
+        "extra": 11
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 925,
+        "extra": 39
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3033,
+        "extra": 281
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18779,
+        "extra": 3806
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.88,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 6,
+            "lift_pct": 1.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 793,
+            "extra": 18,
+            "lift_pct": 2.4
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2155,
+            "extra": 106,
+            "lift_pct": 5.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8520,
+            "extra": 926,
+            "lift_pct": 12.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.58,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 462,
+            "extra": 11,
+            "lift_pct": 2.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 925,
+            "extra": 39,
+            "lift_pct": 4.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3033,
+            "extra": 281,
+            "lift_pct": 10.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18779,
+            "extra": 3806,
+            "lift_pct": 25.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.52,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 477,
+            "extra": 25,
+            "lift_pct": 5.6
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 976,
+            "extra": 90,
+            "lift_pct": 10.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3423,
+            "extra": 671,
+            "lift_pct": 24.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24929,
+            "extra": 9956,
+            "lift_pct": 66.5
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 66.0,
+        "avg_saving": 0.72,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 67.4,
+        "avg_saving": 0.878,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 69.5,
+        "avg_saving": 1.172,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 73.7,
+        "avg_saving": 1.596,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "BDX",
+      "n_months": 225,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 1.189,
+      "median_saving_pct": 0.997,
+      "avg_capture_rate": 95.0,
+      "best_month": 9.89,
+      "worst_month": -9.61
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Becton, Dickinson and Company",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.352
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider macro stability and BDX dip below SMA20. Oil's inflation signal conflicts with Gold's risk-off signal. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "VIX stability"
+    },
+    "lgbm_rec": {
+      "ticker": "BDX",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        27,
+        28
+      ],
+      "predicted_saving": 0.018,
+      "day_scores": {
+        "20": 0.0005,
+        "21": 0.0023,
+        "22": 0.0183,
+        "23": 0.0592,
+        "24": 0.1468,
+        "27": 0.44,
+        "28": 0.4328,
+        "29": 0.4603,
+        "30": 0.1759
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0203
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 75.0,
+  "generated": "2026-04-30T19:53:16.631742",
+  "cached": false
+}

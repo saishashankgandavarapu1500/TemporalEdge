@@ -1,0 +1,268 @@
+{
+  "ticker": "LULU",
+  "summary": {
+    "ticker": "LULU",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (73%)",
+      "strong capture (86%)",
+      "moderate beta (1.1) \u2014 predictable enough",
+      "well-trained (190 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (8.8pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (73%); strong capture (86%). Concerns: wide spread (8.8pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 73.0,
+    "avg_saving_pct": 2.341,
+    "median_saving_pct": 2.02,
+    "percentiles": {
+      "p10": -1.573,
+      "p25": 0.0,
+      "p50": 2.02,
+      "p75": 4.557,
+      "p90": 7.257
+    },
+    "clipped_values": 99,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2597,
+    "avg_dollar_per_year": 3.12,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 479,
+        "extra": 28
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 984,
+        "extra": 98
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3482,
+        "extra": 730
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 25956,
+        "extra": 10983
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.11,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 431,
+            "extra": 14,
+            "lift_pct": 3.3
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 819,
+            "extra": 45,
+            "lift_pct": 5.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2315,
+            "extra": 266,
+            "lift_pct": 13.0
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 10036,
+            "extra": 2442,
+            "lift_pct": 32.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.79,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 28,
+            "lift_pct": 6.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 984,
+            "extra": 98,
+            "lift_pct": 11.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3482,
+            "extra": 730,
+            "lift_pct": 26.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 25956,
+            "extra": 10983,
+            "lift_pct": 73.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 23.43,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 134,
+            "extra": 5,
+            "lift_pct": 4.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 515,
+            "extra": 64,
+            "lift_pct": 14.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1122,
+            "extra": 236,
+            "lift_pct": 26.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4700,
+            "extra": 1948,
+            "lift_pct": 70.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 52530,
+            "extra": 37557,
+            "lift_pct": 250.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 280,
+        "win_rate": 72.9,
+        "avg_saving": 1.532,
+        "pct_of_runs": 28.0
+      },
+      "normal": {
+        "n_runs": 329,
+        "win_rate": 77.5,
+        "avg_saving": 2.413,
+        "pct_of_runs": 32.9
+      },
+      "elevated": {
+        "n_runs": 318,
+        "win_rate": 68.2,
+        "avg_saving": 2.627,
+        "pct_of_runs": 31.8
+      },
+      "fear": {
+        "n_runs": 73,
+        "win_rate": 74.0,
+        "avg_saving": 3.871,
+        "pct_of_runs": 7.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "LULU",
+      "n_months": 190,
+      "win_rate_pct": 72.6,
+      "avg_saving_pct": 2.316,
+      "median_saving_pct": 1.728,
+      "avg_capture_rate": 86.4,
+      "best_month": 25.67,
+      "worst_month": -11.88
+    },
+    "ticker_meta": {
+      "rows": 4720,
+      "start": "2007-07-27",
+      "end": "2026-04-30",
+      "name": "lululemon athletica inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.07
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider LULU's dip below SMA20 and macro signals. Oil's rise may support the model's recommendation. ",
+      "suggested_window": "days 28-30",
+      "action": "consider",
+      "key_factor": "LULU's price dip"
+    },
+    "lgbm_rec": {
+      "ticker": "LULU",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        30,
+        28
+      ],
+      "predicted_saving": 0.03,
+      "day_scores": {
+        "20": 0.0137,
+        "21": 0.0002,
+        "22": 0.0283,
+        "23": 0.253,
+        "24": 0.2209,
+        "27": 0.2161,
+        "28": 0.3984,
+        "29": 0.5037,
+        "30": 0.4922
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2876
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 70.7,
+  "generated": "2026-04-30T20:24:21.499530",
+  "cached": false
+}

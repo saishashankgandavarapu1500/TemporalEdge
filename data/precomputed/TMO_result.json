@@ -1,0 +1,268 @@
+{
+  "ticker": "TMO",
+  "summary": {
+    "ticker": "TMO",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "strong capture (76%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (5.9pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "low win rate (65%) \u2014 barely above random"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: strong capture (76%); moderate beta (1.0) \u2014 predictable enough. Concerns: low win rate (65%) \u2014 barely above random.",
+    "win_rate_pct": 64.6,
+    "avg_saving_pct": 1.163,
+    "median_saving_pct": 0.887,
+    "percentiles": {
+      "p10": -1.466,
+      "p25": -0.038,
+      "p50": 0.887,
+      "p75": 2.451,
+      "p90": 4.425
+    },
+    "clipped_values": 150,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1224,
+    "avg_dollar_per_year": 1.47,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 13
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 933,
+        "extra": 47
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3090,
+        "extra": 338
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19614,
+        "extra": 4642
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.05,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2176,
+            "extra": 127,
+            "lift_pct": 6.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8710,
+            "extra": 1116,
+            "lift_pct": 14.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.88,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 13,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 933,
+            "extra": 47,
+            "lift_pct": 5.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3090,
+            "extra": 338,
+            "lift_pct": 12.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19614,
+            "extra": 4642,
+            "lift_pct": 31.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.19,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 482,
+            "extra": 31,
+            "lift_pct": 6.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 995,
+            "extra": 109,
+            "lift_pct": 12.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3571,
+            "extra": 819,
+            "lift_pct": 29.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27531,
+            "extra": 12558,
+            "lift_pct": 83.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.2,
+        "avg_saving": 1.109,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 64.4,
+        "avg_saving": 1.219,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 60.0,
+        "avg_saving": 1.105,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 63.2,
+        "avg_saving": 1.349,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "TMO",
+      "n_months": 225,
+      "win_rate_pct": 74.2,
+      "avg_saving_pct": 1.381,
+      "median_saving_pct": 1.072,
+      "avg_capture_rate": 75.9,
+      "best_month": 15.34,
+      "worst_month": -11.47
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Thermo Fisher Scientific Inc.",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.972
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 28 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 27-29",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "TMO",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        29
+      ],
+      "predicted_saving": 0.009,
+      "day_scores": {
+        "20": 0.0719,
+        "21": 0.003,
+        "22": 0.05,
+        "23": 0.2873,
+        "24": 0.2931,
+        "27": 0.4637,
+        "28": 0.4988,
+        "29": 0.3935,
+        "30": 0.199
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.035
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 73.4,
+  "generated": "2026-04-30T23:21:51.261468",
+  "cached": false
+}

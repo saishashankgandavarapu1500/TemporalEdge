@@ -1,0 +1,268 @@
+{
+  "ticker": "RJF",
+  "summary": {
+    "ticker": "RJF",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 74,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (94%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.4pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 74/100. Strengths: moderate win rate (70%); strong capture (94%). Concerns: wide spread (6.4pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.1,
+    "avg_saving_pct": 1.601,
+    "median_saving_pct": 1.237,
+    "percentiles": {
+      "p10": -1.182,
+      "p25": 0.0,
+      "p50": 1.237,
+      "p75": 3.039,
+      "p90": 5.174
+    },
+    "clipped_values": 50,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.1677,
+    "avg_dollar_per_year": 2.01,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 470,
+        "extra": 19
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 951,
+        "extra": 66
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3230,
+        "extra": 477
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 21752,
+        "extra": 6780
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.44,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 427,
+            "extra": 9,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 805,
+            "extra": 30,
+            "lift_pct": 3.9
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2226,
+            "extra": 178,
+            "lift_pct": 8.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9179,
+            "extra": 1585,
+            "lift_pct": 20.9
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.59,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 951,
+            "extra": 66,
+            "lift_pct": 7.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3230,
+            "extra": 477,
+            "lift_pct": 17.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21752,
+            "extra": 6780,
+            "lift_pct": 45.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.76,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 4,
+            "lift_pct": 2.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 494,
+            "extra": 43,
+            "lift_pct": 9.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1040,
+            "extra": 154,
+            "lift_pct": 17.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3950,
+            "extra": 1198,
+            "lift_pct": 43.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 34903,
+            "extra": 19930,
+            "lift_pct": 133.1
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.6,
+        "avg_saving": 1.002,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 68.8,
+        "avg_saving": 1.43,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 71.5,
+        "avg_saving": 2.014,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 68.4,
+        "avg_saving": 2.924,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "RJF",
+      "n_months": 225,
+      "win_rate_pct": 76.4,
+      "avg_saving_pct": 2.11,
+      "median_saving_pct": 1.581,
+      "avg_capture_rate": 93.9,
+      "best_month": 23.54,
+      "worst_month": -11.37
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Raymond James Financial, Inc.",
+      "sector": "Financial Services",
+      "type": "EQUITY",
+      "beta": 1.01
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 20 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 19-21",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "RJF",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        29,
+        27
+      ],
+      "predicted_saving": 0.004,
+      "day_scores": {
+        "20": 0.4876,
+        "21": 0.0168,
+        "22": 0.0006,
+        "23": 0.196,
+        "24": 0.1717,
+        "27": 0.2441,
+        "28": 0.1903,
+        "29": 0.2784,
+        "30": 0.0677
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.2435
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 63.4,
+  "generated": "2026-04-30T23:03:32.555891",
+  "cached": false
+}

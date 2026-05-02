@@ -1,0 +1,262 @@
+{
+  "ticker": "CEG",
+  "summary": {
+    "ticker": "CEG",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "tier_label": "Medium precision \u2014 use as context, not instruction",
+    "trust_score": 60,
+    "trust_reasons": [
+      "high win rate (80%)",
+      "strong capture (95%)",
+      "moderate beta (1.2) \u2014 predictable enough"
+    ],
+    "trust_penalties": [
+      "wide spread (9.1pp) \u2014 outcomes vary a lot month to month",
+      "insufficient training (16 folds) \u2014 results provisional"
+    ],
+    "trust_summary": "Trust 60/100. Strengths: high win rate (80%); strong capture (95%). Concerns: wide spread (9.1pp) \u2014 outcomes vary a lot month to month; insufficient training (16 folds) \u2014 results provisional.",
+    "win_rate_pct": 80.5,
+    "avg_saving_pct": 2.93,
+    "median_saving_pct": 2.629,
+    "percentiles": {
+      "p10": -1.143,
+      "p25": 0.52,
+      "p50": 2.629,
+      "p75": 5.391,
+      "p90": 8.0
+    },
+    "clipped_values": 149,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.343,
+    "avg_dollar_per_year": 4.12,
+    "projections": {
+      "1": {
+        "fixed": 127,
+        "optimised": 128,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 431,
+        "optimised": 449,
+        "extra": 18
+      },
+      "5": {
+        "fixed": 817,
+        "optimised": 877,
+        "extra": 60
+      },
+      "10": {
+        "fixed": 2300,
+        "optimised": 2692,
+        "extra": 392
+      },
+      "20": {
+        "fixed": 9893,
+        "optimised": 14225,
+        "extra": 4332
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 8.0,
+        "capture_rate": 15.0,
+        "opt_rate": 9.58,
+        "projections": {
+          "1": {
+            "fixed": 124,
+            "optimised": 125,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 405,
+            "optimised": 415,
+            "extra": 10,
+            "lift_pct": 2.4
+          },
+          "5": {
+            "fixed": 735,
+            "optimised": 766,
+            "extra": 31,
+            "lift_pct": 4.2
+          },
+          "10": {
+            "fixed": 1829,
+            "optimised": 2000,
+            "extra": 171,
+            "lift_pct": 9.3
+          },
+          "20": {
+            "fixed": 5890,
+            "optimised": 7195,
+            "extra": 1305,
+            "lift_pct": 22.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 12.0,
+        "capture_rate": 25.0,
+        "opt_rate": 14.64,
+        "projections": {
+          "1": {
+            "fixed": 127,
+            "optimised": 128,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 431,
+            "optimised": 449,
+            "extra": 18,
+            "lift_pct": 4.1
+          },
+          "5": {
+            "fixed": 817,
+            "optimised": 877,
+            "extra": 60,
+            "lift_pct": 7.4
+          },
+          "10": {
+            "fixed": 2300,
+            "optimised": 2692,
+            "extra": 392,
+            "lift_pct": 17.0
+          },
+          "20": {
+            "fixed": 9893,
+            "optimised": 14225,
+            "extra": 4332,
+            "lift_pct": 43.8
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 19.75,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 486,
+            "extra": 35,
+            "lift_pct": 7.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1010,
+            "extra": 125,
+            "lift_pct": 14.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3700,
+            "extra": 948,
+            "lift_pct": 34.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 29933,
+            "extra": 14961,
+            "lift_pct": 99.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "\u26a0\ufe0f  Tier B: base rate assumption is uncertain for volatile assets.",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 206,
+        "win_rate": 83.5,
+        "avg_saving": 3.606,
+        "pct_of_runs": 20.6
+      },
+      "normal": {
+        "n_runs": 452,
+        "win_rate": 80.5,
+        "avg_saving": 2.471,
+        "pct_of_runs": 45.2
+      },
+      "elevated": {
+        "n_runs": 342,
+        "win_rate": 78.7,
+        "avg_saving": 3.129,
+        "pct_of_runs": 34.2
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CEG",
+      "n_months": 16,
+      "win_rate_pct": 75.0,
+      "avg_saving_pct": 0.831,
+      "median_saving_pct": 2.724,
+      "avg_capture_rate": 95.0,
+      "best_month": 13.62,
+      "worst_month": -28.8
+    },
+    "ticker_meta": {
+      "rows": 1074,
+      "start": "2022-01-19",
+      "end": "2026-04-30",
+      "name": "Constellation Energy Corporation",
+      "sector": "Utilities",
+      "type": "EQUITY",
+      "beta": 1.188
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 11.7% rise may impact CEG. Consider days 20-22.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "CEG",
+      "recommended_day": 21,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        22,
+        20
+      ],
+      "predicted_saving": 0.11,
+      "day_scores": {
+        "20": 0.1915,
+        "21": 0.5984,
+        "22": 0.2025,
+        "23": 0.1597,
+        "24": 0.031,
+        "27": 0.0003,
+        "28": 0.0208,
+        "29": 0.0742,
+        "30": 0.0198
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5981
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 15.7,
+  "generated": "2026-04-30T19:59:12.217590",
+  "cached": false
+}

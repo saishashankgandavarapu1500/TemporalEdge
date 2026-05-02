@@ -1,0 +1,267 @@
+{
+  "ticker": "VRSK",
+  "summary": {
+    "ticker": "VRSK",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (90%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (4.3pp)",
+      "well-trained (163 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (71%); strong capture (90%). ",
+    "win_rate_pct": 71.1,
+    "avg_saving_pct": 1.074,
+    "median_saving_pct": 0.717,
+    "percentiles": {
+      "p10": -0.897,
+      "p25": 0.0,
+      "p50": 0.717,
+      "p75": 2.128,
+      "p90": 3.367
+    },
+    "clipped_values": 82,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1135,
+    "avg_dollar_per_year": 1.36,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 464,
+        "extra": 12
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 929,
+        "extra": 43
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3062,
+        "extra": 310
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19208,
+        "extra": 4235
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.97,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 794,
+            "extra": 20,
+            "lift_pct": 2.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2166,
+            "extra": 117,
+            "lift_pct": 5.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8618,
+            "extra": 1025,
+            "lift_pct": 13.5
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.74,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 464,
+            "extra": 12,
+            "lift_pct": 2.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 929,
+            "extra": 43,
+            "lift_pct": 4.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3062,
+            "extra": 310,
+            "lift_pct": 11.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19208,
+            "extra": 4235,
+            "lift_pct": 28.3
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.87,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 479,
+            "extra": 28,
+            "lift_pct": 6.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 986,
+            "extra": 100,
+            "lift_pct": 11.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3499,
+            "extra": 747,
+            "lift_pct": 27.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 26246,
+            "extra": 11274,
+            "lift_pct": 75.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 329,
+        "win_rate": 72.3,
+        "avg_saving": 0.761,
+        "pct_of_runs": 32.9
+      },
+      "normal": {
+        "n_runs": 353,
+        "win_rate": 69.1,
+        "avg_saving": 1.17,
+        "pct_of_runs": 35.3
+      },
+      "elevated": {
+        "n_runs": 262,
+        "win_rate": 67.9,
+        "avg_saving": 1.065,
+        "pct_of_runs": 26.2
+      },
+      "fear": {
+        "n_runs": 56,
+        "win_rate": 91.1,
+        "avg_saving": 2.346,
+        "pct_of_runs": 5.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "VRSK",
+      "n_months": 163,
+      "win_rate_pct": 73.6,
+      "avg_saving_pct": 1.358,
+      "median_saving_pct": 0.829,
+      "avg_capture_rate": 90.0,
+      "best_month": 12.54,
+      "worst_month": -3.14
+    },
+    "ticker_meta": {
+      "rows": 4166,
+      "start": "2009-10-07",
+      "end": "2026-04-30",
+      "name": "Verisk Analytics, Inc.",
+      "sector": "Industrials",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 27 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 26-28",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "VRSK",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        30
+      ],
+      "predicted_saving": 0.019,
+      "day_scores": {
+        "20": 0.0641,
+        "21": 0.0005,
+        "22": 0.0462,
+        "23": 0.1054,
+        "24": 0.0396,
+        "27": 0.5828,
+        "28": 0.5088,
+        "29": 0.1084,
+        "30": 0.1728
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 47.6,
+  "generated": "2026-04-30T23:31:32.404849",
+  "cached": false
+}

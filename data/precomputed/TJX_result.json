@@ -1,0 +1,268 @@
+{
+  "ticker": "TJX",
+  "summary": {
+    "ticker": "TJX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 79,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (100%)",
+      "low beta (0.7) \u2014 stable patterns",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "wide spread (6.1pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 79/100. Strengths: moderate win rate (68%); strong capture (100%). Concerns: wide spread (6.1pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.0,
+    "avg_saving_pct": 1.233,
+    "median_saving_pct": 0.997,
+    "percentiles": {
+      "p10": -1.707,
+      "p25": 0.0,
+      "p50": 0.997,
+      "p75": 2.633,
+      "p90": 4.382
+    },
+    "clipped_values": 152,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1244,
+    "avg_dollar_per_year": 1.49,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 14
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 936,
+        "extra": 50
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3112,
+        "extra": 360
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19938,
+        "extra": 4966
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.11,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.7
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 798,
+            "extra": 23,
+            "lift_pct": 3.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2184,
+            "extra": 135,
+            "lift_pct": 6.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8783,
+            "extra": 1189,
+            "lift_pct": 15.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.0,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 14,
+            "lift_pct": 3.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 936,
+            "extra": 50,
+            "lift_pct": 5.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3112,
+            "extra": 360,
+            "lift_pct": 13.1
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19938,
+            "extra": 4966,
+            "lift_pct": 33.2
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.44,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 484,
+            "extra": 32,
+            "lift_pct": 7.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1002,
+            "extra": 116,
+            "lift_pct": 13.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3628,
+            "extra": 876,
+            "lift_pct": 31.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 28582,
+            "extra": 13610,
+            "lift_pct": 90.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 75.5,
+        "avg_saving": 0.996,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 62.0,
+        "avg_saving": 1.055,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.5,
+        "avg_saving": 1.431,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 68.4,
+        "avg_saving": 2.108,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "TJX",
+      "n_months": 225,
+      "win_rate_pct": 78.2,
+      "avg_saving_pct": 1.765,
+      "median_saving_pct": 1.505,
+      "avg_capture_rate": 100.0,
+      "best_month": 13.32,
+      "worst_month": -7.49
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "The TJX Companies, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 0.727
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "TJX",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        24,
+        28
+      ],
+      "predicted_saving": 0.005,
+      "day_scores": {
+        "20": 0.0076,
+        "21": 0.0546,
+        "22": 0.1451,
+        "23": 0.1227,
+        "24": 0.217,
+        "27": 0.1835,
+        "28": 0.2103,
+        "29": 0.2912,
+        "30": 0.1861
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.1076
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 72.2,
+  "generated": "2026-04-30T23:21:54.515564",
+  "cached": false
+}

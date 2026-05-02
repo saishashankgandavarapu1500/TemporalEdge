@@ -1,0 +1,267 @@
+{
+  "ticker": "FMC",
+  "summary": {
+    "ticker": "FMC",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 86,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (72%)",
+      "low beta (0.5) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 86/100. Strengths: moderate win rate (68%); strong capture (72%). ",
+    "win_rate_pct": 68.1,
+    "avg_saving_pct": 1.112,
+    "median_saving_pct": 1.132,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 1.132,
+      "p75": 2.5,
+      "p90": 2.5
+    },
+    "clipped_values": 478,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1664,
+    "avg_dollar_per_year": 2.0,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 464,
+        "extra": 13
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 931,
+        "extra": 45
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3074,
+        "extra": 322
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19381,
+        "extra": 4409
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.0,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 6,
+            "lift_pct": 1.5
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 795,
+            "extra": 21,
+            "lift_pct": 2.7
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2170,
+            "extra": 122,
+            "lift_pct": 5.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8658,
+            "extra": 1064,
+            "lift_pct": 14.0
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.8,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 464,
+            "extra": 13,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 931,
+            "extra": 45,
+            "lift_pct": 5.1
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3074,
+            "extra": 322,
+            "lift_pct": 11.7
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19381,
+            "extra": 4409,
+            "lift_pct": 29.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.0,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 480,
+            "extra": 29,
+            "lift_pct": 6.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 990,
+            "extra": 104,
+            "lift_pct": 11.7
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3530,
+            "extra": 777,
+            "lift_pct": 28.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 26790,
+            "extra": 11817,
+            "lift_pct": 78.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 70.9,
+        "avg_saving": 1.001,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 67.4,
+        "avg_saving": 1.086,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 66.2,
+        "avg_saving": 1.166,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 68.4,
+        "avg_saving": 1.429,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "FMC",
+      "n_months": 225,
+      "win_rate_pct": 73.3,
+      "avg_saving_pct": 1.911,
+      "median_saving_pct": 1.447,
+      "avg_capture_rate": 72.5,
+      "best_month": 19.92,
+      "worst_month": -8.73
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "FMC Corporation",
+      "sector": "Basic Materials",
+      "type": "EQUITY",
+      "beta": 0.523
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider FMC's dip below SMA20 and macro signals. Oil's 12.2% rise may impact. ",
+      "suggested_window": "days 23-29",
+      "action": "consider",
+      "key_factor": "SMA20 dip"
+    },
+    "lgbm_rec": {
+      "ticker": "FMC",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        29,
+        28
+      ],
+      "predicted_saving": 0.083,
+      "day_scores": {
+        "20": 0.0072,
+        "21": 0.1169,
+        "22": 0.2472,
+        "23": 0.5964,
+        "24": 0.1516,
+        "27": 0.2295,
+        "28": 0.3601,
+        "29": 0.481,
+        "30": 0.1838
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.3669
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 69.4,
+  "generated": "2026-04-30T20:12:46.514454",
+  "cached": false
+}

@@ -1,0 +1,267 @@
+{
+  "ticker": "CNC",
+  "summary": {
+    "ticker": "CNC",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 92,
+    "trust_reasons": [
+      "high win rate (75%)",
+      "strong capture (95%)",
+      "low beta (0.6) \u2014 stable patterns",
+      "moderate spread (3.0pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 92/100. Strengths: high win rate (75%); strong capture (95%). ",
+    "win_rate_pct": 75.1,
+    "avg_saving_pct": 1.425,
+    "median_saving_pct": 1.963,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.025,
+      "p50": 1.963,
+      "p75": 2.5,
+      "p90": 2.5
+    },
+    "clipped_values": 566,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.2325,
+    "avg_dollar_per_year": 2.79,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 468,
+        "extra": 17
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 944,
+        "extra": 58
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3173,
+        "extra": 421
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 20865,
+        "extra": 5893
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.28,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 426,
+            "extra": 8,
+            "lift_pct": 2.0
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 801,
+            "extra": 27,
+            "lift_pct": 3.5
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2206,
+            "extra": 157,
+            "lift_pct": 7.7
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8987,
+            "extra": 1393,
+            "lift_pct": 18.4
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 17.31,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 1.1
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 468,
+            "extra": 17,
+            "lift_pct": 3.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 944,
+            "extra": 58,
+            "lift_pct": 6.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3173,
+            "extra": 421,
+            "lift_pct": 15.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 20865,
+            "extra": 5893,
+            "lift_pct": 39.4
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 20.13,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 132,
+            "extra": 3,
+            "lift_pct": 2.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 489,
+            "extra": 38,
+            "lift_pct": 8.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1021,
+            "extra": 136,
+            "lift_pct": 15.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3793,
+            "extra": 1041,
+            "lift_pct": 37.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 31717,
+            "extra": 16745,
+            "lift_pct": 111.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 333,
+        "win_rate": 75.7,
+        "avg_saving": 1.345,
+        "pct_of_runs": 33.3
+      },
+      "normal": {
+        "n_runs": 340,
+        "win_rate": 77.9,
+        "avg_saving": 1.525,
+        "pct_of_runs": 34.0
+      },
+      "elevated": {
+        "n_runs": 250,
+        "win_rate": 72.8,
+        "avg_saving": 1.378,
+        "pct_of_runs": 25.0
+      },
+      "fear": {
+        "n_runs": 77,
+        "win_rate": 67.5,
+        "avg_saving": 1.485,
+        "pct_of_runs": 7.7
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "CNC",
+      "n_months": 225,
+      "win_rate_pct": 75.6,
+      "avg_saving_pct": 2.424,
+      "median_saving_pct": 2.056,
+      "avg_capture_rate": 95.0,
+      "best_month": 21.24,
+      "worst_month": -12.8
+    },
+    "ticker_meta": {
+      "rows": 6133,
+      "start": "2001-12-13",
+      "end": "2026-04-30",
+      "name": "Centene Corporation",
+      "sector": "Healthcare",
+      "type": "EQUITY",
+      "beta": 0.587
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider CNC's momentum and model recommendation.",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "CNC's +32.8% vs SMA20"
+    },
+    "lgbm_rec": {
+      "ticker": "CNC",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        22
+      ],
+      "predicted_saving": 0.084,
+      "day_scores": {
+        "20": 0.5898,
+        "21": 0.2206,
+        "22": 0.2167,
+        "23": 0.1578,
+        "24": 0.1432,
+        "27": 0.1028,
+        "28": 0.1141,
+        "29": 0.1225,
+        "30": 0.0896
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.487
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 62.9,
+  "generated": "2026-04-30T21:27:36.854238",
+  "cached": false
+}

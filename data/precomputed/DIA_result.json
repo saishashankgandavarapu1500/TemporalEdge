@@ -1,0 +1,267 @@
+{
+  "ticker": "DIA",
+  "summary": {
+    "ticker": "DIA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (71%)",
+      "strong capture (100%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.4pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (71%); strong capture (100%). ",
+    "win_rate_pct": 70.8,
+    "avg_saving_pct": 0.864,
+    "median_saving_pct": 0.693,
+    "percentiles": {
+      "p10": -0.719,
+      "p25": 0.0,
+      "p50": 0.693,
+      "p75": 1.515,
+      "p90": 2.694
+    },
+    "clipped_values": 53,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.0841,
+    "avg_dollar_per_year": 1.01,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 461,
+        "extra": 10
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 920,
+        "extra": 35
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 2999,
+        "extra": 247
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 18287,
+        "extra": 3315
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.78,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.4
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 423,
+            "extra": 5,
+            "lift_pct": 1.2
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 790,
+            "extra": 16,
+            "lift_pct": 2.1
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2142,
+            "extra": 94,
+            "lift_pct": 4.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8406,
+            "extra": 813,
+            "lift_pct": 10.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.4,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.7
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 461,
+            "extra": 10,
+            "lift_pct": 2.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 920,
+            "extra": 35,
+            "lift_pct": 3.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2999,
+            "extra": 247,
+            "lift_pct": 9.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 18287,
+            "extra": 3315,
+            "lift_pct": 22.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 18.11,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 474,
+            "extra": 22,
+            "lift_pct": 5.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 965,
+            "extra": 79,
+            "lift_pct": 9.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3336,
+            "extra": 584,
+            "lift_pct": 21.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23470,
+            "extra": 8497,
+            "lift_pct": 56.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 68.4,
+        "avg_saving": 0.454,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 73.9,
+        "avg_saving": 0.739,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 70.5,
+        "avg_saving": 1.132,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 67.1,
+        "avg_saving": 1.867,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "DIA",
+      "n_months": 225,
+      "win_rate_pct": 73.3,
+      "avg_saving_pct": 1.119,
+      "median_saving_pct": 0.98,
+      "avg_capture_rate": 100.0,
+      "best_month": 10.72,
+      "worst_month": -5.82
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "State Street SPDR Dow Jones Industrial Average ETF Trust",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 29 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 28-30",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "DIA",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        23,
+        28
+      ],
+      "predicted_saving": 0.002,
+      "day_scores": {
+        "20": 0.0059,
+        "21": 0.1815,
+        "22": 0.0534,
+        "23": 0.2691,
+        "24": 0.1931,
+        "27": 0.2116,
+        "28": 0.2159,
+        "29": 0.2841,
+        "30": 0.0953
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0725
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 50.7,
+  "generated": "2026-04-30T23:48:11.913109",
+  "cached": false
+}

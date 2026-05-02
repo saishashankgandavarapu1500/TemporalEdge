@@ -1,0 +1,268 @@
+{
+  "ticker": "FOX",
+  "summary": {
+    "ticker": "FOX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 72,
+    "trust_reasons": [
+      "moderate win rate (66%)",
+      "strong capture (100%)",
+      "low beta (0.5) \u2014 stable patterns",
+      "moderate spread (3.0pp)"
+    ],
+    "trust_penalties": [
+      "limited training (50 folds) \u2014 newer ticker, less history"
+    ],
+    "trust_summary": "Trust 72/100. Strengths: moderate win rate (66%); strong capture (100%). Concerns: limited training (50 folds) \u2014 newer ticker, less history.",
+    "win_rate_pct": 66.2,
+    "avg_saving_pct": 1.166,
+    "median_saving_pct": 1.402,
+    "percentiles": {
+      "p10": -0.5,
+      "p25": 0.0,
+      "p50": 1.402,
+      "p75": 2.5,
+      "p90": 2.5
+    },
+    "clipped_values": 449,
+    "clip_bounds": {
+      "low": -0.5,
+      "high": 2.5
+    },
+    "avg_dollar_per_month": 0.1662,
+    "avg_dollar_per_year": 1.99,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 465,
+        "extra": 13
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 933,
+        "extra": 47
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3091,
+        "extra": 339
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19629,
+        "extra": 4657
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.05,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 425,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2176,
+            "extra": 128,
+            "lift_pct": 6.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8714,
+            "extra": 1120,
+            "lift_pct": 14.7
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.89,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 465,
+            "extra": 13,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 933,
+            "extra": 47,
+            "lift_pct": 5.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3091,
+            "extra": 339,
+            "lift_pct": 12.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19629,
+            "extra": 4657,
+            "lift_pct": 31.1
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.2,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 482,
+            "extra": 31,
+            "lift_pct": 6.8
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 995,
+            "extra": 109,
+            "lift_pct": 12.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3574,
+            "extra": 821,
+            "lift_pct": 29.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27579,
+            "extra": 12606,
+            "lift_pct": 84.2
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 208,
+        "win_rate": 67.8,
+        "avg_saving": 1.121,
+        "pct_of_runs": 20.8
+      },
+      "normal": {
+        "n_runs": 399,
+        "win_rate": 62.2,
+        "avg_saving": 0.993,
+        "pct_of_runs": 39.9
+      },
+      "elevated": {
+        "n_runs": 340,
+        "win_rate": 70.6,
+        "avg_saving": 1.356,
+        "pct_of_runs": 34.0
+      },
+      "fear": {
+        "n_runs": 53,
+        "win_rate": 62.3,
+        "avg_saving": 1.434,
+        "pct_of_runs": 5.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "FOX",
+      "n_months": 50,
+      "win_rate_pct": 72.0,
+      "avg_saving_pct": 1.538,
+      "median_saving_pct": 1.302,
+      "avg_capture_rate": 100.0,
+      "best_month": 8.23,
+      "worst_month": -3.8
+    },
+    "ticker_meta": {
+      "rows": 1794,
+      "start": "2019-03-13",
+      "end": "2026-04-30",
+      "name": "Fox Corporation",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 0.505
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Normal volatility environment (VIX=17), market flat (+0.6% past 5 days). Model recommends day 24 with 75% confidence. Standard timing conditions.",
+      "suggested_window": "days 23-25",
+      "action": "act",
+      "key_factor": "VIX=17 (normal (VIX15-20))"
+    },
+    "lgbm_rec": {
+      "ticker": "FOX",
+      "recommended_day": 24,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        24,
+        28,
+        27
+      ],
+      "predicted_saving": 0.021,
+      "day_scores": {
+        "20": 0.0017,
+        "21": 0.0321,
+        "22": 0.0019,
+        "23": 0.047,
+        "24": 0.5952,
+        "27": 0.1857,
+        "28": 0.327,
+        "29": 0.1773,
+        "30": 0.1227
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.4094
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 16.9,
+  "generated": "2026-04-30T22:00:58.284515",
+  "cached": false
+}

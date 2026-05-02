@@ -1,0 +1,260 @@
+{
+  "ticker": "AAPL",
+  "summary": {
+    "ticker": "AAPL",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 87,
+    "trust_reasons": [
+      "high win rate (77%)",
+      "strong capture (98%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (5.6pp)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 87/100. Strengths: high win rate (77%); strong capture (98%). ",
+    "win_rate_pct": 77.1,
+    "avg_saving_pct": 2.022,
+    "median_saving_pct": 1.976,
+    "percentiles": {
+      "p10": -0.567,
+      "p25": 0.177,
+      "p50": 1.976,
+      "p75": 4.082,
+      "p90": 5.0
+    },
+    "clipped_values": 243,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.2373,
+    "avg_dollar_per_year": 2.85,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 475,
+        "extra": 24
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 970,
+        "extra": 84
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3371,
+        "extra": 619
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24048,
+        "extra": 9076
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.82,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.8
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 813,
+            "extra": 38,
+            "lift_pct": 5.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2276,
+            "extra": 228,
+            "lift_pct": 11.1
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9656,
+            "extra": 2062,
+            "lift_pct": 27.2
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.28,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 475,
+            "extra": 24,
+            "lift_pct": 5.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 970,
+            "extra": 84,
+            "lift_pct": 9.5
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3371,
+            "extra": 619,
+            "lift_pct": 22.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24048,
+            "extra": 9076,
+            "lift_pct": 60.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.28,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.5
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 506,
+            "extra": 55,
+            "lift_pct": 12.1
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1086,
+            "extra": 200,
+            "lift_pct": 22.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4359,
+            "extra": 1607,
+            "lift_pct": 58.4
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 44003,
+            "extra": 29031,
+            "lift_pct": 193.9
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 279,
+        "win_rate": 77.1,
+        "avg_saving": 1.558,
+        "pct_of_runs": 27.9
+      },
+      "normal": {
+        "n_runs": 340,
+        "win_rate": 80.3,
+        "avg_saving": 2.031,
+        "pct_of_runs": 34.0
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 74.8,
+        "avg_saving": 2.385,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 72.4,
+        "avg_saving": 2.235,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "AAPL",
+      "n_months": 225,
+      "win_rate_pct": 79.1,
+      "avg_saving_pct": 2.089,
+      "median_saving_pct": 1.844,
+      "avg_capture_rate": 98.5,
+      "best_month": 20.22,
+      "worst_month": -24.11
+    },
+    "ticker_meta": {
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.109
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider AAPL purchase with model confidence 90% and normal VIX.",
+      "suggested_window": "days 20-24",
+      "action": "consider",
+      "key_factor": "model recommendation"
+    },
+    "lgbm_rec": {
+      "ticker": "AAPL",
+      "recommended_day": 21,
+      "confidence": 0.895,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        21,
+        24,
+        20
+      ],
+      "predicted_saving": 0.016,
+      "day_scores": {
+        "20": 0.0294,
+        "21": 0.5988,
+        "22": 0.0202,
+        "23": 0.0007,
+        "24": 0.0829
+      },
+      "current_day": 27,
+      "model_reliability": 0.895,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5694
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 11.6,
+  "generated": "2026-04-30T19:49:52.502811",
+  "cached": false
+}

@@ -1,0 +1,268 @@
+{
+  "ticker": "NFLX",
+  "summary": {
+    "ticker": "NFLX",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (69%)",
+      "strong capture (72%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.7) \u2014 volatile, patterns weaker",
+      "wide spread (11.3pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (69%); strong capture (72%). Concerns: high beta (1.7) \u2014 volatile, patterns weaker; wide spread (11.3pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 68.6,
+    "avg_saving_pct": 2.442,
+    "median_saving_pct": 1.335,
+    "percentiles": {
+      "p10": -2.305,
+      "p25": 0.0,
+      "p50": 1.335,
+      "p75": 4.487,
+      "p90": 8.963
+    },
+    "clipped_values": 59,
+    "clip_bounds": {
+      "low": -8.0,
+      "high": 15.0
+    },
+    "avg_dollar_per_month": 0.259,
+    "avg_dollar_per_year": 3.11,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 480,
+        "extra": 29
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 988,
+        "extra": 102
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3519,
+        "extra": 767
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 26597,
+        "extra": 11625
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 12.2,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 1.0
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 432,
+            "extra": 14,
+            "lift_pct": 3.4
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 821,
+            "extra": 47,
+            "lift_pct": 6.0
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2327,
+            "extra": 279,
+            "lift_pct": 13.6
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 10160,
+            "extra": 2566,
+            "lift_pct": 33.8
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.96,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 480,
+            "extra": 29,
+            "lift_pct": 6.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 988,
+            "extra": 102,
+            "lift_pct": 11.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3519,
+            "extra": 767,
+            "lift_pct": 27.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 26597,
+            "extra": 11625,
+            "lift_pct": 77.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 23.79,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 134,
+            "extra": 5,
+            "lift_pct": 4.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 518,
+            "extra": 67,
+            "lift_pct": 14.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1134,
+            "extra": 248,
+            "lift_pct": 28.0
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4815,
+            "extra": 2063,
+            "lift_pct": 75.0
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 55600,
+            "extra": 40627,
+            "lift_pct": 271.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 349,
+        "win_rate": 69.6,
+        "avg_saving": 2.444,
+        "pct_of_runs": 34.9
+      },
+      "normal": {
+        "n_runs": 324,
+        "win_rate": 72.2,
+        "avg_saving": 2.56,
+        "pct_of_runs": 32.4
+      },
+      "elevated": {
+        "n_runs": 257,
+        "win_rate": 63.8,
+        "avg_saving": 2.331,
+        "pct_of_runs": 25.7
+      },
+      "fear": {
+        "n_runs": 70,
+        "win_rate": 64.3,
+        "avg_saving": 2.291,
+        "pct_of_runs": 7.0
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "NFLX",
+      "n_months": 225,
+      "win_rate_pct": 63.6,
+      "avg_saving_pct": 1.838,
+      "median_saving_pct": 1.293,
+      "avg_capture_rate": 71.6,
+      "best_month": 25.14,
+      "worst_month": -37.87
+    },
+    "ticker_meta": {
+      "rows": 6023,
+      "start": "2002-05-23",
+      "end": "2026-04-30",
+      "name": "Netflix, Inc.",
+      "sector": "Communication Services",
+      "type": "EQUITY",
+      "beta": 1.669
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider NFLX purchase amidst normal VIX and flat S&P 500. Oil's inflation signal may impact. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "normal VIX"
+    },
+    "lgbm_rec": {
+      "ticker": "NFLX",
+      "recommended_day": 29,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        29,
+        27,
+        21
+      ],
+      "predicted_saving": 0.002,
+      "day_scores": {
+        "20": 0.0371,
+        "21": 0.1857,
+        "22": 0.0377,
+        "23": 0.1183,
+        "24": 0.1386,
+        "27": 0.2284,
+        "28": 0.113,
+        "29": 0.2551,
+        "30": 0.0025
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0268
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 65.5,
+  "generated": "2026-04-30T20:29:23.495057",
+  "cached": false
+}

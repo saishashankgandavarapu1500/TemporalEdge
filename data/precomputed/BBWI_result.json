@@ -1,0 +1,268 @@
+{
+  "ticker": "BBWI",
+  "summary": {
+    "ticker": "BBWI",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (68%)",
+      "strong capture (83%)",
+      "well-trained (225 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (9.0pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (68%); strong capture (83%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (9.0pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 67.6,
+    "avg_saving_pct": 1.889,
+    "median_saving_pct": 1.512,
+    "percentiles": {
+      "p10": -2.016,
+      "p25": 0.0,
+      "p50": 1.512,
+      "p75": 3.718,
+      "p90": 7.026
+    },
+    "clipped_values": 115,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2066,
+    "avg_dollar_per_year": 2.48,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 473,
+        "extra": 22
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 964,
+        "extra": 78
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3325,
+        "extra": 573
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 23294,
+        "extra": 8321
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.7,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.8
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 429,
+            "extra": 11,
+            "lift_pct": 2.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 810,
+            "extra": 36,
+            "lift_pct": 4.6
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2260,
+            "extra": 212,
+            "lift_pct": 10.3
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9502,
+            "extra": 1908,
+            "lift_pct": 25.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.06,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.4
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 473,
+            "extra": 22,
+            "lift_pct": 4.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 964,
+            "extra": 78,
+            "lift_pct": 8.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3325,
+            "extra": 573,
+            "lift_pct": 20.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 23294,
+            "extra": 8321,
+            "lift_pct": 55.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 21.8,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 4,
+            "lift_pct": 3.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 502,
+            "extra": 51,
+            "lift_pct": 11.3
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1071,
+            "extra": 185,
+            "lift_pct": 20.9
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4225,
+            "extra": 1473,
+            "lift_pct": 53.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 40875,
+            "extra": 25902,
+            "lift_pct": 173.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 282,
+        "win_rate": 72.3,
+        "avg_saving": 1.476,
+        "pct_of_runs": 28.2
+      },
+      "normal": {
+        "n_runs": 337,
+        "win_rate": 65.3,
+        "avg_saving": 1.824,
+        "pct_of_runs": 33.7
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 2.17,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 61.8,
+        "avg_saving": 2.582,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "BBWI",
+      "n_months": 225,
+      "win_rate_pct": 77.8,
+      "avg_saving_pct": 2.875,
+      "median_saving_pct": 2.21,
+      "avg_capture_rate": 83.0,
+      "best_month": 27.16,
+      "worst_month": -9.42
+    },
+    "ticker_meta": {
+      "rows": 6621,
+      "start": "2000-01-03",
+      "end": "2026-04-30",
+      "name": "Bath & Body Works, Inc.",
+      "sector": "Consumer Cyclical",
+      "type": "EQUITY",
+      "beta": 1.463
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Consider model's 75% confidence and normal VIX. Oil's 11.5% gain may impact BBWI. ",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "BBWI",
+      "recommended_day": 28,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        28,
+        27,
+        29
+      ],
+      "predicted_saving": 0.031,
+      "day_scores": {
+        "20": 0.0012,
+        "21": 0.0324,
+        "22": 0.0208,
+        "23": 0.0137,
+        "24": 0.0653,
+        "27": 0.3542,
+        "28": 0.3821,
+        "29": 0.3201,
+        "30": 0.221
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0279
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 77.7,
+  "generated": "2026-04-30T21:17:05.208967",
+  "cached": false
+}

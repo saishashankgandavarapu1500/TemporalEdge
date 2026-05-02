@@ -1,0 +1,268 @@
+{
+  "ticker": "MPWR",
+  "summary": {
+    "ticker": "MPWR",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 67,
+    "trust_reasons": [
+      "moderate win rate (70%)",
+      "strong capture (89%)",
+      "well-trained (222 folds)"
+    ],
+    "trust_penalties": [
+      "high beta (1.5) \u2014 volatile, patterns weaker",
+      "wide spread (8.9pp) \u2014 outcomes vary a lot month to month"
+    ],
+    "trust_summary": "Trust 67/100. Strengths: moderate win rate (70%); strong capture (89%). Concerns: high beta (1.5) \u2014 volatile, patterns weaker; wide spread (8.9pp) \u2014 outcomes vary a lot month to month.",
+    "win_rate_pct": 70.1,
+    "avg_saving_pct": 2.085,
+    "median_saving_pct": 1.962,
+    "percentiles": {
+      "p10": -2.15,
+      "p25": 0.0,
+      "p50": 1.962,
+      "p75": 4.213,
+      "p90": 6.737
+    },
+    "clipped_values": 114,
+    "clip_bounds": {
+      "low": -4.0,
+      "high": 8.0
+    },
+    "avg_dollar_per_month": 0.2284,
+    "avg_dollar_per_year": 2.74,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 131,
+        "extra": 2
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 476,
+        "extra": 24
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 972,
+        "extra": 87
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3393,
+        "extra": 640
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 24412,
+        "extra": 9440
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.88,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 127,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 430,
+            "extra": 12,
+            "lift_pct": 2.9
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 814,
+            "extra": 40,
+            "lift_pct": 5.1
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2284,
+            "extra": 235,
+            "lift_pct": 11.5
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 9730,
+            "extra": 2136,
+            "lift_pct": 28.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 18.38,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 2,
+            "lift_pct": 1.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 476,
+            "extra": 24,
+            "lift_pct": 5.4
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 972,
+            "extra": 87,
+            "lift_pct": 9.8
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3393,
+            "extra": 640,
+            "lift_pct": 23.3
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 24412,
+            "extra": 9440,
+            "lift_pct": 63.0
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 22.51,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 133,
+            "extra": 5,
+            "lift_pct": 3.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 508,
+            "extra": 57,
+            "lift_pct": 12.5
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 1093,
+            "extra": 207,
+            "lift_pct": 23.4
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 4424,
+            "extra": 1672,
+            "lift_pct": 60.8
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 45563,
+            "extra": 30591,
+            "lift_pct": 204.3
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 365,
+        "win_rate": 66.8,
+        "avg_saving": 1.711,
+        "pct_of_runs": 36.5
+      },
+      "normal": {
+        "n_runs": 314,
+        "win_rate": 71.3,
+        "avg_saving": 2.262,
+        "pct_of_runs": 31.4
+      },
+      "elevated": {
+        "n_runs": 265,
+        "win_rate": 70.2,
+        "avg_saving": 1.883,
+        "pct_of_runs": 26.5
+      },
+      "fear": {
+        "n_runs": 56,
+        "win_rate": 83.9,
+        "avg_saving": 4.49,
+        "pct_of_runs": 5.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MPWR",
+      "n_months": 222,
+      "win_rate_pct": 75.2,
+      "avg_saving_pct": 2.526,
+      "median_saving_pct": 2.109,
+      "avg_capture_rate": 88.6,
+      "best_month": 16.38,
+      "worst_month": -15.29
+    },
+    "ticker_meta": {
+      "rows": 5394,
+      "start": "2004-11-19",
+      "end": "2026-04-30",
+      "name": "Monolithic Power Systems, Inc.",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.478
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 20th, oil inflation signal supports, consider days 20-22",
+      "suggested_window": "days 20-22",
+      "action": "consider",
+      "key_factor": "oil inflation signal"
+    },
+    "lgbm_rec": {
+      "ticker": "MPWR",
+      "recommended_day": 20,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        20,
+        21,
+        22
+      ],
+      "predicted_saving": 0.042,
+      "day_scores": {
+        "20": 0.5947,
+        "21": 0.1935,
+        "22": 0.1647,
+        "23": 0.0663,
+        "24": 0.0001,
+        "27": 0.023,
+        "28": 0.0962,
+        "29": 0.0609,
+        "30": 0.0035
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5717
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 80.7,
+  "generated": "2026-04-30T20:27:55.942100",
+  "cached": false
+}

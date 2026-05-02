@@ -1,0 +1,268 @@
+{
+  "ticker": "JEPI",
+  "summary": {
+    "ticker": "JEPI",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 75,
+    "trust_reasons": [
+      "high win rate (77%)",
+      "strong capture (100%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "tight distribution (p10-p90 range 2.3pp)"
+    ],
+    "trust_penalties": [
+      "insufficient training (36 folds) \u2014 results provisional"
+    ],
+    "trust_summary": "Trust 75/100. Strengths: high win rate (77%); strong capture (100%). Concerns: insufficient training (36 folds) \u2014 results provisional.",
+    "win_rate_pct": 77.4,
+    "avg_saving_pct": 0.74,
+    "median_saving_pct": 0.64,
+    "percentiles": {
+      "p10": -0.309,
+      "p25": 0.074,
+      "p50": 0.64,
+      "p75": 1.219,
+      "p90": 1.995
+    },
+    "clipped_values": 4,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.0739,
+    "avg_dollar_per_year": 0.89,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 129,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 460,
+        "extra": 8
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 915,
+        "extra": 30
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 2962,
+        "extra": 209
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 17763,
+        "extra": 2791
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 10.67,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 0,
+            "lift_pct": 0.3
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 422,
+            "extra": 4,
+            "lift_pct": 1.0
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 788,
+            "extra": 14,
+            "lift_pct": 1.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2128,
+            "extra": 80,
+            "lift_pct": 3.9
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8283,
+            "extra": 690,
+            "lift_pct": 9.1
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.2,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 129,
+            "extra": 1,
+            "lift_pct": 0.6
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 460,
+            "extra": 8,
+            "lift_pct": 1.9
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 915,
+            "extra": 30,
+            "lift_pct": 3.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 2962,
+            "extra": 209,
+            "lift_pct": 7.6
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 17763,
+            "extra": 2791,
+            "lift_pct": 18.6
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 17.66,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 2,
+            "lift_pct": 1.2
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 470,
+            "extra": 19,
+            "lift_pct": 4.2
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 953,
+            "extra": 67,
+            "lift_pct": 7.6
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3244,
+            "extra": 491,
+            "lift_pct": 17.9
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 21974,
+            "extra": 7001,
+            "lift_pct": 46.8
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 148,
+        "win_rate": 85.1,
+        "avg_saving": 0.525,
+        "pct_of_runs": 14.8
+      },
+      "normal": {
+        "n_runs": 425,
+        "win_rate": 75.8,
+        "avg_saving": 0.552,
+        "pct_of_runs": 42.5
+      },
+      "elevated": {
+        "n_runs": 406,
+        "win_rate": 76.1,
+        "avg_saving": 1.005,
+        "pct_of_runs": 40.6
+      },
+      "fear": {
+        "n_runs": 21,
+        "win_rate": 81.0,
+        "avg_saving": 0.924,
+        "pct_of_runs": 2.1
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "JEPI",
+      "n_months": 36,
+      "win_rate_pct": 66.7,
+      "avg_saving_pct": 0.589,
+      "median_saving_pct": 0.699,
+      "avg_capture_rate": 100.0,
+      "best_month": 4.13,
+      "worst_month": -2.27
+    },
+    "ticker_meta": {
+      "rows": 1493,
+      "start": "2020-05-21",
+      "end": "2026-04-30",
+      "name": "JPMorgan Equity Premium Income ETF",
+      "sector": "Unknown",
+      "type": "ETF",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 27th, oil inflation signal supports, gold risk-off signal conflicts.",
+      "suggested_window": "days 27-29",
+      "action": "consider",
+      "key_factor": "oil inflation signal"
+    },
+    "lgbm_rec": {
+      "ticker": "JEPI",
+      "recommended_day": 27,
+      "confidence": 0.75,
+      "vix_level": 10.6,
+      "vix_regime": "calm",
+      "vix_trust": "low",
+      "top_3_days": [
+        27,
+        28,
+        29
+      ],
+      "predicted_saving": 0.005,
+      "day_scores": {
+        "20": 0.0417,
+        "21": 0.0037,
+        "22": 0.1322,
+        "23": 0.0418,
+        "24": 0.1341,
+        "27": 0.4382,
+        "28": 0.2377,
+        "29": 0.2011,
+        "30": 0.0718
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.0
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 12.7,
+  "generated": "2026-04-30T20:59:38.251759",
+  "cached": false
+}

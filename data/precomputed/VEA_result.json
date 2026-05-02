@@ -1,0 +1,260 @@
+{
+  "ticker": "VEA",
+  "summary": {
+    "ticker": "VEA",
+    "monthly_usd": 10.0,
+    "n_runs": 1000,
+    "tier": "A",
+    "tier_label": "High precision \u2014 act on model recommendation",
+    "trust_score": 81,
+    "trust_reasons": [
+      "moderate win rate (75%)",
+      "strong capture (89%)",
+      "moderate beta (1.0) \u2014 predictable enough",
+      "moderate spread (3.6pp)",
+      "well-trained (190 folds)"
+    ],
+    "trust_penalties": [],
+    "trust_summary": "Trust 81/100. Strengths: moderate win rate (75%); strong capture (89%). ",
+    "win_rate_pct": 74.7,
+    "avg_saving_pct": 1.154,
+    "median_saving_pct": 1.002,
+    "percentiles": {
+      "p10": -0.332,
+      "p25": 0.0,
+      "p50": 1.002,
+      "p75": 1.933,
+      "p90": 3.221
+    },
+    "clipped_values": 40,
+    "clip_bounds": {
+      "low": -2.0,
+      "high": 5.0
+    },
+    "avg_dollar_per_month": 0.1162,
+    "avg_dollar_per_year": 1.39,
+    "projections": {
+      "1": {
+        "fixed": 129,
+        "optimised": 130,
+        "extra": 1
+      },
+      "3": {
+        "fixed": 451,
+        "optimised": 464,
+        "extra": 13
+      },
+      "5": {
+        "fixed": 886,
+        "optimised": 932,
+        "extra": 47
+      },
+      "10": {
+        "fixed": 2752,
+        "optimised": 3087,
+        "extra": 335
+      },
+      "20": {
+        "fixed": 14972,
+        "optimised": 19574,
+        "extra": 4601
+      }
+    },
+    "projections_by_scenario": {
+      "Conservative": {
+        "base_rate": 10.0,
+        "capture_rate": 25.0,
+        "opt_rate": 11.04,
+        "projections": {
+          "1": {
+            "fixed": 126,
+            "optimised": 126,
+            "extra": 1,
+            "lift_pct": 0.5
+          },
+          "3": {
+            "fixed": 418,
+            "optimised": 424,
+            "extra": 7,
+            "lift_pct": 1.6
+          },
+          "5": {
+            "fixed": 774,
+            "optimised": 796,
+            "extra": 22,
+            "lift_pct": 2.8
+          },
+          "10": {
+            "fixed": 2048,
+            "optimised": 2175,
+            "extra": 126,
+            "lift_pct": 6.2
+          },
+          "20": {
+            "fixed": 7594,
+            "optimised": 8701,
+            "extra": 1107,
+            "lift_pct": 14.6
+          }
+        }
+      },
+      "Base case": {
+        "base_rate": 15.0,
+        "capture_rate": 45.0,
+        "opt_rate": 16.87,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 130,
+            "extra": 1,
+            "lift_pct": 0.9
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 464,
+            "extra": 13,
+            "lift_pct": 3.0
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 932,
+            "extra": 47,
+            "lift_pct": 5.3
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3087,
+            "extra": 335,
+            "lift_pct": 12.2
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 19574,
+            "extra": 4601,
+            "lift_pct": 30.7
+          }
+        }
+      },
+      "Optimistic": {
+        "base_rate": 15.0,
+        "capture_rate": 100.0,
+        "opt_rate": 19.16,
+        "projections": {
+          "1": {
+            "fixed": 129,
+            "optimised": 131,
+            "extra": 3,
+            "lift_pct": 2.0
+          },
+          "3": {
+            "fixed": 451,
+            "optimised": 481,
+            "extra": 30,
+            "lift_pct": 6.7
+          },
+          "5": {
+            "fixed": 886,
+            "optimised": 994,
+            "extra": 108,
+            "lift_pct": 12.2
+          },
+          "10": {
+            "fixed": 2752,
+            "optimised": 3564,
+            "extra": 812,
+            "lift_pct": 29.5
+          },
+          "20": {
+            "fixed": 14972,
+            "optimised": 27401,
+            "extra": 12428,
+            "lift_pct": 83.0
+          }
+        }
+      }
+    },
+    "show_optimistic": true,
+    "projection_note": "",
+    "regime_stats": {
+      "calm": {
+        "n_runs": 275,
+        "win_rate": 82.2,
+        "avg_saving": 0.902,
+        "pct_of_runs": 27.5
+      },
+      "normal": {
+        "n_runs": 334,
+        "win_rate": 74.9,
+        "avg_saving": 1.098,
+        "pct_of_runs": 33.4
+      },
+      "elevated": {
+        "n_runs": 318,
+        "win_rate": 68.6,
+        "avg_saving": 1.263,
+        "pct_of_runs": 31.8
+      },
+      "fear": {
+        "n_runs": 73,
+        "win_rate": 72.6,
+        "avg_saving": 1.892,
+        "pct_of_runs": 7.3
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "VEA",
+      "n_months": 190,
+      "win_rate_pct": 77.4,
+      "avg_saving_pct": 1.081,
+      "median_saving_pct": 1.001,
+      "avg_capture_rate": 88.7,
+      "best_month": 5.97,
+      "worst_month": -4.0
+    },
+    "ticker_meta": {
+      "name": "VEA",
+      "sector": "Unknown",
+      "type": "EQUITY",
+      "beta": 1.0
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 23rd, consider gold's flat move.",
+      "suggested_window": "days 21-24",
+      "action": "consider",
+      "key_factor": "model confidence"
+    },
+    "lgbm_rec": {
+      "ticker": "VEA",
+      "recommended_day": 23,
+      "confidence": 0.884,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        21,
+        24
+      ],
+      "predicted_saving": 0.009,
+      "day_scores": {
+        "20": 0.0078,
+        "21": 0.2542,
+        "22": 0.0713,
+        "23": 0.5984,
+        "24": 0.088
+      },
+      "current_day": 27,
+      "model_reliability": 0.883,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.5906
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 3.6,
+  "generated": "2026-04-30T01:02:21.613197",
+  "cached": false
+}
