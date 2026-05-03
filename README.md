@@ -216,6 +216,6 @@ Unknown tickers (not in the 491 precomputed) run the live pipeline on Streamlit 
 
 Built by Shashank Gandavarapu as a full-stack ML project combining quantitative finance, machine learning, and production deployment.
 
-- Portfolio: [your-portfolio-link]
-- LinkedIn: [your-linkedin]
-- GitHub: [your-github]
+- Portfolio: [https://myportfolio-ssg.vercel.app/]
+- LinkedIn: [https://www.linkedin.com/in/saishashankgandavarapu1500/]
+- GitHub: [[your-github](https://github.com/saishashankgandavarapu1500)]
