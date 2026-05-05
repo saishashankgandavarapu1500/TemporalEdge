@@ -691,7 +691,8 @@ def run_on_demand(
     horizon_years: int = 10,
     n_runs: int = 1000,
     force_retrain: bool = False,
-    progress_cb=None,   # callable(fraction: float, message: str)
+    progress_cb=None,           # callable(fraction: float, message: str)
+    skip_llm: bool = False,     # True = skip LLM advisory (faster, for precompute)
 ) -> dict:
     """
     Run the full pipeline for any ticker.
@@ -799,8 +800,13 @@ def run_on_demand(
             "summary": None,
         }
 
-    # Step 5: LLM advisory
-    llm_data = _get_llm_advisory(ticker, model_bundle, feat_df, progress_cb)
+    # Step 5: LLM advisory (skipped when skip_llm=True for faster precompute)
+    if skip_llm:
+        llm_data = {}
+        if progress_cb:
+            progress_cb(0.92, "Skipping LLM advisory (precompute mode)...")
+    else:
+        llm_data = _get_llm_advisory(ticker, model_bundle, feat_df, progress_cb)
 
     if progress_cb:
         progress_cb(0.95, "Assembling results...")

@@ -1,0 +1,310 @@
+{
+  "VOO": {
+    "significance": {
+      "ticker": "VOO",
+      "n_months": 152,
+      "n_wins": 125,
+      "win_rate_pct": 82.2,
+      "avg_saving_pct": 1.1187,
+      "std_saving_pct": 1.6959,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 8.132,
+      "sharpe_of_edge": 2.285,
+      "cohens_d": 0.66,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "VOO",
+      "total_years": 14,
+      "positive_years": 14,
+      "stability_pct": 100.0,
+      "stability_label": "STABLE",
+      "win_rate_std": 8.9,
+      "best_year": 2026,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2014,
+      "worst_year_win_rate": 66.7
+    }
+  },
+  "VTI": {
+    "significance": {
+      "ticker": "VTI",
+      "n_months": 225,
+      "n_wins": 176,
+      "win_rate_pct": 78.2,
+      "avg_saving_pct": 1.1611,
+      "std_saving_pct": 1.7899,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 9.73,
+      "sharpe_of_edge": 2.247,
+      "cohens_d": 0.649,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "VTI",
+      "total_years": 20,
+      "positive_years": 20,
+      "stability_pct": 100.0,
+      "stability_label": "STABLE",
+      "win_rate_std": 9.1,
+      "best_year": 2026,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2010,
+      "worst_year_win_rate": 66.7
+    }
+  },
+  "NVDA": {
+    "significance": {
+      "ticker": "NVDA",
+      "n_months": 225,
+      "n_wins": 166,
+      "win_rate_pct": 73.8,
+      "avg_saving_pct": 3.1019,
+      "std_saving_pct": 4.9067,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 9.483,
+      "sharpe_of_edge": 2.19,
+      "cohens_d": 0.632,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "NVDA",
+      "total_years": 20,
+      "positive_years": 20,
+      "stability_pct": 100.0,
+      "stability_label": "STABLE",
+      "win_rate_std": 9.1,
+      "best_year": 2012,
+      "best_year_win_rate": 91.7,
+      "worst_year": 2016,
+      "worst_year_win_rate": 58.3
+    }
+  },
+  "AAPL": {
+    "significance": {
+      "ticker": "AAPL",
+      "n_months": 225,
+      "n_wins": 174,
+      "win_rate_pct": 77.3,
+      "avg_saving_pct": 2.0515,
+      "std_saving_pct": 3.5269,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 8.725,
+      "sharpe_of_edge": 2.015,
+      "cohens_d": 0.582,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "AAPL",
+      "total_years": 20,
+      "positive_years": 19,
+      "stability_pct": 95.0,
+      "stability_label": "STABLE",
+      "win_rate_std": 14.3,
+      "best_year": 2007,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2026,
+      "worst_year_win_rate": 50.0
+    }
+  },
+  "SCHD": {
+    "significance": {
+      "ticker": "SCHD",
+      "n_months": 139,
+      "n_wins": 112,
+      "win_rate_pct": 80.6,
+      "avg_saving_pct": 1.0031,
+      "std_saving_pct": 1.8589,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 6.362,
+      "sharpe_of_edge": 1.869,
+      "cohens_d": 0.54,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "SCHD",
+      "total_years": 13,
+      "positive_years": 12,
+      "stability_pct": 92.3,
+      "stability_label": "STABLE",
+      "win_rate_std": 13.4,
+      "best_year": 2014,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2018,
+      "worst_year_win_rate": 50.0
+    }
+  },
+  "VXUS": {
+    "significance": {
+      "ticker": "VXUS",
+      "n_months": 148,
+      "n_wins": 104,
+      "win_rate_pct": 70.3,
+      "avg_saving_pct": 0.7983,
+      "std_saving_pct": 1.417,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 6.854,
+      "sharpe_of_edge": 1.952,
+      "cohens_d": 0.563,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "VXUS",
+      "total_years": 13,
+      "positive_years": 11,
+      "stability_pct": 84.6,
+      "stability_label": "STABLE",
+      "win_rate_std": 11.0,
+      "best_year": 2017,
+      "best_year_win_rate": 83.3,
+      "worst_year": 2018,
+      "worst_year_win_rate": 50.0
+    }
+  },
+  "TSLA": {
+    "significance": {
+      "ticker": "TSLA",
+      "n_months": 155,
+      "n_wins": 112,
+      "win_rate_pct": 72.3,
+      "avg_saving_pct": 2.2746,
+      "std_saving_pct": 7.0367,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 4.024,
+      "sharpe_of_edge": 1.12,
+      "cohens_d": 0.323,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "TSLA",
+      "total_years": 14,
+      "positive_years": 13,
+      "stability_pct": 92.9,
+      "stability_label": "STABLE",
+      "win_rate_std": 10.9,
+      "best_year": 2013,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2017,
+      "worst_year_win_rate": 50.0
+    }
+  },
+  "BND": {
+    "significance": {
+      "ticker": "BND",
+      "n_months": 193,
+      "n_wins": 144,
+      "win_rate_pct": 74.6,
+      "avg_saving_pct": 0.2571,
+      "std_saving_pct": 0.458,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 7.798,
+      "sharpe_of_edge": 1.945,
+      "cohens_d": 0.561,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "BND",
+      "total_years": 17,
+      "positive_years": 14,
+      "stability_pct": 82.4,
+      "stability_label": "STABLE",
+      "win_rate_std": 16.8,
+      "best_year": 2018,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2010,
+      "worst_year_win_rate": 44.4
+    }
+  },
+  "VYM": {
+    "significance": {
+      "ticker": "VYM",
+      "n_months": 198,
+      "n_wins": 155,
+      "win_rate_pct": 78.3,
+      "avg_saving_pct": 0.9568,
+      "std_saving_pct": 1.412,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 9.535,
+      "sharpe_of_edge": 2.347,
+      "cohens_d": 0.678,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "VYM",
+      "total_years": 17,
+      "positive_years": 17,
+      "stability_pct": 100.0,
+      "stability_label": "STABLE",
+      "win_rate_std": 11.5,
+      "best_year": 2026,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2024,
+      "worst_year_win_rate": 58.3
+    }
+  },
+  "VEA": {
+    "significance": {
+      "ticker": "VEA",
+      "n_months": 190,
+      "n_wins": 146,
+      "win_rate_pct": 76.8,
+      "avg_saving_pct": 1.1101,
+      "std_saving_pct": 1.4358,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 10.657,
+      "sharpe_of_edge": 2.678,
+      "cohens_d": 0.773,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "VEA",
+      "total_years": 17,
+      "positive_years": 16,
+      "stability_pct": 94.1,
+      "stability_label": "STABLE",
+      "win_rate_std": 14.0,
+      "best_year": 2012,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2018,
+      "worst_year_win_rate": 50.0
+    }
+  },
+  "VWO": {
+    "significance": {
+      "ticker": "VWO",
+      "n_months": 218,
+      "n_wins": 160,
+      "win_rate_pct": 73.4,
+      "avg_saving_pct": 1.2987,
+      "std_saving_pct": 1.8916,
+      "p_value_binomial": 0.0,
+      "p_value_ttest": 0.0,
+      "t_statistic": 10.137,
+      "sharpe_of_edge": 2.378,
+      "cohens_d": 0.687,
+      "significance": "HIGHLY SIGNIFICANT (p<0.01)"
+    },
+    "stability": {
+      "ticker": "VWO",
+      "total_years": 19,
+      "positive_years": 19,
+      "stability_pct": 100.0,
+      "stability_label": "STABLE",
+      "win_rate_std": 10.9,
+      "best_year": 2026,
+      "best_year_win_rate": 100.0,
+      "worst_year": 2010,
+      "worst_year_win_rate": 58.3
+    }
+  }
+}

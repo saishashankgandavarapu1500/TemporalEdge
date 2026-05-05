@@ -56,8 +56,9 @@ def get_active_portfolio() -> dict:
 # (render_simulator uses PORTFOLIO.get(ticker_input, {}))
 PORTFOLIO = _DEFAULT_PORTFOLIO
 
-CACHE_FILE = Path(__file__).parent.parent / "cache" / "execution_plan.json"  # dashboard/cache/
-RESULTS_FILE = Path(__file__).parent.parent.parent / "results" / "portfolio_simulation.json"
+CACHE_FILE       = Path(__file__).parent.parent / "cache" / "execution_plan.json"
+RESULTS_FILE     = Path(__file__).parent.parent.parent / "results" / "portfolio_simulation.json"
+PRECOMPUTED_DIR  = Path(__file__).parent.parent.parent / "data" / "precomputed"
 
 # Tickers whose model weights come from a proxy ticker (not their own training).
 # For these, we display "proxy (SOURCE)" instead of a confidence % on the card —
@@ -91,6 +92,45 @@ TIER_LABELS = {
 
 
 # ── Data loaders ──────────────────────────────────────────────────────────────
+
+def load_ondemand_result(ticker: str) -> dict | None:
+    """
+    Load cached result for a ticker. Priority order:
+    1. On-demand cache (fresh user run) — always preferred
+    2. Precomputed cache (Phase 8 batch run) — fallback
+    Returns None if neither exists.
+    """
+    from datetime import datetime, timedelta
+
+    def _valid(path: Path, max_days: int = 35) -> bool:
+        if not path.exists():
+            return False
+        age = datetime.now() - datetime.fromtimestamp(path.stat().st_mtime)
+        return age < timedelta(days=max_days)
+
+    # Check on-demand first (fresher, user-specific)
+    od_path = ONDEMAND_DIR / f"{ticker}_result.json"
+    if _valid(od_path):
+        try:
+            return json.loads(od_path.read_text())
+        except Exception:
+            pass
+
+    # Fallback to precomputed
+    pc_path = PRECOMPUTED_DIR / f"{ticker}_result.json"
+    if _valid(pc_path, max_days=35):
+        try:
+            return json.loads(pc_path.read_text())
+        except Exception:
+            pass
+
+    return None
+
+
+def is_cached(ticker: str) -> bool:
+    """True if a valid result exists in either cache."""
+    return load_ondemand_result(ticker) is not None
+
 
 def load_execution_plan():
     if CACHE_FILE.exists():

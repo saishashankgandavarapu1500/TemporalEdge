@@ -242,7 +242,7 @@ def download_fred_data(force_refresh: bool = False) -> pd.DataFrame:
 
     # FRED data is monthly/weekly — forward-fill to daily
     daily_idx = pd.date_range(start=macro.index.min(), end=datetime.today(), freq="B")
-    macro = macro.reindex(daily_idx).ffill()
+    macro = macro.reindex(daily_idx).ffill().shift(1)
     macro.index.name = "date"
 
     macro.to_parquet(cache_path)

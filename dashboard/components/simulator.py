@@ -3,12 +3,29 @@ TemporalEdge — Simulator tab renderer.
 """
 import sys
 import time
+import threading
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
 from .utils import get_active_portfolio, load_execution_plan, load_simulation_results, MODEL_PROXY, PLOTLY_LAYOUT, AXIS_DEFAULTS, TIER_COLORS, TIER_LABELS
+
+def _render_advisory(placeholder, advisory: str, key_factor: str, action: str):
+    """Render the LLM advisory block into a placeholder."""
+    action_colors = {"act": "#2DB37A", "consider": "#E8A020", "skip": "#6B7280"}
+    color = action_colors.get(action, "#9AA0B4")
+    kf_html = (f'<span style="font-family:var(--mono);font-size:0.68rem;'
+               f'color:#5C6378;background:#252A38;padding:2px 7px;'
+               f'border-radius:3px;margin-left:0.5rem;">↳ {key_factor}</span>'
+               if key_factor else "")
+    placeholder.markdown(f"""
+    <div style="font-size:0.82rem;color:#9AA0B4;line-height:1.6;
+                border-top:1px solid #252A38;padding-top:0.6rem;margin-top:0.4rem;">
+        {advisory}{kf_html}
+    </div>
+    """, unsafe_allow_html=True)
+
 
 def render_simulator():
     st.markdown('<div class="section-label">portfolio simulator</div>', unsafe_allow_html=True)
@@ -28,19 +45,49 @@ def render_simulator():
         horizon = st.slider("Years", min_value=1, max_value=30, value=10)
 
     is_portfolio = ticker_input in get_active_portfolio()
-    run_label    = "▶  Run Simulation" if is_portfolio else f"▶  Download + Train + Simulate {ticker_input}"
-    run_sim      = st.button(run_label)
+
+    # Check if ticker is in precomputed S&P 500 results
+    from .utils import PRECOMPUTED_DIR
+    _precomputed_tickers = {
+        f.stem.replace("_result", "")
+        for f in PRECOMPUTED_DIR.glob("*_result.json")
+    }
+    is_precomputed = ticker_input in _precomputed_tickers
+
+    # Gate: unknown tickers need explicit user consent before live training
+    _needs_live    = not is_portfolio and not is_precomputed
+    _live_approved = st.session_state.get(f"live_approved_{ticker_input}", False)
+
+    if _needs_live and not _live_approved:
+        st.warning(f"**{ticker_input}** is not in our analysed database.")
+        st.caption("Live analysis requires downloading data and training a model (~3-5 min first time, then cached for 30 days).")
+        if st.button(f"🔬 Run Live Analysis for {ticker_input}"):
+            st.session_state[f"live_approved_{ticker_input}"] = True
+            st.rerun()
+        return
+
+    run_label = "▶  Run Simulation" if is_portfolio else f"▶  Run Simulation for {ticker_input}"
+    run_sim   = st.button(run_label)
 
     if not is_portfolio and ticker_input:
-        st.markdown(f"""
-        <div style="background:rgba(77,158,245,0.07);border:1px solid rgba(77,158,245,0.2);
-                    border-radius:6px;padding:0.65rem 1rem;margin-bottom:0.75rem;
-                    font-size:0.78rem;color:#4D9EF5;font-family:var(--mono)">
-            {ticker_input} is not in your portfolio.
-            Running will: download history → build 121 features → train LightGBM
-            → 1,000 Monte Carlo runs → LLM advisory. ~1-3 min first time, cached after.
-        </div>
-        """, unsafe_allow_html=True)
+        if _needs_live:
+            st.markdown(f"""
+            <div style="background:rgba(77,158,245,0.07);border:1px solid rgba(77,158,245,0.2);
+                        border-radius:6px;padding:0.65rem 1rem;margin-bottom:0.75rem;
+                        font-size:0.78rem;color:#4D9EF5;font-family:var(--mono)">
+                {ticker_input} is not in your portfolio.
+                Running will: download history → build 121 features → train LightGBM
+                → 1,000 Monte Carlo runs → LLM advisory. ~1-3 min first time, cached after.
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown(f"""
+            <div style="background:rgba(45,179,122,0.07);border:1px solid rgba(45,179,122,0.2);
+                        border-radius:6px;padding:0.65rem 1rem;margin-bottom:0.75rem;
+                        font-size:0.78rem;color:#2DB37A;font-family:var(--mono)">
+                {ticker_input} is pre-analysed — results load instantly from cache.
+            </div>
+            """, unsafe_allow_html=True)
 
     # Check portfolio cache first
     sim_results  = load_simulation_results()
@@ -76,31 +123,51 @@ def render_simulator():
                         st.error(f"Simulation failed: {e}")
                         return
             else:
-                # Full on-demand pipeline with progress bar
-                progress_bar = st.progress(0)
-                status_text  = st.empty()
+                # Full on-demand pipeline — session_state prevents rerun kills
+                _rkey = f"od_result_{ticker_input}"
+                _running = f"od_running_{ticker_input}"
 
-                def update_progress(fraction: float, message: str):
-                    progress_bar.progress(min(fraction, 1.0))
-                    status_text.markdown(
-                        f'<div style="font-family:var(--mono);font-size:0.75rem;'
-                        f'color:#9AA0B4">{message}</div>',
-                        unsafe_allow_html=True,
-                    )
+                if not st.session_state.get(_running, False):
+                    st.session_state[_running] = True
+                    st.session_state.pop(_rkey, None)
 
-                try:
-                    from src.pipeline.on_demand import run_on_demand
-                    result = run_on_demand(
-                        ticker_input,
-                        monthly_usd=float(monthly_usd),
-                        horizon_years=horizon,
-                        n_runs=1000,
-                        progress_cb=update_progress,
-                    )
-                    progress_bar.progress(1.0)
-                    status_text.empty()
-                except Exception as e:
-                    st.error(f"Pipeline failed: {e}")
+                    progress_bar = st.progress(0)
+                    status_text  = st.empty()
+
+                    def update_progress(fraction: float, message: str):
+                        try:
+                            progress_bar.progress(min(fraction, 1.0))
+                            status_text.markdown(
+                                f'<div style="font-family:var(--mono);font-size:0.75rem;'
+                                f'color:#9AA0B4">{message}</div>',
+                                unsafe_allow_html=True,
+                            )
+                        except Exception:
+                            pass
+
+                    try:
+                        from src.pipeline.on_demand import run_on_demand
+                        _res = run_on_demand(
+                            ticker_input,
+                            monthly_usd=float(monthly_usd),
+                            horizon_years=horizon,
+                            n_runs=1000,
+                            progress_cb=update_progress,
+                        )
+                        st.session_state[_rkey] = _res
+                        progress_bar.progress(1.0)
+                        status_text.empty()
+                    except Exception as e:
+                        st.session_state[_running] = False
+                        st.error(f"Pipeline failed: {e}")
+                        return
+                    finally:
+                        st.session_state[_running] = False
+
+                if _rkey in st.session_state:
+                    result = st.session_state[_rkey]
+                else:
+                    st.info("Pipeline running — please wait...")
                     return
 
         if result is None:
@@ -282,7 +349,7 @@ def render_simulator():
                 yaxis=dict(**AXIS_DEFAULTS, tickprefix="$", tickformat=",.0f"),
                 height=300,
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
         with col_right:
             # Regime breakdown
@@ -312,7 +379,62 @@ def render_simulator():
                                   gridcolor="#252A38", linecolor="#252A38", showgrid=True)
                 fig2.update_yaxes(title_text="Avg saving %", secondary_y=True,
                                   gridcolor="rgba(0,0,0,0)", showgrid=False)
-                st.plotly_chart(fig2, use_container_width=True)
+                st.plotly_chart(fig2)
+
+        # ── LLM Advisory — async, shows after MC results ─────────────
+        advisory_text = result.get("advisory", "")
+        key_factor    = result.get("key_factor", "")
+        llm_action    = result.get("llm_action", "consider")
+
+        adv_placeholder = st.empty()
+
+        if advisory_text:
+            # Advisory already in cache — show immediately
+            _render_advisory(adv_placeholder, advisory_text, key_factor, llm_action)
+        else:
+            # No advisory yet — fetch async so MC results show first
+            _llm_key = f"llm_{ticker_input}"
+
+            if _llm_key not in st.session_state:
+                st.session_state[_llm_key] = {"status": "running", "result": None}
+
+                def _fetch_llm():
+                    try:
+                        from src.llm.groq_advisor import (
+                            build_macro_context, build_ticker_context, generate_advisory
+                        )
+                        macro_ctx  = build_macro_context()
+                        ticker_ctx = build_ticker_context(ticker_input)
+                        adv = generate_advisory(
+                            ticker_input,
+                            result.get("lgbm_recommendation", {}),
+                            macro_ctx,
+                            ticker_ctx,
+                        )
+                        st.session_state[_llm_key] = {"status": "done", "result": adv}
+                    except Exception as e:
+                        st.session_state[_llm_key] = {
+                            "status": "error",
+                            "result": {"advisory": f"LLM unavailable ({e})",
+                                       "key_factor": "model signal only",
+                                       "action": "consider"}
+                        }
+
+                t = threading.Thread(target=_fetch_llm, daemon=True)
+                t.start()
+
+            llm_state = st.session_state.get(_llm_key, {})
+            if llm_state.get("status") == "done" and llm_state.get("result"):
+                adv = llm_state["result"]
+                _render_advisory(adv_placeholder, adv.get("advisory",""),
+                                 adv.get("key_factor",""), adv.get("action","consider"))
+            else:
+                adv_placeholder.markdown("""
+                <div style="font-family:var(--mono);font-size:0.72rem;color:#5C6378;
+                            padding:0.5rem 0;border-top:1px solid #252A38;margin-top:0.5rem;">
+                    ⟳ Fetching LLM advisory context…
+                </div>
+                """, unsafe_allow_html=True)
 
         # ── Projection table — tier-aware scenarios ───────────────────
         if proj_scenarios:
@@ -340,7 +462,7 @@ def render_simulator():
                 rows.append(row)
 
             df_proj = pd.DataFrame(rows)
-            st.dataframe(df_proj, use_container_width=True, hide_index=True)
+            st.dataframe(df_proj, hide_index=True)
 
         elif proj:
             # Fallback for portfolio tickers using old format
@@ -357,7 +479,7 @@ def render_simulator():
                     "Lift": f"+{extra/max(p_data.get('fixed',1),1)*100:.1f}%",
                 })
             df_proj = pd.DataFrame(rows)
-            st.dataframe(df_proj, use_container_width=True, hide_index=True)
+            st.dataframe(df_proj, hide_index=True)
 
 
 # ── Page 3: Historical Evidence ───────────────────────────────────────────────

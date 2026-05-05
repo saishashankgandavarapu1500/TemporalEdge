@@ -46,7 +46,7 @@ def render_evidence():
         })
 
     df = pd.DataFrame(rows)
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, hide_index=True)
 
     # ── Phase 3 vs Phase 4 consistency chart ──────────────────────────────
     st.markdown('<div class="section-label">phase 3 vs phase 4 consistency — key reliability test</div>',
@@ -71,7 +71,7 @@ def render_evidence():
         yaxis=dict(**AXIS_DEFAULTS, title="Δ percentage points"),
         height=320,
     )
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3)
 
     # ── 3-scenario compounding chart ──────────────────────────────────────
     st.markdown('<div class="section-label">20-year compounding — 3 scenarios ($55/month)</div>',
@@ -111,7 +111,7 @@ def render_evidence():
         x=months/12, y=fv_b, name="Fixed day 27 (15%)",
         line=dict(color="#3A3F52", width=1.5, dash="dash"),
     ))
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────

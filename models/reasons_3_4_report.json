@@ -1,0 +1,435 @@
+{
+  "regime_dependence": {
+    "VOO": {
+      "calm": {
+        "n": 59,
+        "win_rate": 79.7,
+        "avg_saving": 0.7973,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 55,
+        "win_rate": 80.0,
+        "avg_saving": 1.018,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 32,
+        "win_rate": 87.5,
+        "avg_saving": 1.6484,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 6,
+        "win_rate": 100.0,
+        "avg_saving": 2.3763,
+        "p_value": 0.0156,
+        "significant": "True"
+      }
+    },
+    "VTI": {
+      "calm": {
+        "n": 65,
+        "win_rate": 78.5,
+        "avg_saving": 0.6734,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 77,
+        "win_rate": 74.0,
+        "avg_saving": 0.8926,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 63,
+        "win_rate": 82.5,
+        "avg_saving": 1.5219,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 20,
+        "win_rate": 80.0,
+        "avg_saving": 2.6431,
+        "p_value": 0.0059,
+        "significant": "True"
+      }
+    },
+    "NVDA": {
+      "calm": {
+        "n": 65,
+        "win_rate": 67.7,
+        "avg_saving": 1.4537,
+        "p_value": 0.003,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 77,
+        "win_rate": 79.2,
+        "avg_saving": 3.3718,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 63,
+        "win_rate": 71.4,
+        "avg_saving": 3.7815,
+        "p_value": 0.0004,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 20,
+        "win_rate": 80.0,
+        "avg_saving": 5.279,
+        "p_value": 0.0059,
+        "significant": "True"
+      }
+    },
+    "AAPL": {
+      "calm": {
+        "n": 65,
+        "win_rate": 75.4,
+        "avg_saving": 1.5515,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 77,
+        "win_rate": 79.2,
+        "avg_saving": 1.9682,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 63,
+        "win_rate": 76.2,
+        "avg_saving": 2.3762,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 20,
+        "win_rate": 80.0,
+        "avg_saving": 2.9746,
+        "p_value": 0.0059,
+        "significant": "True"
+      }
+    },
+    "SCHD": {
+      "calm": {
+        "n": 48,
+        "win_rate": 79.2,
+        "avg_saving": 0.569,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 53,
+        "win_rate": 81.1,
+        "avg_saving": 1.1229,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 32,
+        "win_rate": 81.2,
+        "avg_saving": 1.3167,
+        "p_value": 0.0003,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 6,
+        "win_rate": 83.3,
+        "avg_saving": 1.745,
+        "p_value": 0.1094,
+        "significant": "False"
+      }
+    },
+    "VXUS": {
+      "calm": {
+        "n": 56,
+        "win_rate": 66.1,
+        "avg_saving": 0.5411,
+        "p_value": 0.0111,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 54,
+        "win_rate": 66.7,
+        "avg_saving": 0.7686,
+        "p_value": 0.0099,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 32,
+        "win_rate": 78.1,
+        "avg_saving": 1.079,
+        "p_value": 0.0011,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 6,
+        "win_rate": 100.0,
+        "avg_saving": 1.9679,
+        "p_value": 0.0156,
+        "significant": "True"
+      }
+    },
+    "TSLA": {
+      "calm": {
+        "n": 61,
+        "win_rate": 67.2,
+        "avg_saving": 2.1148,
+        "p_value": 0.0049,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 56,
+        "win_rate": 75.0,
+        "avg_saving": 2.156,
+        "p_value": 0.0001,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 32,
+        "win_rate": 71.9,
+        "avg_saving": 2.0138,
+        "p_value": 0.01,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 6,
+        "win_rate": 100.0,
+        "avg_saving": 6.3972,
+        "p_value": 0.0156,
+        "significant": "True"
+      }
+    },
+    "BND": {
+      "calm": {
+        "n": 65,
+        "win_rate": 84.6,
+        "avg_saving": 0.2729,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 74,
+        "win_rate": 75.7,
+        "avg_saving": 0.2459,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 43,
+        "win_rate": 55.8,
+        "avg_saving": 0.2338,
+        "p_value": 0.2712,
+        "significant": "False"
+      },
+      "fear": {
+        "n": 11,
+        "win_rate": 81.8,
+        "avg_saving": 0.33,
+        "p_value": 0.0327,
+        "significant": "True"
+      }
+    },
+    "VYM": {
+      "calm": {
+        "n": 65,
+        "win_rate": 67.7,
+        "avg_saving": 0.5955,
+        "p_value": 0.003,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 74,
+        "win_rate": 79.7,
+        "avg_saving": 0.8239,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 48,
+        "win_rate": 87.5,
+        "avg_saving": 1.3788,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 11,
+        "win_rate": 90.9,
+        "avg_saving": 2.1436,
+        "p_value": 0.0059,
+        "significant": "True"
+      }
+    },
+    "VEA": {
+      "calm": {
+        "n": 65,
+        "win_rate": 69.2,
+        "avg_saving": 0.6872,
+        "p_value": 0.0013,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 72,
+        "win_rate": 77.8,
+        "avg_saving": 1.061,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 43,
+        "win_rate": 83.7,
+        "avg_saving": 1.4389,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 10,
+        "win_rate": 90.0,
+        "avg_saving": 2.7977,
+        "p_value": 0.0107,
+        "significant": "True"
+      }
+    },
+    "VWO": {
+      "calm": {
+        "n": 65,
+        "win_rate": 70.8,
+        "avg_saving": 1.1005,
+        "p_value": 0.0005,
+        "significant": "True"
+      },
+      "normal": {
+        "n": 75,
+        "win_rate": 73.3,
+        "avg_saving": 1.2145,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "elevated": {
+        "n": 58,
+        "win_rate": 75.9,
+        "avg_saving": 1.4113,
+        "p_value": 0.0001,
+        "significant": "True"
+      },
+      "fear": {
+        "n": 20,
+        "win_rate": 75.0,
+        "avg_saving": 1.9322,
+        "p_value": 0.0207,
+        "significant": "True"
+      }
+    }
+  },
+  "sharpe_analysis": {
+    "VOO": {
+      "avg_saving_pct": 1.1187,
+      "sharpe": 2.285,
+      "dollar_per_month": 1.119,
+      "dollar_per_year": 13.42,
+      "net_after_cost_pct": 1.0187,
+      "survives_costs": "True",
+      "20yr_compounded_value": 614.0
+    },
+    "VTI": {
+      "avg_saving_pct": 1.1611,
+      "sharpe": 2.247,
+      "dollar_per_month": 1.161,
+      "dollar_per_year": 13.93,
+      "net_after_cost_pct": 1.0611,
+      "survives_costs": "True",
+      "20yr_compounded_value": 638.0
+    },
+    "NVDA": {
+      "avg_saving_pct": 3.1019,
+      "sharpe": 2.19,
+      "dollar_per_month": 3.102,
+      "dollar_per_year": 37.22,
+      "net_after_cost_pct": 3.0019,
+      "survives_costs": "True",
+      "20yr_compounded_value": 1703.0
+    },
+    "AAPL": {
+      "avg_saving_pct": 2.0515,
+      "sharpe": 2.015,
+      "dollar_per_month": 2.052,
+      "dollar_per_year": 24.62,
+      "net_after_cost_pct": 1.9515,
+      "survives_costs": "True",
+      "20yr_compounded_value": 1127.0
+    },
+    "SCHD": {
+      "avg_saving_pct": 1.0031,
+      "sharpe": 1.869,
+      "dollar_per_month": 1.003,
+      "dollar_per_year": 12.04,
+      "net_after_cost_pct": 0.9031,
+      "survives_costs": "True",
+      "20yr_compounded_value": 551.0
+    },
+    "VXUS": {
+      "avg_saving_pct": 0.7983,
+      "sharpe": 1.952,
+      "dollar_per_month": 0.798,
+      "dollar_per_year": 9.58,
+      "net_after_cost_pct": 0.6983,
+      "survives_costs": "True",
+      "20yr_compounded_value": 438.0
+    },
+    "TSLA": {
+      "avg_saving_pct": 2.2746,
+      "sharpe": 1.12,
+      "dollar_per_month": 2.275,
+      "dollar_per_year": 27.3,
+      "net_after_cost_pct": 2.1746,
+      "survives_costs": "True",
+      "20yr_compounded_value": 1249.0
+    },
+    "BND": {
+      "avg_saving_pct": 0.2571,
+      "sharpe": 1.945,
+      "dollar_per_month": 0.257,
+      "dollar_per_year": 3.09,
+      "net_after_cost_pct": 0.1571,
+      "survives_costs": "True",
+      "20yr_compounded_value": 141.0
+    },
+    "VYM": {
+      "avg_saving_pct": 0.9568,
+      "sharpe": 2.347,
+      "dollar_per_month": 0.957,
+      "dollar_per_year": 11.48,
+      "net_after_cost_pct": 0.8568,
+      "survives_costs": "True",
+      "20yr_compounded_value": 525.0
+    },
+    "VEA": {
+      "avg_saving_pct": 1.1101,
+      "sharpe": 2.678,
+      "dollar_per_month": 1.11,
+      "dollar_per_year": 13.32,
+      "net_after_cost_pct": 1.0101,
+      "survives_costs": "True",
+      "20yr_compounded_value": 610.0
+    },
+    "VWO": {
+      "avg_saving_pct": 1.2987,
+      "sharpe": 2.378,
+      "dollar_per_month": 1.299,
+      "dollar_per_year": 15.58,
+      "net_after_cost_pct": 1.1987,
+      "survives_costs": "True",
+      "20yr_compounded_value": 713.0
+    }
+  }
+}
