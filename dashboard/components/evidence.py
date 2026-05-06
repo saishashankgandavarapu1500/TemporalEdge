@@ -63,37 +63,40 @@ No bullet points. Conversational. Grounded.""",
 
     prompt = prompts.get(section_key, "Explain this chart in plain English.")
 
-    # Get API key from Streamlit secrets or environment
+    # Use Groq — same as the rest of the pipeline
     import os
     api_key = ""
     try:
-        api_key = st.secrets.get("ANTHROPIC_API_KEY", "")
+        api_key = st.secrets.get("GROQ_API_KEY", "")
     except Exception:
         pass
     if not api_key:
-        api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+        api_key = os.environ.get("GROQ_API_KEY", "")
     if not api_key:
-        return "Add ANTHROPIC_API_KEY to Streamlit secrets or environment variables."
+        return "Add GROQ_API_KEY to Streamlit secrets or environment variables."
 
     try:
         response = requests.post(
-            "https://api.anthropic.com/v1/messages",
+            "https://api.groq.com/openai/v1/chat/completions",
             headers={
                 "Content-Type": "application/json",
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
+                "Authorization": f"Bearer {api_key}",
             },
             json={
-                "model": "claude-haiku-4-5-20251001",
+                "model": "llama3-8b-8192",
                 "max_tokens": 300,
-                "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.4,
+                "messages": [
+                    {"role": "system", "content": "You are a helpful financial educator explaining investment data to retail investors in plain English. Be concise, honest, and avoid hype."},
+                    {"role": "user", "content": prompt},
+                ],
             },
             timeout=20,
         )
         if response.status_code != 200:
             return f"API error {response.status_code}: {response.text[:150]}"
         data = response.json()
-        text = data["content"][0]["text"].strip()
+        text = data["choices"][0]["message"]["content"].strip()
         st.session_state[cache_key] = text
         return text
     except Exception as e:
