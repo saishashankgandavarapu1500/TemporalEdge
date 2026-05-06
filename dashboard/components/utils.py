@@ -59,6 +59,7 @@ PORTFOLIO = _DEFAULT_PORTFOLIO
 CACHE_FILE       = Path(__file__).parent.parent / "cache" / "execution_plan.json"
 RESULTS_FILE     = Path(__file__).parent.parent.parent / "results" / "portfolio_simulation.json"
 PRECOMPUTED_DIR  = Path(__file__).parent.parent.parent / "data" / "precomputed"
+ONDEMAND_DIR     = Path(__file__).parent.parent / "cache" / "on_demand"
 
 # Tickers whose model weights come from a proxy ticker (not their own training).
 # For these, we display "proxy (SOURCE)" instead of a confidence % on the card —
@@ -116,9 +117,9 @@ def load_ondemand_result(ticker: str) -> dict | None:
         except Exception:
             pass
 
-    # Fallback to precomputed
+    # Fallback to precomputed — these never expire, ignore age
     pc_path = PRECOMPUTED_DIR / f"{ticker}_result.json"
-    if _valid(pc_path, max_days=35):
+    if pc_path.exists():
         try:
             return json.loads(pc_path.read_text())
         except Exception:
