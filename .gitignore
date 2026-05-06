@@ -24,7 +24,6 @@ data/raw/
 data/features/
 data/macro/
 data/cache/
-data/precomputed/
 
 # ── ML artefacts ─────────────────────────────────────────────────────────────
 # PKL files ARE committed (2-3MB each, 61MB total — fine for GitHub)
