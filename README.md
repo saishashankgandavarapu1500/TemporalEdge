@@ -312,4 +312,4 @@ Built by Shashank Gandavarapu as a full-stack ML project combining quantitative 
 
 - Portfolio: [https://myportfolio-ssg.vercel.app/]
 - LinkedIn: [https://www.linkedin.com/in/saishashankgandavarapu1500/]
-- GitHub: [[your-github](https://github.com/saishashankgandavarapu1500)]
+- GitHub: [(https://github.com/saishashankgandavarapu1500)]
