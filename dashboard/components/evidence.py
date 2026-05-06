@@ -6,7 +6,103 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
+import requests
 from .utils import get_active_portfolio, load_simulation_results, PLOTLY_LAYOUT, AXIS_DEFAULTS, TIER_COLORS
+
+
+# ── AI Explanation helper ─────────────────────────────────────────────────────
+
+def _ai_explanation(section_key: str, context: dict) -> str:
+    """
+    Call Claude via Anthropic API to generate a plain-English explanation
+    of the evidence section. Results cached in session_state.
+    """
+    cache_key = f"evidence_ai_{section_key}"
+    if cache_key in st.session_state:
+        return st.session_state[cache_key]
+
+    prompts = {
+        "summary_table": f"""You are explaining a DCA timing model to a retail investor.
+Here is the backtest summary data:
+- Average win rate (model beats fixed day 27): {context.get('avg_win', 0):.1f}%
+- Average monthly saving: {context.get('avg_save', 0):+.3f}%
+- Tickers with Tier A (high trust): {context.get('tier_a', [])}
+- Tickers with Tier B (moderate trust): {context.get('tier_b', [])}
+
+Write 3–4 sentences in plain English explaining:
+1. What the win rate means in practice
+2. What the average saving means in dollar terms for someone investing $100/month
+3. Why some tickers have higher trust than others
+Be honest about uncertainty. No bullet points. Conversational tone.""",
+
+        "consistency": f"""You are explaining a model reliability check to a retail investor.
+The chart shows how consistent the model's win rate is between two independent validation phases.
+- Tickers within ±5pp (consistent): {context.get('consistent', [])}
+- Tickers with larger delta: {context.get('inconsistent', [])}
+- Average delta across all tickers: {context.get('avg_delta', 0):+.1f} percentage points
+
+Write 3–4 sentences explaining:
+1. Why consistency between phases matters (overfitting risk)
+2. What it means when two independent tests agree
+3. What the user should take away from this chart
+No bullet points. Plain English. Honest about what this does and doesn't prove.""",
+
+        "compounding": f"""You are explaining long-term compounding to a retail investor.
+The chart shows 20-year wealth projections for $55/month invested.
+- Average monthly saving from model timing: {context.get('avg_save', 0):+.3f}%
+- Conservative scenario annual return: 10%
+- Base case annual return: 15%
+- Optimistic scenario annual return: higher with full timing capture
+
+Write 3–4 sentences explaining:
+1. Why even a small monthly edge compounds to meaningful wealth
+2. What the gap between model-timed and fixed day 27 represents in dollars
+3. The honest caveat — this is a projection, not a guarantee
+No bullet points. Conversational. Grounded.""",
+    }
+
+    prompt = prompts.get(section_key, "Explain this chart in plain English.")
+
+    try:
+        response = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={"Content-Type": "application/json"},
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 1000,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=15,
+        )
+        data = response.json()
+        text = data["content"][0]["text"].strip()
+        st.session_state[cache_key] = text
+        return text
+    except Exception:
+        return ""
+
+
+def _render_ai_panel(section_key: str, context: dict, label: str = "🤖 AI Explanation"):
+    """Render an expandable AI explanation panel below a chart."""
+    with st.expander(label, expanded=False):
+        with st.spinner("Generating explanation..."):
+            explanation = _ai_explanation(section_key, context)
+        if explanation:
+            st.markdown(
+                f"""<div style="
+                    background: rgba(77,158,245,0.06);
+                    border-left: 3px solid #4D9EF5;
+                    border-radius: 0 6px 6px 0;
+                    padding: 0.85rem 1.1rem;
+                    font-size: 0.83rem;
+                    line-height: 1.65;
+                    color: #C8CEDB;
+                    font-family: var(--font-body, sans-serif);
+                ">{explanation}</div>""",
+                unsafe_allow_html=True,
+            )
+        else:
+            st.caption("AI explanation unavailable — check API connection.")
 
 def render_evidence():
     st.markdown('<div class="section-label">historical evidence — walk-forward backtest + monte carlo</div>',
@@ -48,6 +144,17 @@ def render_evidence():
     df = pd.DataFrame(rows)
     st.dataframe(df, hide_index=True)
 
+    # AI explanation for summary table
+    tier_a = [r["Ticker"] for r in rows if r["Tier"] == "A"]
+    tier_b = [r["Ticker"] for r in rows if r["Tier"] == "B"]
+    avg_win  = np.mean([sim[t]["summary"].get("win_rate_pct", 0) for t in sim])
+    avg_save = np.mean([sim[t]["summary"].get("avg_saving_pct", 0) for t in sim])
+    _render_ai_panel(
+        "summary_table",
+        {"avg_win": avg_win, "avg_save": avg_save, "tier_a": tier_a, "tier_b": tier_b},
+        "🤖 What does this table mean?",
+    )
+
     # ── Phase 3 vs Phase 4 consistency chart ──────────────────────────────
     st.markdown('<div class="section-label">phase 3 vs phase 4 consistency — key reliability test</div>',
                 unsafe_allow_html=True)
@@ -72,6 +179,16 @@ def render_evidence():
         height=320,
     )
     st.plotly_chart(fig3)
+
+    # AI explanation for consistency chart
+    consistent   = [t for t, d in zip(tickers, deltas) if abs(d) <= 5]
+    inconsistent = [t for t, d in zip(tickers, deltas) if abs(d) > 5]
+    avg_delta    = np.mean(deltas)
+    _render_ai_panel(
+        "consistency",
+        {"consistent": consistent, "inconsistent": inconsistent, "avg_delta": avg_delta},
+        "🤖 Why does this consistency check matter?",
+    )
 
     # ── 3-scenario compounding chart ──────────────────────────────────────
     st.markdown('<div class="section-label">20-year compounding — 3 scenarios ($55/month)</div>',
@@ -112,6 +229,13 @@ def render_evidence():
         line=dict(color="#3A3F52", width=1.5, dash="dash"),
     ))
     st.plotly_chart(fig4)
+
+    # AI explanation for compounding chart
+    _render_ai_panel(
+        "compounding",
+        {"avg_save": avg_save},
+        "🤖 What does this compounding chart mean for me?",
+    )
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
