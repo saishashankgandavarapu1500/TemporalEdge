@@ -63,23 +63,41 @@ No bullet points. Conversational. Grounded.""",
 
     prompt = prompts.get(section_key, "Explain this chart in plain English.")
 
+    # Get API key from Streamlit secrets or environment
+    import os
+    api_key = ""
+    try:
+        api_key = st.secrets.get("ANTHROPIC_API_KEY", "")
+    except Exception:
+        pass
+    if not api_key:
+        api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        return "Add ANTHROPIC_API_KEY to Streamlit secrets or environment variables."
+
     try:
         response = requests.post(
             "https://api.anthropic.com/v1/messages",
-            headers={"Content-Type": "application/json"},
+            headers={
+                "Content-Type": "application/json",
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+            },
             json={
-                "model": "claude-sonnet-4-20250514",
-                "max_tokens": 1000,
+                "model": "claude-haiku-4-5-20251001",
+                "max_tokens": 300,
                 "messages": [{"role": "user", "content": prompt}],
             },
-            timeout=15,
+            timeout=20,
         )
+        if response.status_code != 200:
+            return f"API error {response.status_code}: {response.text[:150]}"
         data = response.json()
         text = data["content"][0]["text"].strip()
         st.session_state[cache_key] = text
         return text
-    except Exception:
-        return ""
+    except Exception as e:
+        return f"Connection error: {str(e)[:100]}"
 
 
 def _render_ai_panel(section_key: str, context: dict, label: str = "🤖 AI Explanation"):
