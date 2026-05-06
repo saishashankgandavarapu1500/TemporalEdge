@@ -58,3 +58,7 @@ Thumbs.db
 
 # ── On-demand cache — large, rebuilt on first user request ───────────────────
 dashboard/cache/on_demand/
+models/*.pkl
+models/*.csv
+models/robustness_report.json
+models/reasons_3_4_report.json
