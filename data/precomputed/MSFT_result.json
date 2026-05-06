@@ -1,0 +1,132 @@
+{
+  "ticker": "MSFT",
+  "summary": {
+    "ticker": "MSFT",
+    "monthly_usd": 50.0,
+    "n_runs": 1000,
+    "tier": "B",
+    "win_rate_pct": 67.8,
+    "avg_saving_pct": 1.361,
+    "median_saving_pct": 0.915,
+    "percentiles": {
+      "p10": -1.345,
+      "p25": 0.0,
+      "p50": 0.915,
+      "p75": 2.591,
+      "p90": 4.456
+    },
+    "avg_dollar_per_month": 0.6805,
+    "avg_dollar_per_year": 8.17,
+    "opt_rate_pct": 17.2,
+    "projections": {
+      "1": {
+        "fixed": 643,
+        "optimised": 650,
+        "extra": 7
+      },
+      "3": {
+        "fixed": 2256,
+        "optimised": 2335,
+        "extra": 79
+      },
+      "5": {
+        "fixed": 4429,
+        "optimised": 4706,
+        "extra": 277
+      },
+      "10": {
+        "fixed": 13761,
+        "optimised": 15761,
+        "extra": 2000
+      },
+      "20": {
+        "fixed": 74862,
+        "optimised": 102749,
+        "extra": 27887
+      }
+    },
+    "regime_stats": {
+      "calm": {
+        "n_runs": 279,
+        "win_rate": 73.1,
+        "avg_saving": 1.256,
+        "pct_of_runs": 27.9
+      },
+      "normal": {
+        "n_runs": 340,
+        "win_rate": 67.1,
+        "avg_saving": 1.21,
+        "pct_of_runs": 34.0
+      },
+      "elevated": {
+        "n_runs": 305,
+        "win_rate": 67.2,
+        "avg_saving": 1.863,
+        "pct_of_runs": 30.5
+      },
+      "fear": {
+        "n_runs": 76,
+        "win_rate": 53.9,
+        "avg_saving": 0.407,
+        "pct_of_runs": 7.6
+      }
+    },
+    "confidence_stats": {},
+    "backtest": {
+      "ticker": "MSFT",
+      "n_months": 225,
+      "win_rate_pct": 76.4,
+      "avg_saving_pct": 1.778,
+      "median_saving_pct": 1.479,
+      "avg_capture_rate": -144.2,
+      "best_month": 10.66,
+      "worst_month": -12.9
+    },
+    "ticker_meta": {
+      "rows": 6616,
+      "start": "2000-01-03",
+      "end": "2026-04-23",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
+      "type": "EQUITY",
+      "beta": 1.107
+    },
+    "is_portfolio_ticker": false,
+    "is_proxy_data": false,
+    "llm_advisory": {
+      "advisory": "Model recommends 23rd, considering VIX and gold.",
+      "suggested_window": "days 20-23",
+      "action": "consider",
+      "key_factor": "VIX increase"
+    },
+    "lgbm_rec": {
+      "ticker": "MSFT",
+      "recommended_day": 23,
+      "confidence": 0.75,
+      "vix_level": 19.1,
+      "vix_regime": "normal",
+      "vix_trust": "low",
+      "top_3_days": [
+        23,
+        20,
+        21
+      ],
+      "predicted_saving": 0.007,
+      "day_scores": {
+        "20": 0.1081,
+        "21": 0.077,
+        "22": 0.0002,
+        "23": 0.5971
+      },
+      "current_day": 27,
+      "model_reliability": 0.75,
+      "uncertainty_days": 1,
+      "timing_precision": "exact",
+      "improvement_vs_current": 0.489
+    },
+    "projection_years": 10
+  },
+  "elapsed_s": 50.6,
+  "generated": "2026-04-23T20:53:16.956439",
+  "cached": false
+}
