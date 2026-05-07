@@ -453,8 +453,14 @@ def render_simulator():
             st.markdown(f'<div class="section-label">compounding projections — {label_str}</div>',
                         unsafe_allow_html=True)
 
+            # Collect all available years from the first scenario
+            first_s = proj_scenarios[scenario_names[0]].get("projections", {})
+            available_years = sorted([int(k) for k in first_s.keys()])
+            if not available_years:
+                available_years = [1, 3, 5, 10, 20]
+
             rows = []
-            for yr in [1, 3, 5, 10, 20]:
+            for yr in available_years:
                 row = {"Years": f"{yr}yr"}
                 for s_name in scenario_names:
                     s_data = proj_scenarios[s_name].get("projections", {})
