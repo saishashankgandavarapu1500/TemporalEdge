@@ -96,10 +96,9 @@ def render_simulator():
     if is_portfolio and sim_results and ticker_input in sim_results:
         cached_result = sim_results[ticker_input]
     else:
-        # Check on-demand cache
-        from src.pipeline.on_demand import _cache_valid, _load_cache
-        if _cache_valid(ticker_input):
-            cached_result = _load_cache(ticker_input)
+        # Use unified loader — checks on-demand cache then precomputed JSON
+        from .utils import load_ondemand_result
+        cached_result = load_ondemand_result(ticker_input)
 
     # Auto-show cached results without needing to click Run
     if cached_result and not run_sim:
@@ -113,7 +112,11 @@ def render_simulator():
         result = cached_result
 
         if run_sim:
-            if is_portfolio:
+            # If precomputed result exists, just use it — don't re-run pipeline
+            if cached_result and is_precomputed and not is_portfolio:
+                result = cached_result
+                st.toast(f"{ticker_input} loaded from precomputed cache", icon="✅")
+            elif is_portfolio:
                 with st.spinner(f"Running Monte Carlo for {ticker_input}..."):
                     try:
                         from src.simulation.monte_carlo import run_simulation
