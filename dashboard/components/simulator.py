@@ -458,10 +458,11 @@ def render_simulator():
                 row = {"Years": f"{yr}yr"}
                 for s_name in scenario_names:
                     s_data = proj_scenarios[s_name].get("projections", {})
-                    if yr in s_data:
-                        extra = s_data[yr].get("extra", 0)
+                    yr_key = yr if yr in s_data else str(yr)
+                    if yr_key in s_data:
+                        extra = s_data[yr_key].get("extra", 0)
                         row[f"{s_name} extra"] = f"+${extra:,.0f}"
-                        row[f"{s_name} lift"]  = f"+{s_data[yr].get('lift_pct',0):.1f}%"
+                        row[f"{s_name} lift"]  = f"+{s_data[yr_key].get('lift_pct',0):.1f}%"
                 rows.append(row)
 
             df_proj = pd.DataFrame(rows)
