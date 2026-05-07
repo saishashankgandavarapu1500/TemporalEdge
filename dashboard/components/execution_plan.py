@@ -64,44 +64,38 @@ def render_execution_plan():
 
     # Show only tickers in the user's active portfolio.
     # Unknown tickers (not in cache) get a "queued" card.
-    # Merge on-demand cache into ep for tickers not in monthly plan
-    try:
-        from src.pipeline.on_demand import _cache_valid, _load_cache
-        _od_available = True
-    except Exception:
-        _od_available = False
+    # Merge on-demand + precomputed cache into ep for tickers not in monthly plan
+    from .utils import load_ondemand_result
 
     cached_tickers = set(ep.keys())
     user_tickers   = set(active_portfolio.keys())
 
-    if _od_available:
-        for t in user_tickers - cached_tickers:
-            try:
-                if _cache_valid(t):
-                    od = _load_cache(t)
-                    if od and "summary" in od:
-                        s    = od["summary"]
-                        tier = s.get("tier", "B")
-                        ep[t] = {
-                            "ticker":           t,
-                            "name":             od.get("ticker_meta", {}).get("name", t),
-                            "monthly_usd":      active_portfolio[t]["monthly_usd"],
-                            "recommended_day":  od.get("recommended_day", 27),
-                            "top_3_days":       od.get("top_3_days", [27]),
-                            "confidence":       od.get("confidence", 0.5),
-                            "predicted_saving": s.get("avg_saving_pct", 0.0),
-                            "suggested_window": od.get("suggested_window", ""),
-                            "advisory":         od.get("advisory", ""),
-                            "key_factor":       od.get("key_factor", ""),
-                            "llm_action":       od.get("llm_action", "consider"),
-                            "exec_tier":        {"A":"green","B":"amber","C":"grey"}.get(tier,"amber"),
-                            "exec_score":       {"A":7,"B":5,"C":3}.get(tier,5),
-                            "exec_reason":      s.get("trust_summary",""),
-                            "win_rate_pct":     s.get("win_rate_pct", 50),
-                        }
-                        cached_tickers.add(t)
-            except Exception:
-                pass
+    for t in user_tickers - cached_tickers:
+        try:
+            od = load_ondemand_result(t)
+            if od and "summary" in od:
+                s    = od["summary"]
+                tier = s.get("tier", "B")
+                ep[t] = {
+                    "ticker":           t,
+                    "name":             s.get("ticker_meta", {}).get("name", t),
+                    "monthly_usd":      active_portfolio[t]["monthly_usd"],
+                    "recommended_day":  od.get("recommended_day", s.get("lgbm_rec", {}).get("recommended_day", 27)),
+                    "top_3_days":       od.get("top_3_days", s.get("lgbm_rec", {}).get("top_3_days", [27])),
+                    "confidence":       od.get("confidence", s.get("lgbm_rec", {}).get("confidence", 0.5)),
+                    "predicted_saving": s.get("avg_saving_pct", 0.0),
+                    "suggested_window": od.get("suggested_window", ""),
+                    "advisory":         od.get("advisory", s.get("llm_advisory", {}).get("advisory", "")),
+                    "key_factor":       od.get("key_factor", s.get("llm_advisory", {}).get("key_factor", "")),
+                    "llm_action":       od.get("llm_action", s.get("llm_advisory", {}).get("action", "consider")),
+                    "exec_tier":        {"A":"green","B":"amber","C":"grey"}.get(tier,"amber"),
+                    "exec_score":       {"A":7,"B":5,"C":3}.get(tier,5),
+                    "exec_reason":      s.get("trust_summary",""),
+                    "win_rate_pct":     s.get("win_rate_pct", 50),
+                }
+                cached_tickers.add(t)
+        except Exception:
+            pass
 
     # Patch monthly_usd from live portfolio (cache may have stale amounts)
     for t in cached_tickers & user_tickers:
